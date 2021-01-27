@@ -59,23 +59,23 @@
                                         <h3>热门直播:</h3>
                                         <div class="live-list">
                                             <a href="">
-                                                <img src="./img/live-img/t1.webp" alt="">
+                                                <img src="./img/live-img/t1.png" alt="">
                                                 <div class="live-hover">LIVE</div>
                                                 <p>酸奶EFI</p></a>
                                             <a href="">
-                                                <img src="./img/live-img/t2.webp" alt=""><div class="live-hover">LIVE</div>
+                                                <img src="./img/live-img/t2.png" alt=""><div class="live-hover">LIVE</div>
                                                 <p>夜落莫言</p></a>
                                             <a href="">
-                                                <img src="./img/live-img/t3.webp" alt=""><div class="live-hover">LIVE</div>
+                                                <img src="./img/live-img/t3.png" alt=""><div class="live-hover">LIVE</div>
                                                 <p>十二月的...</p></a>
                                             <a href="">
-                                                <img src="./img/live-img/t4.webp" alt=""><div class="live-hover">LIVE</div>
+                                                <img src="./img/live-img/t4.png" alt=""><div class="live-hover">LIVE</div>
                                                 <p>睡神不醒、</p></a>
                                             <a href="">
-                                                <img src="./img/live-img/t5.webp" alt=""><div class="live-hover">LIVE</div>
+                                                <img src="./img/live-img/t5.png" alt=""><div class="live-hover">LIVE</div>
                                                 <p>是辞妹o</p></a>
                                             <a href="">
-                                                <img src="./img/live-img/t6.webp" alt=""><div class="live-hover">LIVE</div>
+                                                <img src="./img/live-img/t6.png" alt=""><div class="live-hover">LIVE</div>  
                                                 <p>梦醒三生梦</p></a>
                                         </div>
                                     </div>
