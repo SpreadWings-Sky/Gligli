@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="AdminLogin.aspx" />
     <Content Include="css\AdminLogin.css" />
+    <Content Include="gligli.aspx" />
     <Content Include="js\jquery-3.3.1.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -79,6 +80,13 @@
     </Compile>
     <Compile Include="AdminLogin.aspx.designer.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gligli.aspx.cs">
+      <DependentUpon>gligli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gligli.aspx.designer.cs">
+      <DependentUpon>gligli.aspx</DependentUpon>
     </Compile>
     <Compile Include="GliMS.Master.cs">
       <DependentUpon>GliMS.Master</DependentUpon>
