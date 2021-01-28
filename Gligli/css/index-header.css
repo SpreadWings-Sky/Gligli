@@ -401,7 +401,7 @@ ul li{
     outline: none;
     border: none;
     padding-left: 15px;
-
+    overflow: hidden;
 }
 .search-box a{
     display:  inline-block;
@@ -527,6 +527,7 @@ ul li{
     z-index: 999;
     position: absolute;
     transition: all 0.4s 0s;
+    top: 0;
 }
 .user-item{
     width: 280px;
