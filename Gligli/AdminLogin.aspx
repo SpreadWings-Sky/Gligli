@@ -4,9 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>GliGliManagement</title>
-    <link rel="stylesheet" href="./css/AdminLogin.css"/>
+    <link rel="stylesheet" href="./css/AdminLogin.css" />
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.bootcss.com/typed.js/2.0.5/typed.js"></script>
     <script>
@@ -34,8 +34,8 @@
         });
     </script>
 </head>
-<body> 
-    <form runat ="server" style="height:100%;width:100%">
+<body>
+    <form runat="server" style="height: 100%; width: 100%">
         <!-- 扫描线 -->
         <div id="Scanning">
         </div>
