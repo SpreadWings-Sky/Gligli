@@ -40,26 +40,23 @@ ul li{
 }
 /* 标题栏 */
 #header{
-    min-height: 155px;
-    height: 10vh;
     min-width: 1000px;
-    background: url("../img/banner1.jpg") no-repeat 0 24%;
-    background-size: cover;
     line-height: 55px;
+    box-shadow: 3px 0 5px #ccc;
 }
 .header-left{
     min-height: 55px;
     justify-content: left;
 }
 .header-left .left-logo{
-    background: url("../img/logo1.png") no-repeat 20px 20px;
-    background-size: 15px;
+    background: url("../img/gligli.png") no-repeat 0 center;
+    background-size: 80%;
     height: 55px;
-    width: 80px;
+    width:110px;
 }
 .logo-title{
-    margin-left: 45px;
-    color: #fff;
+    margin-left: 80px;
+    color: #000;
     font-size: 14px;    
 }
 .left-logo:hover .logo-muen{
@@ -171,7 +168,7 @@ ul li{
     display: inline-block;
 }
 .nav-left ul li a{
-    color:#fff;
+    color:#000;
     font-size: 14px;
 }
 .nva-left-live{
@@ -372,6 +369,7 @@ ul li{
     position: absolute;
     background: url("../img/app-download.png") no-repeat;
     background-size: cover;
+    top: 40px;
     transition: all 0.4s 0s linear;
     visibility: hidden;
     z-index: 88;
@@ -402,19 +400,21 @@ ul li{
     border: none;
     padding-left: 15px;
     overflow: hidden;
+    background-color: #F4F4F4;
+    border: 1px solid #e7e7e7;
 }
 .search-box a{
     display:  inline-block;
-    width: 34px;
-    height: 33px;
-    background-color: #f4f4f4;
+    width: 36px;
+    height: 36px;
+    background-color: #ccc;
     position: absolute;
-    right: -15px;
+    right: -17px;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 13px;
-    color: #ccc;
+    top: 11px;
+    color: #a1a1a1;
     font-size: 12px;
 }
 .search-box a:hover{
@@ -450,7 +450,7 @@ ul li{
 }
 .right-login a{
     float: left;
-    color: #fff;
+    color: #000;
     font-size: 14px;
 }
 .right-login a:nth-child(3){
@@ -523,7 +523,7 @@ ul li{
     width: 38px;
     position: relative;
 }
-.userlogin a img{
+.userlogin .userimg img{
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -613,7 +613,7 @@ ul li{
     position: relative;
 }
 .user-title li a{
-    color: #fff;
+    color: #000;
 }
 .user-title li:nth-child(1):hover .Message{
     visibility: visible;
@@ -667,6 +667,7 @@ ul li{
     background-color: #fff;
     box-shadow: 0px 3px 6px 0 rgb(0, 0, 0,0.2);
     transition: all 0 0;
+    z-index: 88;
 }
 .user-title li:nth-child(2):hover .title-moving{
     visibility: visible;
@@ -680,9 +681,11 @@ ul li{
     background-color: #fff;
     transform: rotate(45deg);
     position: absolute;
-    box-shadow: -1px -1px 1px rgb(0 0 0 / 5%);
     top: -5px;
     left: 50%;
+    box-shadow: 0 0 3px #ccc;
+    box-shadow: -1px -1px 1px rgb(0 0 0 / 5%);
+    z-index: 1;
 }
 .moving-tab{
     padding-left: 20px;
