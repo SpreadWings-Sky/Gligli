@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/index-header.css" />
     <link rel="stylesheet" href="./css/index-footer.css" />
     <link rel="stylesheet" href="./css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/index-content.css" />
+    <script src="./js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -18,7 +20,7 @@
                 <div class="header-left grid grid-cell-1">
                     <!-- logo开始 -->
                     <div class="left-logo">
-                        <a href="">
+                        <a href="gligli.aspx">
                             <span class="logo-title">主站</span>
                         </a>
                         <!-- 目录 -->
@@ -89,9 +91,11 @@
                                     <div class="live-right">
                                         <h3>热门活动:</h3>
                                         <div class="right-list">
-                                            <img src="./img/live-img/zyt1.jpg" alt=""></div>
+                                            <img src="./img/live-img/zyt1.jpg" alt="">
+                                        </div>
                                         <div class="right-list">
-                                            <img src="./img/live-img/zyt2.jpg" alt=""></div>
+                                            <img src="./img/live-img/zyt2.jpg" alt="">
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -357,6 +361,215 @@
             <img src="./img/gligli.png" alt="" class="gligli" />
         </header>
     </form>
+    <!-- 主体内容区开始 -->
+    <section id="content">
+        <!-- 主体内容导航栏开始 -->
+        <div class="content-meun grid">
+            <div class="meun-left grid">
+                <a href="">首页</a>
+                <a href="">动态</a>
+                <a href="">排行</a>
+            </div>
+            <span class="content-meun-line"></span>
+            <div class="meun-conter grid grid-cell-2">
+                <span><a href=""><span>动画</span><em>999+</em></a>
+                    <div class="meun-conter-item" style="width: 180px; top: -350%">
+                        <a href="" class="item-name">MAD·AMV</a>
+                        <a href="" class="item-name">MMD·3D</a>
+                        <a href="" class="item-name">短片·手书·配音</a>
+                        <a href="" class="item-name">手办·模玩</a>
+                        <a href="" class="item-name">特摄</a>
+                        <a href="" class="item-name">综合</a>
+                    </div>
+                </span>
+                <span><a href=""><span>音乐</span><em>999+</em></a>
+                </span>
+                <span><a href=""><span>番剧</span><em>999+</em></a>
+                    <div class="meun-conter-item" style="width: 180px; top: -350%">
+                        <a href="" class="item-name">连载动画</a>
+                        <a href="" class="item-name">完结动画</a>
+                        <a href="" class="item-name">资讯</a>
+                        <a href="" class="item-name">官方延伸</a>
+                        <a href="" class="item-name">新番时间表</a>
+                        <a href="" class="item-name">番剧索引</a>
+                    </div>
+                </span>
+                <span><a href=""><span>国创</span><em>999+</em></a>
+                </span>
+                <span><a href=""><span>游戏</span><em>999+</em></a>
+                </span>
+                <span><a href=""><span>数码</span><em>999+</em></a>
+                </span>
+                <span><a href=""><span>鬼畜</span><em>999+</em></a>
+                </span>
+                <span><a href=""><span>舞蹈</span><em>999+</em></a>
+                </span>
+                <span><a href=""><span>知识</span><em>999+</em></a>
+                </span>
+                <span><a href=""><span>生活</span><em>999+</em></a>
+                </span>
+                <span><a href=""><span>时尚</span><em>999+</em></a>
+                </span>
+                <span><a href=""><span>娱乐</span><em>999+</em></a>
+                </span>
+                <span><a href=""><span>放映厅</span><em>999+</em></a>
+                </span>
+                <span><a href=""><span>美食</span><em>999+</em></a>
+                </span>
+                <span><a href=""><span>单机游戏</span><em>999+</em></a></span>
+                <span class="min-vis"><a href="#">更多<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                    <div class="meun-conter-item">
+                        <a href="" class="item-name">资讯</a>
+                        <a href="" class="item-name">影视</a>
+                        <a href="" class="item-name">搞笑</a>
+                        <a href="" class="item-name">动物圈</a>
+                        <a href="" class="item-name">VLOG</a>
+                    </div>
+                </span>
+                <span class="max-vis"><a href=""><span>资讯</span><em>999+</em></a></span>
+                <span class="max-vis"><a href=""><span>影视</span><em>999+</em></a></span>
+                <span class="max-vis"><a href=""><span>搞笑</span><em>999+</em></a></span>
+                <span class="max-vis"><a href=""><span>动物圈</span><em>999+</em></a></span>
+                <span class="max-vis"><a href=""><span>VLOG</span></a></span>
+            </div>
+            <span class="content-meun-line"></span>
+            <div class="meun-right">
+                <a href="">专栏</a>
+                <a href="">活动</a>
+                <a href="">直播</a>
+            </div>
+        </div>
+        <!-- 主体内容导航栏结束 -->
+        <!-- 轮播图热门推荐开始 -->
+        <div class="content-img-hot">
+            <div class="content-img-hot-left">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="./img/hot-img/1.png" alt="">
+                            <p>风华是一指流砂</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/hot-img/2.png" alt="">
+                            <p>苍老是一段年华</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/hot-img/3.png" alt="">
+                            <p>待浮花浪蕊俱尽</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/hot-img/4.png" alt="">
+                            <p>唯留血染墨香哭乱冢</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/hot-img/5.png" alt="">
+                            <p>昔有朝歌夜弦之高楼</p>
+                        </a>
+                    </li>
+                </ul>
+                <a href="" class="move">更多<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                <div class="left-trigger">
+                    <span class="oncheck"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <script src="./js/img-hot.js"></script>
+            </div>
+            <div class="content-img-hot-right">
+                <div class="hot-video-item">
+                    <a href="">
+                        <img src="./img/video-img/1.webp" alt="">
+                        <div class="video-info">
+                            <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
+                            <p class="userName"><span>UP</span>colorwolf4</p>
+                            <p class="play"><span>100万</span>播放</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="hot-video-item">
+                    <a href="">
+                        <img src="./img/video-img/1.webp" alt="">
+                        <div class="video-info">
+                            <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
+                            <p class="userName"><span>UP</span>colorwolf4</p>
+                            <p class="play"><span>100万</span>播放</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="hot-video-item">
+                    <a href="">
+                        <img src="./img/video-img/1.webp" alt="">
+                        <div class="video-info">
+                            <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
+                            <p class="userName"><span>UP</span>colorwolf4</p>
+                            <p class="play"><span>100万</span>播放</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="hot-video-item">
+                    <a href="">
+                        <img src="./img/video-img/1.webp" alt="">
+                        <div class="video-info">
+                            <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
+                            <p class="userName"><span>UP</span>colorwolf4</p>
+                            <p class="play"><span>100万</span>播放</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="hot-video-item">
+                    <a href="">
+                        <img src="./img/video-img/1.webp" alt="">
+                        <div class="video-info">
+                            <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
+                            <p class="userName"><span>UP</span>colorwolf4</p>
+                            <p class="play"><span>100万</span>播放</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="hot-video-item">
+                    <a href="">
+                        <img src="./img/video-img/1.webp" alt="">
+                        <div class="video-info">
+                            <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
+                            <p class="userName"><span>UP</span>colorwolf4</p>
+                            <p class="play"><span>100万</span>播放</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="hot-video-item">
+                    <a href="">
+                        <img src="./img/video-img/1.webp" alt="">
+                        <div class="video-info">
+                            <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
+                            <p class="userName"><span>UP</span>colorwolf4</p>
+                            <p class="play"><span>100万</span>播放</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="hot-video-item">
+                    <a href="">
+                        <img src="./img/video-img/1.webp" alt="">
+                        <div class="video-info">
+                            <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
+                            <p class="userName"><span>UP</span>colorwolf4</p>
+                            <p class="play"><span>100万</span>播放</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 轮播图热门推荐结束 -->
+    </section>
     <!--底部版权-->
     <footer id="footer">
         <!-- 上半部分开始 -->
@@ -416,12 +629,12 @@
             </div>
             <div class="footer-bottom-right grid-cell-4">
                 <p>
-                    <span><a href="">营业执照</a></span>
+                    <span><a href="#">营业执照</a></span>
                     <span>信息网络传播视听节目许可证：6666666</span>
                     <span>网络文化经营许可证 沪网文【2077】4857-111号</span>
                     <span>广播电视节目制作经营许可证：（龍）字第00001号</span>
                     <span>增值电信业务经营许可证 龍A1-20770001</span>
-                    <span>互联网ICP备案：<a href="">龍ICP备10000111号-2</a></span>
+                    <span>互联网ICP备案：<a href="#">龍ICP备10000111号-2</a></span>
                     <span>出版物经营许可证 龍批字第ZY2077 号</span>
                     <span>互联网药品信息服务资格证 龍-非经营性-2077-0101</span>
                     <span>营业性演出许可证 龍市文演（经）00-0102</span>
