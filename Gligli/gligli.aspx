@@ -488,7 +488,7 @@
            <div class="content-img-hot-right">
                 <div class="hot-video-item">
                     <a href="">
-                        <img src="./img/video-img/1.webp" alt="">
+                        <img src="./img/video-img/1.png" alt="">
                         <div class="video-info">
                             <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
                             <p class="userName"><span>UP</span>colorwolf4</p>
@@ -498,7 +498,7 @@
                 </div>
                 <div class="hot-video-item">
                     <a href="">
-                        <img src="./img/video-img/1.webp" alt="">
+                        <img src="./img/video-img/1.png" alt="">
                         <div class="video-info">
                             <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
                             <p class="userName"><span>UP</span>colorwolf4</p>
@@ -508,7 +508,7 @@
                 </div>
                 <div class="hot-video-item">
                     <a href="">
-                        <img src="./img/video-img/1.webp" alt="">
+                        <img src="./img/video-img/1.png" alt="">
                         <div class="video-info">
                             <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
                             <p class="userName"><span>UP</span>colorwolf4</p>
@@ -518,7 +518,7 @@
                 </div>
                 <div class="hot-video-item">
                     <a href="">
-                        <img src="./img/video-img/1.webp" alt="">
+                        <img src="./img/video-img/1.png" alt="">
                         <div class="video-info">
                             <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
                             <p class="userName"><span>UP</span>colorwolf4</p>
@@ -528,7 +528,7 @@
                 </div>
                 <div class="hot-video-item">
                     <a href="">
-                        <img src="./img/video-img/1.webp" alt="">
+                        <img src="./img/video-img/1.png" alt="">
                         <div class="video-info">
                             <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
                             <p class="userName"><span>UP</span>colorwolf4</p>
@@ -538,7 +538,7 @@
                 </div>
                 <div class="hot-video-item">
                     <a href="">
-                        <img src="./img/video-img/1.webp" alt="">
+                        <img src="./img/video-img/1.png" alt="">
                         <div class="video-info">
                             <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
                             <p class="userName"><span>UP</span>colorwolf4</p>
@@ -548,7 +548,7 @@
                 </div>
                 <div class="hot-video-item">
                     <a href="">
-                        <img src="./img/video-img/1.webp" alt="">
+                        <img src="./img/video-img/1.png" alt="">
                         <div class="video-info">
                             <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
                             <p class="userName"><span>UP</span>colorwolf4</p>
@@ -558,7 +558,7 @@
                 </div>
                 <div class="hot-video-item">
                     <a href="">
-                        <img src="./img/video-img/1.webp" alt="">
+                        <img src="./img/video-img/1.png" alt="">
                         <div class="video-info">
                             <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
                             <p class="userName"><span>UP</span>colorwolf4</p>
@@ -585,7 +585,7 @@
                     <ul>
                         <li>
                             <a href="">
-                                <img src="./img/video-img/2.webp" alt="">
+                                <img src="./img/video-img/2.png" alt="">
                                 <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
                                 <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
                                 <p class="video-list-up"><span>UP</span>Super也好君</p>
@@ -593,77 +593,88 @@
                         </li>
                         <li>
                             <a href="">
-                                <img src="./img/video-img/2.webp" alt="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
                                 <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
                                 <p class="video-list-up"><span>UP</span>Super也好君</p>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./img/video-img/2.webp" alt="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
                                 <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
                                 <p class="video-list-up"><span>UP</span>Super也好君</p>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./img/video-img/2.webp" alt="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
                                 <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
                                 <p class="video-list-up"><span>UP</span>Super也好君</p>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./img/video-img/2.webp" alt="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
                                 <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
                                 <p class="video-list-up"><span>UP</span>Super也好君</p>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./img/video-img/2.webp" alt="">
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li> 
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.webp" alt="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
                                 <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
                                 <p class="video-list-up"><span>UP</span>Super也好君</p>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./img/video-img/2.webp" alt="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
                                 <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
                                 <p class="video-list-up"><span>UP</span>Super也好君</p>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./img/video-img/2.webp" alt="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
                                 <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
                                 <p class="video-list-up"><span>UP</span>Super也好君</p>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./img/video-img/2.webp" alt="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
                                 <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
                                 <p class="video-list-up"><span>UP</span>Super也好君</p>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./img/video-img/2.webp" alt="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
                                 <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
                                 <p class="video-list-up"><span>UP</span>Super也好君</p>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./img/video-img/2.webp" alt="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
                                 <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
                                 <p class="video-list-up"><span>UP</span>Super也好君</p>
                             </a>
