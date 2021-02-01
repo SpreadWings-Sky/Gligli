@@ -6,7 +6,7 @@ a{
     text-decoration: none;
 }
 #footer{
-    width: 100vw;
+    /* width: 100vw; */
     min-width: 1000px;
     margin-top: 20px;
     background-color: #f6f9fa;

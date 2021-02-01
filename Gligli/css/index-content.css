@@ -169,7 +169,7 @@
 }
 /* 导航条部分结束 */
 /* 轮播图与热门推荐开始 */
-.content-img-hot{
+.content-img-hot,.content-videoclass{
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
@@ -323,4 +323,238 @@
 .hot-video-item:hover .video-info{
     top: 0;
     background: rgba(0, 0, 0, 0.5) !important;
+}
+/* 分区内容展示开始 */
+/* 排行榜 */
+.content-videoclass .video-rank{
+    width: 320px;
+    min-width: 315px;
+    height: 450px;
+}
+.content-videoclass .video-rank .rank-header{
+    height: 36px;
+    margin-bottom: 16px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.content-videoclass .video-rank .rank-header span{
+    font-size: 20px;
+    color: #212121;
+    vertical-align: bottom;
+}
+.content-videoclass .video-rank .rank-header a{
+    font-size: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 3px 8px;
+    color: #212121;
+    margin-right: 10px;
+}
+.rank-item{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 18px;
+    justify-content: space-between;
+}
+.rank-item .item-number{
+    display: inline-block;
+    font-size: 14px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 2px;
+    text-align: center;
+}
+.rank-item .item-right{
+    width: 290px;
+    display: flex;
+    position: relative;
+}
+.rank-item .item-img a{
+    display: inline-block;
+    width: 112px;
+    height: 63px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.rank-item .item-img a img{
+    width: 100%;
+}
+.item-text:nth-child(2){
+    margin-left: 14px;
+}
+.item-text:nth-child(2) a p{
+    height: 40px;
+    line-height: 20px;
+}
+.item-text a p{
+    font-size: 14px;
+    height: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 5px;
+    color: #212121;
+    transition: color 0.3s;
+}
+.item-text a span{
+    font-size: 10px;
+    color: #999;
+    margin-right: 5px;
+}
+.item-text:hover a p{
+    color: #73c9e5;
+}
+.rank-on{
+    background-color: #00a1d6;
+    color: #fff;
+}
+.item-right .video-show{
+    position: absolute;
+    padding: 12px;
+    width: 300px;
+    bottom: 100%;
+    left: -10%;
+    background: #fff;
+    box-shadow: 0 1px 6px 0 rgb(0 0 0 / 20%);
+    border-radius: 2px;
+    z-index: 200;
+    opacity: 0;
+    transition: opacity 0.4s 0.3s;
+    visibility: hidden;
+}
+.video-show .video-show-top{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+.video-show .video-show-bottom ul li{
+    margin-top: 5px;
+    font-size: 12px;
+    color: #999;
+}
+.video-show .video-show-bottom ul li i{
+    margin-right: 5px;
+}
+.rank-item:hover .video-show{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0 0 !important;
+}
+/* 排行榜结束 */
+/* 视频展示 */
+.video-list{
+    width: 80%;
+    margin-right: 20px;
+}
+.video-list .video-list-header{
+    width: 100%;
+    height: 36px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: space-between;
+}
+.video-list .video-list-header .list-header-logo{
+    background: url("../img/index-content-img/c4.png") no-repeat 10% center;
+    text-indent: 40px;
+    font-size: 20px;
+    font-weight: 800;
+}
+.video-list .video-list-header .list-header-logo a,.list-header-btn a{
+    color: #212121;
+}
+.video-list-header .list-header-btn{
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 22px;
+}
+.video-list-header .list-header-btn .btn-change{
+    border: 1px solid #999;
+    height: 22px;
+    width: 72px;
+    text-align: center;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.video-list-header .list-header-btn .btn-change i{
+    margin-right: 5px;
+    transform: rotate(0deg);
+    transition: all 0.5s;
+}
+.video-list-header .list-header-btn .btn-change:hover i{
+    transform: rotate(360deg);
+}
+.video-list-header .list-header-btn a{
+    display: inline-block;
+    border: 1px solid #999;
+    padding: 0 15px;
+}
+.video-list-header .list-header-btn .btn-change:hover,.video-list-header .list-header-btn a:hover{
+    background-color: #f5f5f5;
+}
+.video-list .video-list-box ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 404px;
+    overflow: hidden;
+}
+.video-list .video-list-box ul li a{
+    margin-bottom: 15px;
+    display: block;
+    width: 208px;
+    height: 190px;
+    color: #000;
+    position: relative;
+}
+@media screen and (max-width: 1438px){
+    .video-list .video-list-box ul li a{
+        width: 200px;
+    }
+}
+.video-list .video-list-box ul li a img{
+    width: 100%;
+    height: 116px;
+    border-radius: 3px;
+}
+.video-list .video-list-box .video-list-title{
+    font-size: 14px;
+    line-height: 20px;
+    margin: 10px 0 8px;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-weight: 500;
+    padding-right: 12px;
+}
+.video-list .video-list-box .video-list-title:hover{
+    color: #73c9e5;
+}
+.video-list .video-list-box .video-list-up{
+    font-size: 12px;
+    line-height: 16px;
+    color: #999;
+}
+.video-list .video-list-box .video-list-up span{
+    border: 1px solid #999;
+    padding: 0 5px;
+    margin-right: 5px;
+}
+.video-list .video-list-box .video-list-play{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #fff;
+    font-size: 12px;
+}
+.video-list .video-list-box .video-list-play i{
+    margin-right: 5px;
 }
