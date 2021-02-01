@@ -364,7 +364,7 @@
     <!-- 主体内容区开始 -->
     <section id="content">
         <!-- 主体内容导航栏开始 -->
-       <div class="content-meun grid">
+        <div class="content-meun grid">
             <div class="meun-left grid">
                 <a href="">首页</a>
                 <a href="">动态</a>
@@ -373,7 +373,7 @@
             <span class="content-meun-line"></span>
             <div class="meun-conter grid grid-cell-2">
                 <span><a href=""><span>动画</span><em>999+</em></a>
-                    <div class="meun-conter-item" style="width:180px;top:-350%">
+                    <div class="meun-conter-item" style="width: 180px; top: -350%">
                         <a href="" class="item-name">MAD·AMV</a>
                         <a href="" class="item-name">MMD·3D</a>
                         <a href="" class="item-name">短片·手书·配音</a>
@@ -385,7 +385,7 @@
                 <span><a href=""><span>音乐</span><em>999+</em></a>
                 </span>
                 <span><a href=""><span>番剧</span><em>999+</em></a>
-                    <div class="meun-conter-item" style="width:180px;top:-350%">
+                    <div class="meun-conter-item" style="width: 180px; top: -350%">
                         <a href="" class="item-name">连载动画</a>
                         <a href="" class="item-name">完结动画</a>
                         <a href="" class="item-name">资讯</a>
@@ -438,44 +438,44 @@
                 <a href="">活动</a>
                 <a href="">直播</a>
             </div>
-       </div> 
-       <!-- 主体内容导航栏结束 -->
-       <!-- 轮播图热门推荐开始 -->
-       <diV class="content-img-hot">
-           <div class="content-img-hot-left">
-               <ul>
-                   <li>
-                       <a href="">
-                           <img src="./img/hot-img/1.png" alt="">
-                           <p>风华是一指流砂</p>
-                       </a>
-                   </li>
-                   <li>
-                       <a href="">
-                           <img src="./img/hot-img/2.png" alt="">
-                           <p>苍老是一段年华</p>
-                       </a>
-                   </li>
-                   <li>
-                       <a href="">
-                           <img src="./img/hot-img/3.png" alt="">
-                           <p>待浮花浪蕊俱尽</p>
-                       </a>
-                   </li>
-                   <li>
-                       <a href="">
-                           <img src="./img/hot-img/4.png" alt="">
-                           <p>唯留血染墨香哭乱冢</p>
-                       </a>
-                   </li>
-                   <li>
-                       <a href="">
-                           <img src="./img/hot-img/5.png" alt="">
-                           <p>昔有朝歌夜弦之高楼</p>
-                       </a>
-                   </li>
-               </ul>
-               <a href="" class="move">更多<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+        </div>
+        <!-- 主体内容导航栏结束 -->
+        <!-- 轮播图热门推荐开始 -->
+        <div class="content-img-hot">
+            <div class="content-img-hot-left">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="./img/hot-img/1.png" alt="">
+                            <p>风华是一指流砂</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/hot-img/2.png" alt="">
+                            <p>苍老是一段年华</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/hot-img/3.png" alt="">
+                            <p>待浮花浪蕊俱尽</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/hot-img/4.png" alt="">
+                            <p>唯留血染墨香哭乱冢</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/hot-img/5.png" alt="">
+                            <p>昔有朝歌夜弦之高楼</p>
+                        </a>
+                    </li>
+                </ul>
+                <a href="" class="move">更多<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="left-trigger">
                     <span class="oncheck"></span>
                     <span></span>
@@ -484,8 +484,8 @@
                     <span></span>
                 </div>
                 <script src="./js/img-hot.js"></script>
-           </div>
-           <div class="content-img-hot-right">
+            </div>
+            <div class="content-img-hot-right">
                 <div class="hot-video-item">
                     <a href="">
                         <img src="./img/video-img/1.png" alt="">
@@ -566,14 +566,14 @@
                         </div>
                     </a>
                 </div>
-           </div>
-       </diV>
-       <!-- 轮播图热门推荐结束 -->
-       <!-- 分区内容展示部分开始 -->
-       <div class="content-videoclass">
-           <div class="video-list">
+            </div>
+        </div>
+        <!-- 轮播图热门推荐结束 -->
+        <!-- 分区内容展示部分开始 -->
+        <div class="content-videoclass">
+            <div class="video-list">
                 <header class="video-list-header">
-                    <div class="list-header-logo">
+                    <div class="list-header-logo logo1">
                         <a href="">动画</a>
                     </div>
                     <div class="list-header-btn">
@@ -681,17 +681,18 @@
                         </li>
                     </ul>
                 </div>
-           </div>
-           <div class="video-rank">
-               <header class="rank-header">
-                   <span>排行榜</span>
-                   <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-               </header>
-               <div class="rank-item">
+            </div>
+            <div class="video-rank">
+                <header class="rank-header">
+                    <span>排行榜</span>
+                    <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </header>
+                <div class="rank-item">
                     <span class="item-number rank-on">1</span>
                     <div class="item-right">
                         <div class="item-img">
-                            <a href=""><img src="./img/hot-img/4.png" alt=""></a>
+                            <a href="">
+                                <img src="./img/hot-img/4.png" alt=""></a>
                         </div>
                         <div class="item-text">
                             <a href="">
@@ -702,7 +703,8 @@
                         <div class="video-show">
                             <div class="video-show-top item-right">
                                 <div class="item-img">
-                                    <a href=""><img src="./img/hot-img/4.png" alt=""></a>
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
                                 </div>
                                 <div class="item-text">
                                     <a href="">
@@ -720,250 +722,1064 @@
                             </div>
                         </div>
                     </div>
-               </div>
-               <div class="rank-item">
-                <span class="item-number rank-on">2</span>
-                <div class="item-right">
-                    <div class="item-text">
-                        <a href="">
-                            <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                        </a>
-                    </div>
-                    <div class="video-show">
-                        <div class="video-show-top item-right">
-                            <div class="item-img">
-                                <a href=""><img src="./img/hot-img/4.png" alt=""></a>
-                            </div>
-                            <div class="item-text">
-                                <a href="">
-                                    <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                                    <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
-                                </a>
-                            </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number rank-on">2</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
                         </div>
-                        <div class="video-show-bottom">
-                            <ul class="grid">
-                                <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
-                                <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
-                                <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
-                            </ul>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-               </div>
-               <div class="rank-item">
-                <span class="item-number rank-on">3</span>
-                <div class="item-right">
-                    <div class="item-text">
-                        <a href="">
-                            <p>我不在乎输赢，因为袋鼠喜欢男桐，同时马老师的青花瓷外衣很好看，听说糖宝的鞋被偷走了，我很难过，所以我要加个菜，综上所述，马老师获得胜利</p>
-                        </a> 
-                    </div>
-                    <div class="video-show">
-                        <div class="video-show-top item-right">
-                            <div class="item-img">
-                                <a href=""><img src="./img/hot-img/4.png" alt=""></a>
-                            </div>
-                            <div class="item-text">
-                                <a href="">
-                                    <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                                    <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
-                                </a>
-                            </div>
+                <div class="rank-item">
+                    <span class="item-number rank-on">3</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>我不在乎输赢，因为袋鼠喜欢男桐，同时马老师的青花瓷外衣很好看，听说糖宝的鞋被偷走了，我很难过，所以我要加个菜，综上所述，马老师获得胜利</p>
+                            </a>
                         </div>
-                        <div class="video-show-bottom">
-                            <ul class="grid">
-                                <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
-                                <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
-                                <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-               </div>
-               <div class="rank-item">
-                <span class="item-number">4</span>
-                <div class="item-right">
-                    <div class="item-text">
-                        <a href="">
-                            <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                        </a>
-                    </div>
-                    <div class="video-show">
-                        <div class="video-show-top item-right">
-                            <div class="item-img">
-                                <a href=""><img src="./img/hot-img/4.png" alt=""></a>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="item-text">
-                                <a href="">
-                                    <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                                    <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
-                                </a>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="video-show-bottom">
-                            <ul class="grid">
-                                <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
-                                <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
-                                <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
-               </div>
-               <div class="rank-item">
-                <span class="item-number">5</span>
-                <div class="item-right">
-                    <div class="item-text">
-                        <a href="">
-                            <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                        </a>
-                    </div>
-                    <div class="video-show">
-                        <div class="video-show-top item-right">
-                            <div class="item-img">
-                                <a href=""><img src="./img/hot-img/4.png" alt=""></a>
-                            </div>
-                            <div class="item-text">
-                                <a href="">
-                                    <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                                    <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
-                                </a>
-                            </div>
+                <div class="rank-item">
+                    <span class="item-number">4</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
                         </div>
-                        <div class="video-show-bottom">
-                            <ul class="grid">
-                                <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
-                                <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
-                                <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-               </div>
-               <div class="rank-item">
-                <span class="item-number">6</span>
-                <div class="item-right">
-                    <div class="item-text">
-                        <a href="">
-                            <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                        </a>
-                    </div>
-                    <div class="video-show">
-                        <div class="video-show-top item-right">
-                            <div class="item-img">
-                                <a href=""><img src="./img/hot-img/4.png" alt=""></a>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="item-text">
-                                <a href="">
-                                    <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                                    <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
-                                </a>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="video-show-bottom">
-                            <ul class="grid">
-                                <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
-                                <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
-                                <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
-               </div>
-               <div class="rank-item">
-                <span class="item-number">7</span>
-                <div class="item-right">
-                    <div class="item-text">
-                        <a href="">
-                            <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                        </a>
-                    </div>
-                    <div class="video-show">
-                        <div class="video-show-top item-right">
-                            <div class="item-img">
-                                <a href=""><img src="./img/hot-img/4.png" alt=""></a>
-                            </div>
-                            <div class="item-text">
-                                <a href="">
-                                    <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                                    <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
-                                </a>
-                            </div>
+                <div class="rank-item">
+                    <span class="item-number">5</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
                         </div>
-                        <div class="video-show-bottom">
-                            <ul class="grid">
-                                <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
-                                <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
-                                <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-               </div>
-               <div class="rank-item">
-                <span class="item-number">8</span>
-                <div class="item-right">
-                    <div class="item-text">
-                        <a href="">
-                            <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                        </a>
-                    </div>
-                    <div class="video-show">
-                        <div class="video-show-top item-right">
-                            <div class="item-img">
-                                <a href=""><img src="./img/hot-img/4.png" alt=""></a>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="item-text">
-                                <a href="">
-                                    <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                                    <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
-                                </a>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="video-show-bottom">
-                            <ul class="grid">
-                                <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
-                                <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
-                                <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
-               </div>
-               <div class="rank-item">
-                <span class="item-number">9</span>
-                <div class="item-right">
-                    <div class="item-text">
-                        <a href="">
-                            <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                        </a>
-                    </div>
-                    <div class="video-show">
-                        <div class="video-show-top item-right">
-                            <div class="item-img">
-                                <a href=""><img src="./img/hot-img/4.png" alt=""></a>
-                            </div>
-                            <div class="item-text">
-                                <a href="">
-                                    <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                                    <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
-                                </a>
-                            </div>
+                <div class="rank-item">
+                    <span class="item-number">6</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
                         </div>
-                        <div class="video-show-bottom">
-                            <ul class="grid">
-                                <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
-                                <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
-                                <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
-                            </ul>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-               </div>
-           </div>
-       </div>
-       <!-- 分区内容展示部分结束 -->
+                <div class="rank-item">
+                    <span class="item-number">7</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">8</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">9</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-videoclass">
+            <div class="video-list">
+                <header class="video-list-header">
+                    <div class="list-header-logo logo2">
+                        <a href="">鬼畜</a>
+                    </div>
+                    <div class="list-header-btn">
+                        <div class="btn-change"><i class="fa fa-refresh" aria-hidden="true"></i>换一换</div>
+                        <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    </div>
+                </header>
+                <div class="video-list-box">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="video-rank">
+                <header class="rank-header">
+                    <span>排行榜</span>
+                    <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </header>
+                <div class="rank-item">
+                    <span class="item-number rank-on">1</span>
+                    <div class="item-right">
+                        <div class="item-img">
+                            <a href="">
+                                <img src="./img/hot-img/4.png" alt=""></a>
+                        </div>
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                <span>综合得分937.1万</span>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number rank-on">2</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number rank-on">3</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>我不在乎输赢，因为袋鼠喜欢男桐，同时马老师的青花瓷外衣很好看，听说糖宝的鞋被偷走了，我很难过，所以我要加个菜，综上所述，马老师获得胜利</p>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">4</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">5</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">6</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">7</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">8</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">9</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-videoclass">
+            <div class="video-list">
+                <header class="video-list-header">
+                    <div class="list-header-logo logo3">
+                        <a href="">音乐</a>
+                    </div>
+                    <div class="list-header-btn">
+                        <div class="btn-change"><i class="fa fa-refresh" aria-hidden="true"></i>换一换</div>
+                        <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    </div>
+                </header>
+                <div class="video-list-box">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/2.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
+                                <p class="video-list-up"><span>UP</span>Super也好君</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="video-rank">
+                <header class="rank-header">
+                    <span>排行榜</span>
+                    <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </header>
+                <div class="rank-item">
+                    <span class="item-number rank-on">1</span>
+                    <div class="item-right">
+                        <div class="item-img">
+                            <a href="">
+                                <img src="./img/hot-img/4.png" alt=""></a>
+                        </div>
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                <span>综合得分937.1万</span>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number rank-on">2</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number rank-on">3</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>我不在乎输赢，因为袋鼠喜欢男桐，同时马老师的青花瓷外衣很好看，听说糖宝的鞋被偷走了，我很难过，所以我要加个菜，综上所述，马老师获得胜利</p>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">4</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">5</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">6</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">7</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">8</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">9</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                        <div class="video-show">
+                            <div class="video-show-top item-right">
+                                <div class="item-img">
+                                    <a href="">
+                                        <img src="./img/hot-img/4.png" alt=""></a>
+                                </div>
+                                <div class="item-text">
+                                    <a href="">
+                                        <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                        <span>卑鄙的南瓜骨头</span><span>2021-01-30</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="video-show-bottom">
+                                <ul class="grid">
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 分区内容展示部分结束 -->
     </section>
     <!--底部版权-->
     <footer id="footer">

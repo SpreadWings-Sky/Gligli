@@ -457,10 +457,18 @@
     justify-content: space-between;
 }
 .video-list .video-list-header .list-header-logo{
-    background: url("../img/index-content-img/c4.png") no-repeat 10% center;
     text-indent: 40px;
     font-size: 20px;
     font-weight: 800;
+}
+.logo1{
+    background: url("../img/index-content-img/c4.png") no-repeat 5% center;
+} 
+.logo2{
+    background: url("../img/index-content-img/c14.png") no-repeat 5% center;
+}
+.logo3{
+    background: url("../img/index-content-img/c8.png") no-repeat 5% center;
 }
 .video-list .video-list-header .list-header-logo a,.list-header-btn a{
     color: #212121;
