@@ -593,16 +593,20 @@
     .articel-list ul li .list-title-name .arti-name{
         width: 160px;
     }
+    .articel-list ul li a.arti-img{
+        width: 100px !important;
+        height: 70px !important;
+    }
 }
 .articel-list ul li a.arti-img{
     display: block;
-    width: 120px;
+    width: 150px;
     height: 90px;
     margin-right: 16px;
 }
 .articel-list ul li a img{
-    width: 120px !important;
-    height: 90px !important;
+    width: 100%;
+    height: 100% !important;
     border-radius: 2px;
 }
 .articel-list ul li .list-title-name .arti-name{
