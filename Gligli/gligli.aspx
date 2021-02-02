@@ -921,6 +921,152 @@
                 </div>
             </div>
         </div>
+        <!-- 番剧动态开始 -->
+        <div class="content-videoclass">
+            <div class="video-list">
+                <header class="video-list-header">
+                    <div class="list-header-logo logo5">
+                        <a href="">番剧</a>
+                        <div class="video-tab">
+                            <span class="tab-item ontab">最新</span>
+                            <span class="tab-item">周一</span>
+                            <span class="tab-item">周二</span>
+                            <span class="tab-item">周三</span>
+                            <span class="tab-item">周四</span>
+                            <span class="tab-item">周五</span>
+                            <span class="tab-item">周六</span>
+                            <span class="tab-item">周日</span>
+                        </div>
+                    </div>
+                    <script src="./js/tab-item.js"></script>
+                    <div class="list-header-btn">
+                        <div class="btn-change"><i class="fa fa-refresh" aria-hidden="true"></i>换一换</div>
+                        <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    </div>
+                </header>
+                <div class="video-list-anime">
+                    <div class="anime-item">
+                        <a href="" class="anime-img">
+                            <img src="./img/anim-img/1.png" alt="">
+                        </a>
+                        <div class="anime-txt">
+                            <a href="" class="anime-name">记录的地平线 圆桌崩坏
+                            </a>
+                            <p class="anime-data">
+                                <a href="">第5话</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="video-rank">
+                <header class="rank-header">
+                    <span>排行榜</span>
+                    <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </header>
+                <div class="rank-item">
+                    <span class="item-number rank-on">1</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="" class="anime-updata">
+                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number rank-on">2</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="" class="anime-updata">
+                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number rank-on">3</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="" class="anime-updata">
+                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">4</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="" class="anime-updata">
+                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">5</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="" class="anime-updata">
+                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">6</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="" class="anime-updata">
+                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">7</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="" class="anime-updata">
+                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">8</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="" class="anime-updata">
+                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">9</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="" class="anime-updata">
+                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">10</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="" class="anime-updata">
+                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 番剧动态结束 -->
         <div class="content-videoclass">
             <div class="video-list">
                 <header class="video-list-header">
