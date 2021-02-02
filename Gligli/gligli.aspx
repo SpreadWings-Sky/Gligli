@@ -546,26 +546,6 @@
                         </div>
                     </a>
                 </div>
-                <div class="hot-video-item">
-                    <a href="">
-                        <img src="./img/video-img/1.png" alt="">
-                        <div class="video-info">
-                            <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
-                            <p class="userName"><span>UP</span>colorwolf4</p>
-                            <p class="play"><span>100万</span>播放</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="hot-video-item">
-                    <a href="">
-                        <img src="./img/video-img/1.png" alt="">
-                        <div class="video-info">
-                            <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
-                            <p class="userName"><span>UP</span>colorwolf4</p>
-                            <p class="play"><span>100万</span>播放</p>
-                        </div>
-                    </a>
-                </div>
             </div>
         </div>
         <!-- 轮播图热门推荐结束 -->
@@ -583,38 +563,6 @@
                 </header>
                 <div class="video-list-box">
                     <ul>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
                         <li>
                             <a href="">
                                 <img src="./img/video-img/2.png" alt="">
@@ -1050,38 +998,6 @@
                                 <p class="video-list-up"><span>UP</span>Super也好君</p>
                             </a>
                         </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -1453,38 +1369,6 @@
                                 <p class="video-list-up"><span>UP</span>Super也好君</p>
                             </a>
                         </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -1774,6 +1658,228 @@
                                     <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-videoclass">
+            <div class="video-list">
+                <header class="video-list-header">
+                    <div class="list-header-logo logo4">
+                        <a href="">专栏</a>
+                    </div>
+                    <div class="list-header-btn">
+                        <div class="btn-change"><i class="fa fa-refresh" aria-hidden="true"></i>换一换</div>
+                        <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    </div>
+                </header>
+                <div class="video-list-box articel-list">
+                    <ul>
+                        <li>
+                            <a href="" class="arti-img">
+                                <img src="./img/video-img/10.png" alt=""></a>
+                            <div class="list-title-name">
+                                <a href="" class="arti-name" title="纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画">纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画
+                                </a>
+                                <a href="" class="arti-up"><span>UP</span>动画学术叭</a>
+                                <p class="arti-play">
+                                    <i class="fa fa-eye fa-fw" aria-hidden="true"></i><span>333</span>
+                                    <i class="fa fa-comment-o fa-fw" style="margin-left: 10%;" aria-hidden="true"></i><span>666</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" class="arti-img">
+                                <img src="./img/video-img/10.png" alt=""></a>
+                            <div class="list-title-name">
+                                <a href="" class="arti-name" title="纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画">纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画
+                                </a>
+                                <a href="" class="arti-up"><span>UP</span>动画学术叭</a>
+                                <p class="arti-play">
+                                    <i class="fa fa-eye fa-fw" aria-hidden="true"></i><span>333</span>
+                                    <i class="fa fa-comment-o fa-fw" style="margin-left: 10%;" aria-hidden="true"></i><span>666</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" class="arti-img">
+                                <img src="./img/video-img/10.png" alt=""></a>
+                            <div class="list-title-name">
+                                <a href="" class="arti-name" title="纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画">纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画
+                                </a>
+                                <a href="" class="arti-up"><span>UP</span>动画学术叭</a>
+                                <p class="arti-play">
+                                    <i class="fa fa-eye fa-fw" aria-hidden="true"></i><span>333</span>
+                                    <i class="fa fa-comment-o fa-fw" style="margin-left: 10%;" aria-hidden="true"></i><span>666</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" class="arti-img">
+                                <img src="./img/video-img/10.png" alt=""></a>
+                            <div class="list-title-name">
+                                <a href="" class="arti-name" title="纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画">纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画
+                                </a>
+                                <a href="" class="arti-up"><span>UP</span>动画学术叭</a>
+                                <p class="arti-play">
+                                    <i class="fa fa-eye fa-fw" aria-hidden="true"></i><span>333</span>
+                                    <i class="fa fa-comment-o fa-fw" style="margin-left: 10%;" aria-hidden="true"></i><span>666</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" class="arti-img">
+                                <img src="./img/video-img/10.png" alt=""></a>
+                            <div class="list-title-name">
+                                <a href="" class="arti-name" title="纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画">纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画
+                                </a>
+                                <a href="" class="arti-up"><span>UP</span>动画学术叭</a>
+                                <p class="arti-play">
+                                    <i class="fa fa-eye fa-fw" aria-hidden="true"></i><span>333</span>
+                                    <i class="fa fa-comment-o fa-fw" style="margin-left: 10%;" aria-hidden="true"></i><span>666</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" class="arti-img">
+                                <img src="./img/video-img/10.png" alt=""></a>
+                            <div class="list-title-name">
+                                <a href="" class="arti-name" title="纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画">纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画
+                                </a>
+                                <a href="" class="arti-up"><span>UP</span>动画学术叭</a>
+                                <p class="arti-play">
+                                    <i class="fa fa-eye fa-fw" aria-hidden="true"></i><span>333</span>
+                                    <i class="fa fa-comment-o fa-fw" style="margin-left: 10%;" aria-hidden="true"></i><span>666</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" class="arti-img">
+                                <img src="./img/video-img/10.png" alt=""></a>
+                            <div class="list-title-name">
+                                <a href="" class="arti-name" title="纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画">纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画
+                                </a>
+                                <a href="" class="arti-up"><span>UP</span>动画学术叭</a>
+                                <p class="arti-play">
+                                    <i class="fa fa-eye fa-fw" aria-hidden="true"></i><span>333</span>
+                                    <i class="fa fa-comment-o fa-fw" style="margin-left: 10%;" aria-hidden="true"></i><span>666</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" class="arti-img">
+                                <img src="./img/video-img/10.png" alt=""></a>
+                            <div class="list-title-name">
+                                <a href="" class="arti-name" title="纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画">纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画
+                                </a>
+                                <a href="" class="arti-up"><span>UP</span>动画学术叭</a>
+                                <p class="arti-play">
+                                    <i class="fa fa-eye fa-fw" aria-hidden="true"></i><span>333</span>
+                                    <i class="fa fa-comment-o fa-fw" style="margin-left: 10%;" aria-hidden="true"></i><span>666</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="video-rank">
+                <header class="rank-header">
+                    <span>排行榜</span>
+                    <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </header>
+                <div class="rank-item">
+                    <span class="item-number rank-on">1</span>
+                    <div class="item-right">
+                        <div class="item-img">
+                            <a href="">
+                                <img src="./img/hot-img/4.png" alt=""></a>
+                        </div>
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                <span>综合得分937.1万</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number rank-on">2</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number rank-on">3</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>我不在乎输赢，因为袋鼠喜欢男桐，同时马老师的青花瓷外衣很好看，听说糖宝的鞋被偷走了，我很难过，所以我要加个菜，综上所述，马老师获得胜利</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">4</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">5</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">6</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">7</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">8</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rank-item">
+                    <span class="item-number">9</span>
+                    <div class="item-right">
+                        <div class="item-text">
+                            <a href="">
+                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                            </a>
                         </div>
                     </div>
                 </div>
