@@ -246,7 +246,7 @@
     cursor: pointer;
     transition: all .2s;
 }
-.content-img-hot-left .left-trigger span:hover{
+.content-img-hot-left .left-trigger span:hover,.anime-trigger span:hover{
     border: 2px solid #fff;
     background-color: #73c9e5;
 }
@@ -736,4 +736,65 @@
 }
 .anime-updata span.datanumber{
     min-width: 90px;
+}
+.anime-header{
+    text-indent:0 !important;
+}
+.anime-img-slide{
+    width: 90%;
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+}
+.anime-img-slide ul{
+    display: flex;
+    width: 500%;
+    height: 100%;
+    position: absolute;
+    transition: all .4s;
+}
+.anime-img-slide ul li{
+    width: 20%;
+    position: relative;
+}
+.anime-img-slide ul li a img{
+    width: 100%;
+    height: 100%;
+}
+.anime-img-slide ul li a p{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    background: rgb(0 0 0 / 20%);
+    box-shadow: 0 -5px 5px rgb(0 0 0 / 0.5) inset;
+    line-height: 30px;
+    font-size: 14px;
+    color: #fff;
+}
+.anime-img-slide ul li a p span{
+    display: inline-block;
+    max-width: 40%;
+    margin-left: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.anime-trigger{
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+    z-index: 10;
+}
+.anime-trigger span{
+    display: inline-block;
+    margin-left: 8px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background-color: #fff;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: all .2s;
 }
