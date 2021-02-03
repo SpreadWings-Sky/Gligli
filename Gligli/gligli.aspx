@@ -363,6 +363,30 @@
     </form>
     <!-- 主体内容区开始 -->
     <section id="content">
+        <!-- 竖状导航 -->
+        <div class="vertical-list">
+            <div class="vertical-list-box">
+                <div class="box-item">
+                    动画
+                </div>
+                <div class="box-item">
+                    番剧
+                </div>
+                <div class="box-item">
+                    鬼畜
+                </div>
+                <div class="box-item">
+                    音乐
+                </div>
+                <div class="box-item">
+                    专栏
+                </div>
+                <div class="back-top">
+                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                </div>
+            </div>
+            <script src="./js/back-top.js"></script>
+        </div>
         <!-- 主体内容导航栏开始 -->
         <div class="content-meun grid">
             <div class="meun-left grid">
@@ -550,7 +574,7 @@
         </div>
         <!-- 轮播图热门推荐结束 -->
         <!-- 分区内容展示部分开始 -->
-        <div class="content-videoclass">
+        <div class="content-videoclass dh">
             <div class="video-list">
                 <header class="video-list-header">
                     <div class="list-header-logo logo1">
@@ -922,7 +946,7 @@
             </div>
         </div>
         <!-- 番剧动态开始 -->
-        <div class="content-videoclass">
+        <div class="content-videoclass fj">
             <div class="video-list">
                 <header class="video-list-header">
                     <div class="list-header-logo logo5">
@@ -1187,7 +1211,7 @@
             </div>
         </div>
         <!-- 番剧动态结束 -->
-        <div class="content-videoclass">
+        <div class="content-videoclass gc">
             <div class="video-list">
                 <header class="video-list-header">
                     <div class="list-header-logo logo2">
@@ -1558,7 +1582,7 @@
                 </div>
             </div>
         </div>
-        <div class="content-videoclass">
+        <div class="content-videoclass yy">
             <div class="video-list">
                 <header class="video-list-header">
                     <div class="list-header-logo logo3">
@@ -1929,7 +1953,7 @@
                 </div>
             </div>
         </div>
-        <div class="content-videoclass">
+        <div class="content-videoclass zl">
             <div class="video-list">
                 <header class="video-list-header">
                     <div class="list-header-logo logo4">

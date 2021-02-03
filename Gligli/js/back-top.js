@@ -1,0 +1,58 @@
+var lsbx = $(".vertical-list-box");
+$(window).scroll(function(){
+    var scr = parseInt($(this).scrollTop());
+    console.log(scr);
+    if(scr<444){
+        lsbx.find(".box-item").each(function(){
+            $(this).removeClass("Onclick-list");
+        })
+    }
+    if(scr>444&&scr<887){
+        lsbx.find(".box-item").each(function(){
+            $(this).removeClass("Onclick-list");
+        })
+        lsbx.find(".box-item").eq(0).addClass("Onclick-list");
+    }
+    if(scr>887&&scr<1887){
+        lsbx.find(".box-item").each(function(){
+            $(this).removeClass("Onclick-list");
+        })
+        lsbx.find(".box-item").eq(1).addClass("Onclick-list");
+    }
+    if(scr>1880&&scr<2500){
+        lsbx.find(".box-item").each(function(){
+            $(this).removeClass("Onclick-list");
+        })
+        lsbx.find(".box-item").eq(2).addClass("Onclick-list");
+    }
+    if(scr>2444&&scr<2877){
+        lsbx.find(".box-item").each(function(){
+            $(this).removeClass("Onclick-list");
+        })
+        lsbx.find(".box-item").eq(3).addClass("Onclick-list");
+    }
+    if(scr>2877){
+        lsbx.find(".box-item").each(function(){
+            $(this).removeClass("Onclick-list");
+        })
+        lsbx.find(".box-item").eq(4).addClass("Onclick-list");
+    }
+})
+$(".back-top").click(function(){
+    $(window).scrollTop(0);
+})
+lsbx.find(".box-item").eq(0).click(function(){
+    $(window).scrollTop(532);
+})
+lsbx.find(".box-item").eq(1).click(function(){
+    $(window).scrollTop(976);
+})
+lsbx.find(".box-item").eq(2).click(function(){
+    $(window).scrollTop(1980);
+})
+lsbx.find(".box-item").eq(3).click(function(){
+    $(window).scrollTop(2480);
+})
+lsbx.find(".box-item").eq(4).click(function(){
+    $(window).scrollTop(2971);
+})
