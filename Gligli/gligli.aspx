@@ -1066,6 +1066,126 @@
                 </div>
             </div>
         </div>
+        <div class="content-videoclass">
+            <div class="video-list">
+                <header class="video-list-header">
+                    <div class="list-header-logo anime-header">
+                        <a href="">番剧动态</a>
+                    </div>
+                    <div class="list-header-btn">
+                        <div class="btn-change"><i class="fa fa-refresh" aria-hidden="true"></i>换一换</div>
+                        <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    </div>
+                </header>
+                <div class="video-list-box">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/8.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">【10月】JOJO的奇妙冒险 黄金之风 04</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/8.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">【10月】JOJO的奇妙冒险 黄金之风 04</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/8.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">【10月】JOJO的奇妙冒险 黄金之风 04</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/8.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">【10月】JOJO的奇妙冒险 黄金之风 04</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/8.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">【10月】JOJO的奇妙冒险 黄金之风 04</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/8.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">【10月】JOJO的奇妙冒险 黄金之风 04</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/8.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">【10月】JOJO的奇妙冒险 黄金之风 04</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/video-img/8.png" alt="">
+                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
+                                <p class="video-list-title">【10月】JOJO的奇妙冒险 黄金之风 04</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="video-rank">
+                <header class="rank-header">
+                    <span>特别推荐</span>
+                </header>
+                <div class="anime-img-slide">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="./img/anim-img/hot/1.jpg" alt="">
+                                <p><span title="学校第一美少女教你变现充">学校第一美少女教你变现充</span></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/anim-img/hot/2.jpg" alt="">
+                                <p><span title="萌王又回来啦！">萌王又回来啦！</span></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/anim-img/hot/3.jpg" alt="">
+                                <p><span title="身体内的细胞日常">身体内的细胞日常</span></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/anim-img/hot/4.jpg" alt="">
+                                <p><span title="剑与魔法的冒险史诗~">剑与魔法的冒险史诗~</span></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/anim-img/hot/5.jpg" alt="">
+                                <p><span title="食杀事件即将揭晓">食杀事件即将揭晓</span></p>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="anime-trigger">
+                        <span class="oncheck"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <script src="./js/anime-img-hot.js"></script>
+                </div>
+            </div>
+        </div>
         <!-- 番剧动态结束 -->
         <div class="content-videoclass">
             <div class="video-list">
