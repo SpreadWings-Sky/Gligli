@@ -39,7 +39,7 @@
         <!-- 扫描线 -->
         <div id="Scanning">
         </div>
-        <!-- 信息展示 -->
+        <!-- 打印信息展示 -->
         <div class="content">
             <p id="WT"></p>
             <p id="DM"></p>
@@ -54,7 +54,8 @@
                 <li><span>UserName:</span><asp:TextBox ID="UserName" class="UserText" runat="server"></asp:TextBox></li>
                 <li><span>PassWord:</span><asp:TextBox ID="password" class="UserText" runat="server" TextMode="Password"></asp:TextBox></li>
                 <li>
-                    <asp:Button ID="UserLogin" CssClass="UserBtn" runat="server" Text="Login" /></li>
+                   <asp:Button ID="UserLogin" CssClass="UserBtn" runat="server" Text="Login" />
+                </li>
             </ul>
         </div>
     </form>
