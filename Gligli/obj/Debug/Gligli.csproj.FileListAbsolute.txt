@@ -57,3 +57,7 @@ C:\Users\Admin\Downloads\Gligli\Gligli\obj\Debug\Gligli.csproj.CoreCompileInputs
 C:\Users\Admin\Downloads\Gligli\Gligli\obj\Debug\Gligli.csproj.CopyComplete
 C:\Users\Admin\Downloads\Gligli\Gligli\obj\Debug\Gligli.dll
 C:\Users\Admin\Downloads\Gligli\Gligli\obj\Debug\Gligli.pdb
+C:\Users\Admin\Downloads\Gligli\Gligli\bin\GliDAL.dll
+C:\Users\Admin\Downloads\Gligli\Gligli\bin\Models.dll
+C:\Users\Admin\Downloads\Gligli\Gligli\bin\GliDAL.pdb
+C:\Users\Admin\Downloads\Gligli\Gligli\bin\Models.pdb

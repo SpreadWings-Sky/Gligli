@@ -1,0 +1,6 @@
+C:\Users\Admin\Downloads\Gligli\Models\bin\Debug\Models.dll
+C:\Users\Admin\Downloads\Gligli\Models\bin\Debug\Models.pdb
+C:\Users\Admin\Downloads\Gligli\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\Gligli\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Gligli\Models\obj\Debug\Models.dll
+C:\Users\Admin\Downloads\Gligli\Models\obj\Debug\Models.pdb

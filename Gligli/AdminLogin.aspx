@@ -27,12 +27,12 @@
             <div class="login_box">
                 <asp:TextBox ID="password" runat="server" AutoCompleteType="Disabled" required="required" TextMode="Password"></asp:TextBox><label>密码</label>
             </div>
-            <a href="javascript:void(0)">登录
+            <asp:LinkButton ID="UserLoginbtn" runat="server" OnClick="UserLoginbtn_Click">登录
 				<span></span>
                 <span></span>
                 <span></span>
                 <span></span>
-            </a>
+            </asp:LinkButton>
         </div>
         <video autoplay muted loop class="vidbacking">
             <source src="./img/Admin-img/bg.mp4" type="video/mp4" />

@@ -110,6 +110,16 @@
     <Folder Include="css\" />
     <Folder Include="Font\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GliDAL\GliDAL.csproj">
+      <Project>{90e7c698-18a8-4445-8863-8d76b2dd9c19}</Project>
+      <Name>GliDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{5c57ad78-d40d-4f1f-a149-7fa4692de3d6}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

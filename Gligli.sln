@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gligli", "Gligli\Gligli.csproj", "{9A5D436E-3896-467B-872A-BB66E007AD0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{5C57AD78-D40D-4F1F-A149-7FA4692DE3D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GliDAL", "GliDAL\GliDAL.csproj", "{90E7C698-18A8-4445-8863-8D76B2DD9C19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{9A5D436E-3896-467B-872A-BB66E007AD0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A5D436E-3896-467B-872A-BB66E007AD0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A5D436E-3896-467B-872A-BB66E007AD0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C57AD78-D40D-4F1F-A149-7FA4692DE3D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C57AD78-D40D-4F1F-A149-7FA4692DE3D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C57AD78-D40D-4F1F-A149-7FA4692DE3D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C57AD78-D40D-4F1F-A149-7FA4692DE3D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90E7C698-18A8-4445-8863-8D76B2DD9C19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90E7C698-18A8-4445-8863-8D76B2DD9C19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90E7C698-18A8-4445-8863-8D76B2DD9C19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90E7C698-18A8-4445-8863-8D76B2DD9C19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
