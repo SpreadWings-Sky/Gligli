@@ -21,15 +21,21 @@ namespace Gligli
             string Account = this.UserName.Text;
             string pwd = this.password.Text;
             //判断是否为空
-            if (Account.Equals("") || pwd.Equals("")) return;
+            if (Account.Equals("") || pwd.Equals(""))
+            {
+                ClientScript.RegisterStartupScript(ClientScript.GetType(), "myscript", "<script>iziToast.warning({ title: '提示', message: '请输入账号和密码！', });</script>");
+                return;
+            }
             //数据进行验证
             if (UserInfoServ.UserLogin(Account, pwd))
             {
-                
+                Session["Account"] = Account;
+                Session["pwd"] = pwd;
+                Response.Redirect("gligli.aspx");
             }
             else
             {
-                Response.Write("<script>alert('账号或密码错误');</script>");
+                ClientScript.RegisterStartupScript(ClientScript.GetType(), "myscript", "<script>iziToast.error({title: '失败',message: '账号或密码错误！',});</script>");
             }
         }
     }

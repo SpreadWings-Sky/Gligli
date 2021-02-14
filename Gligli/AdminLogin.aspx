@@ -7,6 +7,8 @@
     <title>GliGliManagement</title>
     <link rel="stylesheet" href="./css/AdminLog.css" />
     <link rel="stylesheet" href="./css/jquery.vidbacking.css" />
+    <link rel="stylesheet" href="./css/iziToast.min.css"/>
+    <script src="./js/iziToast.min.js"></script>
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/jquery.vidbacking.js"></script>
     <script type="text/javascript">
