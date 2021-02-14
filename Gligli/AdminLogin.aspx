@@ -6,35 +6,38 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>GliGliManagement</title>
-    <link rel="stylesheet" href="./css/AdminLogin.css" />
-    <script src="./js/jquery-3.3.1.min.js"></script>
-    <script src="./js/admin-logo.js"></script>
-    <script src="https://cdn.bootcss.com/typed.js/2.0.5/typed.js"></script>
+    <link rel="stylesheet" href="css/AdminLogin.css" />
+    <link rel="stylesheet" href="./css/jquery.vidbacking.css"/>
+    <script src="./js/jquery-2.1.1.min.js"></script>
+    <script src="./js/jquery.vidbacking.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('body').vidbacking();
+        });
+    </script>
 </head>
 <body>
     <form runat="server" style="height: 100%; width: 100%">
-        <!-- 扫描线 -->
-        <div id="Scanning">
-        </div>
-        <!-- 打印信息展示 -->
-        <div class="content">
-            <p id="WT"></p>
-            <p id="DM"></p>
-            <p id="SI"></p>
-        </div>
-        <!-- 登录框 -->
         <div class="login">
-            <ul>
-                <li>GliGliManagement</li>
-                <li>&lt;SYSTEM BOOTING &gt;</li>
-                <li>GCI VER 1.02 SYS START</li>
-                <li><asp:TextBox ID="UserName" class="UserText" runat="server"></asp:TextBox></li>
-                <li><asp:TextBox ID="password" class="UserText" runat="server" TextMode="Password"></asp:TextBox></li>
-                <li>
-                   <asp:Button ID="UserLogin" CssClass="UserBtn" runat="server" Text="Login" />
-                </li>
-            </ul>
+            <h2>GLI管理</h2>
+            <div class="login_box">
+                <!-- required就是不能为空 必须在css效果中有很大的作用 -->
+                <!-- 可以简写为required -->
+                <input type="text" required /><label>用户名</label>
+            </div>
+            <div class="login_box">
+                <input type="password" required="required" /><label>密码</label>
+            </div>
+            <a href="javascript:void(0)">登录
+				<span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
         </div>
+        <video autoplay muted loop class="vidbacking">
+            <source src="./img/Admin-img/bg.mp4" type="video/mp4" />
+        </video>
     </form>
 </body>
 </html>
