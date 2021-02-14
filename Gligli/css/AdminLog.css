@@ -15,6 +15,15 @@ body {
 	/* 背景渐变色 */
 	background: linear-gradient(#141e30, #243b55);
 }
+form {
+	/* 弹性布局 让页面元素垂直+水平居中 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* 让页面始终占浏览器可视区域总高度 */
+	height: 100vh;
+	width:100%;
+}
 .login {
 	/* 弹性布局 让子元素称为弹性项目 */
 	display: flex;
