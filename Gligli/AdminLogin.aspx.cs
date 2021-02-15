@@ -1,4 +1,5 @@
 ﻿using GliDAL;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,10 @@ namespace Gligli
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
 
+            }
         }
 
         protected void UserLoginbtn_Click(object sender, EventArgs e)
@@ -27,15 +31,27 @@ namespace Gligli
                 return;
             }
             //数据进行验证
-            if (UserInfoServ.UserLogin(Account, pwd))
+            UserInfo user = UserInfoServ.UserLogin(Account);
+            if (user.Account==null)
             {
-                Session["Account"] = Account;
-                Session["pwd"] = pwd;
-                Response.Redirect("gligli.aspx");
+                ClientScript.RegisterStartupScript(ClientScript.GetType(), "myscript", "<script>iziToast.error({title: '提示',message: '账号不存在！',});</script>");
+                return;
+            }
+            if (user.Account == Account&&user.pwd==pwd)
+            {
+                if (user.state.Equals("gl"))
+                {
+                    Session["user"] = user;
+                    Response.Redirect("gligli.aspx");
+                }
+                else
+                {
+                    ClientScript.RegisterStartupScript(ClientScript.GetType(), "myscript", "<script>iziToast.error({title: '失败',message: '账号没有管理员权限！',});</script>");
+                }
             }
             else
             {
-                ClientScript.RegisterStartupScript(ClientScript.GetType(), "myscript", "<script>iziToast.error({title: '失败',message: '账号或密码错误！',});</script>");
+                ClientScript.RegisterStartupScript(ClientScript.GetType(), "myscript", "<script>iziToast.error({title: '失败',message: '密码错误！',});</script>");
             }
         }
     }

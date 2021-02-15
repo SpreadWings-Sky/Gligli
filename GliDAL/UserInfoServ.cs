@@ -10,17 +10,22 @@ namespace GliDAL
 {
     public class UserInfoServ
     {
-        public static bool UserLogin(string Account, string pwd)
+        //用户登录信息查询
+        public static UserInfo UserLogin(string Account)
         {
-            string sql = string.Format("select * from UserInfo where Account='{0}' and pwd ='{1}' and state ='gl'", Account, pwd);
+            string sql = string.Format("select * from UserInfo where Account='{0}'", Account);
             SqlDataReader da =  DBHelper.GetData(sql);
-            bool yh = false;
+            UserInfo user = new UserInfo();
             if (da.Read())
             {
-                yh = true;
+                user.userID = da.GetInt32(0);
+                user.userName = da.GetString(1);
+                user.Account = da.GetString(2);
+                user.pwd = da.GetString(3);
+                user.state = da.GetString(13);
             }
             DBHelper.Close();
-            return yh;
+            return user;
         }
     }
 }
