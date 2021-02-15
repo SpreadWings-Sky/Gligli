@@ -15,15 +15,16 @@ namespace Gligli
         {
             if (!IsPostBack)
             {
-
+                this.UserName.Text = null;
+                this.password.Text = null;
             }
         }
 
         protected void UserLoginbtn_Click(object sender, EventArgs e)
         {
             //获取用户信息
-            string Account = this.UserName.Text;
-            string pwd = this.password.Text;
+            string Account = this.UserName.Text.Trim();
+            string pwd = this.password.Text.Trim();
             //判断是否为空
             if (Account.Equals("") || pwd.Equals(""))
             {
