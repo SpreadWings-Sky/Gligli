@@ -7,12 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Gligli
 {
-    public partial class Admin_index : System.Web.UI.MasterPage
+    public partial class admin_home : System.Web.UI.Page
     {
-        public string user = "张三";
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

@@ -67,12 +67,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin-home.aspx" />
     <Content Include="AdminLogin.aspx" />
     <Content Include="gligli.aspx" />
     <Content Include="js\jquery-3.3.1.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin-home.aspx.cs">
+      <DependentUpon>admin-home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-home.aspx.designer.cs">
+      <DependentUpon>admin-home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin-index.Master.cs">
+      <DependentUpon>Admin-index.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin-index.Master.designer.cs">
+      <DependentUpon>Admin-index.Master</DependentUpon>
+    </Compile>
     <Compile Include="AdminLogin.aspx.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -98,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="GliMS.Master" />
+    <Content Include="Admin-index.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

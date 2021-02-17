@@ -103,3 +103,6 @@ body{
     transform: rotate(225deg) !important;
     top: 18px !important; 
 }
+#content .content-box{
+    width: 100%;
+}
