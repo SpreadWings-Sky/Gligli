@@ -14,5 +14,9 @@ namespace Gligli
         {
             
         }
+        protected void Home_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("gligli.aspx");
+        }
     }
 }
