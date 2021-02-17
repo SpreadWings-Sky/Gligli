@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin-index.master.cs" Inherits="Gligli.Admin_index" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>GLI管理</title>
+    <link rel="stylesheet" href="./css/adminsystem.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/admin-list-num.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!-- 头部管理信息显示 -->
+    <header id="header" class="grid">
+        <div class="header-left">
+            <h1>GliGli-ADMIN-SYSTEM</h1>
+        </div>
+        <div class="header-right grid">
+            <div class="admin-user">
+                欢迎回来:
+            </div>
+            <div class="admin-img">
+                <img src="./img/akari.jpg" alt="">
+            </div>
+            <div class="admin-exit">
+                <a href=""><i class="fa fa-sign-out" aria-hidden="true"></i>退出登录</a>
+            </div>
+        </div>
+    </header>
+    <section id="content">
+        <!-- 左侧选择菜单 -->
+        <div class="list-num">
+            <ul>
+                <li>
+                    <h3><i class="fa fa-home" aria-hidden="true"></i>信息概览</h3>
+                </li>
+                <li>
+                    <h3><i class="fa fa-server" aria-hidden="true"></i>内容管理<span class="z"></span></h3>
+                    <ul class="item">
+                        <li>稿件管理</li>
+                        <li>申述管理</li>
+                        <li>字幕管理</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3><i class="fa fa-user" aria-hidden="true"></i>用户管理</h3>
+                </li>
+                <li>
+                    <h3><i class="fa fa-pencil-square-o" aria-hidden="true"></i>专栏管理<span class="z"></span></h3>
+                    <ul class="item">
+                        <li>评论管理</li>
+                        <li>弹幕管理</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3><i class="fa fa-picture-o" aria-hidden="true"></i>轮播管理<span class="z"></span></h3>
+                    <ul class="item">
+                        <li>创作激励</li>
+                        <li>充电计划</li>
+                        <li>悬赏计划</li>
+                        <li>花火平台</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <script src="./js/admin-list-num.js"></script>
+        <!-- 右侧内容显示 -->
+        <div class="content-box">
+            <form id="form1" runat="server">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

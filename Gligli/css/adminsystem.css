@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.grid{
+    display: flex;
+    flex-wrap: nowrap;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+#header{
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    justify-content: space-between;
+    background: linear-gradient(to right, #73C767,#55b66f);
+}
+#header .header-left h1{
+    font-size: 0.9rem;
+    line-height: 50px;
+    margin-left: 20px;
+}
+#header .header-right{
+    line-height: 50px;
+    font-size: 0.9rem;
+    align-items: center;
+} 
+#header .header-right .admin-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-right: 40px;
+}
+#header .header-right .admin-img img{
+    width: 100%;
+}
+#header .header-right .admin-exit{
+    margin-right: 10px;
+    font-size: 0.7rem;
+}
+#header .header-right .admin-exit a{
+    color: #fff;
+}
+/* 主体内容区 */
+#content{
+    width: 100%;
+    height: 93%;
+}
+#content .list-num{
+    width: 160px;
+    height: 100%;
+    box-shadow: 10px 10px 10px #F5F5F5;
+}
+#content .list-num ul li {
+    width: 100%;
+    line-height: 46px;
+    color: rgb(119, 117, 117);
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+#content .list-num h3 {
+    position: relative;
+    font-weight: normal;
+    color: #000;
+    font-size: 0.8rem;
+}
+
+#content .list-num ul li h3:hover {
+    background-color: #F3FFF1;
+}
+
+#content .list-num ul li ul li:hover {
+    background-color: #F3FFF1;
+}
+/* 切换样式 */
+.color {
+    color: #69BF66 !important;
+}
+/* 指示器 */
+#content .list-num  .z{
+     position: absolute;
+     top: 23px;
+     right: 20px;
+     display: inline-block;
+     width: 7px;
+     height: 7px;
+     border-left: 2px solid #a7a7a7;
+     border-top: 2px solid #a7a7a7;
+     transform: rotate(45deg);
+}
+.transf{
+    transform: rotate(225deg) !important;
+    top: 18px !important; 
+}
