@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminNumGet.cs" />
     <Compile Include="DBHelper.cs" />
     <Compile Include="UserInfoServ.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

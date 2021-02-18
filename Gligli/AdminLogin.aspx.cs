@@ -19,7 +19,6 @@ namespace Gligli
                 this.password.Text = null;
             }
         }
-
         protected void UserLoginbtn_Click(object sender, EventArgs e)
         {
             //获取用户信息
@@ -42,8 +41,10 @@ namespace Gligli
             {
                 if (user.state.Equals("gl"))
                 {
-                    Session["user"] = user;
-                    Response.Redirect("gligli.aspx");
+                    Session["userName"] = user.userName;
+                    Session["userAccount"] = user.Account;
+                    Session["userImg"] = user.imgurl;
+                    Response.Redirect("admin-home.aspx");
                 }
                 else
                 {

@@ -69,6 +69,16 @@
   <ItemGroup>
     <Content Include="admin-home.aspx" />
     <Content Include="AdminLogin.aspx" />
+    <Content Include="css\AdminLog.css" />
+    <Content Include="css\adminsystem.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\index-content.css" />
+    <Content Include="css\index-footer.css" />
+    <Content Include="css\index-header-top.css" />
+    <Content Include="css\index-header.css" />
+    <Content Include="css\iziToast.min.css" />
+    <Content Include="css\jquery.vidbacking.css" />
     <Content Include="gligli.aspx" />
     <Content Include="js\jquery-3.3.1.min.js" />
     <Content Include="Web.config" />
@@ -123,7 +133,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="css\" />
     <Folder Include="Font\" />
   </ItemGroup>
   <ItemGroup>

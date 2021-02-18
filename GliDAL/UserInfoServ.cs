@@ -22,6 +22,7 @@ namespace GliDAL
                 user.userName = da.GetString(1);
                 user.Account = da.GetString(2);
                 user.pwd = da.GetString(3);
+                user.imgurl = da.GetString(9);
                 user.state = da.GetString(13);
             }
             DBHelper.Close();
