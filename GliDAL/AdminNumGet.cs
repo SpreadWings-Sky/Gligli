@@ -71,5 +71,29 @@ namespace GliDAL
             da.Close();
             return nums;
         }
+        //获取视频列表排行
+        public static VideoInfo[] GetVideoList()
+        {
+            VideoInfo[] vd = new VideoInfo[8];
+            string sql = "select top 8 * from VideoInfo order by videoPlay";
+            SqlDataReader da = DBHelper.GetData(sql);
+            int i = 0;
+            while (da.Read())
+            {
+                vd[i] = new VideoInfo();
+                vd[i].VideoID = da.GetInt32(0);
+                vd[i].UserID = da.GetInt32(1);
+                vd[i].Title = da.GetString(2);
+                vd[i].VideoPlay = da.GetInt32(3);
+                vd[i].Duction = da.GetString(4);
+                vd[i].type = da.GetInt32(5);
+                vd[i].Url = da.IsDBNull(6)?"":da.GetString(6);
+                vd[i].Uptime = da.GetDateTime(7);
+                vd[i].State = da.GetString(8);
+                i++;
+            }
+            da.Close();
+            return vd;
+        }
     }
 }

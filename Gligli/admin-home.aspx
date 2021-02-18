@@ -95,66 +95,66 @@
                                         <th>编号</th>
                                         <th>视频名称</th>
                                         <th>播放数</th>
-                                        <th>点赞数</th>
+                                        <th>更新时间</th>
                                         <th>标签</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>1</td>
-                                        <td>设计新主题</td>
-                                        <td>6</td>
-                                        <td>12</td>
-                                        <td><span class="label label-success">待定</span></td>
+                                        <td><%=vd[0].VideoID %></td>
+                                        <td><%=vd[0].Title %></td>
+                                        <td><%=vd[0].VideoPlay %></td>
+                                        <td><%=vd[0].Uptime %></td>
+                                        <td><span class="label label-success"><%=vd[0].State %></span></td>
                                     </tr>
                                     <tr>
-                                        <td>2</td>
-                                        <td>网站重新设计</td>
-                                        <td>01/03/2019</td>
-                                        <td>12/04/2019</td>
-                                        <td><span class="label label-success">进行中</span></td>
+                                        <td><%=vd[1].VideoID %></td>
+                                        <td><%=vd[1].Title %></td>
+                                        <td><%=vd[1].VideoPlay %></td>
+                                        <td><%=vd[1].Uptime %></td>
+                                        <td><span class="label label-success"><%=vd[1].State %></span></td>
                                     </tr>
                                     <tr>
-                                        <td>3</td>
-                                        <td>模型设计</td>
-                                        <td>10/10/2019</td>
-                                        <td>12/11/2019</td>
-                                        <td><span class="label label-success">待定</span></td>
+                                        <td><%=vd[2].VideoID %></td>
+                                        <td><%=vd[2].Title %></td>
+                                        <td><%=vd[2].VideoPlay %></td>
+                                        <td><%=vd[2].Uptime %></td>
+                                        <td><span class="label label-success"><%=vd[2].State %></span></td>
                                     </tr>
                                     <tr>
-                                        <td>4</td>
-                                        <td>后台管理系统模板设计</td>
-                                        <td>25/01/2019</td>
-                                        <td>09/05/2019</td>
-                                        <td><span class="label label-success">进行中</span></td>
+                                        <td><%=vd[3].VideoID %></td>
+                                        <td><%=vd[3].Title %></td>
+                                        <td><%=vd[3].VideoPlay %></td>
+                                        <td><%=vd[3].Uptime %></td>
+                                        <td><span class="label label-success"><%=vd[3].State %></span></td>
                                     </tr>
                                     <tr>
-                                        <td>5</td>
-                                        <td>前端设计</td>
-                                        <td>10/10/2019</td>
-                                        <td>12/12/2019</td>
-                                        <td><span class="label label-success">未开始</span></td>
+                                        <td><%=vd[4].VideoID %></td>
+                                        <td><%=vd[4].Title %></td>
+                                        <td><%=vd[4].VideoPlay %></td>
+                                        <td><%=vd[4].Uptime %></td>
+                                        <td><span class="label label-success"><%=vd[4].State %></span></td>
                                     </tr>
                                     <tr>
-                                        <td>6</td>
-                                        <td>桌面软件测试</td>
-                                        <td>10/01/2019</td>
-                                        <td>29/03/2019</td>
-                                        <td><span class="label label-success">进行中</span></td>
+                                        <td><%=vd[5].VideoID %></td>
+                                        <td><%=vd[5].Title %></td>
+                                        <td><%=vd[5].VideoPlay %></td>
+                                        <td><%=vd[5].Uptime %></td>
+                                        <td><span class="label label-success"><%=vd[5].State %></span></td>
                                     </tr>
                                     <tr>
-                                        <td>7</td>
-                                        <td>APP改版开发</td>
-                                        <td>25/02/2019</td>
-                                        <td>12/05/2019</td>
-                                        <td><span class="label label-success">暂停</span></td>
+                                        <td><%=vd[6].VideoID %></td>
+                                        <td><%=vd[6].Title %></td>
+                                        <td><%=vd[6].VideoPlay %></td>
+                                        <td><%=vd[6].Uptime %></td>
+                                        <td><span class="label label-success"><%=vd[6].State %></span></td>
                                     </tr>
                                     <tr>
-                                        <td>8</td>
-                                        <td>Logo设计</td>
-                                        <td>10/02/2019</td>
-                                        <td>01/03/2019</td>
-                                        <td><span class="label label-success">完成</span></td>
+                                        <td><%=vd[7].VideoID %></td>
+                                        <td><%=vd[7].Title %></td>
+                                        <td><%=vd[7].VideoPlay %></td>
+                                        <td><%=vd[7].Uptime %></td>
+                                        <td><span class="label label-success"><%=vd[7].State %></span></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -185,7 +185,7 @@
                 ]
             };
             var $dashChartLinesData = {
-                labels: ['2017','2018', '2019', '2020', '2021'],
+                labels: ['2017', '2018', '2019', '2020', '2021'],
                 datasets: [
                     {
                         label: '用户总数',

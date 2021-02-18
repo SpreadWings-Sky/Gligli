@@ -14,11 +14,14 @@ namespace Gligli
         public static Admin_home_num nums = new Admin_home_num();
         public static string upnums = null;
         public static string usernums = null;
+        public static VideoInfo[] vd = new VideoInfo[8];
         protected void Page_Load(object sender, EventArgs e)
         {
+            //绑定数据
             GetAdminNums();
             Page.DataBind();
         }
+        //加载数据
         public static void GetAdminNums()
         {
             nums = AdminNumGet.Getnum();
@@ -38,6 +41,7 @@ namespace Gligli
                     usernums += ",";
                 }
             }
+            vd = AdminNumGet.GetVideoList();
         }
     }
 }
