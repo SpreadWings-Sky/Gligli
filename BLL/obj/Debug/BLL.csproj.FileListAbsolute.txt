@@ -1,0 +1,11 @@
+C:\Users\Admin\Downloads\Gligli\BLL\bin\Debug\BLL.dll
+C:\Users\Admin\Downloads\Gligli\BLL\bin\Debug\BLL.pdb
+C:\Users\Admin\Downloads\Gligli\BLL\bin\Debug\GliDAL.dll
+C:\Users\Admin\Downloads\Gligli\BLL\bin\Debug\Models.dll
+C:\Users\Admin\Downloads\Gligli\BLL\bin\Debug\GliDAL.pdb
+C:\Users\Admin\Downloads\Gligli\BLL\bin\Debug\Models.pdb
+C:\Users\Admin\Downloads\Gligli\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\Gligli\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Gligli\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Admin\Downloads\Gligli\BLL\obj\Debug\BLL.dll
+C:\Users\Admin\Downloads\Gligli\BLL\obj\Debug\BLL.pdb

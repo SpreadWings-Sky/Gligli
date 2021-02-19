@@ -11,13 +11,21 @@
     <meta name="keywords" content="Gli后台管理系统">
     <meta name="description" content="管理系统V1.0">
     <meta name="author" content="yinqi">
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/materialdesignicons.min.css" rel="stylesheet">
     <link href="./css/style.min.css" rel="stylesheet">
     <script type="text/javascript" src="./js/Chart.js"></script>
-    <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/perfect-scrollbar.min.js"></script>
+    <link href="./css/grivews.css" rel="stylesheet">
+    <!--消息提示-->
+    <script src="js/bootstrap-notify.min.js"></script>
+    <script type="text/javascript" src="js/lightyear.js"></script>
+    <link href="css/animate.css" rel="stylesheet">
+    <!--消息框-->
+    <script src="js/jconfirm/jquery-confirm.min.js"></script>
+    <link rel="stylesheet" href="js/jconfirm/jquery-confirm.min.css">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -29,7 +37,7 @@
                 <aside class="lyear-layout-sidebar">
                     <!-- logo -->
                     <div id="logo" class="sidebar-header">
-                        <a href="index.html">
+                        <a href="Admin-home.aspx">
                             <img src="./img/logo (3).png" title="GliGli" alt="gligli" /></a>
                     </div>
                     <div class="lyear-layout-sidebar-scroll">
@@ -90,8 +98,7 @@
                                     <span class="lyear-toggler-bar"></span>
                                 </div>
                                 <!-- 页面标题 -->
-                                <span class="navbar-page-title">
-                                    gligli管理后台
+                                <span class="navbar-page-title">gligli管理后台
                                 </span>
                             </div>
                             <!--头像 -->

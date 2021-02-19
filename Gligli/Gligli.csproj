@@ -144,6 +144,10 @@
     <Folder Include="Font\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{42062280-b550-4356-94f3-a6d2c2553cd6}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GliDAL\GliDAL.csproj">
       <Project>{90e7c698-18a8-4445-8863-8d76b2dd9c19}</Project>
       <Name>GliDAL</Name>

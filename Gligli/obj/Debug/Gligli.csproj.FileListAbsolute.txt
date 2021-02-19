@@ -61,3 +61,5 @@ C:\Users\Admin\Downloads\Gligli\Gligli\bin\GliDAL.dll
 C:\Users\Admin\Downloads\Gligli\Gligli\bin\Models.dll
 C:\Users\Admin\Downloads\Gligli\Gligli\bin\GliDAL.pdb
 C:\Users\Admin\Downloads\Gligli\Gligli\bin\Models.pdb
+C:\Users\Admin\Downloads\Gligli\Gligli\bin\BLL.dll
+C:\Users\Admin\Downloads\Gligli\Gligli\bin\BLL.pdb

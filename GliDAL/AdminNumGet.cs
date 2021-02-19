@@ -62,7 +62,7 @@ namespace GliDAL
             sql = "select datepart(YYYY,reghitTime) 日期,COUNT(*) 数量 from UserInfo  where year(reghitTime)>year(GETDATE()) -5 GROUP BY YEAR(reghitTime)";//查询近五年注册的用户数
             da = DBHelper.GetData(sql);
             int j = 0;
-            while(da.Read())
+            while (da.Read())
             {
                 nums.regusernum[j] = da.GetInt32(1);
                 j++;
@@ -87,9 +87,11 @@ namespace GliDAL
                 vd[i].VideoPlay = da.GetInt32(3);
                 vd[i].Duction = da.GetString(4);
                 vd[i].type = da.GetInt32(5);
-                vd[i].Url = da.IsDBNull(6)?"":da.GetString(6);
-                vd[i].Uptime = da.GetDateTime(7);
-                vd[i].State = da.GetString(8);
+                vd[i].barrageUrl = da.IsDBNull(6) ? "" : da.GetString(6);
+                vd[i].bacimg = da.IsDBNull(7) ? "" : da.GetString(7);
+                vd[i].VideoUrl = da.IsDBNull(8) ? "" : da.GetString(8);
+                vd[i].Uptime = da.GetDateTime(9);
+                vd[i].State = da.GetString(10);
                 i++;
             }
             da.Close();
