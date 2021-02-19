@@ -6,10 +6,10 @@ use Gligli
 --用户表
 create table UserInfo(
 	userID int identity(1000000,1) primary key not null, --用户名表编号
-	userName nvarchar(20) not null unique(userName) default('gligli'+getdate()),--用户名
+	userName nvarchar(50) not null unique(userName) default(getdate()),--用户名
 	Account nvarchar(20) not null,--账号
 	pwd nvarchar(50) not null,--密码
-	sex char,--性别
+	sex char(2),--性别
 	Email nvarchar(20),--邮箱
 	Phone nvarchar(11),--手机号
 	[address] nvarchar(50),--地址
@@ -18,7 +18,7 @@ create table UserInfo(
 	backimgUrl nvarchar(100) default('./img/wdbg.png'),--背景图
 	brief nvarchar(50) default('这个人什么简介也没有'),--简介
 	reghitTime datetime default(getdate()) not null,--注册时间
-	[state] varchar(2) default('正常') not null,--账号状态
+	[state] nvarchar(2) default('zc') not null,--账号状态
 )
 --关注表
 create table WarchInfo(
@@ -43,8 +43,10 @@ create table VideoInfo(
 	duction nvarchar(500),--视频简介
 	type int not null,--视频分区编号
 	barrageUrl nvarchar(100),--弹幕文件
+	bacImg nvarchar(150),--视频封面
+	videoUrl nvarchar(150),--视频地址
 	uptime datetime default(getdate()),--上传时间
-	[state] varchar(5) default('审核中')--视频状态
+	[state] varchar(5) default('审核')--视频状态
 )
 --视频评论表
 create table VideoCommentInfo(
