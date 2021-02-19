@@ -33,6 +33,60 @@ namespace Gligli
         protected global::System.Web.UI.WebControls.LinkButton home_btn;
 
         /// <summary>
+        /// VideoList_btn 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton VideoList_btn;
+
+        /// <summary>
+        /// VideoCommit 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton VideoCommit;
+
+        /// <summary>
+        /// Spk_btn 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Spk_btn;
+
+        /// <summary>
+        /// SpkCommit 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton SpkCommit;
+
+        /// <summary>
+        /// Imgtab_btn 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Imgtab_btn;
+
+        /// <summary>
+        /// UserList_btn 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton UserList_btn;
+
+        /// <summary>
         /// userimg 控件。
         /// </summary>
         /// <remarks>

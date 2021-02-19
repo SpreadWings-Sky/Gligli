@@ -39,5 +39,35 @@ namespace Gligli
             Session.Abandon();
             Response.Redirect("AdminLogin.aspx");
         }
+        //视频管理
+        protected void VideoList_btn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminVideoList.aspx");
+        }
+
+        protected void VideoCommit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Spk_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void SpkCommit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Imgtab_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void UserList_btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

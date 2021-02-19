@@ -18,7 +18,6 @@
     <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/perfect-scrollbar.min.js"></script>
-    <script type="text/javascript" src="./js/main.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -31,7 +30,7 @@
                     <!-- logo -->
                     <div id="logo" class="sidebar-header">
                         <a href="index.html">
-                            <img src="./img/logo (3).png" title="LightYear" alt="LightYear" /></a>
+                            <img src="./img/logo (3).png" title="GliGli" alt="gligli" /></a>
                     </div>
                     <div class="lyear-layout-sidebar-scroll">
 
@@ -41,77 +40,32 @@
                                     <asp:LinkButton ID="home_btn" runat="server" OnClick="Home_Click"><i class="mdi mdi-home"></i>后台首页</asp:LinkButton>
                                 </li>
                                 <li class="nav-item nav-item-has-subnav">
-                                    <a href="javascript:void(0)"><i class="mdi mdi-palette"></i>UI 元素</a>
+                                    <a href="javascript:void(0)"><i class="mdi mdi-movie"></i>视频管理</a>
                                     <ul class="nav nav-subnav">
-                                        <li><a href="lyear_ui_buttons.html">按钮</a> </li>
-                                        <li><a href="lyear_ui_cards.html">卡片</a> </li>
-                                        <li><a href="lyear_ui_grid.html">格栅</a> </li>
-                                        <li><a href="lyear_ui_icons.html">图标</a> </li>
-                                        <li><a href="lyear_ui_tables.html">表格</a> </li>
-                                        <li><a href="lyear_ui_modals.html">模态框</a> </li>
-                                        <li><a href="lyear_ui_tooltips_popover.html">提示 / 弹出框</a> </li>
-                                        <li><a href="lyear_ui_alerts.html">警告框</a> </li>
-                                        <li><a href="lyear_ui_pagination.html">分页</a> </li>
-                                        <li><a href="lyear_ui_progress.html">进度条</a> </li>
-                                        <li><a href="lyear_ui_tabs.html">标签页</a> </li>
-                                        <li><a href="lyear_ui_typography.html">排版</a> </li>
-                                        <li><a href="lyear_ui_step.html">步骤</a> </li>
-                                        <li><a href="lyear_ui_other.html">其他</a> </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item nav-item-has-subnav">
-                                    <a href="javascript:void(0)"><i class="mdi mdi-format-align-justify"></i>表单</a>
-                                    <ul class="nav nav-subnav">
-                                        <li><a href="lyear_forms_elements.html">基本元素</a> </li>
-                                        <li><a href="lyear_forms_radio.html">单选框</a> </li>
-                                        <li><a href="lyear_forms_checkbox.html">复选框</a> </li>
-                                        <li><a href="lyear_forms_switch.html">开关</a> </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item nav-item-has-subnav">
-                                    <a href="javascript:void(0)"><i class="mdi mdi-file-outline"></i>示例页面</a>
-                                    <ul class="nav nav-subnav">
-                                        <li><a href="lyear_pages_doc.html">文档列表</a> </li>
-                                        <li><a href="lyear_pages_gallery.html">图库列表</a> </li>
-                                        <li><a href="lyear_pages_config.html">网站配置</a> </li>
-                                        <li><a href="lyear_pages_rabc.html">设置权限</a> </li>
-                                        <li><a href="lyear_pages_add_doc.html">新增文档</a> </li>
-                                        <li><a href="lyear_pages_guide.html">表单向导</a> </li>
-                                        <li><a href="lyear_pages_login.html">登录页面</a> </li>
-                                        <li><a href="lyear_pages_error.html">错误页面</a> </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item nav-item-has-subnav">
-                                    <a href="javascript:void(0)"><i class="mdi mdi-language-javascript"></i>JS 插件</a>
-                                    <ul class="nav nav-subnav">
-                                        <li><a href="lyear_js_datepicker.html">日期选取器</a> </li>
-                                        <li><a href="lyear_js_sliders.html">滑块</a> </li>
-                                        <li><a href="lyear_js_colorpicker.html">选色器</a> </li>
-                                        <li><a href="lyear_js_chartjs.html">Chart.js</a> </li>
-                                        <li><a href="lyear_js_jconfirm.html">对话框</a> </li>
-                                        <li><a href="lyear_js_tags_input.html">标签插件</a> </li>
-                                        <li><a href="lyear_js_notify.html">通知消息</a> </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item nav-item-has-subnav">
-                                    <a href="javascript:void(0)"><i class="mdi mdi-menu"></i>多级菜单</a>
-                                    <ul class="nav nav-subnav">
-                                        <li><a href="#!">一级菜单</a> </li>
-                                        <li class="nav-item nav-item-has-subnav">
-                                            <a href="#!">一级菜单</a>
-                                            <ul class="nav nav-subnav">
-                                                <li><a href="#!">二级菜单</a> </li>
-                                                <li class="nav-item nav-item-has-subnav">
-                                                    <a href="#!">二级菜单</a>
-                                                    <ul class="nav nav-subnav">
-                                                        <li><a href="#!">三级菜单</a> </li>
-                                                        <li><a href="#!">三级菜单</a> </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                        <li>
+                                            <asp:LinkButton ID="VideoList_btn" runat="server" OnClick="VideoList_btn_Click">视频列表</asp:LinkButton>
                                         </li>
-                                        <li><a href="#!">一级菜单</a> </li>
+                                        <li>
+                                            <asp:LinkButton ID="VideoCommit" runat="server" OnClick="VideoCommit_Click">评论列表</asp:LinkButton>
+                                        </li>
                                     </ul>
+                                </li>
+                                <li class="nav-item nav-item-has-subnav">
+                                    <a href="javascript:void(0)"><i class="mdi mdi-format-align-justify"></i>专栏管理</a>
+                                    <ul class="nav nav-subnav">
+                                        <li>
+                                            <asp:LinkButton ID="Spk_btn" runat="server" OnClick="Spk_btn_Click">专栏列表</asp:LinkButton>
+                                        </li>
+                                        <li>
+                                            <asp:LinkButton ID="SpkCommit" runat="server" OnClick="SpkCommit_Click">评论列表</asp:LinkButton>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <asp:LinkButton ID="Imgtab_btn" runat="server" OnClick="Imgtab_btn_Click"><i class="mdi mdi-image"></i>轮播图管理</asp:LinkButton>
+                                </li>
+                                <li class="nav-item">
+                                    <asp:LinkButton ID="UserList_btn" runat="server" OnClick="UserList_btn_Click"><i class="mdi mdi-account"></i>用户管理 </asp:LinkButton>
                                 </li>
                             </ul>
                         </nav>
@@ -136,7 +90,9 @@
                                     <span class="lyear-toggler-bar"></span>
                                 </div>
                                 <!-- 页面标题 -->
-                                <span class="navbar-page-title">后台首页 </span>
+                                <span class="navbar-page-title">
+                                    gligli管理后台
+                                </span>
                             </div>
                             <!--头像 -->
                             <ul class="topbar-right">
@@ -191,5 +147,6 @@
             </div>
         </div>
     </form>
+    <script type="text/javascript" src="./js/main.min.js"></script>
 </body>
 </html>
