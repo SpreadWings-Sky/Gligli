@@ -54,6 +54,9 @@
                                             <asp:LinkButton ID="VideoList_btn" runat="server" OnClick="VideoList_btn_Click">视频列表</asp:LinkButton>
                                         </li>
                                         <li>
+                                            <asp:LinkButton ID="Video_state" runat="server">视频审核</asp:LinkButton>
+                                        </li>
+                                        <li>
                                             <asp:LinkButton ID="VideoCommit" runat="server" OnClick="VideoCommit_Click">评论列表</asp:LinkButton>
                                         </li>
                                     </ul>

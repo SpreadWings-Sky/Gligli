@@ -67,8 +67,8 @@ namespace Gligli
             vd.VideoPlay = int.Parse(((TextBox)(this.GridView1.Rows[e.RowIndex].Cells[4].Controls[0])).Text);
             vd.type = int.Parse(((TextBox)(this.GridView1.Rows[e.RowIndex].Cells[5].Controls[0])).Text);
             vd.barrageUrl = ((TextBox)(this.GridView1.Rows[e.RowIndex].Cells[6].Controls[0])).Text;
-            vd.bacimg = ((TextBox)(this.GridView1.Rows[e.RowIndex].Cells[7].FindControl("TextBox2"))).Text;
-            vd.VideoUrl = ((TextBox)(this.GridView1.Rows[e.RowIndex].Cells[8].FindControl("TextBox2"))).Text;
+            vd.bacimg = ((TextBox)(this.GridView1.Rows[e.RowIndex].Cells[8].FindControl("TextBox1"))).Text;
+            vd.VideoUrl = ((TextBox)(this.GridView1.Rows[e.RowIndex].Cells[7].FindControl("TextBox2"))).Text;
             vd.Uptime = DateTime.Parse(this.GridView1.Rows[e.RowIndex].Cells[9].Text);
             vd.State = ((TextBox)(this.GridView1.Rows[e.RowIndex].Cells[10].Controls[0])).Text;
             ClientScript.RegisterStartupScript(ClientScript.GetType(), "deletescript", "<script>lightyear.loading('show');</script>");
@@ -83,12 +83,29 @@ namespace Gligli
             }
             BindVideoInfo();
         }
-
+        //播放视频
         protected void videplay_Click(object sender, EventArgs e)
         {
-            int row = ((GridViewRow)((LinkButton)sender).NamingContainer).RowIndex;
-            string url = ResolveUrl(".\\img\\Admin-img\\bg.mp4");
-            ClientScript.RegisterStartupScript(ClientScript.GetType(), "myscript", "<script>$.confirm({title:'视频',content:'<video width=\"320px\" height=\"240px\" controls=\"controls\"><source src=\""+url+"\" type=\"video/mp4\"></video>',buttons:{cancel:{text:'取消'},},});</script>");
+            LinkButton lb = (LinkButton)sender;
+
+            DataControlFieldCell dcf = (DataControlFieldCell)lb.Parent;
+
+            GridViewRow gvr = (GridViewRow)dcf.Parent; //此得出的值是表示那行被选中的索引值
+
+            int row = gvr.RowIndex;
+            string lr = ((Label)(this.GridView1.Rows[row].Cells[7].FindControl("Label1"))).Text;
+            string url = ResolveUrl(lr);
+            ClientScript.RegisterStartupScript(ClientScript.GetType(), "myscript", "<script>$.confirm({title:'视频',content:'<video width=\"100%\" controls=\"controls\"><source src=\""+url+"\" type=\"video/mp4\"></video>',buttons:{cancel:{text:'取消'},},});</script>");
+        }
+        //控制文本长度
+        protected void GridView1_DataBound(object sender, EventArgs e)
+        {
+            for (int i = 0; i < GridView1.Rows.Count; i++)
+            {
+                GridView1.Rows[i].Cells[3].ToolTip = GridView1.Rows[i].Cells[3].Text;
+                if (GridView1.Rows[i].Cells[3].Text.Length > 25)
+                    GridView1.Rows[i].Cells[3].Text = GridView1.Rows[i].Cells[3].Text.Substring(0, 25) + "...";
+            }
         }
     }
 }
