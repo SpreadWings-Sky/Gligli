@@ -70,6 +70,7 @@
     <Content Include="admin-home.aspx" />
     <Content Include="AdminLogin.aspx" />
     <Content Include="AdminVideoList.aspx" />
+    <Content Include="Admin_Imgrot.aspx" />
     <Content Include="css\AdminLog.css" />
     <Content Include="css\adminsystem.css" />
     <Content Include="css\font-awesome.css" />
@@ -112,6 +113,13 @@
     </Compile>
     <Compile Include="AdminVideoList.aspx.designer.cs">
       <DependentUpon>AdminVideoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Imgrot.aspx.cs">
+      <DependentUpon>Admin_Imgrot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Imgrot.aspx.designer.cs">
+      <DependentUpon>Admin_Imgrot.aspx</DependentUpon>
     </Compile>
     <Compile Include="gligli.aspx.cs">
       <DependentUpon>gligli.aspx</DependentUpon>

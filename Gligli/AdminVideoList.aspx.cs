@@ -93,9 +93,10 @@ namespace Gligli
             GridViewRow gvr = (GridViewRow)dcf.Parent; //此得出的值是表示那行被选中的索引值
 
             int row = gvr.RowIndex;
+            string title = this.GridView1.Rows[row].Cells[1].Text;
             string lr = ((Label)(this.GridView1.Rows[row].Cells[7].FindControl("Label1"))).Text;
             string url = ResolveUrl(lr);
-            ClientScript.RegisterStartupScript(ClientScript.GetType(), "myscript", "<script>$.confirm({title:'视频',content:'<video width=\"100%\" controls=\"controls\"><source src=\""+url+"\" type=\"video/mp4\"></video>',buttons:{cancel:{text:'取消'},},});</script>");
+            ClientScript.RegisterStartupScript(ClientScript.GetType(), "myscript", "<script>$.confirm({title:'"+title+"',content:'<video width=\"100%\" controls=\"controls\"><source src=\""+url+"\" type=\"video/mp4\"></video>',buttons:{cancel:{text:'取消'},},});</script>");
         }
         //控制文本长度
         protected void GridView1_DataBound(object sender, EventArgs e)

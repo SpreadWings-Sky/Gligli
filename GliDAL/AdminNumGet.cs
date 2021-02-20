@@ -75,7 +75,7 @@ namespace GliDAL
         public static VideoInfo[] GetVideoList()
         {
             VideoInfo[] vd = new VideoInfo[8];
-            string sql = "select top 8 * from VideoInfo order by videoPlay";
+            string sql = "select top 8 * from VideoInfo order by videoPlay desc";
             SqlDataReader da = DBHelper.GetData(sql);
             int i = 0;
             while (da.Read())

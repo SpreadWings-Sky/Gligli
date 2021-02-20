@@ -26,7 +26,7 @@
                                             <asp:Label ID="Label1" runat="server" Style="display: none" Text='<%# Bind("VideoUrl") %>'>
                                                  
                                             </asp:Label>
-                                            <asp:LinkButton ID="videplay" runat="server" CssClass="VideoPlay" OnClick="videplay_Click">播放</asp:LinkButton>
+                                            <asp:LinkButton ID="videplay" runat="server" CssClass="VideoPlay btn btn-label btn-info" OnClick="videplay_Click"><label><i class="mdi mdi-play-circle-outline"></i></label> 播放</asp:LinkButton>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:TemplateField HeaderText="封面">

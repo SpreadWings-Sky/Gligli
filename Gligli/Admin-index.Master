@@ -54,10 +54,7 @@
                                             <asp:LinkButton ID="VideoList_btn" runat="server" OnClick="VideoList_btn_Click">视频列表</asp:LinkButton>
                                         </li>
                                         <li>
-                                            <asp:LinkButton ID="Video_state" runat="server">视频审核</asp:LinkButton>
-                                        </li>
-                                        <li>
-                                            <asp:LinkButton ID="VideoCommit" runat="server" OnClick="VideoCommit_Click">评论列表</asp:LinkButton>
+                                            <asp:LinkButton ID="VideoCommit" runat="server" OnClick="VideoCommit_Click">视频评论</asp:LinkButton>
                                         </li>
                                     </ul>
                                 </li>
@@ -68,7 +65,7 @@
                                             <asp:LinkButton ID="Spk_btn" runat="server" OnClick="Spk_btn_Click">专栏列表</asp:LinkButton>
                                         </li>
                                         <li>
-                                            <asp:LinkButton ID="SpkCommit" runat="server" OnClick="SpkCommit_Click">评论列表</asp:LinkButton>
+                                            <asp:LinkButton ID="SpkCommit" runat="server" OnClick="SpkCommit_Click">专栏评论</asp:LinkButton>
                                         </li>
                                     </ul>
                                 </li>

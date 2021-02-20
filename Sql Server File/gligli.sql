@@ -98,3 +98,11 @@ create table SpKeepInfo(
 	userID int foreign key references UserInfo(userID) not null,--收藏用户
 	spID int foreign key references SpeInfo(spID) not null--收藏专栏
 )
+--轮播图
+create table ImgRotationInfo(
+	ImgID int identity(1,1) primary key not null,--图片编号
+	ImgUrl nvarchar(200),--图片来源
+	[Page] nvarchar(10) default('未设置'),--归属页面
+	Title nvarchar(100),--标题
+	ImgLike nvarchar(200),--跳转链接
+)

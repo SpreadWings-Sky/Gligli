@@ -44,27 +44,27 @@ namespace Gligli
         {
             Response.Redirect("AdminVideoList.aspx");
         }
-
+        //视频评论
         protected void VideoCommit_Click(object sender, EventArgs e)
         {
 
         }
-
+        //专栏
         protected void Spk_btn_Click(object sender, EventArgs e)
         {
 
         }
-
+        //专栏评论
         protected void SpkCommit_Click(object sender, EventArgs e)
         {
 
         }
-
+        //轮播图
         protected void Imgtab_btn_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Admin_imgrot.aspx");
         }
-
+        //用户管理
         protected void UserList_btn_Click(object sender, EventArgs e)
         {
 
