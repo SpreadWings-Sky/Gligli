@@ -60,5 +60,11 @@ namespace GliDAL
             da.Close();
             return ImgList;
         }
+        //插入新的轮播图
+        public static bool InsetrImg(ImgRotationInfo ig)
+        {
+            string sql = string.Format("insert into ImgRotationInfo(ImgUrl,Page,Title,ImgLike) values('{0}','{1}','{2}','{3}')", ig.ImgUrl, ig.Page, ig.Title, ig.ImgLike);
+            return DBHelper.Updata(sql);
+        }
     }
 }

@@ -79,5 +79,10 @@ namespace Gligli
             else this.GridView1.DataSource = ImgRotationInfoMMag.SelectImgByPage(page);
             DataBind();
         }
+        //新增轮播图
+        protected void ImgAddLike_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ImgFileUp.aspx");
+        }
     }
 }

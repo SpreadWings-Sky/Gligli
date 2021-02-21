@@ -30,5 +30,10 @@ namespace BLL
         {
             return ImgRotationInfoServices.SelectImgByPage(page);
         }
+        //插入新的轮播图
+        public static bool InsertImg(ImgRotationInfo ig)
+        {
+            return ImgRotationInfoServices.InsetrImg(ig);
+        }
     }
 }
