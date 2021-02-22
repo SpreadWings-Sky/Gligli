@@ -46,6 +46,7 @@
     <Compile Include="ImgRotationInfoServices.cs" />
     <Compile Include="UserInfoServ.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VideoCommentInfoServices.cs" />
     <Compile Include="VideoInfoServices.cs" />
   </ItemGroup>
   <ItemGroup>

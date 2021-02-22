@@ -1,6 +1,7 @@
 ﻿using GliDAL;
 using Models;
 using System;
+using BLL;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +19,7 @@ namespace Gligli
                 this.UserName.Text = null;
                 this.password.Text = null;
             }
+            VideoCommentInfoMMag.SelectCommentAndChildrenComment();
         }
         protected void UserLoginbtn_Click(object sender, EventArgs e)
         {
