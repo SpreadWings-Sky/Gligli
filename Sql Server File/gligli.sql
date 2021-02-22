@@ -51,12 +51,11 @@ create table VideoInfo(
 --视频评论表
 create table VideoCommentInfo(
 	comID int identity(1,1) primary key not null,--评论主编号
-	zcomID int identity(1,1) not null,--评论id
 	videoID int foreign key references VideoInfo(videoID) not null,--视频编号
 	userID int foreign key references UserInfo(userID) not null,--用户编号
 	Comment nvarchar(100) not null,--文章内容
-	RecomID int foreign key references VideoCommentInfo(comID),--回复主评论编号
-	zRecomID int foreign key references VideoCommentInfo(zcomID)--回复评论
+	zRecomID int foreign key references VideoCommentInfo(comID),--主评论编号
+	RecomID int foreign key references VideoCommentInfo(comID)--回复评论
 )
 --视频点赞表
 create table VideoLikeInfo(
