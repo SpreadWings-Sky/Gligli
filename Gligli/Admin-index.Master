@@ -44,7 +44,7 @@
 
                         <nav class="sidebar-main">
                             <ul class="nav nav-drawer">
-                                <li class="nav-item active">
+                                <li class="nav-item">
                                     <asp:LinkButton ID="home_btn" runat="server" OnClick="Home_Click"><i class="mdi mdi-home"></i>后台首页</asp:LinkButton>
                                 </li>
                                 <li class="nav-item nav-item-has-subnav">

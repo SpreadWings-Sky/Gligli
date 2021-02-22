@@ -37,10 +37,11 @@
                                     </asp:TemplateField>
                                     <asp:TemplateField HeaderText="页面">
                                         <EditItemTemplate>
-                                            <asp:DropDownList ID="DropDownList1" runat="server">
-                                                <asp:ListItem Value="0">主页</asp:ListItem>
-                                                <asp:ListItem Value="1">动画</asp:ListItem>
-                                                <asp:ListItem Value="2">音乐</asp:ListItem>
+                                            <asp:DropDownList ID="DropDownList1" runat="server" Text='<%# Bind("Page") %>'>
+                                                <asp:ListItem Value="主页">主页</asp:ListItem>
+                                                <asp:ListItem Value="动画">动画</asp:ListItem>
+                                                <asp:ListItem Value="音乐">音乐</asp:ListItem>
+                                                <asp:ListItem Value="禁用">禁用</asp:ListItem>
                                             </asp:DropDownList>
                                         </EditItemTemplate>
                                         <ItemTemplate>

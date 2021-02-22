@@ -46,7 +46,7 @@ create table VideoInfo(
 	bacImg nvarchar(150),--视频封面
 	videoUrl nvarchar(150),--视频地址
 	uptime datetime default(getdate()),--上传时间
-	[state] varchar(5) default('审核')--视频状态
+	[state] nvarchar(5) default('审核')--视频状态
 )
 --视频评论表
 create table VideoCommentInfo(

@@ -38,15 +38,31 @@
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:BoundField DataField="Uptime" HeaderText="更新时间" ReadOnly="True" />
-                                    <asp:BoundField DataField="State" HeaderText="状态">
-                                        <ItemStyle CssClass="text-success" />
-                                    </asp:BoundField>
+                                    <asp:TemplateField HeaderText="状态">
+                                        <EditItemTemplate>
+                                            <asp:DropDownList ID="State" runat="server" Text='<%# Bind("State") %>'>
+                                                <asp:ListItem Value="审核">审核</asp:ListItem>
+                                                <asp:ListItem Value="正常">正常</asp:ListItem>
+                                                <asp:ListItem Value="驳回">驳回</asp:ListItem>
+                                            </asp:DropDownList>
+                                        </EditItemTemplate>
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label2" runat="server" Text='<%# Bind("State") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
                                     <asp:CommandField HeaderText="删除" ShowDeleteButton="True">
                                         <ControlStyle CssClass="btn btn-danger" />
                                     </asp:CommandField>
-                                    <asp:CommandField HeaderText="操作" ShowEditButton="True">
+                                    <asp:TemplateField HeaderText="操作" ShowHeader="False">
+                                        <EditItemTemplate>
+                                            <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" Text="更新"></asp:LinkButton>
+                                            &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" Text="取消"></asp:LinkButton>
+                                        </EditItemTemplate>
+                                        <ItemTemplate>
+                                            <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" Text="编辑"></asp:LinkButton>
+                                        </ItemTemplate>
                                         <ControlStyle CssClass="btn btn-warning" />
-                                    </asp:CommandField>
+                                    </asp:TemplateField>
                                 </Columns>
                                 <PagerSettings Mode="NumericFirstLast" />
                             </asp:GridView>

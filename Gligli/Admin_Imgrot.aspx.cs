@@ -20,7 +20,9 @@ namespace Gligli
         }
         private void BinImgData()
         {
-            this.GridView1.DataSource = ImgRotationInfoMMag.SelectImgAll();
+            string page = this.DropDownList2.SelectedItem.Text;
+            if (page.Equals("全部")) this.GridView1.DataSource = ImgRotationInfoMMag.SelectImgAll();
+            else this.GridView1.DataSource = ImgRotationInfoMMag.SelectImgByPage(page);
             DataBind();
         }
         //禁用图片
@@ -60,7 +62,7 @@ namespace Gligli
             ig.Title = ((TextBox)(this.GridView1.Rows[e.RowIndex].Cells[3].Controls[0])).Text;
             ig.ImgLike = ((TextBox)(this.GridView1.Rows[e.RowIndex].Cells[4].Controls[0])).Text;
             ClientScript.RegisterStartupScript(ClientScript.GetType(), "deletescript", "<script>lightyear.loading('show');</script>");
-            if (ImgRotationInfoMMag.UpImgByID(ig.ImgID,ig))
+            if (ImgRotationInfoMMag.UpImgByID(ig.ImgID, ig))
             {
                 this.GridView1.EditIndex = -1;
                 ClientScript.RegisterStartupScript(ClientScript.GetType(), "myscript", "<script>lightyear.notify('修改成功', 'success', 2000, 'mdi mdi-emoticon-happy', 'top', 'center');lightyear.loading('hide');</script>");
@@ -74,10 +76,7 @@ namespace Gligli
         //筛选内容
         protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string page = this.DropDownList2.SelectedItem.Text;
-            if (page.Equals("全部")) BinImgData();
-            else this.GridView1.DataSource = ImgRotationInfoMMag.SelectImgByPage(page);
-            DataBind();
+            BinImgData();
         }
         //新增轮播图
         protected void ImgAddLike_Click(object sender, EventArgs e)

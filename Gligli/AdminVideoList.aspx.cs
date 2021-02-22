@@ -70,7 +70,7 @@ namespace Gligli
             vd.bacimg = ((TextBox)(this.GridView1.Rows[e.RowIndex].Cells[8].FindControl("TextBox1"))).Text;
             vd.VideoUrl = ((TextBox)(this.GridView1.Rows[e.RowIndex].Cells[7].FindControl("TextBox2"))).Text;
             vd.Uptime = DateTime.Parse(this.GridView1.Rows[e.RowIndex].Cells[9].Text);
-            vd.State = ((TextBox)(this.GridView1.Rows[e.RowIndex].Cells[10].Controls[0])).Text;
+            vd.State = ((DropDownList)(this.GridView1.Rows[e.RowIndex].Cells[10].FindControl("State"))).SelectedItem.Text;
             ClientScript.RegisterStartupScript(ClientScript.GetType(), "deletescript", "<script>lightyear.loading('show');</script>");
             if (VideoMMag.UpVideobyID(vd.VideoID, vd))
             {
