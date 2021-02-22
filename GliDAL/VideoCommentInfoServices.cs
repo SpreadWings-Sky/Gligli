@@ -33,7 +33,7 @@ namespace GliDAL
         public static Dictionary<VideoCommentInfo, List<VideoCommentInfo>> SelectCommentAndChildrenComment()
         {
             Dictionary<VideoCommentInfo, List<VideoCommentInfo>> dComment = new Dictionary<VideoCommentInfo, List<VideoCommentInfo>>();
-            string sql = "select s.comID,s.videoID,s.userID,s.Comment,a.comID,a.userID,a.Comment,a.RecomID from VideoCommentInfo s inner join VideoCommentInfo a on s.comID = a.RecomID";
+            string sql = "select s.comID,s.videoID,s.userID,s.Comment,s.RecomID,a.comID,a.userID,a.Comment,a.RecomID from VideoCommentInfo s inner join VideoCommentInfo a on s.comID = a.RecomID";
             SqlDataReader da = DBHelper.GetData(sql);
             while (da.Read())
             {
@@ -42,11 +42,12 @@ namespace GliDAL
                 vd.VideoID = da.GetInt32(1);
                 vd.userID = da.GetInt32(2);
                 vd.Comment = da.GetString(3);
+                vd.RecomID = da.IsDBNull(4)?0:da.GetInt32(4);
                 VideoCommentInfo rec = new VideoCommentInfo();
-                rec.comID = da.GetInt32(4);
-                rec.userID = da.GetInt32(5);
-                rec.Comment = da.GetString(6);
-                rec.RecomID = da.GetInt32(7);
+                rec.comID = da.GetInt32(5);
+                rec.userID = da.GetInt32(6);
+                rec.Comment = da.GetString(7);
+                rec.RecomID = da.GetInt32(8);
                 List<VideoCommentInfo> coment = new List<VideoCommentInfo>();
                 bool Waht = true;
                 //判断是否已存在父级评论
