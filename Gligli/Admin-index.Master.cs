@@ -67,7 +67,7 @@ namespace Gligli
         //用户管理
         protected void UserList_btn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("");
+            Response.Redirect("Admin_UserList.aspx");
         }
     }
 }
