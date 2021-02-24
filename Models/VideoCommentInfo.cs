@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
+    [Serializable]
     public class VideoCommentInfo
     {
         //评论id

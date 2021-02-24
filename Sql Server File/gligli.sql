@@ -7,7 +7,7 @@ use Gligli
 create table UserInfo(
 	userID int identity(1000000,1) primary key not null, --用户名表编号
 	userName nvarchar(50) not null unique(userName) default(getdate()),--用户名
-	Account nvarchar(20) not null,--账号
+	Account nvarchar(20) not null unique(Account),--账号
 	pwd nvarchar(50) not null,--密码
 	sex char(2),--性别
 	Email nvarchar(20),--邮箱

@@ -28,5 +28,43 @@ namespace GliDAL
             DBHelper.Close();
             return user;
         }
+        //查询全部用户信息
+        public static List<UserInfo> SelectUserAll()
+        {
+            List<UserInfo> userList = new List<UserInfo>();
+            string sql = "select userID,userName,imageUrl,Account,sex,Email,Phone,address,Birt,brief,reghitTime,state from UserInfo";
+            SqlDataReader da = DBHelper.GetData(sql);
+            while (da.Read())
+            {
+                UserInfo us = new UserInfo();
+                us.userID = da.GetInt32(0);
+                us.userName = da.GetString(1);
+                us.imgurl = da.GetString(2);
+                us.Account = da.GetString(3);
+                us.sex = da.IsDBNull(4) ? '无' : da.GetString(4).Equals('1') ? '男' : '女';
+                us.Email = da.IsDBNull(5) ? "无" : da.GetString(5);
+                us.Phone = da.IsDBNull(6) ? "无" : da.GetString(6);
+                us.address = da.IsDBNull(7) ? "无" : da.GetString(7);
+                us.Birt = da.IsDBNull(8) ? DateTime.Parse("2077 - 07 - 01 13:14:22") : da.GetDateTime(8);
+                us.brief = da.GetString(9);
+                us.regTime = da.GetDateTime(10);
+                us.state = da.GetString(11);
+                userList.Add(us);
+            }
+            da.Close();
+            return userList;
+        }
+        //通过用户ID封禁
+        public static bool DeleteUserByID(int userID)
+        {
+            string sql = string.Format("update UserInfo set state = 'fj' where userID = {0}",userID);
+            return DBHelper.Updata(sql);
+        }
+        //通过ID更新用户信息
+        public static bool UpUserByID(int userID,UserInfo us)
+        {
+            string sql = string.Format("update UserInfo set userName = '{0}',imageUrl= '{1}',brief='{2}',state='{3}' where userID = {4}",us.userName,us.imgurl,us.brief,us.state,userID);
+            return DBHelper.Updata(sql);
+        }
     }
 }

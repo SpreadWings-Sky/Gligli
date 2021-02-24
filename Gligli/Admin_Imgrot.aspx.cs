@@ -83,5 +83,11 @@ namespace Gligli
         {
             Response.Redirect("ImgFileUp.aspx");
         }
+        //切换分页
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            this.GridView1.PageIndex = e.NewPageIndex;
+            BinImgData();
+        }
     }
 }

@@ -27,7 +27,7 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <asp:GridView ID="GridView1" runat="server" CssClass="table table-bordered" AutoGenerateColumns="False" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowUpdating="GridView1_RowUpdating">
+                            <asp:GridView ID="GridView1" runat="server" CssClass="table tables table-bordered" AutoGenerateColumns="False" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowUpdating="GridView1_RowUpdating" AllowPaging="True" OnPageIndexChanging="GridView1_PageIndexChanging" PageSize="5">
                                 <Columns>
                                     <asp:BoundField DataField="ImgID" HeaderText="编号" ReadOnly="True" />
                                     <asp:TemplateField HeaderText="图片">

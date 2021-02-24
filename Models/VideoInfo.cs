@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
+    [Serializable]
     public class VideoInfo
     {
         public int VideoID { get; set; }//视频id
