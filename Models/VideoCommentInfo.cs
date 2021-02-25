@@ -19,5 +19,7 @@ namespace Models
         public string Comment { get; set; }
         //回复评论ID
         public int RecomID { get; set; }
+        //主评论ID
+        public int zRecomID { get; set; }
     }
 }

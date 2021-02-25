@@ -66,5 +66,19 @@ namespace GliDAL
             string sql = string.Format("update UserInfo set userName = '{0}',imageUrl= '{1}',brief='{2}',state='{3}' where userID = {4}",us.userName,us.imgurl,us.brief,us.state,userID);
             return DBHelper.Updata(sql);
         }
+        //查询密码是否正确
+        public static bool SelectUserPwd(string Account,string pwd)
+        {
+            string sql = string.Format("select userID from UserInfo where Account = '{0}' and pwd = '{1}'",Account,pwd);
+            bool s = DBHelper.GetData(sql).Read();
+            DBHelper.Close();
+            return s;
+        }
+        //通过用户名和账号更新密码
+        public static bool UpUserPwdByUserAndAccount(string name,string Account,string newpwd)
+        {
+            string sql = string.Format("update UserInfo set pwd = '{0}' where userName='{1}' and Account = '{2}'",newpwd,name,Account);
+            return DBHelper.Updata(sql);
+        }
     }
 }

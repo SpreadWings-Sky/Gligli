@@ -23,7 +23,8 @@ namespace GliDAL
                 vc.VideoID = da.GetInt32(1);
                 vc.userID = da.GetInt32(2);
                 vc.Comment = da.GetString(3);
-                vc.RecomID = da.GetInt32(4);
+                vc.zRecomID = da.IsDBNull(4)?0:da.GetInt32(4);
+                vc.RecomID = da.IsDBNull(5) ? 0 : da.GetInt32(5);
                 vcomnet.Add(vc);
             }
             da.Close();
@@ -68,6 +69,12 @@ namespace GliDAL
             }
             da.Close();
             return dComment;
+        }
+        //通过Id删除评论
+        public static bool DeleteCommentByID(int id)
+        {
+            string sql = string.Format("delete VideoCommentInfo where comID ={0}",id);
+            return DBHelper.Updata(sql);
         }
     }
 }

@@ -25,5 +25,15 @@ namespace BLL
         {
             return UserInfoServ.UpUserByID(id, us);
         }
+        //查询账号密码是否存在
+        public static bool SelectUserPwd(string Account, string pwd)
+        {
+            return UserInfoServ.SelectUserPwd(Account, pwd);
+        }
+        //通过账号和用户名更新密码
+        public static bool UpPwdByNameAndAccount(string name,string account,string newpwd)
+        {
+            return UserInfoServ.UpUserPwdByUserAndAccount(name, account, newpwd);
+        }
     }
 }

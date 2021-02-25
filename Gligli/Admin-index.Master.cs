@@ -47,7 +47,7 @@ namespace Gligli
         //视频评论
         protected void VideoCommit_Click(object sender, EventArgs e)
         {
-            Response.Redirect("");
+            Response.Redirect("Admin_VideoComment.aspx");
         }
         //专栏
         protected void Spk_btn_Click(object sender, EventArgs e)
@@ -68,6 +68,11 @@ namespace Gligli
         protected void UserList_btn_Click(object sender, EventArgs e)
         {
             Response.Redirect("Admin_UserList.aspx");
+        }
+        //修改密码
+        protected void LkPwdBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Admin_upPwd.aspx");
         }
     }
 }
