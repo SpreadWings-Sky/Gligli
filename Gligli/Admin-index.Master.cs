@@ -52,12 +52,12 @@ namespace Gligli
         //专栏
         protected void Spk_btn_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Admin_SpList.aspx");
         }
         //专栏评论
         protected void SpkCommit_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Admin_SPCommentList.aspx");
         }
         //轮播图
         protected void Imgtab_btn_Click(object sender, EventArgs e)

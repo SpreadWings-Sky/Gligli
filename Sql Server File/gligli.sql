@@ -79,7 +79,7 @@ create table SpeInfo(
 	spUrl nvarchar(40) not null,--专栏文章文件地址
 	upTime datetime default(getdate()) not null,--上传时间
 	spNumber int default(0),--专栏阅读数
-	[state] nvarchar(10) default('草稿') not null, --文章状态
+	[state] nvarchar(10) default('审核') not null, --文章状态
 )
 --专栏评论
 create table SPCommentInfo(

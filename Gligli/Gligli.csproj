@@ -71,6 +71,7 @@
     <Content Include="AdminLogin.aspx" />
     <Content Include="AdminVideoList.aspx" />
     <Content Include="Admin_Imgrot.aspx" />
+    <Content Include="Admin_SPCommentList.aspx" />
     <Content Include="Admin_upPwd.aspx" />
     <Content Include="Admin_UserList.aspx" />
     <Content Include="Admin_VideoComment.aspx" />
@@ -124,6 +125,13 @@
     </Compile>
     <Compile Include="Admin_Imgrot.aspx.designer.cs">
       <DependentUpon>Admin_Imgrot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_SPCommentList.aspx.cs">
+      <DependentUpon>Admin_SPCommentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_SPCommentList.aspx.designer.cs">
+      <DependentUpon>Admin_SPCommentList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_upPwd.aspx.cs">
       <DependentUpon>Admin_upPwd.aspx</DependentUpon>

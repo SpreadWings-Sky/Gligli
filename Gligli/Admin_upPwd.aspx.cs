@@ -44,6 +44,7 @@ namespace Gligli
                 ClientScript.RegisterStartupScript(ClientScript.GetType(), "myscript", "<script>lightyear.notify('旧密码错误!', 'warning', 2000, 'mdi mdi-emoticon-happy', 'top', 'center');</script>");
             }
         }
+        //跳转至登录页
         private void LikeLog()
         {
             Session.RemoveAll();

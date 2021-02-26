@@ -20,23 +20,29 @@ namespace Gligli
         }
         protected void CommnetBin()
         {
-            this.GridView1.DataSource = VideoCommentInfoMMag.SelectCommetAll();
+            this.VideoCommentList.DataSource = VideoCommentInfoMMag.SelectCommetAll();
             DataBind();
         }
 
         protected void GridView1_DataBound(object sender, EventArgs e)
         {
-            for (int i = 0; i < GridView1.Rows.Count; i++)
+            for (int i = 0; i < VideoCommentList.Rows.Count; i++)
             {
-                GridView1.Rows[i].Cells[3].ToolTip = GridView1.Rows[i].Cells[3].Text;
-                if (GridView1.Rows[i].Cells[3].Text.Length > 10)
-                    GridView1.Rows[i].Cells[3].Text = GridView1.Rows[i].Cells[3].Text.Substring(0, 10) + "...";
+                VideoCommentList.Rows[i].Cells[3].ToolTip = VideoCommentList.Rows[i].Cells[3].Text;
+                if (VideoCommentList.Rows[i].Cells[3].Text.Length > 10)
+                    VideoCommentList.Rows[i].Cells[3].Text = VideoCommentList.Rows[i].Cells[3].Text.Substring(0, 10) + "...";
             }
+        }
+        //切换分页
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            this.VideoCommentList.PageIndex = e.NewPageIndex;
+            CommnetBin();
         }
         //删除评论
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            int id = int.Parse(this.GridView1.Rows[e.RowIndex].Cells[0].Text);
+            int id = int.Parse(this.VideoCommentList.Rows[e.RowIndex].Cells[0].Text);
             ClientScript.RegisterStartupScript(ClientScript.GetType(), "deletescript", "<script>lightyear.loading('show');</script>");
             if (VideoCommentInfoMMag.DeleteCommentByID(id))
             {
@@ -46,12 +52,6 @@ namespace Gligli
             {
                 ClientScript.RegisterStartupScript(ClientScript.GetType(), "myscript", "<script>lightyear.notify('删除失败', 'warning', 2000, 'mdi mdi-emoticon-happy', 'top', 'center');lightyear.loading('hide');</script>");
             }
-            CommnetBin();
-        }
-        //切换分页
-        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        {
-            this.GridView1.PageIndex = e.NewPageIndex;
             CommnetBin();
         }
     }
