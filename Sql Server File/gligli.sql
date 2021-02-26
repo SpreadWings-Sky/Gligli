@@ -53,7 +53,7 @@ create table VideoCommentInfo(
 	comID int identity(1,1) primary key not null,--评论主编号
 	videoID int foreign key references VideoInfo(videoID) not null,--视频编号
 	userID int foreign key references UserInfo(userID) not null,--用户编号
-	Comment nvarchar(100) not null,--文章内容
+	Comment nvarchar(100) not null,--评论内容
 	zRecomID int foreign key references VideoCommentInfo(comID),--主评论编号
 	RecomID int foreign key references VideoCommentInfo(comID)--回复评论
 )
@@ -83,10 +83,12 @@ create table SpeInfo(
 )
 --专栏评论
 create table SPCommentInfo(
-	comID int identity(1,1) primary key not null,--评论编号
+	comID int identity(1,1) primary key not null,--评论主编号
 	spID int foreign key references SpeInfo(spID) not null,--专栏编号
 	userID int foreign key references UserInfo(userID) not null,--用户编号
-	RecomID int foreign key references VideoCommentInfo(comID),--回复评论编号
+	Comment nvarchar(100) not null,--评论内容
+	zRecomID int foreign key references SPCommentInfo(comID),--主评论编号
+	RecomID int foreign key references SPCommentInfo(comID)--回复评论
 )
 --专栏点赞表
 create table SpLikeInfo(
