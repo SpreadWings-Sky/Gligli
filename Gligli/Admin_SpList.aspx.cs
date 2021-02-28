@@ -13,8 +13,12 @@ namespace Gligli
         {
             if (!IsPostBack)
             {
-
+                SpListBin();
             }
+        }
+        protected  void SpListBin()
+        {
+            
         }
     }
 }
