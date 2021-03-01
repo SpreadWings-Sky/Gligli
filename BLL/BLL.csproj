@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ImgRotationInfoMMag.cs" />
     <Compile Include="SPCommentInfoMMag.cs" />
+    <Compile Include="SpeInfoMMag.cs" />
     <Compile Include="UserInfoListMMag.cs" />
     <Compile Include="VideoCommentInfoMMag.cs" />
     <Compile Include="VideoMMag.cs" />
