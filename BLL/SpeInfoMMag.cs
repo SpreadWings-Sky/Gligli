@@ -25,5 +25,10 @@ namespace BLL
         {
             return SpeInfoServices.UpSpInfoByID(id, sp);
         }
+        //通过ID查询专栏地址
+        public static string SelectSpByID(int id)
+        {
+            return SpeInfoServices.SelectSpByID(id);
+        }
     }
 }

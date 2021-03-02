@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="admin-home.aspx" />
     <Content Include="AdminLogin.aspx" />
+    <Content Include="AdminSpShow.aspx" />
     <Content Include="AdminVideoList.aspx" />
     <Content Include="Admin_Imgrot.aspx" />
     <Content Include="Admin_SPCommentList.aspx" />
@@ -112,6 +113,13 @@
     </Compile>
     <Compile Include="AdminLogin.aspx.designer.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSpShow.aspx.cs">
+      <DependentUpon>AdminSpShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSpShow.aspx.designer.cs">
+      <DependentUpon>AdminSpShow.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminVideoList.aspx.cs">
       <DependentUpon>AdminVideoList.aspx</DependentUpon>

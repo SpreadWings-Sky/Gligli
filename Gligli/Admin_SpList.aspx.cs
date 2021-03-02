@@ -76,5 +76,18 @@ namespace Gligli
             this.SpList.EditIndex = -1;
             SpListBin();
         }
+        //文章id
+        protected void SpShow_Btn_Click(object sender, EventArgs e)
+        {
+            LinkButton lb = (LinkButton)sender;
+
+            DataControlFieldCell dcf = (DataControlFieldCell)lb.Parent;
+
+            GridViewRow gvr = (GridViewRow)dcf.Parent; //此得出的值是表示那行被选中的索引值
+
+            int row = gvr.RowIndex;
+            string id = this.SpList.Rows[row].Cells[0].Text;
+            Response.Redirect("AdminSpShow.aspx?SpId="+id+"");
+        }
     }
 }

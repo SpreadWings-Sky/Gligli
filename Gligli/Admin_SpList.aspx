@@ -27,7 +27,10 @@
                                             <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("SpUrl") %>'></asp:TextBox>
                                         </EditItemTemplate>
                                         <ItemTemplate>
-                                            <asp:Label ID="Label1" runat="server" Text='<%# Bind("SpUrl") %>'></asp:Label>
+                                            <asp:TextBox ID="Sp" runat="server" name="SpUrl" Text='<%# Bind("SpUrl")%>' Style="display: none"></asp:TextBox>
+                                            <asp:LinkButton type="submit" id="SpShow_Btn" class="btn btn-label btn-primary" runat="server" OnClick="SpShow_Btn_Click">
+                                                <label><i class="mdi mdi-checkbox-marked-circle-outline"></i></label>
+                                                查看文章</asp:LinkButton>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:BoundField DataField="UpTime" HeaderText="上传时间" ReadOnly="True" />

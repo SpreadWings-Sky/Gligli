@@ -44,5 +44,19 @@ namespace GliDAL
             string sql = string.Format("update SpeInfo set title = '{0}',pageimg='{1}',state='{2}' where spID ={3} ",sp.Title,sp.PageImg,sp.State,id);
             return DBHelper.Updata(sql);
         }
+        //通过ID查询专栏地址
+        public static string SelectSpByID(int id)
+        {
+            string sql = string.Format("select spUrl from SpeInfo where spID={0}", id);
+            SqlDataReader da = DBHelper.GetData(sql);
+            string url="";
+            if (da.Read())
+            {
+                url = da.GetString(0);
+            }
+            da.Close();
+            DBHelper.Close();
+            return url;
+        } 
     }
 }
