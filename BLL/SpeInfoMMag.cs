@@ -20,5 +20,10 @@ namespace BLL
         {
             return SpeInfoServices.DeleteSpByID(id);
         }
+        //通过id更新信息
+        public static bool UpSpInfoByid(int id,SpeInfo sp)
+        {
+            return SpeInfoServices.UpSpInfoByID(id, sp);
+        }
     }
 }

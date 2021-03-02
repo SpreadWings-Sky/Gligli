@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BLL;
+using Models;
 
 namespace Gligli
 {
@@ -46,7 +47,22 @@ namespace Gligli
         //更新信息
         protected void SpList_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-
+            int id = int.Parse(this.SpList.Rows[e.RowIndex].Cells[0].Text);
+            SpeInfo sp = new SpeInfo();
+            sp.Title = ((TextBox)(this.SpList.Rows[e.RowIndex].Cells[2].Controls[0])).Text;
+            sp.PageImg = ((TextBox)(this.SpList.Rows[e.RowIndex].Cells[3].FindControl("ImgUrl"))).Text;
+            sp.State =((DropDownList)(this.SpList.Rows[e.RowIndex].Cells[7].FindControl("State"))).SelectedValue;
+            ClientScript.RegisterStartupScript(ClientScript.GetType(), "deletescript", "<script>lightyear.loading('show');</script>");
+            if (SpeInfoMMag.UpSpInfoByid(id,sp))
+            {
+                this.SpList.EditIndex = -1;
+                ClientScript.RegisterStartupScript(ClientScript.GetType(), "myscript", "<script>lightyear.notify('修改成功', 'success', 2000, 'mdi mdi-emoticon-happy', 'top', 'center');lightyear.loading('hide');</script>");
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(ClientScript.GetType(), "myscript", "<script>lightyear.notify('修改失败', 'warning', 2000, 'mdi mdi-emoticon-happy', 'top', 'center');lightyear.loading('hide');</script>");
+            }
+            SpListBin();
         }
         //编辑状态
         protected void SpList_RowEditing(object sender, GridViewEditEventArgs e)

@@ -9,30 +9,41 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <asp:GridView id="SpList" class="table table-bordered tables tables-striped tables-bordered tables-hover" runat="server" AutoGenerateColumns="False" OnRowDeleting="SpList_RowDeleting" AllowPaging="True" OnPageIndexChanging="SpList_PageIndexChanging" OnRowCancelingEdit="SpList_RowCancelingEdit" OnRowEditing="SpList_RowEditing" OnRowUpdating="SpList_RowUpdating" PageSize="5">
+                            <asp:GridView ID="SpList" class="table table-bordered tables tables-striped tables-bordered tables-hover" runat="server" AutoGenerateColumns="False" OnRowDeleting="SpList_RowDeleting" AllowPaging="True" OnPageIndexChanging="SpList_PageIndexChanging" OnRowCancelingEdit="SpList_RowCancelingEdit" OnRowEditing="SpList_RowEditing" OnRowUpdating="SpList_RowUpdating" PageSize="5">
                                 <Columns>
-                                    <asp:TemplateField HeaderText="编号">
-                                        <EditItemTemplate>
-                                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("spID") %>'></asp:Label>
-                                        </EditItemTemplate>
-                                        <ItemTemplate>
-                                            <asp:Label ID="Label1" runat="server" Text='<%# Bind("spID") %>'></asp:Label>
-                                        </ItemTemplate>
-                                    </asp:TemplateField>
+                                    <asp:BoundField HeaderText="编号" DataField="SpID" ReadOnly="true" />
                                     <asp:BoundField DataField="UserID" HeaderText="用户编号" ReadOnly="True" />
                                     <asp:BoundField DataField="Title" HeaderText="标题" />
                                     <asp:TemplateField HeaderText="封面">
                                         <EditItemTemplate>
-                                            <asp:TextBox ID="TextBox1" runat="server" Text='<%# Eval("PageImg") %>'></asp:TextBox>
+                                            <asp:TextBox ID="ImgUrl" runat="server" Text='<%# Eval("PageImg") %>'></asp:TextBox>
                                         </EditItemTemplate>
                                         <ItemTemplate>
-                                            <asp:Image ID="Image1" runat="server" style="min-width:117px;max-width:206px" ImageUrl='<%# Eval("PageImg") %>' />
+                                            <asp:Image ID="Image1" runat="server" Style="min-width: 117px; max-width: 206px" ImageUrl='<%# Eval("PageImg") %>' />
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:BoundField DataField="SpUrl" HeaderText="文章" />
+                                    <asp:TemplateField HeaderText="文章">
+                                        <EditItemTemplate>
+                                            <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("SpUrl") %>'></asp:TextBox>
+                                        </EditItemTemplate>
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label1" runat="server" Text='<%# Bind("SpUrl") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
                                     <asp:BoundField DataField="UpTime" HeaderText="上传时间" ReadOnly="True" />
                                     <asp:BoundField DataField="SpNumber" HeaderText="阅读数" ReadOnly="True" />
-                                    <asp:BoundField DataField="State" HeaderText="状态" />
+                                    <asp:TemplateField HeaderText="状态">
+                                        <EditItemTemplate>
+                                            <asp:DropDownList ID="State" CssClass="btn btn-default dropdown-toggle" Text='<%# Bind("State") %>' runat="server">
+                                                <asp:ListItem Value="审核">审核</asp:ListItem>
+                                                <asp:ListItem Value="正常">正常</asp:ListItem>
+                                                <asp:ListItem Value="驳回">驳回</asp:ListItem>
+                                            </asp:DropDownList>
+                                        </EditItemTemplate>
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label2" runat="server" Text='<%# Bind("State") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
                                     <asp:TemplateField HeaderText="删除" ShowHeader="False">
                                         <ItemTemplate>
                                             <asp:LinkButton ID="LinkButton1" runat="server" class="btn btn-danger" CausesValidation="False" CommandName="Delete" Text="删除"></asp:LinkButton>

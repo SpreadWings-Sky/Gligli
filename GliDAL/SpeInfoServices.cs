@@ -41,7 +41,7 @@ namespace GliDAL
         //通过id更新专栏消息
         public static bool UpSpInfoByID(int id,SpeInfo sp)
         {
-            string sql = string.Format("");
+            string sql = string.Format("update SpeInfo set title = '{0}',pageimg='{1}',state='{2}' where spID ={3} ",sp.Title,sp.PageImg,sp.State,id);
             return DBHelper.Updata(sql);
         }
     }
