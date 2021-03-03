@@ -26,8 +26,6 @@
     <!--消息框-->
     <script src="js/jconfirm/jquery-confirm.min.js"></script>
     <link rel="stylesheet" href="js/jconfirm/jquery-confirm.min.css">
-    <%--文章转化--%>
-    <script src="./js/marked.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
