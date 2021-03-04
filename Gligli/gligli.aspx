@@ -154,6 +154,8 @@
                 <!-- 中间搜索栏结束 -->
                 <!-- 右侧状态展示栏开始 -->
                 <div class="header-right grid grid-cell-1">
+                    <%if (Session["UserName"] == null || Session["UserName"].ToString() == string.Empty)
+                        { %>
                     <!-- 未登录状态 -->
                     <div class="right-login">
                         <a href="" class="login-img">
@@ -161,6 +163,9 @@
                         <a href="">登录</a>
                         <a href="">注册</a>
                     </div>
+                    <%} %>
+                    <%else
+                    { %>
                     <!-- 登录状态 -->
                     <div class="userlogin grid">
                         <div class="userimg">
@@ -339,6 +344,7 @@
                             <li><a href="">创作中心</a></li>
                         </ul>
                     </div>
+                    <%} %>
                     <!-- 投稿栏 -->
                     <div class="right-up">
                         <a href="">投稿</a>
