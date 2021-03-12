@@ -108,6 +108,7 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\materialdesignicons.svg" />
     <Content Include="gligli.aspx" />
+    <Content Include="gligli_user_upvideo.aspx" />
     <Content Include="ImgFileUp.aspx" />
     <Content Include="img\Admin-img\06-01.png" />
     <Content Include="img\Admin-img\06-app-bar.gif" />
@@ -331,6 +332,13 @@
     </Compile>
     <Compile Include="gligli.aspx.designer.cs">
       <DependentUpon>gligli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gligli_user_upvideo.aspx.cs">
+      <DependentUpon>gligli_user_upvideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gligli_user_upvideo.aspx.designer.cs">
+      <DependentUpon>gligli_user_upvideo.aspx</DependentUpon>
     </Compile>
     <Compile Include="GliMS.Master.cs">
       <DependentUpon>GliMS.Master</DependentUpon>
