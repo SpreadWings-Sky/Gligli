@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -53,6 +56,21 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -87,9 +105,146 @@
     <Content Include="css\index-header.css" />
     <Content Include="css\iziToast.min.css" />
     <Content Include="css\jquery.vidbacking.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\materialdesignicons.svg" />
     <Content Include="gligli.aspx" />
     <Content Include="ImgFileUp.aspx" />
+    <Content Include="img\Admin-img\06-01.png" />
+    <Content Include="img\Admin-img\06-app-bar.gif" />
+    <Content Include="img\Admin-img\bg.mp4" />
+    <Content Include="img\Admin-img\ErroIco.png" />
+    <Content Include="img\Admin-img\logICo.png" />
+    <Content Include="img\akari.jpg" />
+    <Content Include="img\anim-img\1.png" />
+    <Content Include="img\anim-img\hot\1.jpg" />
+    <Content Include="img\anim-img\hot\2.jpg" />
+    <Content Include="img\anim-img\hot\3.jpg" />
+    <Content Include="img\anim-img\hot\4.jpg" />
+    <Content Include="img\anim-img\hot\5.jpg" />
+    <Content Include="img\app-download.png" />
+    <Content Include="img\banner.jpg" />
+    <Content Include="img\banner1.jpg" />
+    <Content Include="img\chara-a.png" />
+    <Content Include="img\comic-img\c1.jpg" />
+    <Content Include="img\comic-img\c2.jpg" />
+    <Content Include="img\comic-img\c3.jpg" />
+    <Content Include="img\comic-img\c4.jpg" />
+    <Content Include="img\comic-img\c5.jpg" />
+    <Content Include="img\comic-img\c6.png" />
+    <Content Include="img\comic-img\i1.jpg" />
+    <Content Include="img\comic-img\i2.jpg" />
+    <Content Include="img\comic-img\i3.png" />
+    <Content Include="img\comic-img\i4.jpg" />
+    <Content Include="img\comic-img\n1.png" />
+    <Content Include="img\comic-img\n2.png" />
+    <Content Include="img\comic-img\n3.png" />
+    <Content Include="img\comic-img\n4.png" />
+    <Content Include="img\comic-img\n5.png" />
+    <Content Include="img\comic-img\n6.png" />
+    <Content Include="img\duan.png" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\footer-img\bq1.png" />
+    <Content Include="img\footer-img\bq2.png" />
+    <Content Include="img\footer-img\bq3.png" />
+    <Content Include="img\footer-img\bq4.gif" />
+    <Content Include="img\footer-img\hz_icon.png" />
+    <Content Include="img\gligli.png" />
+    <Content Include="img\hot-img\1.png" />
+    <Content Include="img\hot-img\2.png" />
+    <Content Include="img\hot-img\3.png" />
+    <Content Include="img\hot-img\4.png" />
+    <Content Include="img\hot-img\5.png" />
+    <Content Include="img\hot-img\djItMDg5YzZhZDcxOGNiNjNjODkzNDEzY2FmMDdkZTYxZjdfci5qcGc=.jpg" />
+    <Content Include="img\hot-img\MjAyMS0wMi0yMVQyMzo0OTo1OS4zMDgyMDc4KzA4OjAw.png" />
+    <Content Include="img\hot-img\MjAyMS0wMi0yMVQyMzo1MDoyOC4xNTUxMDIwKzA4OjAw.jpg" />
+    <Content Include="img\hot-img\MjAyMS0wMi0yMVQyMzoyODo0My44MTM4MTA1KzA4OjAw.png" />
+    <Content Include="img\hot-img\MjAyMS0wMi0yMVQyMzoyODo1NC42MjY0NTY2KzA4OjAw.png" />
+    <Content Include="img\hot-img\MjAyMS0wMi0yMVQyMzoyODowNi4xNjA3ODY4KzA4OjAw.png" />
+    <Content Include="img\hot-img\MjAyMS0wMi0yNFQxOTo1ODowOC4yMjIzNDYyKzA4OjAw.jpg" />
+    <Content Include="img\hot-img\MjAyMS0wMy0wNFQwMDo0NjoxOC45NTU0ODQxKzA4OjAw.jpg" />
+    <Content Include="img\index-content-img\c1.png" />
+    <Content Include="img\index-content-img\c10.png" />
+    <Content Include="img\index-content-img\c11.png" />
+    <Content Include="img\index-content-img\c12.png" />
+    <Content Include="img\index-content-img\c13.png" />
+    <Content Include="img\index-content-img\c14.png" />
+    <Content Include="img\index-content-img\c15.png" />
+    <Content Include="img\index-content-img\c16.png" />
+    <Content Include="img\index-content-img\c17.png" />
+    <Content Include="img\index-content-img\c18.png" />
+    <Content Include="img\index-content-img\c19.png" />
+    <Content Include="img\index-content-img\c2.png" />
+    <Content Include="img\index-content-img\c20.png" />
+    <Content Include="img\index-content-img\c21.png" />
+    <Content Include="img\index-content-img\c22.png" />
+    <Content Include="img\index-content-img\c23.png" />
+    <Content Include="img\index-content-img\c3.png" />
+    <Content Include="img\index-content-img\c4.png" />
+    <Content Include="img\index-content-img\c5.png" />
+    <Content Include="img\index-content-img\c6.png" />
+    <Content Include="img\index-content-img\c7.png" />
+    <Content Include="img\index-content-img\c8.png" />
+    <Content Include="img\index-content-img\c9.png" />
+    <Content Include="img\index-content-img\s1.png" />
+    <Content Include="img\index-content-img\s2-1.png" />
+    <Content Include="img\index-content-img\s3.png" />
+    <Content Include="img\index-content-img\s4.png" />
+    <Content Include="img\index-content-img\s5.png" />
+    <Content Include="img\index-content-img\s6.png" />
+    <Content Include="img\live-img\t1.png" />
+    <Content Include="img\live-img\t2.png" />
+    <Content Include="img\live-img\t3.png" />
+    <Content Include="img\live-img\t4.png" />
+    <Content Include="img\live-img\t5.png" />
+    <Content Include="img\live-img\t6.png" />
+    <Content Include="img\live-img\yuan.png" />
+    <Content Include="img\live-img\zyt1.jpg" />
+    <Content Include="img\live-img\zyt2.jpg" />
+    <Content Include="img\logo %283%29.png" />
+    <Content Include="img\logo1.png" />
+    <Content Include="img\ls.png" />
+    <Content Include="img\m1.png" />
+    <Content Include="img\m10.png" />
+    <Content Include="img\m11.png" />
+    <Content Include="img\m12.png" />
+    <Content Include="img\m13.png" />
+    <Content Include="img\m14.png" />
+    <Content Include="img\m15.png" />
+    <Content Include="img\m16.png" />
+    <Content Include="img\m17.png" />
+    <Content Include="img\m18.png" />
+    <Content Include="img\m19.png" />
+    <Content Include="img\m2.png" />
+    <Content Include="img\m20.png" />
+    <Content Include="img\m21.png" />
+    <Content Include="img\m3.png" />
+    <Content Include="img\m4.png" />
+    <Content Include="img\m5.png" />
+    <Content Include="img\m6.png" />
+    <Content Include="img\m7.png" />
+    <Content Include="img\m8.png" />
+    <Content Include="img\m9.png" />
+    <Content Include="img\selected.png" />
+    <Content Include="img\shouji1.png" />
+    <Content Include="img\tg1.png" />
+    <Content Include="img\tg2.png" />
+    <Content Include="img\tg3.png" />
+    <Content Include="img\tg4.png" />
+    <Content Include="img\video-img\1.png" />
+    <Content Include="img\video-img\10.png" />
+    <Content Include="img\video-img\2.png" />
+    <Content Include="img\video-img\3.png" />
+    <Content Include="img\video-img\4.png" />
+    <Content Include="img\video-img\5.png" />
+    <Content Include="img\video-img\6.png" />
+    <Content Include="img\video-img\7.png" />
+    <Content Include="img\video-img\8.png" />
+    <Content Include="img\video-img\9.png" />
+    <Content Include="img\wdbg.png" />
     <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="Sp\1.txt" />
+    <Content Include="video\100001.mp4" />
+    <Content Include="video\video-img\100001.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -196,7 +351,45 @@
   <ItemGroup>
     <Content Include="GliMS.Master" />
     <Content Include="Admin-index.Master" />
+    <Content Include="less\animated.less" />
+    <Content Include="less\bordered-pulled.less" />
+    <Content Include="less\core.less" />
+    <Content Include="less\fixed-width.less" />
+    <Content Include="less\font-awesome.less" />
+    <Content Include="less\icons.less" />
+    <Content Include="less\larger.less" />
+    <Content Include="less\list.less" />
+    <Content Include="less\mixins.less" />
+    <Content Include="less\path.less" />
+    <Content Include="less\rotated-flipped.less" />
+    <Content Include="less\screen-reader.less" />
+    <Content Include="less\stacked.less" />
+    <Content Include="less\variables.less" />
+    <Content Include="fonts\BenderLight.woff\BenderLight.woff.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\materialdesignicons.eot" />
+    <Content Include="fonts\materialdesignicons.ttf" />
+    <Content Include="fonts\materialdesignicons.woff" />
+    <Content Include="fonts\materialdesignicons.woff2" />
     <None Include="packages.config" />
+    <Content Include="scss\font-awesome.scss" />
+    <Content Include="scss\_animated.scss" />
+    <Content Include="scss\_bordered-pulled.scss" />
+    <Content Include="scss\_core.scss" />
+    <Content Include="scss\_fixed-width.scss" />
+    <Content Include="scss\_icons.scss" />
+    <Content Include="scss\_larger.scss" />
+    <Content Include="scss\_list.scss" />
+    <Content Include="scss\_mixins.scss" />
+    <Content Include="scss\_path.scss" />
+    <Content Include="scss\_rotated-flipped.scss" />
+    <Content Include="scss\_screen-reader.scss" />
+    <Content Include="scss\_stacked.scss" />
+    <Content Include="scss\_variables.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
