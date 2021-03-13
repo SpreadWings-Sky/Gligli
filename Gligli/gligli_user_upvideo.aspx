@@ -18,12 +18,14 @@
         <header id="header">
             <!-- 左侧logo -->
             <div class="left-block">
-                <a href="#"><img src="./img/gligli.png" alt="" />主站</a>
+                <a href="#">
+                    <img src="./img/gligli.png" alt="" />主站</a>
             </div>
             <!-- 右侧内容显示 -->
             <div class="right-block">
                 <span class="UserImg">
-                    <a class="ImgT" href=""><img src="./img/akari.jpg" alt="" /></a>
+                    <a class="ImgT" href="">
+                        <img src="./img/akari.jpg" alt="" /></a>
                     <div class="UserMuen">
                         <a href="#"><i class="fa fa-user-o" aria-hidden="true"></i><span>个人中心</span></a>
                         <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i><span>退出登录</span></a>
