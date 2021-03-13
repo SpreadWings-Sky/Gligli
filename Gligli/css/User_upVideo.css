@@ -127,6 +127,9 @@ textarea {
   min-height: 100%;
   background: #fafafa;
 }
+#warp * {
+  box-sizing: inherit;
+}
 #header {
   height: 60px;
   display: flex;
@@ -254,6 +257,7 @@ textarea {
   z-index: 100;
   height: calc(100%);
   left: 0;
+  z-index: 10;
 }
 .content_warp_nav .nav_warp {
   width: 200px !important;
@@ -341,4 +345,44 @@ ul.nav-warp li {
 .item_group {
   width: 114px;
   overflow: hidden;
+}
+/* 右侧投稿内容 */
+#content .content_body {
+  height: calc(100%);
+  padding: 60px 0 50px 0;
+  margin-left: 200px;
+}
+.upload_warp {
+  width: inherit;
+  margin-left: 72px;
+  margin-right: 72px;
+  margin-top: 16px;
+  height: calc(100%);
+}
+/* 选择菜单 */
+.new_link_top {
+  position: relative;
+}
+.new_link_top .new_link_nav {
+  background: #fff;
+  height: 64px;
+  display: flex;
+  border-bottom: 1px solid #e7e7e7;
+  position: relative;
+}
+.new_link_nav .nav_item {
+  display: flex;
+  padding-top: 26px;
+  height: 100%;
+  margin-left: 40px;
+  font-size: 18px;
+  color: #505050;
+  border-bottom: 3px solid transparent;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+}
+.new_link_nav .nav_item.active {
+  color: #00a1d6;
+  border-bottom: 3px solid #00a1d6;
+  font-weight: bolder;
 }
