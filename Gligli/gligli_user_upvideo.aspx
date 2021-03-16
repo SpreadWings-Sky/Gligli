@@ -136,6 +136,7 @@
                                                 <div class="file-content-title">
                                                     <h1>基本信息</h1>
                                                 </div>
+                                                <!-- 封面 -->
                                                 <div class="file-content-img">
                                                     <div class="img-title">
                                                         <h3>视频封面设置</h3>
@@ -143,6 +144,46 @@
                                                     </div>
                                                     <div class="img-up">
                                                         <img src="./img/banner.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                                <!-- 标题 -->
+                                                <div class="file-title">
+                                                    <div class="section-content">
+                                                        <p>*</p>
+                                                        <h3>标题</h3>
+                                                    </div>
+                                                    <div class="content-input">
+                                                        <div class="input-box">
+                                                            <div class="ipnut-box-inster">
+                                                                <input type="text" maxlength="80" placeholder="请输入稿件标题">
+                                                            </div>
+                                                            <p>0/80</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 分区 -->
+                                                <div class="file-title">
+                                                    <div class="section-content">
+                                                        <p>*</p>
+                                                        <h3>分区</h3>
+                                                    </div>
+                                                    <div class="type-list">
+                                                        <div class="type-list-box">
+                                                            <div class="type-list-select">
+                                                                <p>动画</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 简介 -->
+                                                <div class="file-title">
+                                                    <div class="section-content">
+                                                        <h3>简介</h3>
+                                                    </div>
+                                                    <div class="content-desc-text">
+                                                        <div class="content-desc-box">
+                                                            <textarea class="desc-text"></textarea>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -153,7 +194,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
         <!-- 主体结束 -->
     </div>
