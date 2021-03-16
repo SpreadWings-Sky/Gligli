@@ -18,14 +18,12 @@
         <header id="header">
             <!-- 左侧logo -->
             <div class="left-block">
-                <a href="#">
-                    <img src="./img/gligli.png" alt="" />主站</a>
+                <a href="#"><img src="./img/gligli.png" alt="" />主站</a>
             </div>
             <!-- 右侧内容显示 -->
             <div class="right-block">
                 <span class="UserImg">
-                    <a class="ImgT" href="">
-                        <img src="./img/akari.jpg" alt="" /></a>
+                    <a class="ImgT" href=""><img src="./img/akari.jpg" alt="" /></a>
                     <div class="UserMuen">
                         <a href="#"><i class="fa fa-user-o" aria-hidden="true"></i><span>个人中心</span></a>
                         <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i><span>退出登录</span></a>
@@ -98,7 +96,7 @@
                         </div>
                         <div class="videoup_warp">
                             <div class="video_warp_content">
-                                <div>
+                                <div id="video-box">
                                     <div class="Up_btn">
                                         <div class="Up_btn_content">
                                             <div class="file_list">
@@ -114,10 +112,8 @@
                                                         <div class="file_item_warp">
                                                             <div class="item_state_warp">
                                                                 <span class="item-title">
-                                                                    <p>
-                                                                        [HYSUB]Kaifuku Jutsushi no
-                                                                        Yarinaoshi[07][GB_MP4][1920X1080]
-                                                                    </p>
+                                                                    <p>[HYSUB]Kaifuku Jutsushi no
+                                                                        Yarinaoshi[07][GB_MP4][1920X1080]</p>
                                                                 </span>
                                                                 <div class="item-state-op">
                                                                     <span>删除</span>
@@ -183,8 +179,13 @@
                                                     <div class="content-desc-text">
                                                         <div class="content-desc-box">
                                                             <textarea class="desc-text"></textarea>
+                                                            <p>0/200</p>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <!-- 投稿 -->
+                                                <div class="video-up-btn">
+                                                    <a href="#">立即投稿</a>
                                                 </div>
                                             </div>
                                         </div>

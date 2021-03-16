@@ -142,6 +142,9 @@ textarea {
   box-sizing: border-box;
   background: #fff;
   box-shadow: 0 2px 10px 0 rgb(0, 0, 0, 5%);
+  position: fixed;
+  width: 100%;
+  z-index: 999;
 }
 #header .left-block a {
   margin-left: 32px;
@@ -206,6 +209,7 @@ textarea {
   visibility: hidden;
   transition: all 0.5s ease;
   z-index: 100;
+  background-color: #fff;
 }
 .UserMuen::before {
   content: " ";
@@ -258,7 +262,8 @@ textarea {
   border-radius: 4px;
   padding: 8px 0;
   z-index: 100;
-  height: calc(100%);
+  height: calc(100% - 60px);
+  top: 60px;
   left: 0;
   z-index: 10;
 }
@@ -389,8 +394,10 @@ ul.nav-warp li {
   border-bottom: 3px solid #00a1d6;
   font-weight: bolder;
 }
+/* 投稿主体 */
+/* 视频投稿 */
 .videoup_warp{
-  height: calc(100%-50px);
+  height: calc(100% - 50px);
 }
 .video_warp_content{
   height: 100%;
@@ -546,4 +553,130 @@ ul.nav-warp li {
 }
 .img-up img{
   width: 100%;
+}
+/* 标题 */
+.file-title{
+  margin-top: 16px;
+}
+.section-content{
+  display: inline-flex;
+  align-items: center;
+  position:relative;
+  flex-wrap: wrap;
+}
+.section-content p{
+  color: #fc403c;
+  font-size: 18px;
+  line-height: 18px;
+  height: 18px;
+}
+.section-content h3{
+  font-size: 16px;
+  color: #101010;
+  line-height: 21px;
+  font-weight: 400;
+}
+.content-input{
+  margin-top: 12px;
+} 
+.input-box  {
+  background: hsla(0, 0, 85%, 0);
+  border: 1px solid #ccd0d7;
+  border-radius: 4px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: border .3s ease;
+}
+.ipnut-box-inster{
+  flex: 1;
+  min-width: 200px;
+  margin:  8px 0;
+}
+.input-box-inster input{
+  display: block;
+  width: 100%;
+  color: #222;
+  line-height: 22px;
+  height: 22px;
+  font-size: 14px;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  background-color: transparent;
+}
+.input-box p{
+  font-size: 14px;
+  color: #9ba4ac;
+  margin: 8px 0 8px 12px;
+}
+.input-box:hover
+,.content-desc-box:hover{
+  border: 1px solid #00a1d6;
+}
+/* 分区 */
+.type-list{
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+.type-list-box{
+  user-select: none;
+  position: relative;
+}
+.type-list-select{
+  padding: 8px 12px;
+  border: 1px solid #ccd0d7;
+  border-radius: 4px;
+  min-width: 200px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #99a2aa;
+  transition: border .3 ease;
+}
+/* 简介 */
+.content-desc-text{
+  margin-top: 12px;
+}
+.content-desc-box{
+  border: 1px solid #ccd0d7;
+  border-radius: 4px;
+  padding: 10px;
+  transition: border .3s ease;
+}
+.desc-text{
+  border: 0;
+  outline: none;
+  font-size: 14px;
+  appearance: none;
+  width: 100%;
+  min-height: 120px;
+  resize: none;
+}
+.content-desc-box p{
+  line-height: 20px;
+  font-size: 14px;
+  color: #9ba4ac;
+  text-align: right;
+}
+/* 视频投稿按钮 */
+.video-up-btn{
+  padding: 32px 0 106px; 
+}
+.video-up-btn a{
+  display: inline-block;
+  line-height: 40px;
+  color: #fff;
+  background: #00a1d6;
+  font-size: 14px;
+  height: 40px;
+  border-radius: 4px;
+  text-align: center;
+  vertical-align: middle;
+  width: 120px;
+  cursor: pointer;
+  user-select: none;
 }
