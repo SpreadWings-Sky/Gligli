@@ -594,7 +594,7 @@ ul.nav-warp li {
   min-width: 200px;
   margin:  8px 0;
 }
-.input-box-inster input{
+.input-box .ipnut-box-inster input{
   display: block;
   width: 100%;
   color: #222;
@@ -679,4 +679,116 @@ ul.nav-warp li {
   width: 120px;
   cursor: pointer;
   user-select: none;
+}
+/* 专栏投稿页 */
+.Sp-up-warp{
+  transform: translateX(1px);
+  padding-left: 0;
+  margin: 0 auto;
+  width: calc(100% - 60px);
+  padding-top: 20px;
+}
+.editor-warp{
+  padding: 35px 0 0 0;
+  height: 100%;
+}
+.editor-origial{
+  width: 100%;
+  border: 1px solid #e5e9ef;
+  border-radius: 4px;
+  padding: 0 40px 20px;
+  margin: 0 auto;
+}
+.editor-title-box{
+  margin-top: 30px;
+}
+.editor-box-warp{
+  overflow: hidden;
+  position: relative;
+}
+.editor-box-title{
+  width: 100%;
+  margin-bottom: 18px;
+  border: none;
+  padding: 0;
+  display: block;
+}
+.editor-box-title textarea{
+  width: 100%;
+  border: 0;
+  font-size: 28px;
+  padding: 12px 50px 12px 0;
+  font-weight: 700;
+  line-height: 40px;
+}
+.block-warp{
+  margin-top: 30px;
+}
+.block-title{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+#type{
+  background-color: #37c8f7;
+  border-color: #37c8f7;
+  color: #fff;
+  transition-duration: .2s;
+  font-size: 14px;
+  border-radius: 4px;
+  min-width: 80px;
+  padding: 0 10px;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+  display: block;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 20px;
+}
+.block-img{
+  width: 50%;
+  border: 1px solid #ccd0d7;
+  border-radius: 8px;
+  padding: 10px;
+  position: relative;
+}
+.block-img img {
+  width: 100%;
+}
+.block-img a{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,.6);
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    line-height: 40px;
+    text-align: center;
+    line-height: 30px;
+    border-top-left-radius: 4px;
+    cursor: pointer;
+}
+.sp-up-btn{
+  margin: 80px 0 20px;
+  display: flex;
+}
+.sp-up-btn a{
+  display: block;
+  width: 140px;
+  height: 42px;
+  line-height: 42px;
+  border-radius: 50px;
+  margin: 0 35px 0 5px;
+  padding: 0;
+  background-color: #37c8f7;
+  border: 0;
+  color: #fff;
+  text-align: center;
+}
+.sp-up-btn a:hover{
+  background-color: #15c4ff;
 }
