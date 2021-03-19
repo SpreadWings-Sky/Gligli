@@ -154,18 +154,18 @@
                 <!-- 中间搜索栏结束 -->
                 <!-- 右侧状态展示栏开始 -->
                 <div class="header-right grid grid-cell-1">
-                    <%if (Request.Cookies["Account"] == null || Session["UserName"].ToString() == string.Empty)
+                    <%if (Request.Cookies["Account"] == null || Request.Cookies["Account"].ToString() == string.Empty)
                         { %>
                     <!-- 未登录状态 -->
                     <div class="right-login">
                         <a href="Login.aspx" class="login-img">
-                            <img src="./img/akari.jpg" alt=""/></a>
+                            <img src="./img/akari.jpg" alt="" /></a>
                         <a href="Login.aspx">登录</a>
                         <a href="Register.aspx">注册</a>
                     </div>
                     <%} %>
                     <%else
-                    { %>
+                        { %>
                     <!-- 登录状态 -->
                     <div class="userlogin grid">
                         <div class="userimg">
@@ -189,27 +189,28 @@
                                 </div>
                                 <ul>
                                     <li><a href=""><i class="fa fa-user" aria-hidden="true"></i>个人中心</a></li>
-                                    <li><a href=""><i class="fa fa-cog" aria-hidden="true"></i>投稿管理</a></li>
-                                    <li><a href=""><i class="fa fa-file-video-o" aria-hidden="true"></i>直播中心</a></li>
-                                    <li><a href=""><i class="fa fa-sign-out" aria-hidden="true"></i>退出</a></li>
+                                    <li><a href="gligli_user_upvideo.aspx"><i class="fa fa-cog" aria-hidden="true"></i>投稿管理</a></li>
+                                    <li><a href="#"><i class="fa fa-file-video-o" aria-hidden="true"></i>直播中心</a></li>
+                                    <li>
+                                        <asp:LinkButton ID="UserOutLogin_btn" OnClick="UserOutLogin_btn_Click" runat="server"><i class="fa fa-sign-out" aria-hidden="true"></i>退出</asp:LinkButton></li>
                                 </ul>
                             </div>
                         </div>
                         <ul class="user-title grid">
-                            <li><a href="">消息</a>
+                            <li><a href="#">消息</a>
                                 <div class="Message">
                                     <ul>
                                         <li>
-                                            <a href="">回复我的<span>0</span></a>
+                                            <a href="#">回复我的<span>0</span></a>
                                         </li>
                                         <li>
-                                            <a href="">收到的赞<span>0</span></a>
+                                            <a href="#">收到的赞<span>0</span></a>
                                         </li>
                                         <li>
-                                            <a href="">系统通知<span>0</span></a>
+                                            <a href="#">系统通知<span>0</span></a>
                                         </li>
                                         <li>
-                                            <a href="">我的消息<span>1</span></a>
+                                            <a href="#">我的消息<span>1</span></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -350,13 +351,13 @@
                         <a href="gligli_user_upvideo.aspx">投稿</a>
                         <div class="up-box">
                             <ul>
-                                <li><a href="">
+                                <li><a href="gligli_user_upvideo.aspx">
                                     <img src="./img/tg1.png" alt="">专栏投稿</a></li>
-                                <li><a href="">
+                                <li><a href="gligli_user_upvideo.aspx">
                                     <img src="./img/tg2.png" alt="">音频投稿</a></li>
-                                <li><a href="">
+                                <li><a href="gligli_user_upvideo.aspx">
                                     <img src="./img/tg3.png" alt="">视频投稿</a></li>
-                                <li><a href="">
+                                <li><a href="#">
                                     <img src="./img/tg4.png" alt="">稿件管理</a></li>
                             </ul>
                         </div>
@@ -396,7 +397,7 @@
         <!-- 主体内容导航栏开始 -->
         <div class="content-meun grid">
             <div class="meun-left grid">
-                <a href="">首页</a>
+                <a href="gligli.aspx">首页</a>
                 <a href="">动态</a>
                 <a href="">排行</a>
             </div>
@@ -474,38 +475,18 @@
         <div class="content-img-hot">
             <div class="content-img-hot-left">
                 <ul>
-                    <li>
-                        <a href="">
-                            <img src="./img/hot-img/1.png" alt="">
-                            <p>风华是一指流砂</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="./img/hot-img/2.png" alt="">
-                            <p>苍老是一段年华</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="./img/hot-img/3.png" alt="">
-                            <p>待浮花浪蕊俱尽</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="./img/hot-img/4.png" alt="">
-                            <p>唯留血染墨香哭乱冢</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="./img/hot-img/5.png" alt="">
-                            <p>昔有朝歌夜弦之高楼</p>
-                        </a>
-                    </li>
+                    <asp:Repeater ID="ImgRoctRepeater" runat="server">
+                        <ItemTemplate>
+                            <li>
+                                <a href='<%# Eval("ImgLike") %>'>
+                                    <img src='<%# Eval("ImgUrl") %>' alt="">
+                                    <p><%# Eval("Title") %></p>
+                                </a>
+                            </li>
+                        </ItemTemplate>
+                    </asp:Repeater>
                 </ul>
-                <a href="" class="move">更多<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                <a href="#" class="move">更多<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="left-trigger">
                     <span class="oncheck"></span>
                     <span></span>
@@ -516,66 +497,20 @@
                 <script src="./js/img-hot.js"></script>
             </div>
             <div class="content-img-hot-right">
-                <div class="hot-video-item">
-                    <a href="">
-                        <img src="./img/video-img/1.png" alt="">
-                        <div class="video-info">
-                            <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
-                            <p class="userName"><span>UP</span>colorwolf4</p>
-                            <p class="play"><span>100万</span>播放</p>
+                <asp:Repeater ID="ContentHotVideo" runat="server">
+                    <ItemTemplate>
+                        <div class="hot-video-item">
+                            <a href='videoplay.aspx?videoid=<%# Eval("VideoID") %>'>
+                                <img src="<%# Eval("bacimg") %>" alt="">
+                                <div class="video-info">
+                                    <p class="title" title='<%# Eval("Title") %>'><%# Eval("Title") %></p>
+                                    <p class="userName"><span>UP</span><%# Eval("UserName") %></p>
+                                    <p class="play"><span><%# Eval("VideoPlay") %></span>播放</p>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-                <div class="hot-video-item">
-                    <a href="">
-                        <img src="./img/video-img/1.png" alt="">
-                        <div class="video-info">
-                            <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
-                            <p class="userName"><span>UP</span>colorwolf4</p>
-                            <p class="play"><span>100万</span>播放</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="hot-video-item">
-                    <a href="">
-                        <img src="./img/video-img/1.png" alt="">
-                        <div class="video-info">
-                            <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
-                            <p class="userName"><span>UP</span>colorwolf4</p>
-                            <p class="play"><span>100万</span>播放</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="hot-video-item">
-                    <a href="">
-                        <img src="./img/video-img/1.png" alt="">
-                        <div class="video-info">
-                            <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
-                            <p class="userName"><span>UP</span>colorwolf4</p>
-                            <p class="play"><span>100万</span>播放</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="hot-video-item">
-                    <a href="">
-                        <img src="./img/video-img/1.png" alt="">
-                        <div class="video-info">
-                            <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
-                            <p class="userName"><span>UP</span>colorwolf4</p>
-                            <p class="play"><span>100万</span>播放</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="hot-video-item">
-                    <a href="">
-                        <img src="./img/video-img/1.png" alt="">
-                        <div class="video-info">
-                            <p class="title" title="【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~">【手绘动画】 阿尔敏——用巨人之力，为世界带来爱与和平~</p>
-                            <p class="userName"><span>UP</span>colorwolf4</p>
-                            <p class="play"><span>100万</span>播放</p>
-                        </div>
-                    </a>
-                </div>
+                    </ItemTemplate>
+                </asp:Repeater>
             </div>
         </div>
         <!-- 轮播图热门推荐结束 -->

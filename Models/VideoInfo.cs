@@ -20,5 +20,8 @@ namespace Models
         public string VideoUrl{ get; set; }//视频地址
         public DateTime Uptime{ get; set; }//上传时间
         public string State{ get; set; }//状态
+
+        //连接用户表
+        public string UserName { get; set; }
     }
 }

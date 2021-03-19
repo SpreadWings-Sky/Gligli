@@ -25,8 +25,8 @@ namespace Gligli
                 HttpCookie cookies = Request.Cookies["USER_COOKIE"];
                 if (cookies != null)
                 {
-                    this.txtEmail.Text = cookies["Email"];
-                    this.txtPass.Attributes.Add("value", cookies["pwd"]);
+                    this.txtEmail.Text = Base64Helper.Base64Decode(cookies["Account"]);
+                    this.txtPass.Attributes.Add("value",Base64Helper.Base64Decode(cookies["pwd"]));
                     this.checkbox.Checked = true;
                 }
 
@@ -51,10 +51,10 @@ namespace Gligli
                     if (this.checkbox.Checked)
                     {
                         //所有的验证信息检测之后，如果用户选择的记住密码，则将用户名和密码写入Cookie里面保存起来
-                        cookie.Values.Add("Email", this.txtEmail.Text.Trim());
-                        cookie.Values.Add("pwd", this.txtPass.Text.Trim());
+                        cookie.Values.Add("Account",Base64Helper.Base64Encode(this.txtEmail.Text.Trim()));
+                        cookie.Values.Add("pwd", Base64Helper.Base64Encode(this.txtPass.Text.Trim()));
                         //这里是设置Cookie的过期时间，这里设置一个星期的时间，过了一个星期之后状态保持自动清空
-                        cookie.Expires = System.DateTime.Now.AddDays(7.0);
+                        cookie.Expires = System.DateTime.Now.AddDays(7);
                         HttpContext.Current.Response.Cookies.Add(cookie);
                     }
                     else
@@ -66,6 +66,8 @@ namespace Gligli
                         }
                     }
                     Response.Write("<script>alert('登录成功！');</script>");
+                    Response.Cookies["Account"].Value = Base64Helper.Base64Encode(Email);
+                    Response.Cookies["Account"].Expires = DateTime.Now.AddDays(7);
                     Response.Redirect("gligli.aspx");
                 }
                 else
@@ -96,7 +98,9 @@ namespace Gligli
                 else if (StrRandom == vf)
                 {
                     Response.Write("<script language=''>alert('登录成功！');</script>");
-                    Response.Redirect("WebForm1.aspx");
+                    Response.Cookies["Account"].Value = Base64Helper.Base64Encode(Email);
+                    Response.Cookies["Account"].Expires = DateTime.Now.AddDays(7);
+                    Response.Redirect("gligli.aspx");
 
                     //强制刷新页面
                     //Response.Redirect(Request.Url.ToString());

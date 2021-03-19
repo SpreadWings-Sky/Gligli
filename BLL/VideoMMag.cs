@@ -25,5 +25,10 @@ namespace BLL
         {
             return VideoInfoServices.UpVideoByid(id, vd);
         }
+        //查询热门前六视频通过播放量排序
+        public static List<VideoInfo> SelectVideoHotTopSix()
+        {
+            return VideoInfoServices.SelectVideoHotTopSix();
+        }
     }
 }

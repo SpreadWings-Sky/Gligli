@@ -43,10 +43,38 @@ namespace GliDAL
             return DBHelper.Updata(sql);
         }
         //更新视频信息通过ID
-        public static bool UpVideoByid(int id,VideoInfo vd)
+        public static bool UpVideoByid(int id, VideoInfo vd)
         {
-            string sql = string.Format("update VideoInfo set title = '{0}',videoPlay= {1},duction= '{2}',type={3},barrageUrl='{4}',bacImg='{5}',videoUrl='{6}',state='{7}' where videoID={8}",vd.Title,vd.VideoPlay,vd.Duction,vd.type,vd.barrageUrl,vd.bacimg,vd.VideoUrl,vd.State,id);
+            string sql = string.Format("update VideoInfo set title = '{0}',videoPlay= {1},duction= '{2}',type={3},barrageUrl='{4}',bacImg='{5}',videoUrl='{6}',state='{7}' where videoID={8}", vd.Title, vd.VideoPlay, vd.Duction, vd.type, vd.barrageUrl, vd.bacimg, vd.VideoUrl, vd.State, id);
             return DBHelper.Updata(sql);
+        }
+        //查询热门视频通过播放量排序
+        public static List<VideoInfo> SelectVideoHotTopSix()
+        {
+            string sql = "select top 6 v.*,u.userName from VideoInfo v join UserInfo u on(v.userID = u.userID) order by videoPlay desc";
+            SqlDataReader da = DBHelper.GetData(sql);
+            List<VideoInfo> vd = new List<VideoInfo>();
+            while (da.Read())
+            {
+                VideoInfo video = new VideoInfo()
+                {
+                    VideoID = da.GetInt32(0),
+                    UserID = da.GetInt32(1),
+                    Title = da.GetString(2),
+                    VideoPlay = da.GetInt32(3),
+                    Duction = da.GetString(4),
+                    type = da.GetInt32(5),
+                    barrageUrl = da.IsDBNull(6) ? "" : da.GetString(6),
+                    bacimg = da.IsDBNull(7) ? "" : da.GetString(7),
+                    VideoUrl = da.IsDBNull(8) ? "" : da.GetString(8),
+                    Uptime = da.GetDateTime(9),
+                    State = da.GetString(10),
+                    UserName = da.GetString(11)
+                };
+                vd.Add(video);
+            }
+            DBHelper.Close();
+            return vd;
         }
     }
 }
