@@ -108,7 +108,11 @@
     <Content Include="css\index-header.css" />
     <Content Include="css\iziToast.min.css" />
     <Content Include="css\jquery.vidbacking.css" />
+    <Content Include="css\login.css" />
     <Content Include="css\materialdesignicons.min.css" />
+    <Content Include="css\register.css" />
+    <Content Include="css\rest.css" />
+    <Content Include="css\search.css" />
     <Content Include="css\style.min.css" />
     <Content Include="css\User_upVideo.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -249,6 +253,8 @@
     <Content Include="img\video-img\9.png" />
     <Content Include="img\wdbg.png" />
     <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Register.aspx" />
     <Content Include="Sp\1.txt" />
     <Content Include="video\100001.mp4" />
     <Content Include="video\video-img\100001.jpg" />
@@ -332,6 +338,12 @@
     <Compile Include="Admin_VideoComment.aspx.designer.cs">
       <DependentUpon>Admin_VideoComment.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FootSite.Master.cs">
+      <DependentUpon>FootSite.Master</DependentUpon>
+    </Compile>
+    <Compile Include="FootSite.Master.designer.cs">
+      <DependentUpon>FootSite.Master</DependentUpon>
+    </Compile>
     <Compile Include="gligli.aspx.cs">
       <DependentUpon>gligli.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -360,7 +372,21 @@
     <Compile Include="ImgFileUp.aspx.designer.cs">
       <DependentUpon>ImgFileUp.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="GliMS.Master" />
@@ -389,6 +415,7 @@
     <Content Include="fonts\materialdesignicons.ttf" />
     <Content Include="fonts\materialdesignicons.woff" />
     <Content Include="fonts\materialdesignicons.woff2" />
+    <Content Include="FootSite.Master" />
     <None Include="packages.config" />
     <Content Include="scss\font-awesome.scss" />
     <Content Include="scss\_animated.scss" />
@@ -443,7 +470,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>54297</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44349/</IISUrl>
+          <IISUrl>http://localhost:44349/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

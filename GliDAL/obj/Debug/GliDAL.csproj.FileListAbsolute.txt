@@ -16,3 +16,12 @@ J:\Gligli\GliDAL\obj\Debug\GliDAL.csproj.CoreCompileInputs.cache
 J:\Gligli\GliDAL\obj\Debug\GliDAL.csproj.CopyComplete
 J:\Gligli\GliDAL\obj\Debug\GliDAL.dll
 J:\Gligli\GliDAL\obj\Debug\GliDAL.pdb
+E:\作业\卓越项目 - 大二\Gligli\GliDAL\bin\Debug\GliDAL.dll
+E:\作业\卓越项目 - 大二\Gligli\GliDAL\bin\Debug\GliDAL.pdb
+E:\作业\卓越项目 - 大二\Gligli\GliDAL\bin\Debug\Models.dll
+E:\作业\卓越项目 - 大二\Gligli\GliDAL\bin\Debug\Models.pdb
+E:\作业\卓越项目 - 大二\Gligli\GliDAL\obj\Debug\GliDAL.csprojAssemblyReference.cache
+E:\作业\卓越项目 - 大二\Gligli\GliDAL\obj\Debug\GliDAL.csproj.CoreCompileInputs.cache
+E:\作业\卓越项目 - 大二\Gligli\GliDAL\obj\Debug\GliDAL.csproj.CopyComplete
+E:\作业\卓越项目 - 大二\Gligli\GliDAL\obj\Debug\GliDAL.dll
+E:\作业\卓越项目 - 大二\Gligli\GliDAL\obj\Debug\GliDAL.pdb

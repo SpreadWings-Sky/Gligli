@@ -1,0 +1,995 @@
+/* ===================================================================== */
+/* body{
+    height: 2000px;
+} */
+/* 综合 */
+/* .multiple, */
+/* 视频 */
+.tv,
+/* 番剧 */
+.result,
+/* 影视 */
+.movies,
+/* 直播 */
+.live,
+/* 专栏 */
+.special,
+/* 话题 */
+.topic,
+/* 用户 */
+.user
+{
+    display: none;
+}
+/* .conformity div{
+    display: none;
+}
+.default{
+    display: block !important;
+} */
+/* ===================================================================== */
+/* ------------------------【搜索框】------------------------ */
+.breadth{
+    width: 85%;
+    height: 0 auto;
+    margin: 0 auto;
+}
+.middle img{
+    width: 200px;
+    height: 140px;
+    float: right;
+}
+.search-box{
+    width: 55%;
+    height: 42px;
+    overflow: hidden;
+    margin-top: 50px;
+}
+#search-con{
+    width: 400px;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    float: left;
+}
+#search-btn{
+    width: 100px;
+    height: 42px;
+    border-radius: 0 5px 5px 0;
+    outline: none;
+    border: none;
+    background: #00a1d6;
+    color: #fff;
+    float: left;
+}
+#search-btn:hover{
+    background: #2ccaff;
+    cursor: pointer;
+}
+/* ============== */
+.middles{
+    width: 100%;
+    height: 90px;
+    background: #fff;
+    box-shadow: 0 0 5px #ccc;
+}
+.middles img{
+    width: 160px;
+    height: 90px;
+    margin-left: 120px;
+}
+.search-boxs{
+    width: 55%;
+    height: 42px;
+    overflow: hidden;
+    margin: -60px 0 0 450px;
+}
+#search-cons{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    float: left;
+}
+#search-btns{
+    width: 80px;
+    height: 32px;
+    border-radius: 0 5px 5px 0;
+    outline: none;
+    border: none;
+    background: #00a1d6;
+    color: #fff;
+    float: left;
+    cursor: pointer;
+}
+#search-btns:hover{
+    background: #2ccaff;
+}
+.middles{
+    display: none;
+}
+/* ------------------------【导航栏】------------------------ */
+.active,
+.nav-color{
+    color: #00a1d6;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #00a1d6;
+}
+.nav{
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    /* padding: 120px 0 10px 0; */
+}
+.nav a{
+    margin: 0 40px 0 40px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.nav a:hover{
+    padding-bottom: 10px;
+    border-bottom: 2px solid #00a1d6;
+}
+.num{
+    color: #999;
+    font-size: 12px;
+    padding-left: 3px;
+}
+/* ------------------------【分区】------------------------ */
+.back{
+    padding: 3px;
+    background: #00a1d6;
+    color: #fff !important;
+    border-radius: 5px;
+}
+.p-one{
+    margin-top: 10px;
+}
+.partitions{
+    margin-bottom: 10px;
+}
+.parte li,
+.partition li,
+.partitions li{
+    display: inline-block;
+    padding: 10px;
+}
+.parte a,
+.partition a,
+.partitions a{
+    font-size: 12px;
+}
+.parte a:hover,
+.partition a:hover,
+.partitions a:hover{
+    color: #00a1d6;
+}
+.put,
+.screen{
+    margin-left: 10px;
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+}
+.put:hover,
+.screen:hover{
+    padding: 3px 8px;
+    background: #ddd;
+    color: #fff;
+    border-radius: 3px;
+}
+.screen{
+    display: none;
+}
+.m-av{
+    width: 100%;
+    height: 0 auto;
+    margin-top: 10px;
+}
+.p-three{
+    position: relative;
+}
+.av{
+    /* width: 270px;
+    height: 30px;
+    line-height: 30px; */
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #ccc;
+    background: #eee;
+    overflow: hidden;
+    display: none;
+    position: absolute;
+}
+.av span{
+    margin: 0 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.av span:hover{
+    color: #00a1d6;
+}
+/* ------------------------【综合】------------------------ */
+.multiple{
+    width: 100%;
+    height: 0 auto;
+    margin-bottom: 20px;
+}
+.things{
+    width: 100%;
+    max-height: 940px;
+    overflow: hidden;
+}
+/* ------------------------【视频】------------------------ */
+.tv{
+    width: 100%;
+    /* height:1020px; */
+    height: 0 auto;
+    background:#fff;
+    border-top: 1px solid #ccc;
+    margin-top: -1px;
+    margin-bottom: 20px;
+}
+.tv-li{
+    width: 100%;
+    max-height: 940px;
+    overflow: hidden;
+}
+.tv-li ul{
+    padding: 36px;
+}
+.tv-li li{
+    display: inline-block;
+    max-width: 160px;
+    min-height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 0 1px 20px 0;
+    overflow: hidden;
+}
+.tv-li a{
+    border: none !important;
+    padding: 5px;
+}
+.tv-li a:hover{
+    color: #00a1d6;
+}
+.tv-li img{
+    width: 160px;
+    height: 100px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.box-title{
+    font-size: 14px;
+    margin: 0 5px;
+}
+.video-one{
+    margin: 10px;
+}
+.video-two img{
+    margin-left: 10px;
+}
+.video-one img,
+.video-two img{
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+.video-one img:hover,
+.video-two img:hover{
+    cursor: pointer;
+}
+.video-money,
+.video-time,
+.video-user{
+    font-size: 10px;
+}
+.video-user:hover{
+    color: #00a1d6;
+    cursor: pointer;
+}
+ /* =========================【页数——头】========================= */
+.page,
+.page-one,
+.page-two,
+.page-three,
+.page-four,
+.page-five,
+.page-six,
+.page-seven{
+    height: 60px;
+    line-height: 60px;
+}
+.page-con,
+.one-con,
+.two-con,
+.three-con,
+.four-con,
+.five-con,
+.six-con,
+.seven-con{
+    width: 600px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    margin: 0 auto;
+}
+.page-up,
+.page-out,
+.one-up,
+.one-out,
+.two-up,
+.two-out,
+.three-up,
+.three-out,
+.four-up,
+.four-out,
+.five-up,
+.five-out,
+.six-up,
+.six-out,
+.seven-up,
+.seven-out{
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    border-radius: 6px;
+}
+.page-up,
+.one-up,
+.two-up,
+.three-up,
+.four-up,
+.five-up,
+.six-up,
+.seven-up{
+    display: none;
+}
+.page-con .page-item,
+.one-con .one-item,
+.two-con .two-item,
+.three-con .three-item,
+.four-con .four-item,
+.five-con .five-item,
+.six-con .six-item,
+.seven-con .seven-item{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    border-radius: 6px;
+}
+.id{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    margin-right: 5px;
+    color: #bbb;
+}
+.page-up:hover,
+.page-out:hover,
+.page-item:hover,
+.one-up:hover,
+.one-out:hover,
+.one-item:hover,
+.two-up:hover,
+.two-out:hover,
+.two-item:hover,
+.three-up:hover,
+.three-out:hover,
+.three-item:hover,
+.four-up:hover,
+.four-out:hover,
+.four-item:hover,
+.five-up:hover,
+.five-out:hover,
+.five-item:hover,
+.six-up:hover,
+.six-out:hover,
+.six-item:hover,
+.seven-up:hover,
+.seven-out:hover,
+.seven-item:hover{
+    color: #fff;
+    background: #00a1d6;
+    border: 1px solid #00a1d6;
+    cursor: pointer;
+}
+.lone{
+    color: #fff;
+    background: #00a1d6;
+    border: 1px solid #00a1d6 !important;
+}
+.page,
+.page-one,
+.page-two,
+.page-three,
+.page-four,
+.page-five,
+.page-six,
+.page-seven{
+    display: none;
+}
+/* =========================【页数——尾】========================= */
+/* ------------------------【番剧】------------------------ */
+.result{
+    width: 100%;
+    height: 0 auto;
+    border-top: 1px solid #ccc;
+    margin-top: -1px;
+    margin-bottom: 20px;
+}
+.case{
+    width: 100%;
+    max-height: 940px;
+    overflow: hidden;
+}
+.content{
+    width: 100%;
+    height: 0 auto;
+    padding: 6px 0;
+    border-bottom: 1px solid #ccc;
+}
+.content img{
+    width: 130px;
+    height: 180px;
+    float: left;
+    margin: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.content-info{
+    width: 100%;
+    height: 0 auto;
+}
+.info-top{
+    margin: 20px 0;
+}
+.info-lable{
+    padding: 3px 8px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #666;
+    margin-right: 5px;
+}
+.info-item{
+    font-weight: bold;
+    font-size: 16px;
+    color: #00a1d6;
+}
+.grade,
+.count{
+    float: right;
+}
+.grade{
+    color: orange;
+    font-size: 20px;
+    margin-right: 30px;
+}
+.count{
+    font-size: 14px;
+    margin: 24px -62px 0 0;
+}
+.direction-one,
+.direction-two{
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    overflow: hidden;
+}
+.direction-three{
+    width: 100%;
+    height: 37px;
+    line-height: 20px;
+    font-size: 12px;
+    overflow: hidden;
+}
+.direction-two span:nth-child(2){
+    margin-right: 110px;
+}
+.one-lable,
+.two-lable,
+.three-lable,
+.three-value{
+    color: #888;
+}
+.info-watch{
+    width: 100%;
+    height: 32px;
+    margin-top: 25px;
+    overflow: hidden;
+}
+.eq{
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.eq:hover{
+    background: #00a1d6;
+    cursor: pointer;
+}
+.eq a{
+    color: #666;
+}
+.eq a:hover{
+    color: #fff;
+}
+/* ------------------------【影视】------------------------ */
+.movies{
+    width: 100%;
+    height: 0 auto;
+    margin-bottom: 20px;
+}
+.move{
+    width: 100%;
+    max-height: 940px;
+}
+.move-con{
+    width: 100%;
+    height: 0 auto;
+    padding: 6px 0;
+    border-bottom: 1px solid #ccc;
+}
+.move-con img{
+    width: 130px;
+    height: 180px;
+    float: left;
+    margin: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.content-info{
+    width: 100%;
+    height: 0 auto;
+}
+.info-top{
+    margin: 20px 0;
+}
+.i-lable{
+    padding: 3px 8px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #666;
+    margin-right: 5px;
+}
+.i-item{
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+}
+.i-item:hover{
+    color: #00a1d6;
+}
+.film-one,
+.film-two{
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    overflow: hidden;
+}
+.film-three{
+    width: 100%;
+    height: 37px;
+    line-height: 20px;
+    font-size: 12px;
+    overflow: hidden;
+}
+.film-one .right-one{
+    margin-left: 148px;
+}
+.film-two span:nth-child(2){
+    margin-right: 110px;
+}
+.one-lable,
+.two-lable,
+.three-lable,
+.three-value{
+    color: #888;
+}
+.con-btn{
+    width: 100px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    margin-top: 25px;
+    border: 1px solid #00a1d6;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #00a1d6;
+    overflow: hidden;
+    cursor: pointer;
+}
+.con-btn:hover{
+    background: #00a1d6;
+    color: #fff;
+}
+/* ------------------------【直播】------------------------ */
+.live{
+    width: 100%;
+    height: 0 auto;
+    margin-bottom: 20px;
+}
+.live-top li{
+    display: inline-block;
+    padding: 30px 20px 10px 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.top-item{
+    color: #00a1d6;
+    border-bottom: 2px solid #00a1d6;
+}
+.broadcast{
+    width: 100%;
+    max-height: 940px;
+    padding: 20px 0;
+    overflow: hidden;
+}
+.br-one{
+    width: 30%;
+    height: 110px;
+    display: inline-block;
+    margin: 0 15px;
+    border-radius: 5px;
+    border: 0.5px solid #ccc;
+    box-shadow: 0 0 3px #ccc;
+    margin-bottom: 20px;
+}
+.br-one img{
+    float: left;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 15px;
+}
+.br-right{
+    margin: 15px 15px 15px 120px;
+    cursor: pointer;
+}
+.br-bage{
+    font-size: 12px;
+}
+.br-free{
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: #888;
+    border-radius: 5px;
+    color: #fff;
+    margin: 8px 0;
+    font-size: 12px;
+}
+.br-info{
+    margin-left: -15px;
+}
+.br-info li{
+    display: inline-block;
+}
+.br-info img{
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+}
+.i-font{
+    font-size: 12px;
+    color: #aaa;
+    margin-left: -10px;
+}
+.br-defaubrt{
+    display: none;
+}
+.bd,
+.bt{
+    display: none;
+}
+.br-default{
+    display: block;
+}
+/* ------------------------【专栏】------------------------ */
+.special{
+    width: 100%;
+    /* height:1020px; */
+    height: 0 auto;
+    margin-bottom: 20px;
+}
+.gaine{
+    width: 100%;
+    max-height: 940px;
+    border-top: 1px solid #ccc;
+    overflow: hidden;
+}
+.column{
+    width: 100%;
+    height: 0 auto;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 29px 5px;
+    margin-top: -2px;
+}
+.column-photo{
+    width: 160px;
+    height: 110px;
+    border-radius: 5px;
+    margin: -28px 15px 0 0;
+    float: right;
+}
+.column-con{
+    margin-top: 10px;
+    width: 850px;
+    height: 17px;
+    font-size: 12px;
+    color: #99a2aa;
+    overflow: hidden;
+}
+.column-user{
+    margin-top: 20px;
+    width: 70%;
+    height: 30px;
+    line-height: 30px;
+}
+.column-user img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    float: left;
+    vertical-align: middle;
+}
+.column-name,
+.column-type,
+.column-num,
+.column-sum,
+.column-say{
+    font-size: 12px;
+    color: #99a2aa;
+    margin-left: 5px;
+}
+.column-type{
+    margin-left: 50px;
+}
+.column-one,
+.column-two,
+.column-three{
+    display: inline-block;
+    margin: 0 20px;
+}
+.column-one img,
+.column-two img,
+.column-three img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: 5px;
+} 
+/* ------------------------【话题】------------------------ */
+.topic{
+    width: 100%;
+    height: 0 auto;
+    margin-bottom: 20px;
+}
+.top{
+    width: 100%;
+    max-height: 940px;
+}
+.topic-con{
+    width: 100%;
+    height: 0 auto;
+    padding: 6px 0;
+    border-bottom: 1px solid #ccc;
+}
+.topic-con img{
+    width: 130px;
+    height: 180px;
+    float: left;
+    margin: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.topic-info{
+    width: 100%;
+    height: 0 auto;
+}
+.topic-top{
+    margin: 20px 0;
+}
+.topic-item{
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+}
+.topic-box{
+    width: 100%;
+    height: 42px;
+    overflow: hidden;
+}
+.lable{
+    font-size: 12px;
+    color: #888;
+}
+.topic-btn{
+    margin-top: 50px;
+}
+.topic-btn li{
+    display: inline-block;
+    vertical-align: middle;
+}
+.topic-btn img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.topic-time{
+    font-size: 12px;
+    color: #aaa;
+    margin-left: -12px;
+}
+/* ------------------------【用户】------------------------ */
+.user{
+    width: 100%;
+    height: 0 auto;
+    margin-bottom: 20px;
+}
+.u-top{
+    width: 100%;
+    height: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+.u-drop{
+    position: absolute;
+}
+.u-drop ul li,
+.down{
+    display: inline-block;
+    float: left;
+    width: 120px;
+    font-size: 13px;
+}
+.u-drop ul li a{
+    color: #666;
+}
+.down a{
+    color: #000 !important;
+}
+.down{
+    margin-top: 10px;
+    width: 120px;
+    height: 0 auto;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #ccc;
+    text-align: center;
+    overflow: hidden;
+    display: none;
+}
+.down li{
+    padding: 5px 0;
+    background: #fff;
+}
+.down li:hover{
+    background: #ddd;
+}
+.news{
+    width: 100%;
+    max-height: 940px;
+    margin: 20px 10px;
+    overflow: hidden;
+}
+.u-con{
+    width: 100%;
+    height: 0 auto;
+    overflow: hidden;
+}
+.u-box{
+    width: 95%;
+    height: 0 auto;
+    padding: 10px 0 40px 0;
+    border-bottom: 1px solid #ccc;
+}
+.u-box img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.weight{
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.weight:hover{
+    color: #00a1d6;
+}
+.lv{
+    padding: 2px 5px;
+    text-align: center;
+    background: orange;
+    font-size: 12px;
+    border-radius: 5px;
+    margin: 0 15px;
+}
+.add{
+    padding: 4px 10px;
+    text-align: center;
+    background: #00a1d6;
+    font-size: 12px;
+    border-radius: 5px;
+    color: #fff;
+}
+.add:hover{
+    background: #2ccaff;
+}
+.u-box p{
+    margin: 10px 0;
+    font-size: 12px;
+    color: #666;
+}
+.small{
+    margin-top: 10px;
+    width: 25%;
+    height: 10px;
+    display: inline-block;
+}
+.small img{
+    width: 80px;
+    height: 50px;
+    border-radius: 0px;
+}
+.small a{
+    font-size: 12px;
+}
+.small a:hover{
+    color: #00a1d6;
+}
+.u-time{
+    display: block;
+    color: #aaa;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

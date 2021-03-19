@@ -20,3 +20,14 @@ J:\Gligli\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 J:\Gligli\BLL\obj\Debug\BLL.csproj.CopyComplete
 J:\Gligli\BLL\obj\Debug\BLL.dll
 J:\Gligli\BLL\obj\Debug\BLL.pdb
+E:\作业\卓越项目 - 大二\Gligli\BLL\bin\Debug\BLL.dll
+E:\作业\卓越项目 - 大二\Gligli\BLL\bin\Debug\BLL.pdb
+E:\作业\卓越项目 - 大二\Gligli\BLL\bin\Debug\GliDAL.dll
+E:\作业\卓越项目 - 大二\Gligli\BLL\bin\Debug\Models.dll
+E:\作业\卓越项目 - 大二\Gligli\BLL\bin\Debug\GliDAL.pdb
+E:\作业\卓越项目 - 大二\Gligli\BLL\bin\Debug\Models.pdb
+E:\作业\卓越项目 - 大二\Gligli\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+E:\作业\卓越项目 - 大二\Gligli\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\作业\卓越项目 - 大二\Gligli\BLL\obj\Debug\BLL.csproj.CopyComplete
+E:\作业\卓越项目 - 大二\Gligli\BLL\obj\Debug\BLL.dll
+E:\作业\卓越项目 - 大二\Gligli\BLL\obj\Debug\BLL.pdb

@@ -1,0 +1,134 @@
+.entirety{
+    max-width: 1265px;
+    margin: 50px auto;
+}
+#photo img{
+    width: 500px;
+    height: 300px;
+    margin: 80px 0;
+}
+#login{
+    width: 100%;
+    height: 0 auto;
+    border-left: 1px solid #ddd;
+    padding: 0 170px;
+}
+.l-head{
+    text-align: center;
+    padding-bottom: 30px;
+}
+#l-title{
+    font-size: 28px;
+}
+.l-top{
+    margin-left: -6px;
+}
+.l-top a{
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #666;
+}
+.l-top a:hover{
+    color: #00a1d6;
+}
+.active{
+    color: #00a1d6 !important;
+}
+.l-content{
+    width: 100%;
+    height: 0 auto;
+}
+.l-content li,
+.y-content li{
+    margin: 30px 0;
+}
+.email,
+.pass,
+.an-email,
+.box-num {
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: red;
+}
+.mailbox,
+.cipher,
+.enmailbox{
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+}
+.auth-num{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    float: left;
+}
+.auth-btn{
+    width: 100px;
+    height: 42px;
+    border-radius: 0 10px 10px 0;
+    outline: none;
+    background: #00a1d6;
+    border: 1px solid #00a1d6;
+    color: #fff;
+    float: left;
+}
+.auth-btn:hover{
+    background: #2ccaff;
+    border: 1px solid #2ccaff;
+    cursor: pointer;
+}
+.rtpass,
+.click{
+    float: left;
+    font-size: 14px;
+}
+.click,
+.forget{
+    margin-top: -5px;
+}
+.forget{
+    float: right;
+    font-size: 14px;
+    color: #00a1d6;
+    cursor: pointer;
+}
+#l-skip{
+    text-decoration: none;
+    font-size: 12px;
+    float: left;
+}
+.l-btn,
+.ath-btn {
+    width: 422px;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    text-align: center;
+    color: #fff;
+    background: #00a1d6;
+    cursor: pointer;
+    margin: 30px 0;
+}
+.l-btn:hover,
+.ath-btn:hover{
+    background: #2ccaff;
+}
+.l-content div{
+    display: none;
+}
+.l-default{
+    display: block !important;
+}

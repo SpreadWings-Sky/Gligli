@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>咖喱咖喱 (゜-゜)つロ 干杯~-gligli</title>
+    <title>吉哩吉哩 (゜-゜)つロ 干杯~-gligli</title>
     <link rel="stylesheet" href="./css/index-header.css" />
     <link rel="stylesheet" href="./css/index-footer.css" />
     <link rel="stylesheet" href="./css/font-awesome.min.css" />
@@ -154,14 +154,14 @@
                 <!-- 中间搜索栏结束 -->
                 <!-- 右侧状态展示栏开始 -->
                 <div class="header-right grid grid-cell-1">
-                    <%if (Session["UserName"] == null || Session["UserName"].ToString() == string.Empty)
+                    <%if (Request.Cookies["Account"] == null || Session["UserName"].ToString() == string.Empty)
                         { %>
                     <!-- 未登录状态 -->
                     <div class="right-login">
-                        <a href="" class="login-img">
-                            <img src="./img/akari.jpg" alt=""></a>
-                        <a href="">登录</a>
-                        <a href="">注册</a>
+                        <a href="Login.aspx" class="login-img">
+                            <img src="./img/akari.jpg" alt=""/></a>
+                        <a href="Login.aspx">登录</a>
+                        <a href="Register.aspx">注册</a>
                     </div>
                     <%} %>
                     <%else
@@ -347,7 +347,7 @@
                     <%} %>
                     <!-- 投稿栏 -->
                     <div class="right-up">
-                        <a href="">投稿</a>
+                        <a href="gligli_user_upvideo.aspx">投稿</a>
                         <div class="up-box">
                             <ul>
                                 <li><a href="">
