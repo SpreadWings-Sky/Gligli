@@ -33,6 +33,8 @@ namespace Gligli
             VideoTypeGhost.DataSource = VideoMMag.SelectVideoByType(3);
             //音乐
             VideoTypeMusic.DataSource = VideoMMag.SelectVideoByType(2);
+            //专栏
+            SpItem.DataSource = SpeInfoMMag.SelectSpStateAll();
         }
         //热门视频
         private void HotVideoBin()

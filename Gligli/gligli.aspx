@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>吉哩吉哩 (゜-゜)つロ 干杯~-gligli</title>
@@ -1434,7 +1434,7 @@
                     <ul>
                         <asp:Repeater ID="VideoTypeMusic" runat="server">
                             <ItemTemplate>
-                                 <li>
+                                <li>
                                     <a href='video-play.aspx?videoid=<%# Eval("VideoID ") %>'>
                                         <img src='<%# Eval("bacimg") %>' alt="<%# Eval("Title") %>">
                                         <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i><%# Eval("VideoPlay") %></p>
@@ -1751,110 +1751,23 @@
                 </header>
                 <div class="video-list-box articel-list">
                     <ul>
-                        <li>
-                            <a href="" class="arti-img">
-                                <img src="./img/video-img/10.png" alt=""></a>
-                            <div class="list-title-name">
-                                <a href="" class="arti-name" title="纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画">纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画
-                                </a>
-                                <a href="" class="arti-up"><span>UP</span>动画学术叭</a>
-                                <p class="arti-play">
-                                    <i class="fa fa-eye fa-fw" aria-hidden="true"></i><span>333</span>
-                                    <i class="fa fa-comment-o fa-fw" style="margin-left: 10%;" aria-hidden="true"></i><span>666</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="" class="arti-img">
-                                <img src="./img/video-img/10.png" alt=""></a>
-                            <div class="list-title-name">
-                                <a href="" class="arti-name" title="纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画">纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画
-                                </a>
-                                <a href="" class="arti-up"><span>UP</span>动画学术叭</a>
-                                <p class="arti-play">
-                                    <i class="fa fa-eye fa-fw" aria-hidden="true"></i><span>333</span>
-                                    <i class="fa fa-comment-o fa-fw" style="margin-left: 10%;" aria-hidden="true"></i><span>666</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="" class="arti-img">
-                                <img src="./img/video-img/10.png" alt=""></a>
-                            <div class="list-title-name">
-                                <a href="" class="arti-name" title="纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画">纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画
-                                </a>
-                                <a href="" class="arti-up"><span>UP</span>动画学术叭</a>
-                                <p class="arti-play">
-                                    <i class="fa fa-eye fa-fw" aria-hidden="true"></i><span>333</span>
-                                    <i class="fa fa-comment-o fa-fw" style="margin-left: 10%;" aria-hidden="true"></i><span>666</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="" class="arti-img">
-                                <img src="./img/video-img/10.png" alt=""></a>
-                            <div class="list-title-name">
-                                <a href="" class="arti-name" title="纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画">纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画
-                                </a>
-                                <a href="" class="arti-up"><span>UP</span>动画学术叭</a>
-                                <p class="arti-play">
-                                    <i class="fa fa-eye fa-fw" aria-hidden="true"></i><span>333</span>
-                                    <i class="fa fa-comment-o fa-fw" style="margin-left: 10%;" aria-hidden="true"></i><span>666</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="" class="arti-img">
-                                <img src="./img/video-img/10.png" alt=""></a>
-                            <div class="list-title-name">
-                                <a href="" class="arti-name" title="纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画">纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画
-                                </a>
-                                <a href="" class="arti-up"><span>UP</span>动画学术叭</a>
-                                <p class="arti-play">
-                                    <i class="fa fa-eye fa-fw" aria-hidden="true"></i><span>333</span>
-                                    <i class="fa fa-comment-o fa-fw" style="margin-left: 10%;" aria-hidden="true"></i><span>666</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="" class="arti-img">
-                                <img src="./img/video-img/10.png" alt=""></a>
-                            <div class="list-title-name">
-                                <a href="" class="arti-name" title="纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画">纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画
-                                </a>
-                                <a href="" class="arti-up"><span>UP</span>动画学术叭</a>
-                                <p class="arti-play">
-                                    <i class="fa fa-eye fa-fw" aria-hidden="true"></i><span>333</span>
-                                    <i class="fa fa-comment-o fa-fw" style="margin-left: 10%;" aria-hidden="true"></i><span>666</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="" class="arti-img">
-                                <img src="./img/video-img/10.png" alt=""></a>
-                            <div class="list-title-name">
-                                <a href="" class="arti-name" title="纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画">纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画
-                                </a>
-                                <a href="" class="arti-up"><span>UP</span>动画学术叭</a>
-                                <p class="arti-play">
-                                    <i class="fa fa-eye fa-fw" aria-hidden="true"></i><span>333</span>
-                                    <i class="fa fa-comment-o fa-fw" style="margin-left: 10%;" aria-hidden="true"></i><span>666</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="" class="arti-img">
-                                <img src="./img/video-img/10.png" alt=""></a>
-                            <div class="list-title-name">
-                                <a href="" class="arti-name" title="纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画">纯真少女的成神之路，这部「神作」十年后仍在改变着日本动画
-                                </a>
-                                <a href="" class="arti-up"><span>UP</span>动画学术叭</a>
-                                <p class="arti-play">
-                                    <i class="fa fa-eye fa-fw" aria-hidden="true"></i><span>333</span>
-                                    <i class="fa fa-comment-o fa-fw" style="margin-left: 10%;" aria-hidden="true"></i><span>666</span>
-                                </p>
-                            </div>
-                        </li>
+                        <asp:Repeater ID="SpItem" runat="server">
+                            <ItemTemplate>
+                                <li>
+                                    <a href="" class="arti-img">
+                                        <img src='<%# Eval("PageImg") %>' alt=""></a>
+                                    <div class="list-title-name">
+                                        <a href="" class="arti-name" title='<%# Eval("Title") %>'><%# Eval("Title") %>
+                                        </a>
+                                        <a href="" class="arti-up"><span>UP</span><%# Eval("UserName") %></a>
+                                        <p class="arti-play">
+                                            <i class="fa fa-eye fa-fw" aria-hidden="true"></i><span><%# Eval("SpNumber") %></span>
+                                            <i class="fa fa-comment-o fa-fw" style="margin-left: 10%;" aria-hidden="true"></i><span><%# Eval("Sum") %></span>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </ul>
                 </div>
             </div>

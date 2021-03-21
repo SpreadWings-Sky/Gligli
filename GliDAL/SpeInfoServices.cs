@@ -58,5 +58,25 @@ namespace GliDAL
             DBHelper.Close();
             return url;
         } 
+        //查询全部过审专栏 
+        public static List<SpeInfo> SelectSpStateAll()
+        {
+            string sql = "select s.spID,s.userID,s.title,s.pageimg,u.userName,count(c.spID) sun from SpeInfo s left join UserInfo u on(s.userID=u.userID) left join SPCommentInfo c on(c.spID=s.spID) where s.state = '正常' group by c.spID,u.userName,s.spID,s.userID,s.title,s.pageimg";
+            List<SpeInfo> lsp = new List<SpeInfo>();
+            SqlDataReader da = DBHelper.GetData(sql);
+            while (da.Read())
+            {
+                SpeInfo sp = new SpeInfo();
+                sp.spID = da.GetInt32(0);
+                sp.UserID = da.GetInt32(1);
+                sp.Title = da.GetString(2);
+                sp.PageImg = da.GetString(3);
+                sp.UserName = da.GetString(4);
+                sp.Sum = da.GetInt32(5);
+                lsp.Add(sp);
+            }
+            da.Close();
+            return lsp;
+        }
     }
 }
