@@ -29,7 +29,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
+<body them ="dark" data-theme='<%=Request.Cookies["them"]==null?" ":Request.Cookies["them"].Value %>'>
     <form runat="server">
         <div class="lyear-layout-web">
             <div class="lyear-layout-container">
@@ -134,6 +134,31 @@
                                                 <input type="radio" name="site_theme" value="dark" id="site_theme_2">
                                                 <label for="site_theme_2"></label>
                                             </span>
+                                            <script>
+                                                window.onload = function () {
+                                                    if (this.getCookie("them") == "dark") {
+                                                        $("#site_theme_2").checked = true;
+                                                    } else {
+                                                        $("#site_theme_1").checked = true;
+                                                    }
+                                                }
+                                                $(".drop-skin-li").find("span").find("input").click(function () {
+                                                    setCookie("them",$(this).val());   
+                                                })
+                                                function setCookie(name, value) {
+                                                    var Days = 30;
+                                                    var exp = new Date();
+                                                    exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+                                                    document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+                                                }
+                                                function getCookie(name) {
+                                                    var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+                                                    if (arr = document.cookie.match(reg))
+                                                        return unescape(arr[2]);
+                                                    else
+                                                        return null;
+                                                }
+                                            </script>
                                         </li>
                                     </ul>
                                 </li>

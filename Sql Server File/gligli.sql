@@ -76,7 +76,7 @@ create table SpeInfo(
 	userID int foreign key references UserInfo(userID),--上传用户
 	title nvarchar(40) not null,--标题
 	pageimg nvarchar(40) not null,--封面图片
-	spUrl text not null,--专栏文章文件地址
+	spUrl text not null,--专栏文章
 	upTime datetime default(getdate()) not null,--上传时间
 	spNumber int default(0),--专栏阅读数
 	[state] nvarchar(10) default('审核') not null, --文章状态

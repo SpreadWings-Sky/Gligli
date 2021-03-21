@@ -21,7 +21,18 @@ namespace Gligli
             //轮播图绑定
             ImgDatabin();
             HotVideoBin();
+            HotTypeVideoBin();
             DataBind();
+        }
+        //分区视频推荐
+        private void HotTypeVideoBin()
+        {
+            //动画区
+            VideoTypeAniment.DataSource = VideoMMag.SelectVideoByType(1);
+            //鬼畜
+            VideoTypeGhost.DataSource = VideoMMag.SelectVideoByType(3);
+            //音乐
+            VideoTypeMusic.DataSource = VideoMMag.SelectVideoByType(2);
         }
         //热门视频
         private void HotVideoBin()

@@ -519,79 +519,27 @@
             <div class="video-list">
                 <header class="video-list-header">
                     <div class="list-header-logo logo1">
-                        <a href="">动画</a>
+                        <a href="#">动画</a>
                     </div>
                     <div class="list-header-btn">
                         <div class="btn-change"><i class="fa fa-refresh" aria-hidden="true"></i>换一换</div>
-                        <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                        <a href="#">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
                 </header>
                 <div class="video-list-box">
                     <ul>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
+                        <asp:Repeater ID="VideoTypeAniment" runat="server">
+                            <ItemTemplate>
+                                <li>
+                                    <a href='video-play.aspx?videoid=<%# Eval("VideoID ") %>'>
+                                        <img src='<%# Eval("bacimg") %>' alt="<%# Eval("Title") %>">
+                                        <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i><%# Eval("VideoPlay") %></p>
+                                        <p class="video-list-title"><%# Eval("Title") %></p>
+                                        <p class="video-list-up"><span>UP</span><%# Eval("UserName") %></p>
+                                    </a>
+                                </li>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </ul>
                 </div>
             </div>
@@ -1165,70 +1113,18 @@
                 </header>
                 <div class="video-list-box">
                     <ul>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
+                        <asp:Repeater ID="VideoTypeGhost" runat="server">
+                            <ItemTemplate>
+                                <li>
+                                    <a href='video-play.aspx?videoid=<%# Eval("VideoID ") %>'>
+                                        <img src='<%# Eval("bacimg") %>' alt="<%# Eval("Title") %>">
+                                        <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i><%# Eval("VideoPlay") %></p>
+                                        <p class="video-list-title"><%# Eval("Title") %></p>
+                                        <p class="video-list-up"><span>UP</span><%# Eval("UserName") %></p>
+                                    </a>
+                                </li>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </ul>
                 </div>
             </div>
@@ -1536,70 +1432,18 @@
                 </header>
                 <div class="video-list-box">
                     <ul>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/2.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">史上最骚解说：用电竞的方式打开进击的巨人第七集！？！？</p>
-                                <p class="video-list-up"><span>UP</span>Super也好君</p>
-                            </a>
-                        </li>
+                        <asp:Repeater ID="VideoTypeMusic" runat="server">
+                            <ItemTemplate>
+                                 <li>
+                                    <a href='video-play.aspx?videoid=<%# Eval("VideoID ") %>'>
+                                        <img src='<%# Eval("bacimg") %>' alt="<%# Eval("Title") %>">
+                                        <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i><%# Eval("VideoPlay") %></p>
+                                        <p class="video-list-title"><%# Eval("Title") %></p>
+                                        <p class="video-list-up"><span>UP</span><%# Eval("UserName") %></p>
+                                    </a>
+                                </li>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </ul>
                 </div>
             </div>
