@@ -1,5 +1,5 @@
 var lsbx = $(".vertical-list-box");
-$(window).scroll(function(){
+$(window).scroll(function () {
     var scr = parseInt($(this).scrollTop());
     console.log(scr);
     if(scr<444){

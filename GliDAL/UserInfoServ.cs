@@ -80,5 +80,21 @@ namespace GliDAL
             string sql = string.Format("update UserInfo set pwd = '{0}' where userName='{1}' and Account = '{2}'",newpwd,name,Account);
             return DBHelper.Updata(sql);
         }
+        //通过账号连表查询用户信息
+        public static UserInfo SelectUserByAccount(string Account)
+        {
+            string sql = $"select u.userName,u.imageUrl,count(w.watchID) gz,COUNT(w1.watchID) fs from UserInfo u left join WarchInfo w on(u.userID=w.userID) left join WarchInfo w1 on(u.userID=w1.watchID) where u.Account = '{Account}' group by u.userName,u.imageUrl,w.watchID,w1.watchID ";
+            SqlDataReader dr = DBHelper.GetData(sql);
+            UserInfo user = new UserInfo();
+            if (dr.Read())
+            {
+                user.userName = dr.GetString(0);
+                user.imgurl = dr.GetString(1);
+                user.Gz = dr.GetInt32(2);
+                user.Fs = dr.GetInt32(3);
+            }
+            DBHelper.Close();
+            return user;
+        }
     }
 }

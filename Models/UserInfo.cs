@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,5 +23,8 @@ namespace Models
         public string brief { get; set; }//简介
         public DateTime regTime { get; set; }//注册时间
         public string state { get; set; }//账号状态
+        //连接关注表
+        public int Fs { get; set; }//粉丝总数
+        public int Gz { get; set; }//关注总数
     }
 }

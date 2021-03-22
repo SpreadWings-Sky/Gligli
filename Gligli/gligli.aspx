@@ -44,9 +44,9 @@
                             </div>
                             <div class="muen-right">
                                 <a href="" class="ms">专栏</a>
-                                <a href="" class="ms">话题</a>
-                                <a href="" class="ms">活动</a>
-                                <a href="" class="ms">直播</a>
+                                <a href="javascript:void(0)" class="ms">话题</a>
+                                <a href="javascript:void(0)" class="ms">活动</a>
+                                <a href="javascript:void(0)" class="ms">直播</a>
                             </div>
                         </div>
                         <!-- 目录结束 -->
@@ -55,34 +55,34 @@
                     <!-- 左侧导航开始 -->
                     <div class="nav-left">
                         <ul>
-                            <li><a href="">番剧</a></li>
-                            <li><a href="">直播</a>
+                            <li><a href="javascript:void(0)">番剧</a></li>
+                            <li><a href="javascript:void(0)">直播</a>
                                 <div class="nva-left-live">
                                     <div class="live-left">
                                         <h3>热门直播:</h3>
                                         <div class="live-list">
-                                            <a href="">
+                                            <a href="javascript:void(0)">
                                                 <img src="./img/live-img/t1.png" alt="">
                                                 <div class="live-hover">LIVE</div>
                                                 <p>酸奶EFI</p>
                                             </a>
-                                            <a href="">
+                                            <a href="javascript:void(0)">
                                                 <img src="./img/live-img/t2.png" alt=""><div class="live-hover">LIVE</div>
                                                 <p>夜落莫言</p>
                                             </a>
-                                            <a href="">
+                                            <a href="javascript:void(0)">
                                                 <img src="./img/live-img/t3.png" alt=""><div class="live-hover">LIVE</div>
                                                 <p>十二月的...</p>
                                             </a>
-                                            <a href="">
+                                            <a href="javascript:void(0)">
                                                 <img src="./img/live-img/t4.png" alt=""><div class="live-hover">LIVE</div>
                                                 <p>睡神不醒、</p>
                                             </a>
-                                            <a href="">
+                                            <a href="javascript:void(0)">
                                                 <img src="./img/live-img/t5.png" alt=""><div class="live-hover">LIVE</div>
                                                 <p>是辞妹o</p>
                                             </a>
-                                            <a href="">
+                                            <a href="javascript:void(0)">
                                                 <img src="./img/live-img/t6.png" alt=""><div class="live-hover">LIVE</div>
                                                 <p>梦醒三生梦</p>
                                             </a>
@@ -99,40 +99,40 @@
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="">漫画</a>
+                            <li><a href="javascript:void(0)">漫画</a>
                                 <div class="comic">
                                     <div class="comic-left">
-                                        <dic class="comic-item">
+                                        <div class="comic-item">
                                         <img src="./img/comic-img/i1.jpg" alt="无职转生~到了异世界就拿出真本事">
                                         <p>无职转生</p>
-                                    </dic>
-                                        <dic class="comic-item">
+                                    </div>
+                                        <div class="comic-item">
                                         <img src="./img/comic-img/i2.jpg" alt="武林第一厨师">
                                         <p>武林第一厨师</p>
-                                    </dic>
-                                        <dic class="comic-item">
+                                    </div>
+                                        <div class="comic-item">
                                         <img src="./img/comic-img/i3.png" alt="你就饶了为师我">
                                         <p>你就饶了为师我</p>
-                                    </dic>
-                                        <dic class="comic-item">
+                                    </div>
+                                        <div class="comic-item">
                                         <img src="./img/comic-img/i4.jpg" alt="别来无恙">
                                         <p>别来无恙</p>
-                                    </dic>
+                                    </div>
                                     </div>
                                     <div class="comic-right">
                                         <h3>人气漫画</h3>
                                         <ol>
-                                            <li><a href="">其中一个是魔王</a><img src="./img/comic-img/c1.jpg" alt="其中一个是魔王"></li>
-                                            <li><a href="">总之非常可爱</a><img src="./img/comic-img/c2.jpg" alt="总之非常可爱"></li>
-                                            <li><a href="">租借女友</a><img src="./img/comic-img/c3.jpg" alt=""></li>
-                                            <li><a href="">失业魔王</a><img src="./img/comic-img/c4.jpg" alt=""></li>
-                                            <li><a href="">伪恋</a><img src="./img/comic-img/c5.jpg" alt=""></li>
-                                            <li><a href="">咒术回战</a><img src="./img/comic-img/c6.png" alt=""></li>
+                                            <li><a href="javascript:void(0)">其中一个是魔王</a><img src="./img/comic-img/c1.jpg" alt="其中一个是魔王"></li>
+                                            <li><a href="javascript:void(0)">总之非常可爱</a><img src="./img/comic-img/c2.jpg" alt="总之非常可爱"></li>
+                                            <li><a href="javascript:void(0)">租借女友</a><img src="./img/comic-img/c3.jpg" alt=""></li>
+                                            <li><a href="javascript:void(0)">失业魔王</a><img src="./img/comic-img/c4.jpg" alt=""></li>
+                                            <li><a href="javascript:void(0)">伪恋</a><img src="./img/comic-img/c5.jpg" alt=""></li>
+                                            <li><a href="javascript:void(0)">咒术回战</a><img src="./img/comic-img/c6.png" alt=""></li>
                                         </ol>
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="">活动</a></li>
+                            <li><a href="javascript:void(0)">活动</a></li>
                             <li class="Phone-logo"><a href="#">下载APP</a>
                                 <div class="Dolowdimg">
                                 </div>
@@ -170,17 +170,17 @@
                     <div class="userlogin grid">
                         <div class="userimg">
                             <a href="">
-                                <img src="./img/akari.jpg" alt=""></a>
+                                <img src='<%=UserDataBin().imgurl %>' alt=""></a>
                             <div class="user-item">
-                                <p class="user-name">用户名称</p>
+                                <p class="user-name"><%=UserDataBin().userName %></p>
                                 <div class="item-num">
                                     <div class="num1">
                                         <span>关注</span>
-                                        <p>166</p>
+                                        <p><%=UserDataBin().Gz.ToString() %></p>
                                     </div>
                                     <div class="num2">
                                         <span>粉丝</span>
-                                        <p>0</p>
+                                        <p><%=UserDataBin().Fs.ToString() %></p>
                                     </div>
                                     <div class="num3">
                                         <span>动态</span>
@@ -190,7 +190,7 @@
                                 <ul>
                                     <li><a href=""><i class="fa fa-user" aria-hidden="true"></i>个人中心</a></li>
                                     <li><a href="gligli_user_upvideo.aspx"><i class="fa fa-cog" aria-hidden="true"></i>投稿管理</a></li>
-                                    <li><a href="#"><i class="fa fa-file-video-o" aria-hidden="true"></i>直播中心</a></li>
+                                    <li><a href="javascript:void(0)"><i class="fa fa-file-video-o" aria-hidden="true"></i>直播中心</a></li>
                                     <li>
                                         <asp:LinkButton ID="UserOutLogin_btn" OnClick="UserOutLogin_btn_Click" runat="server"><i class="fa fa-sign-out" aria-hidden="true"></i>退出</asp:LinkButton></li>
                                 </ul>
@@ -1883,40 +1883,40 @@
                 <div class="left-item">
                     <h3>gligli</h3>
                     <ul>
-                        <li><a href="">关于我们</a></li>
-                        <li><a href="">加入我们</a></li>
-                        <li><a href="">gligli认证</a></li>
-                        <li><a href="">联系我们</a></li>
-                        <li><a href="">友情链接</a></li>
-                        <li><a href="">Inverstor Relations</a></li>
+                        <li><a href="javascript:void(0)">关于我们</a></li>
+                        <li><a href="javascript:void(0)">加入我们</a></li>
+                        <li><a href="javascript:void(0)">gligli认证</a></li>
+                        <li><a href="javascript:void(0)">联系我们</a></li>
+                        <li><a href="javascript:void(0)">友情链接</a></li>
+                        <li><a href="javascript:void(0)">Inverstor Relations</a></li>
                     </ul>
                 </div>
                 <div class="left-item">
                     <h3>传送门</h3>
                     <ul>
-                        <li><a href="">帮助中心</a></li>
-                        <li><a href="">侵权申述</a></li>
-                        <li><a href="">壁纸站</a></li>
-                        <li><a href="">高级弹幕</a></li>
-                        <li><a href="">活动中心</a></li>
-                        <li><a href="">专车号服务中心</a></li>
-                        <li><a href="">活动专题页</a></li>
-                        <li><a href="">用户反馈论坛</a></li>
-                        <li><a href="">名人堂</a></li>
+                        <li><a href="javascript:void(0)">帮助中心</a></li>
+                        <li><a href="javascript:void(0)">侵权申述</a></li>
+                        <li><a href="javascript:void(0)">壁纸站</a></li>
+                        <li><a href="javascript:void(0)">高级弹幕</a></li>
+                        <li><a href="javascript:void(0)">活动中心</a></li>
+                        <li><a href="javascript:void(0)">专车号服务中心</a></li>
+                        <li><a href="javascript:void(0)">活动专题页</a></li>
+                        <li><a href="javascript:void(0)">用户反馈论坛</a></li>
+                        <li><a href="javascript:void(0)">名人堂</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-top-right">
                 <ol>
-                    <li><a href="">
+                    <li><a href="javascript:void(0)">
                         <i class="fa fa-download" aria-hidden="true"></i>
                         <p>下载APP</p>
                     </a></li>
-                    <li><a href="">
+                    <li><a href="javascript:void(0)">
                         <i class="fa fa-weibo" aria-hidden="true"></i>
                         <p>新浪微博</p>
                     </a></li>
-                    <li><a href="">
+                    <li><a href="javascript:void(0)">
                         <i class="fa fa-weixin" aria-hidden="true"></i>
                         <p>官方微信</p>
                     </a></li>
@@ -1927,9 +1927,9 @@
         <!-- 下半部分开始 -->
         <div class="footer-bottom grid">
             <div class="footer-bottom-left grid-cell-2">
-                <img src="./img/footer-img/bq1.png" alt="" />
-                <img src="./img/footer-img/bq2.png" alt="" />
-                <img src="./img/footer-img/bq3.png" alt="" />
+                <img src="./img/footer-img/bq1.png" alt="只有神知道的世界" />
+                <img src="./img/footer-img/bq2.png" alt="darling" />
+                <img src="./img/footer-img/bq3.png" alt="甘雨" />
                 <span></span>
             </div>
             <div class="footer-bottom-right grid-cell-4">

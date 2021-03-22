@@ -10,7 +10,7 @@ namespace GliDAL
 {
     class DBHelper
     {
-        public static string con = @"server=.;initial catalog=Gligli;uid=sa;pwd=123456";
+        public static string con = @"server=.;initial catalog=Gligli;uid=sa;pwd=JSB903..";
         public static SqlConnection conn;
 
         public static void Open()

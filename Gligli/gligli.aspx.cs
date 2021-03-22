@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BLL;
+using Models;
 
 namespace Gligli
 {
@@ -20,7 +21,9 @@ namespace Gligli
         {
             //轮播图绑定
             ImgDatabin();
+            //热门视频
             HotVideoBin();
+            //分类推荐
             HotTypeVideoBin();
             DataBind();
         }
@@ -47,12 +50,17 @@ namespace Gligli
         {
             ImgRoctRepeater.DataSource = ImgRotationInfoMMag.SelectImgByPage("主页");
         }
+        //用户信息绑定
+       public UserInfo  UserDataBin()
+        {
+            return UserInfoManager.SelectUserByAccount(Base64Helper.Base64Decode(Request.Cookies["Account"].Value));
+        }
         //用户退出登录
         protected void UserOutLogin_btn_Click(object sender, EventArgs e)
         {
             Response.Cookies["Account"].Expires = DateTime.Now.AddDays(-1);
             Session.Clear();
-            Response.Redirect(Request.Url.ToString());
+            Response.Redirect("gligli.aspx");
         }
     }
 }

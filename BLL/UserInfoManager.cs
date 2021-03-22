@@ -33,5 +33,10 @@ namespace BLL
         {
             return UserInfoServer.FindUser(Email, pwd);
         }
+        //主页用户信息获取
+        public static UserInfo SelectUserByAccount(string Account)
+        {
+            return UserInfoServ.SelectUserByAccount(Account);
+        }
     }
 }
