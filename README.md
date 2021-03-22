@@ -5,7 +5,7 @@
 
 参考对象[bilibili](https://www.bilibili.com/ "bilibili")
 
-##### 主页轮播图动态加载
+##### 主页轮播图动态加载:
 
 ![image][service_life]
 
