@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <asp:GridView ID="SpList" class="table table-bordered tables tables-striped tables-bordered tables-hover" runat="server" AutoGenerateColumns="False" OnRowDeleting="SpList_RowDeleting" AllowPaging="True" OnPageIndexChanging="SpList_PageIndexChanging" OnRowCancelingEdit="SpList_RowCancelingEdit" OnRowEditing="SpList_RowEditing" OnRowUpdating="SpList_RowUpdating" PageSize="5">
+                            <asp:GridView ID="SpList" class="table table-bordered tables tables-striped tables-bordered tables-hover" runat="server" AutoGenerateColumns="False" OnRowDeleting="SpList_RowDeleting" AllowPaging="True" OnPageIndexChanging="SpList_PageIndexChanging" OnRowCancelingEdit="SpList_RowCancelingEdit" OnRowEditing="SpList_RowEditing" OnRowUpdating="SpList_RowUpdating" PageSize="5" OnRowDataBound="SpList_RowDataBound">
                                 <Columns>
                                     <asp:BoundField HeaderText="编号" DataField="SpID" ReadOnly="true" />
                                     <asp:BoundField DataField="UserID" HeaderText="用户编号" ReadOnly="True" />

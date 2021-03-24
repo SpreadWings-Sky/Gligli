@@ -78,5 +78,16 @@ namespace Gligli
             }
             UserDataBin();
         }
+        //封禁提示
+        protected void UserListGrid_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                if (e.Row.RowState == DataControlRowState.Normal || e.Row.RowState == DataControlRowState.Alternate)
+                {
+                    ((LinkButton)e.Row.Cells[12].Controls[1]).Attributes.Add("onclick", "javascript:return confirm('确认封禁此账号？')");
+                }
+            }
+        }
     }
 }

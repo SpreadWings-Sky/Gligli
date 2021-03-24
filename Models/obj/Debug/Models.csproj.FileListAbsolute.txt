@@ -16,3 +16,9 @@ E:\作业\卓越项目 - 大二\Gligli\Models\obj\Debug\Models.csprojAssemblyRef
 E:\作业\卓越项目 - 大二\Gligli\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 E:\作业\卓越项目 - 大二\Gligli\Models\obj\Debug\Models.dll
 E:\作业\卓越项目 - 大二\Gligli\Models\obj\Debug\Models.pdb
+C:\Users\wangqinglong\Desktop\Gligli\Models\bin\Debug\Models.dll
+C:\Users\wangqinglong\Desktop\Gligli\Models\bin\Debug\Models.pdb
+C:\Users\wangqinglong\Desktop\Gligli\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\wangqinglong\Desktop\Gligli\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\wangqinglong\Desktop\Gligli\Models\obj\Debug\Models.dll
+C:\Users\wangqinglong\Desktop\Gligli\Models\obj\Debug\Models.pdb

@@ -89,5 +89,16 @@ namespace Gligli
             string id = this.SpList.Rows[row].Cells[0].Text;
             Response.Redirect("AdminSpShow.aspx?SpId="+id+"");
         }
+        //删除提示
+        protected void SpList_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                if (e.Row.RowState == DataControlRowState.Normal || e.Row.RowState == DataControlRowState.Alternate)
+                {
+                    ((LinkButton)e.Row.Cells[8].Controls[1]).Attributes.Add("onclick", "javascript:return confirm('确认删除？')");
+                }
+            }
+        }
     }
 }

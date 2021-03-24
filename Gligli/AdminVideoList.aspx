@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <asp:GridView ID="GridView1" runat="server" class="table table-bordered tables tables-striped tables-bordered tables-hover" AutoGenerateColumns="False" AllowPaging="True" PageSize="5" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnDataBound="GridView1_DataBound">
+                            <asp:GridView ID="GridView1" runat="server" class="table table-bordered tables tables-striped tables-bordered tables-hover" AutoGenerateColumns="False" AllowPaging="True" PageSize="5" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnDataBound="GridView1_DataBound" OnRowDataBound="GridView1_RowDataBound">
                                 <Columns>
                                     <asp:BoundField DataField="UserID" HeaderText="用户ID" ReadOnly="True" />
                                     <asp:BoundField DataField="Title" HeaderText="标题" />

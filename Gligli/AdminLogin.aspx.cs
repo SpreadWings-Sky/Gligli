@@ -55,7 +55,7 @@ namespace Gligli
             }
             else
             {
-                ClientScript.RegisterStartupScript(ClientScript.GetType(), "myscript", "<script>iziToast.error({title: '失败',message: '密码错误！',});</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "myscript", "<script>iziToast.error({title: '失败',message: '密码错误！',});</script>");
             }
         }
     }
