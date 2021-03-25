@@ -80,6 +80,15 @@ create table SpeInfo(
 	upTime datetime default(getdate()) not null,--上传时间
 	spNumber int default(0),--专栏阅读数
 	[state] nvarchar(10) default('审核') not null, --文章状态
+	[partition] [nvarchar](10) NULL -- 分区
+)
+--分区排行
+CREATE table SpeRan(
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Yest] [text] NULL,
+	[Theday] [text] NULL,
+	[Welist] [text] NULL,
+	[Molist] [text] NULL,
 )
 --专栏评论
 create table SPCommentInfo(
