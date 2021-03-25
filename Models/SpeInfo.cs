@@ -25,10 +25,14 @@ namespace Models
         public int SpNumber { get; set; }
         //状态
         public string State { get; set; }
+        //分区
+        public string  Partition { get; set; }
         //链接用户表
         //用户名
         public string UserName { get; set; }
         //评论表
         public int Sum { get; set; }
+        //头像
+        public string ImageUrl { get; set; }
     }
 }

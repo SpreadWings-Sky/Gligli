@@ -95,6 +95,7 @@
     <Content Include="Admin_upPwd.aspx" />
     <Content Include="Admin_UserList.aspx" />
     <Content Include="Admin_VideoComment.aspx" />
+    <Content Include="Animation.aspx" />
     <Content Include="css\AdminLog.css" />
     <Content Include="css\adminsystem.css" />
     <Content Include="css\animate.css" />
@@ -117,6 +118,7 @@
     <Content Include="css\User_upVideo.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\materialdesignicons.svg" />
+    <Content Include="Game.aspx" />
     <Content Include="gligli.aspx" />
     <Content Include="gligli_user_upvideo.aspx" />
     <Content Include="ImgFileUp.aspx" />
@@ -253,8 +255,11 @@
     <Content Include="img\video-img\9.png" />
     <Content Include="img\wdbg.png" />
     <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="LightFiction.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Music.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="Special.aspx" />
     <Content Include="Sp\1.txt" />
     <Content Include="video\100001.mp4" />
     <Content Include="video\video-img\100001.jpg" />
@@ -338,11 +343,25 @@
     <Compile Include="Admin_VideoComment.aspx.designer.cs">
       <DependentUpon>Admin_VideoComment.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Animation.aspx.cs">
+      <DependentUpon>Animation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Animation.aspx.designer.cs">
+      <DependentUpon>Animation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FootSite.Master.cs">
       <DependentUpon>FootSite.Master</DependentUpon>
     </Compile>
     <Compile Include="FootSite.Master.designer.cs">
       <DependentUpon>FootSite.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Game.aspx.cs">
+      <DependentUpon>Game.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Game.aspx.designer.cs">
+      <DependentUpon>Game.aspx</DependentUpon>
     </Compile>
     <Compile Include="gligli.aspx.cs">
       <DependentUpon>gligli.aspx</DependentUpon>
@@ -372,12 +391,26 @@
     <Compile Include="ImgFileUp.aspx.designer.cs">
       <DependentUpon>ImgFileUp.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LightFiction.aspx.cs">
+      <DependentUpon>LightFiction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LightFiction.aspx.designer.cs">
+      <DependentUpon>LightFiction.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Music.aspx.cs">
+      <DependentUpon>Music.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Music.aspx.designer.cs">
+      <DependentUpon>Music.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
@@ -386,6 +419,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Special.aspx.cs">
+      <DependentUpon>Special.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Special.aspx.designer.cs">
+      <DependentUpon>Special.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

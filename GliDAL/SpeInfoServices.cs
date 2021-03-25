@@ -78,5 +78,28 @@ namespace GliDAL
             da.Close();
             return lsp;
         }
+        //获取专栏主页内容
+        public static List<SpeInfo> SpeInfos()
+        {
+            string sql = "select s.title,s.pageimg,s.spUrl,u.userName,s.partition,u.imageUrl from SpeInfo s left join UserInfo u on s.userID=u.userID";
+            SqlDataReader dr = DBHelper.GetData(sql);
+            List<SpeInfo> so = new List<SpeInfo>();
+            SpeInfo spe = null;
+            while (dr.Read())
+            {
+                spe = new SpeInfo()
+                {
+                    Title = dr.GetString(0),
+                    PageImg = dr.GetString(1),
+                    SpUrl = dr.GetString(2),
+                    UserName = dr.GetString(3),
+                    Partition = dr.IsDBNull(4) ? "无" : dr.GetString(4),
+                    ImageUrl = dr.GetString(5)
+                };
+                so.Add(spe);
+            }
+            dr.Close();
+            return so;
+        }
     }
 }

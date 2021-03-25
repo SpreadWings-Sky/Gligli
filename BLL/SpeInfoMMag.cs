@@ -72,5 +72,10 @@ namespace BLL
             }
             return array;
         }
+        //专栏
+        public static List<SpeInfo> SpeInfos()
+        {
+            return SpeInfoServices.SpeInfos();
+        }
     }
 }

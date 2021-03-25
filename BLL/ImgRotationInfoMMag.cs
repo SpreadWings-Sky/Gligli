@@ -35,5 +35,10 @@ namespace BLL
         {
             return ImgRotationInfoServices.InsetrImg(ig);
         }
+        //专栏轮播图
+        public static List<ImgRotationInfo> ImgRotationInfos()
+        {
+            return ImgRotationInfoServices.ImgRotationInfos();
+        }
     }
 }

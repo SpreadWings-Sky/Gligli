@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul li{
+    list-style: none;
+}
+a
+{
+    color: #000;
+}
+#section
+{
+    width: 80%;
+    margin: 0 auto;
+}
+.section-nav
+{
+    width: 120px;
+    height: 400px;
+    margin-left: 20px;
+}
+#section-nav {
+    position: fixed;
+}
+#section-nav img
+{
+   width:25px;
+   height:25px;
+   border-radius:50%;
+}
+.section-nav span
+{
+    font-size: 23px;
+    font-family: serif;
+    color: #00a1d6;
+    font-weight: bolder;
+}
+.section-nav ul li
+{
+    text-align: center;
+    font-size: 16px;
+    font-family: serif;
+    margin-top: 25px;
+}
+.section-nav ul li a:hover
+{
+    color: #00a1d6;
+}
+.section-tu
+{
+    width: 680px;
+    height: 212px; 
+}
+#picBox{
+    position: relative;
+    width:680px;
+    height: 214px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#picBox img
+{
+    width: 680px;
+    height: 212px;   
+    background-position:center;
+}
+#picBox .show{
+    display: block;
+}
+.choice{
+    position: absolute;
+    bottom:5px;
+    left:50%;
+    margin-left: -50px;
+}
+.choice li{
+    list-style: none;
+    width:15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    background:#fff;
+    cursor: pointer;
+    overflow: hidden;
+}
+.lun{
+    /* 给这个样式加一个最高级 */
+    background:orange !important;
+}
+.section-pai
+{
+    margin-right: 0px;
+}
+#section-pai {
+    right: 15%;
+    top: 20px;
+}
+#txt
+{
+    width: 200px;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+#btn
+{
+    height: 25px;
+    width: 30px;
+    border: 0 solid white;
+    font-size: 12px;
+    border-radius: 0 5px 5px 0;
+    position: relative;
+    right: 35px;
+    cursor: pointer;
+    outline: none;
+}
+.section-pai ul
+{
+    font-size: 20px;
+}
+.section-pai ul li
+{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.bian
+{
+    color: #00a1d6;
+    border-bottom: 2px solid #00a1d6;
+}
+.line
+{
+    width: 205px;
+    height: 1px;
+    background: #CCC;
+    margin-top: -1px;
+}
+.lie
+{
+    margin-top: 10px;
+}
+.lie span
+{
+    list-style: none;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 18px;
+    font-size: 12px;
+    border-radius: 3px;
+    background: #ccc;
+    color: #fff;
+    margin-right: 10px;
+}
+.lie p 
+{
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+    .lie p:nth-child(1) span,
+    .lie p:nth-child(2) span,
+    .lie p:nth-child(3) span {
+        background: #FB7299 !important;
+    }
+.lie div {
+    display: none;
+}
+.lie div:nth-child(1)
+{
+    display: block;
+}
+.lie-item
+{
+   background: #eee;
+   margin-top: 20px;
+   width: 220px;
+   height: 20px;
+   font-size: 12px;
+   line-height: 20px;
+   text-align: center;
+   cursor:pointer;
+}
+.lie-item:hover
+{
+    color:#00a1d6;
+}
+.lie-up
+{
+    margin-top: 30px;
+}
+.lie-up-s
+{
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.lie-up-s p
+{
+    font-size: 12px;
+    cursor: pointer;
+}
+.lie-up-s span
+{
+    border: 1px solid #00a1d6;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-left: 30px;
+}
+.lie-up-s p:hover
+{
+    color: #00a1d6;
+}
+.lie-box
+{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.lie-box span
+{
+    font-size: 12px;
+    border: 1px solid #ccc;
+    background: #eee;
+    margin-left: 30px;
+}
+.lie-up img
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.lie-up dd
+{
+    margin-top: -55px;
+    margin-left: 70px;
+    width: 150px;
+}
+.news-item
+{
+    margin-top: 30px;
+    width: 680px;
+}
+.news-item h4
+{
+    font-size: 18px;
+    font-family: serif;
+
+}
+.news-item img
+{
+    width: 117px;
+    height: 88px;
+    float: right;
+    margin-right: 10px;
+}
+.news-item-s
+{
+    margin-top: 20px;
+}
+.news-item-s span
+{
+    font-size: 20px;
+}
+.news-item-s p
+{
+    margin-top: 10px;
+    font-size: 12px;
+}
+.news-item-s p:hover
+{
+    color: #00a1d6;
+}
+.lines
+{
+    margin-top: 20px;
+    width: 680px;
+    height: 1px;
+    background: #eee;
+}
+

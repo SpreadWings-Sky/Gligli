@@ -61,6 +61,25 @@ namespace GliDAL
                 read.Close();
                 return false;
             }
+        //专栏用户获取
+        public static List<UserInfo> UserInfos()
+        {
+            string sql = "select top 5 userName,imageUrl from UserInfo ";
+            SqlDataReader dr = DBHelper.GetData(sql);
+            List<UserInfo> ul = new List<UserInfo>();
+            UserInfo user = null;
+            while (dr.Read())
+            {
+                user = new UserInfo()
+                {
+                    userName = dr.GetString(0),
+                    imgurl = dr.GetString(1)
+                };
+                ul.Add(user);
+            }
+            dr.Close();
+            return ul;
         }
+    }
     }
 

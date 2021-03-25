@@ -66,5 +66,27 @@ namespace GliDAL
             string sql = string.Format("insert into ImgRotationInfo(ImgUrl,Page,Title,ImgLike) values('{0}','{1}','{2}','{3}')", ig.ImgUrl, ig.Page, ig.Title, ig.ImgLike);
             return DBHelper.Updata(sql);
         }
+        //专栏轮播图
+        public static List<ImgRotationInfo> ImgRotationInfos()
+        {
+            string sql = "select * from ImgRotationInfo where Page='专栏'";
+            SqlDataReader dr = DBHelper.GetData(sql);
+            List<ImgRotationInfo> io = new List<ImgRotationInfo>();
+            ImgRotationInfo img = null;
+            while (dr.Read())
+            {
+                img = new ImgRotationInfo()
+                {
+                    ImgID = dr.GetInt32(0),
+                    ImgUrl = dr.GetString(1),
+                    Page = dr.GetString(2),
+                    Title = dr.GetString(3),
+                    ImgLike = dr.GetString(4)
+                };
+                io.Add(img);
+            }
+            dr.Close();
+            return io;
+        }
     }
 }

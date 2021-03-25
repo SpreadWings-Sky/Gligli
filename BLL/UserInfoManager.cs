@@ -38,5 +38,10 @@ namespace BLL
         {
             return UserInfoServ.SelectUserByAccount(Account);
         }
+        //专栏用户
+        public static List<UserInfo> UserInfos()
+        {
+            return UserInfoServer.UserInfos();
+        }
     }
 }

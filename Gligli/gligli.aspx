@@ -26,21 +26,21 @@
                         <!-- 目录 -->
                         <div class="logo-muen">
                             <div class="muen-left">
-                                <a href="" class="ms">动画<span>1996</span></a>
-                                <a href="" class="ms">生活<span>1596</span></a>
-                                <a href="" class="ms">番剧<span>1589</span></a>
-                                <a href="" class="ms">鬼畜<span>1546</span></a>
-                                <a href="" class="ms">国创<span>1440</span></a>
-                                <a href="" class="ms">时尚<span>1057</span></a>
-                                <a href="" class="ms">音乐<span>888</span></a>
-                                <a href="" class="ms">广告<span>489</span></a>
-                                <a href="" class="ms">舞蹈<span>158</span></a>
-                                <a href="" class="ms">娱乐<span>1789</span></a>
-                                <a href="" class="ms">游戏<span>567</span></a>
-                                <a href="" class="ms">影视<span>687</span></a>
-                                <a href="" class="ms">科技<span>487</span></a>
-                                <a href="" class="ms">放映厅<span>541</span></a>
-                                <a href="" class="ms">数码<span>2587</span></a>
+                                <a href="" class="ms">动画<span>0</span></a>
+                                <a href="" class="ms">生活<span>0</span></a>
+                                <a href="" class="ms">番剧<span>0</span></a>
+                                <a href="" class="ms">鬼畜<span>0</span></a>
+                                <a href="" class="ms">国创<span>0</span></a>
+                                <a href="" class="ms">时尚<span>0</span></a>
+                                <a href="" class="ms">音乐<span>0</span></a>
+                                <a href="" class="ms">广告<span>0</span></a>
+                                <a href="" class="ms">舞蹈<span>0</span></a>
+                                <a href="" class="ms">娱乐<span>0</span></a>
+                                <a href="" class="ms">游戏<span>0</span></a>
+                                <a href="" class="ms">影视<span>0</span></a>
+                                <a href="" class="ms">科技<span>0</span></a>
+                                <a href="" class="ms">放映厅<span>0</span></a>
+                                <a href="" class="ms">数码<span>0</span></a>
                             </div>
                             <div class="muen-right">
                                 <a href="" class="ms">专栏</a>
