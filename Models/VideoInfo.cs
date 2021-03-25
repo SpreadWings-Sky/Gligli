@@ -23,5 +23,7 @@ namespace Models
 
         //连接用户表
         public string UserName { get; set; }
+        public string imageUrl { get; set; }//头像
+        public string brief { get; set; }//简介
     }
 }

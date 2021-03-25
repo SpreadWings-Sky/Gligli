@@ -72,5 +72,14 @@ namespace BLL
             }
             return array;
         }
+        //杨-视频
+        public static VideoInfo getvideoList(int id)
+        {
+            return videoSevice.getvideoList(id);
+        }
+        public static List<VideoInfo> Gethotlist(int id, int type)
+        {
+            return videoSevice.Gethotlist(id, type);
+        }
     }
 }

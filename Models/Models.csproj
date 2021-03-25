@@ -49,6 +49,7 @@
     <Compile Include="SpeRan.cs" />
     <Compile Include="UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VComInfo.cs" />
     <Compile Include="VideoCommentInfo.cs" />
     <Compile Include="VideoInfo.cs" />
   </ItemGroup>

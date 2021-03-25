@@ -500,7 +500,7 @@
                 <asp:Repeater ID="ContentHotVideo" runat="server">
                     <ItemTemplate>
                         <div class="hot-video-item">
-                            <a href='videoplay.aspx?videoid=<%# Eval("VideoID") %>'>
+                            <a href='video-playback.aspx?videoID=<%# Eval("VideoID") %>'>
                                 <img src="<%# Eval("bacimg") %>" alt="">
                                 <div class="video-info">
                                     <p class="title" title='<%# Eval("Title") %>'><%# Eval("Title") %></p>
@@ -531,7 +531,7 @@
                         <asp:Repeater ID="VideoTypeAniment" runat="server">
                             <ItemTemplate>
                                 <li>
-                                    <a href='video-play.aspx?videoid=<%# Eval("VideoID ") %>'>
+                                    <a href='video-playback.aspx?videoID=<%# Eval("VideoID ") %>'>
                                         <img src='<%# Eval("bacimg") %>' alt="<%# Eval("Title") %>">
                                         <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i><%# Eval("VideoPlay") %></p>
                                         <p class="video-list-title"><%# Eval("Title") %></p>
@@ -1116,7 +1116,7 @@
                         <asp:Repeater ID="VideoTypeGhost" runat="server">
                             <ItemTemplate>
                                 <li>
-                                    <a href='video-play.aspx?videoid=<%# Eval("VideoID ") %>'>
+                                    <a href='video-playback.aspx?videoID=<%# Eval("VideoID ") %>'>
                                         <img src='<%# Eval("bacimg") %>' alt="<%# Eval("Title") %>">
                                         <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i><%# Eval("VideoPlay") %></p>
                                         <p class="video-list-title"><%# Eval("Title") %></p>
@@ -1435,7 +1435,7 @@
                         <asp:Repeater ID="VideoTypeMusic" runat="server">
                             <ItemTemplate>
                                 <li>
-                                    <a href='video-play.aspx?videoid=<%# Eval("VideoID ") %>'>
+                                    <a href='video-playback.aspx?videoID=<%# Eval("VideoID ") %>'>
                                         <img src='<%# Eval("bacimg") %>' alt="<%# Eval("Title") %>">
                                         <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i><%# Eval("VideoPlay") %></p>
                                         <p class="video-list-title"><%# Eval("Title") %></p>

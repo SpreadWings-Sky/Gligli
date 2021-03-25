@@ -47,6 +47,7 @@
     <Compile Include="SpeRanManager.cs" />
     <Compile Include="UserInfoListMMag.cs" />
     <Compile Include="UserInfoManager.cs" />
+    <Compile Include="VComManager.cs" />
     <Compile Include="VideoCommentInfoMMag.cs" />
     <Compile Include="VideoMMag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

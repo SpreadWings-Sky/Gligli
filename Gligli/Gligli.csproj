@@ -261,6 +261,7 @@
     <Content Include="Register.aspx" />
     <Content Include="Special.aspx" />
     <Content Include="Sp\1.txt" />
+    <Content Include="video-playback.aspx" />
     <Content Include="video\100001.mp4" />
     <Content Include="video\video-img\100001.jpg" />
     <Content Include="Web.config" />
@@ -426,6 +427,13 @@
     </Compile>
     <Compile Include="Special.aspx.designer.cs">
       <DependentUpon>Special.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="video-playback.aspx.cs">
+      <DependentUpon>video-playback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="video-playback.aspx.designer.cs">
+      <DependentUpon>video-playback.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
