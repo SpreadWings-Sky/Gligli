@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="Admin_home_num.cs" />
     <Compile Include="Base64Helper.cs" />
+    <Compile Include="CollectionInfo.cs" />
+    <Compile Include="giligiliInfo.cs" />
     <Compile Include="ImgRotationInfo.cs" />
     <Compile Include="SPCommentInfo.cs" />
     <Compile Include="SpeInfo.cs" />
@@ -52,6 +54,8 @@
     <Compile Include="VComInfo.cs" />
     <Compile Include="VideoCommentInfo.cs" />
     <Compile Include="VideoInfo.cs" />
+    <Compile Include="VideoLikeInfo.cs" />
+    <Compile Include="WarchInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

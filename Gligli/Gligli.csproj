@@ -96,6 +96,8 @@
     <Content Include="Admin_UserList.aspx" />
     <Content Include="Admin_VideoComment.aspx" />
     <Content Include="Animation.aspx" />
+    <Content Include="Collection.aspx" />
+    <Content Include="Collection_column.aspx" />
     <Content Include="css\AdminLog.css" />
     <Content Include="css\adminsystem.css" />
     <Content Include="css\animate.css" />
@@ -116,11 +118,12 @@
     <Content Include="css\search.css" />
     <Content Include="css\style.min.css" />
     <Content Include="css\User_upVideo.css" />
+    <Content Include="follow.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\materialdesignicons.svg" />
     <Content Include="Game.aspx" />
+    <Content Include="giligili.aspx" />
     <Content Include="gligli.aspx" />
-    <Content Include="gligli_user_upvideo.aspx" />
     <Content Include="ImgFileUp.aspx" />
     <Content Include="img\Admin-img\06-01.png" />
     <Content Include="img\Admin-img\06-app-bar.gif" />
@@ -257,10 +260,17 @@
     <Content Include="js\jquery-3.3.1.min.js" />
     <Content Include="LightFiction.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="modify.aspx" />
     <Content Include="Music.aspx" />
+    <Content Include="MyVideo.aspx" />
+    <Content Include="OutLogin.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Special.aspx" />
+    <Content Include="special_column.aspx" />
     <Content Include="Sp\1.txt" />
+    <Content Include="TA.aspx" />
+    <Content Include="UserAdminPage.aspx" />
+    <Content Include="UserUp.aspx" />
     <Content Include="video-playback.aspx" />
     <Content Include="video\100001.mp4" />
     <Content Include="video\video-img\100001.jpg" />
@@ -351,6 +361,27 @@
     <Compile Include="Animation.aspx.designer.cs">
       <DependentUpon>Animation.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Collection.aspx.cs">
+      <DependentUpon>Collection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collection.aspx.designer.cs">
+      <DependentUpon>Collection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collection_column.aspx.cs">
+      <DependentUpon>Collection_column.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collection_column.aspx.designer.cs">
+      <DependentUpon>Collection_column.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="follow.aspx.cs">
+      <DependentUpon>follow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="follow.aspx.designer.cs">
+      <DependentUpon>follow.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FootSite.Master.cs">
       <DependentUpon>FootSite.Master</DependentUpon>
     </Compile>
@@ -364,19 +395,19 @@
     <Compile Include="Game.aspx.designer.cs">
       <DependentUpon>Game.aspx</DependentUpon>
     </Compile>
+    <Compile Include="giligili.aspx.cs">
+      <DependentUpon>giligili.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="giligili.aspx.designer.cs">
+      <DependentUpon>giligili.aspx</DependentUpon>
+    </Compile>
     <Compile Include="gligli.aspx.cs">
       <DependentUpon>gligli.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="gligli.aspx.designer.cs">
       <DependentUpon>gligli.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="gligli_user_upvideo.aspx.cs">
-      <DependentUpon>gligli_user_upvideo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="gligli_user_upvideo.aspx.designer.cs">
-      <DependentUpon>gligli_user_upvideo.aspx</DependentUpon>
     </Compile>
     <Compile Include="GliMS.Master.cs">
       <DependentUpon>GliMS.Master</DependentUpon>
@@ -406,12 +437,33 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="modify.aspx.cs">
+      <DependentUpon>modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modify.aspx.designer.cs">
+      <DependentUpon>modify.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Music.aspx.cs">
       <DependentUpon>Music.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Music.aspx.designer.cs">
       <DependentUpon>Music.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyVideo.aspx.cs">
+      <DependentUpon>MyVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyVideo.aspx.designer.cs">
+      <DependentUpon>MyVideo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OutLogin.aspx.cs">
+      <DependentUpon>OutLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutLogin.aspx.designer.cs">
+      <DependentUpon>OutLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
@@ -427,6 +479,41 @@
     </Compile>
     <Compile Include="Special.aspx.designer.cs">
       <DependentUpon>Special.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="special_column.aspx.cs">
+      <DependentUpon>special_column.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="special_column.aspx.designer.cs">
+      <DependentUpon>special_column.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TA.aspx.cs">
+      <DependentUpon>TA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TA.aspx.designer.cs">
+      <DependentUpon>TA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserAdmin.Master.cs">
+      <DependentUpon>UserAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAdmin.Master.designer.cs">
+      <DependentUpon>UserAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserAdminPage.aspx.cs">
+      <DependentUpon>UserAdminPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAdminPage.aspx.designer.cs">
+      <DependentUpon>UserAdminPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserUp.aspx.cs">
+      <DependentUpon>UserUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserUp.aspx.designer.cs">
+      <DependentUpon>UserUp.aspx</DependentUpon>
     </Compile>
     <Compile Include="video-playback.aspx.cs">
       <DependentUpon>video-playback.aspx</DependentUpon>
@@ -479,6 +566,7 @@
     <Content Include="scss\_screen-reader.scss" />
     <Content Include="scss\_stacked.scss" />
     <Content Include="scss\_variables.scss" />
+    <Content Include="UserAdmin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

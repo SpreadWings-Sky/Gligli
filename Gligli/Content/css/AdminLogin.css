@@ -1,0 +1,150 @@
+﻿@font-face {
+    font-family: 'BenderLight';
+    src: url('../fonts/BenderLight.woff/BenderLight.woff.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #EE621D;
+    font-family: 'BenderLight';
+}
+
+body {
+    background-color: #0f0000;
+    width: 100vw;
+    height: 100vh;
+}
+
+#Scanning {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top, #170808, #0f0000);
+    position: fixed;
+    top: -100vh;
+    animation: anim 10s infinite linear 0s;
+    opacity: 0.8;
+    z-index: -999;
+}
+
+@keyframes anim {
+    10% {
+        top: -90vh;
+    }
+
+    20% {
+        top: -80vh;
+    }
+
+    30% {
+        top: -70vh;
+    }
+
+    40% {
+        top: -60vh;
+    }
+
+    50% {
+        top: -50vh;
+    }
+
+    60% {
+        top: -40vh;
+    }
+
+    70% {
+        top: -30vh;
+    }
+
+    80% {
+        top: -20vh;
+    }
+
+    90% {
+        top: -10vh;
+    }
+
+    100% {
+        top: 0vh;
+    }
+}
+
+.login {
+    margin: 0 auto;
+    position: relative;
+    top: 30%;
+    width: 30vw;
+    height: 30vh;
+    border: 3px solid #E86221;
+    min-height: 350px;
+    min-width: 470px;
+}
+
+    .login ul li {
+        list-style: none;
+        text-align: center;
+        font-size: 1.1em;
+        line-height: 25px;
+        margin: 10px 0;
+    }
+
+        .login ul li:nth-child(1) {
+            margin-top: 5%;
+            font-size: 2em;
+            font-weight: bolder;
+            line-height: 40px;
+        }
+
+    .login::before {
+        display: block;
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 50px #EE621D;
+        content: "";
+        z-index: -100;
+        opacity: 0.5;
+    }
+
+.content {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 1.2em;
+}
+
+.login p {
+    margin-right: 2%;
+    font-size: 1.1em;
+}
+
+.login .UserText {
+    font-size: 1.1em;
+    padding-left: 1%;
+    width: 35%;
+    height: 30px;
+    outline: none;
+    border: 1px solid #F35B1D;
+    background: transparent;
+}
+
+.login ul li:nth-last-child(1) {
+    margin-top: 3%;
+}
+
+.login .UserBtn {
+    width: 40%;
+    height: 45px;
+    font-size: 2em;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #F1702B;
+    cursor: pointer;
+}
+
+    .login .UserBtn:hover {
+        border: 1px solid red;
+        color: red;
+    }

@@ -34,5 +34,6 @@ namespace Models
         public int Sum { get; set; }
         //头像
         public string ImageUrl { get; set; }
+        public string Brief { get; set; }
     }
 }

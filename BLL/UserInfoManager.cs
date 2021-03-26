@@ -43,5 +43,21 @@ namespace BLL
         {
             return UserInfoServer.UserInfos();
         }
+        public static bool updateUser(UserInfo user)
+        {
+            return UserInfoServer.updateUser(user);
+        }
+        public static UserInfo Add(int id)
+        {
+            return UserInfoServer.Add(id);
+        }
+        public static List<UserInfo> Info(int id)
+        {
+            return UserInfoServer.Info(id);
+        }
+        public static bool UpUserInfo(UserInfo Info)
+        {
+            return UserInfoServer.UpUserInfo(Info);
+        }
     }
 }

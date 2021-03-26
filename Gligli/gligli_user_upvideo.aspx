@@ -43,17 +43,19 @@
                     <div class="nav_data">
                         <div class="nav-content">
                             <div class="upload_btn">
-                                <a href="#"><i class="fa fa-upload" aria-hidden="true"></i>投稿</a>
+                                <a href="gligli_user_upvideo.aspx"><i class="fa fa-upload" aria-hidden="true"></i>投稿</a>
                             </div>
                             <!-- 选择列表 -->
                             <ul class="nav-warp">
-                                <li class="bar_item">
-                                    <div class="bar_item_meun">
-                                        <span class="box">
-                                            <i class="fa fa-credit-card" aria-hidden="true"></i><span>内容管理</span>
-                                        </span>
-                                    </div>
-                                </li>
+                                <a href="">
+                                    <li class="bar_item">
+                                        <div class="bar_item_meun">
+                                            <span class="box">
+                                                <i class="fa fa-credit-card" aria-hidden="true"></i><span>内容管理</span>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </a>
                                 <li class="bar_item">
                                     <div class="bar_item_meun">
                                         <span class="box">
@@ -191,7 +193,7 @@
                             </div>
                         </div>
                         <!-- 专栏 -->
-                        <div class="Sp-up-warp"  style="display: none;">
+                        <div class="Sp-up-warp" style="display: none;">
                             <div class="editor-warp">
                                 <div class="editor-origial">
                                     <div class="editor-title-box">

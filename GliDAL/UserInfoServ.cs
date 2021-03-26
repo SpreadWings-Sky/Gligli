@@ -41,7 +41,7 @@ namespace GliDAL
                 us.userName = da.GetString(1);
                 us.imgurl = da.GetString(2);
                 us.Account = da.GetString(3);
-                us.sex = da.IsDBNull(4) ? '无' : da.GetString(4).Equals('1') ? '男' : '女';
+                us.sex = da.IsDBNull(4) ? "无" : da.GetString(4).Equals('1') ? "男" : "女";
                 us.Email = da.IsDBNull(5) ? "无" : da.GetString(5);
                 us.Phone = da.IsDBNull(6) ? "无" : da.GetString(6);
                 us.address = da.IsDBNull(7) ? "无" : da.GetString(7);

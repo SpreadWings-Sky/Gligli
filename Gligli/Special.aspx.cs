@@ -25,5 +25,17 @@ namespace Gligli
             this.UserInfo.DataSource = UserInfoManager.UserInfos();
             DataBind();
         }
+        //用户信息获取
+        public UserInfo UserDataBin()
+        {
+            return UserInfoManager.SelectUserByAccount(Base64Helper.Base64Decode(Request.Cookies["Account"].Value));
+        }
+        //退出登录
+        protected void UserOutLogin_btn_Click(object sender, EventArgs e)
+        {
+            Response.Cookies["Account"].Expires = DateTime.Now.AddDays(-1);
+            Session.Clear();
+            Response.Redirect("gligli.aspx");
+        }
     }
 }

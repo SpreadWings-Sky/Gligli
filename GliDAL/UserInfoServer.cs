@@ -80,6 +80,67 @@ namespace GliDAL
             dr.Close();
             return ul;
         }
+        public static UserInfo Add(int id)
+        {
+            string sql = $"select * from UserInfo where userID={id}";
+            SqlDataReader dr = DBHelper.GetData(sql);
+            UserInfo info = null;
+            if (dr.Read())
+            {
+                info = new UserInfo();
+                info.userID = int.Parse(dr["userID"].ToString());
+                info.userName = dr["userName"].ToString();
+                info.Account = dr["Account"].ToString();
+                info.pwd = dr["pwd"].ToString();
+                info.sex = dr["sex"].ToString();
+                info.Email = dr["Email"].ToString();
+                info.Phone = dr["Phone"].ToString();
+                info.address = dr["address"].ToString();
+                info.Birt = DateTime.Parse(dr["reghitTime"].ToString());
+                info.brief = dr["brief"].ToString();
+                info.imgurl = dr["imageUrl"].ToString();
+            }
+            dr.Close();
+            return info;
+        }
+
+        public static bool updateUser(UserInfo user)
+        {
+            string sql = $"update [user] set userName='{user.userName}',pwd='{user.pwd}',sex='{user.sex}',Email='{user.Email}',Phone='{user.Phone}',[address]='{user.address}',Birt='{user.Birt}',brief='{user.brief}',imageUrl='{user.imgurl}' ";
+            return DBHelper.Updata(sql);
+        }
+
+        public static List<UserInfo> Info(int id)
+        {
+            string sql = $"select * from UserInfo where userID={id}";
+            SqlDataReader dr = DBHelper.GetData(sql);
+            UserInfo info = null;
+            List<UserInfo> list = new List<UserInfo>();
+            while (dr.Read())
+            {
+
+                info = new UserInfo();
+                info.userName = dr["userName"].ToString();
+                info.userID = int.Parse(dr["userID"].ToString());
+                info.imgurl = dr["imageUrl"].ToString();
+                info.brief = dr["brief"].ToString();
+                info.pwd = dr["pwd"].ToString();
+                list.Add(info);
+            }
+            dr.Close();
+            return list;
+        }
+
+
+        public static bool UpUserInfo(UserInfo Info)
+        {
+            string sql = $"UPDATE UserInfo set " +
+                $"userName='{Info.userName}',brief='{Info.brief}',sex='{Info.sex}'," +
+                $"imageUrl='{Info.imgurl}' where userID={Info.userID}";
+
+            return DBHelper.Updata(sql);
+        }
+
     }
-    }
+}
 

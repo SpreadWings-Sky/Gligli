@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminNumGet.cs" />
+    <Compile Include="CollectionService.cs" />
     <Compile Include="DBHelper.cs" />
+    <Compile Include="giligiliService.cs" />
     <Compile Include="ImgRotationInfoServices.cs" />
     <Compile Include="SPCommentInfoServices.cs" />
     <Compile Include="SpeInfoServices.cs" />
@@ -53,7 +55,9 @@
     <Compile Include="VComSevice.cs" />
     <Compile Include="VideoCommentInfoServices.cs" />
     <Compile Include="VideoInfoServices.cs" />
+    <Compile Include="VideoLikeInfoService.cs" />
     <Compile Include="videoSevice.cs" />
+    <Compile Include="WarchInfoService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">

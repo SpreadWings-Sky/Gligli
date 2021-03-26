@@ -43,7 +43,7 @@
                                 <a href="" class="ms">数码<span>0</span></a>
                             </div>
                             <div class="muen-right">
-                                <a href="" class="ms">专栏</a>
+                                <a href="Special.aspx" class="ms">专栏</a>
                                 <a href="javascript:void(0)" class="ms">话题</a>
                                 <a href="javascript:void(0)" class="ms">活动</a>
                                 <a href="javascript:void(0)" class="ms">直播</a>
@@ -188,8 +188,8 @@
                                     </div>
                                 </div>
                                 <ul>
-                                    <li><a href=""><i class="fa fa-user" aria-hidden="true"></i>个人中心</a></li>
-                                    <li><a href="gligli_user_upvideo.aspx"><i class="fa fa-cog" aria-hidden="true"></i>投稿管理</a></li>
+                                    <li><a href="giligili.aspx"><i class="fa fa-user" aria-hidden="true"></i>个人中心</a></li>
+                                    <li><a href="UserUp.aspx"><i class="fa fa-cog" aria-hidden="true"></i>投稿管理</a></li>
                                     <li><a href="javascript:void(0)"><i class="fa fa-file-video-o" aria-hidden="true"></i>直播中心</a></li>
                                     <li>
                                         <asp:LinkButton ID="UserOutLogin_btn" OnClick="UserOutLogin_btn_Click" runat="server"><i class="fa fa-sign-out" aria-hidden="true"></i>退出</asp:LinkButton></li>
@@ -342,20 +342,20 @@
                                 </div>
                             </li>
                             <li><a href="">收藏</a></li>
-                            <li><a href="">创作中心</a></li>
+                            <li><a href="UserUp.aspx">创作中心</a></li>
                         </ul>
                     </div>
                     <%} %>
                     <!-- 投稿栏 -->
                     <div class="right-up">
-                        <a href="gligli_user_upvideo.aspx">投稿</a>
+                        <a href="UserUp.aspx">投稿</a>
                         <div class="up-box">
                             <ul>
-                                <li><a href="gligli_user_upvideo.aspx">
+                                <li><a href="UserUp.aspx">
                                     <img src="./img/tg1.png" alt="">专栏投稿</a></li>
-                                <li><a href="gligli_user_upvideo.aspx">
+                                <li><a href="UserUp.aspx">
                                     <img src="./img/tg2.png" alt="">音频投稿</a></li>
-                                <li><a href="gligli_user_upvideo.aspx">
+                                <li><a href="UserUp.aspx">
                                     <img src="./img/tg3.png" alt="">视频投稿</a></li>
                                 <li><a href="#">
                                     <img src="./img/tg4.png" alt="">稿件管理</a></li>
@@ -465,7 +465,7 @@
             </div>
             <span class="content-meun-line"></span>
             <div class="meun-right">
-                <a href="">专栏</a>
+                <a href="Special.aspx">专栏</a>
                 <a href="">活动</a>
                 <a href="">直播</a>
             </div>
@@ -1742,11 +1742,11 @@
             <div class="video-list">
                 <header class="video-list-header">
                     <div class="list-header-logo logo4">
-                        <a href="">专栏</a>
+                        <a href="Special.aspx">专栏</a>
                     </div>
                     <div class="list-header-btn">
                         <div class="btn-change"><i class="fa fa-refresh" aria-hidden="true"></i>换一换</div>
-                        <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                        <a href="Special.aspx">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
                 </header>
                 <div class="video-list-box articel-list">
@@ -1774,7 +1774,7 @@
             <div class="video-rank">
                 <header class="rank-header">
                     <span>排行榜</span>
-                    <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    <a href="Special.aspx">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                 </header>
                 <div class="rank-item">
                     <span class="item-number rank-on">1</span>

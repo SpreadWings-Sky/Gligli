@@ -13,7 +13,7 @@ namespace Models
         public string userName { get; set; }//用户名
         public string Account { get; set; }//用户账号
         public string pwd { get; set; }//密码
-        public char sex { get; set; }//性别
+        public string sex { get; set; }//性别
         public string Email { get; set; }//邮箱
         public string Phone { get; set; }//手机号
         public string address { get; set; }//地址

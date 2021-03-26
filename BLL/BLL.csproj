@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CollectionManager.cs" />
+    <Compile Include="giligiliManager.cs" />
     <Compile Include="ImgRotationInfoMMag.cs" />
     <Compile Include="SPCommentInfoMMag.cs" />
     <Compile Include="SpeInfoMMag.cs" />
@@ -49,8 +51,10 @@
     <Compile Include="UserInfoManager.cs" />
     <Compile Include="VComManager.cs" />
     <Compile Include="VideoCommentInfoMMag.cs" />
+    <Compile Include="VideoLikeInfoManager.cs" />
     <Compile Include="VideoMMag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WarchInfoManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GliDAL\GliDAL.csproj">

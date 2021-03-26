@@ -77,5 +77,13 @@ namespace BLL
         {
             return SpeInfoServices.SpeInfos();
         }
+        public static List<SpeInfo> Info(int id)
+        {
+            return SpeInfoServices.Info(id);
+        }
+        public static List<SpeInfo> Collection(int id)
+        {
+            return SpeInfoServices.Collection(id);
+        }
     }
 }

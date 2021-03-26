@@ -99,5 +99,10 @@ namespace Gligli
             CommentList(100012, "comtime");
             string send = this.TextBox1.Text;
         }
+        //用户信息
+        public UserInfo UserDataBin()
+        {
+            return UserInfoManager.SelectUserByAccount(Base64Helper.Base64Decode(Request.Cookies["Account"].Value));
+        }
     }
 }
