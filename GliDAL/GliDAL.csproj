@@ -49,6 +49,7 @@
     <Compile Include="SPCommentInfoServices.cs" />
     <Compile Include="SpeInfoServices.cs" />
     <Compile Include="SpeRanServices.cs" />
+    <Compile Include="TypeInfoService.cs" />
     <Compile Include="UserInfoServ.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInfoServer.cs" />

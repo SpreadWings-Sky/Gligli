@@ -27,5 +27,9 @@ namespace BLL
         {
             return VComSevice.AddComm(comm, userid, videoid, recomID);
         }
+        public static void ComLike(int videoid, int likenum, int comid)
+        {
+            VComSevice.ComLike(videoid, likenum, comid);
+        }
     }
 }

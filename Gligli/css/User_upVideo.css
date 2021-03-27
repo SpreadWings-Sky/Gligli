@@ -347,6 +347,9 @@ ul.nav-warp li {
 .item_group_item:hover {
   background: rgb(0, 0, 0, 0.05);
 }
+.bar_item:nth-child(1) .bar_item_meun {
+  background: rgb(0, 0, 0, 0.05);
+}
 .bar_item_meun .box i[fa-angle-up] {
   color: silver !important;
 }
@@ -378,7 +381,7 @@ ul.nav-warp li {
   border-bottom: 1px solid #e7e7e7;
   position: relative;
 }
-.new_link_nav a{
+.new_link_nav a {
   display: inline-block;
   padding-top: 26px;
   height: 100%;
@@ -389,13 +392,13 @@ ul.nav-warp li {
   letter-spacing: 0.5px;
   line-height: 20px;
 }
-.active{
+.active {
   font-weight: bolder;
   color: #00a1d6 !important;
   border-bottom: 3px solid #00a1d6 !important;
 }
 /* 内容管理 */
-#nav_search{
+#nav_search {
   width: 250px;
   height: 35px;
   margin: 20px 0 0 400px;
@@ -406,17 +409,17 @@ ul.nav-warp li {
   color: #505050;
   overflow: hidden;
 }
-#nav_img{
+#nav_img {
   width: 32px;
   height: 32px;
   margin-left: -40px;
 }
-.load_from{
+.load_from {
   width: 100%;
   height: 0 auto;
   /* border: 1px solid #000; */
 }
-.upload_con{
+.upload_con {
   width: 100%;
   height: 0 auto;
   padding: 15px;
@@ -425,30 +428,30 @@ ul.nav-warp li {
 }
 .upload_con div,
 .con_one_tong div,
-.con_one_zhuan div{
+.con_one_zhuan div {
   display: none;
 }
 .l_default,
-.o_default{
+.o_default {
   display: block !important;
 }
 .one_active,
-.two_active{
+.two_active {
   color: #00a1d6 !important;
 }
 /* 内容主题 */
 .con_one ul li,
-.con_two ul li{
+.con_two ul li {
   display: inline-block;
   margin: 10px 15px 5px 15px;
   cursor: pointer;
 }
 .con_one ul li span,
-.con_two ul li span{
+.con_two ul li span {
   margin-left: 3px;
 }
 #con_one_right_y,
-#con_one_right_e{
+#con_one_right_e {
   display: inline-block;
   float: right;
   width: 0 auto;
@@ -458,14 +461,14 @@ ul.nav-warp li {
   margin: 10px 15px 5px 0;
   outline: none;
 }
-p{
+p {
   width: 100%;
   height: 0 auto;
   margin-top: 15px;
   /* border: 1px solid green; */
 }
 .con_one_tong,
-.con_one_zhuan{
+.con_one_zhuan {
   width: 95%;
   height: 0 auto;
   margin: 0px 0px 20px 25px;
@@ -478,7 +481,7 @@ p{
 .zhuan_one table,
 .zhuan_two table,
 .zhuan_three table,
-.zhuan_four table{
+.zhuan_four table {
   margin: 15px 0;
 }
 .one_one span,
@@ -488,12 +491,12 @@ p{
 .zhuan_one span,
 .zhuan_two span,
 .zhuan_three span,
-.zhuan_four span{
+.zhuan_four span {
   width: 100%;
   height: 2px;
   color: #ccc;
 }
-.con_one_tong b{
+.con_one_tong b {
   font-size: 18px;
 }
 .one_one img,
@@ -503,26 +506,19 @@ p{
 .zhuan_one img,
 .zhuan_two img,
 .zhuan_three img,
-.zhuan_four img{
+.zhuan_four img {
   width: 120px;
   height: 80px;
   line-height: 80px;
   border-radius: 5px;
   margin-right: 30px;
 }
-.one_right{
+.one_right {
   float: right;
   line-height: 85px;
   margin: 0 10px;
   color: #606266;
 }
-.one_right:hover{
+.one_right:hover {
   color: #00a1d6;
 }
-
-
-
-
-
-
-

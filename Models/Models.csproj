@@ -49,6 +49,7 @@
     <Compile Include="SPCommentInfo.cs" />
     <Compile Include="SpeInfo.cs" />
     <Compile Include="SpeRan.cs" />
+    <Compile Include="TypeInfo.cs" />
     <Compile Include="UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VComInfo.cs" />

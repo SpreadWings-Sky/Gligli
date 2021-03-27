@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Models;
 using BLL;
+using System.Web.Services;
 
 namespace Gligli
 {
@@ -53,12 +54,14 @@ namespace Gligli
             DataBind();
 
         }
-        private void CommentList(int videoID, string type = "likenum", int num = 1)
+        public static int index = 1;
+        public static string type = "likeNum";
+        public static void CommentList(int videoID)
         {
-            list = VComManager.GetVideoComList(videoID, type, num);
+            list = VComManager.GetVideoComList(videoID, type, index);
             ReplyList(list, videoID);
         }
-        private void ReplyList(List<VComInfo> list, int videoID)
+        private static void ReplyList(List<VComInfo> list, int videoID)
         {
             dic = new Dictionary<int, List<VComInfo>>();
             foreach (VComInfo item in list)
@@ -66,43 +69,83 @@ namespace Gligli
                 dic.Add(item.comID, VComManager.GetVideoreComList(item.comID, videoID));
             }
         }
-        public void GetDetails(int videoId, string type)
-        {
-            CommentList(videoId, type);
-        }
         //评论页数
-        protected void num_TextChanged(object sender, EventArgs e)
+        [WebMethod]
+        public static void ComIndex(int indexs, int VideoID)
         {
-
+            index = indexs;
+            CommentList(VideoID);
+        }
+        [WebMethod]
+        public static void Like(int num, int videoID, int comID)
+        {
+            VComManager.ComLike(videoID, num, comID);
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            if (TextBox1.Text == "")
+            {
+                return;
+            }
+            if (Session["LoginUserID"] == null)
+            {
+                Response.Write("<script>alert('请登录！！')</script> ");
+                return;
+            }
             string rcomid = null;
             rcomid = Label1.Text == "" ? null : Label1.Text;
             string content = TextBox1.Text;
-            VComManager.AddComm(content, 1000015, int.Parse(Session["videoID"].ToString()), rcomid);
+            if (VComManager.AddComm(content, 1000015, int.Parse(Session["videoID"].ToString()), rcomid))
+            {
+                TextBox1.Text = "";
+                Label1.Text = "";
+            }
+
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            if (TextBox4.Text == null)
+            {
+                return;
+            }
+            if (Session["LoginUserID"] == null)
+            {
+                Response.Write("<script>alert('请登录！！')</script> ");
+                return;
+            }
+            string rcomid = null;
+            rcomid = Label1.Text == "" ? null : Label1.Text;
+            string content = TextBox4.Text;
+            if (VComManager.AddComm(content, 1000015, int.Parse(Session["videoID"].ToString()), rcomid))
+            {
+                TextBox1.Text = "";
+                Label1.Text = "";
+            }
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-            CommentList(100012, "likenum");
-            string send = this.TextBox1.Text;
+            type = "LikeNum";
+            index = 1;
+            CommentList(int.Parse(Session["videoID"].ToString()));
         }
 
         protected void LinkButton2_Click(object sender, EventArgs e)
         {
-            CommentList(100012, "comtime");
-            string send = this.TextBox1.Text;
+            type = "ComTime";
+            index = 1;
+            CommentList(int.Parse(Session["videoID"].ToString()));
         }
-        //用户信息
         public UserInfo UserDataBin()
         {
             return UserInfoManager.SelectUserByAccount(Base64Helper.Base64Decode(Request.Cookies["Account"].Value));
+        }
+        //用户退出登录
+        protected void UserOutLogin_btn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("OutLogin.aspx");
         }
     }
 }

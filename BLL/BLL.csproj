@@ -47,6 +47,7 @@
     <Compile Include="SPCommentInfoMMag.cs" />
     <Compile Include="SpeInfoMMag.cs" />
     <Compile Include="SpeRanManager.cs" />
+    <Compile Include="TypeInfoManager.cs" />
     <Compile Include="UserInfoListMMag.cs" />
     <Compile Include="UserInfoManager.cs" />
     <Compile Include="VComManager.cs" />

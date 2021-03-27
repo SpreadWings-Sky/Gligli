@@ -25,6 +25,10 @@ namespace Gligli
             HotVideoBin();
             //分类推荐
             HotTypeVideoBin();
+            //分区视频数
+            TypeVideoCountGet();
+            //用户更新列表
+            UserWarchVideoUpList();
             DataBind();
         }
         //分区视频推荐
@@ -33,9 +37,9 @@ namespace Gligli
             //动画区
             VideoTypeAniment.DataSource = VideoMMag.SelectVideoByType(1);
             //鬼畜
-            VideoTypeGhost.DataSource = VideoMMag.SelectVideoByType(3);
+            VideoTypeGhost.DataSource = VideoMMag.SelectVideoByType(8);
             //音乐
-            VideoTypeMusic.DataSource = VideoMMag.SelectVideoByType(2);
+            VideoTypeMusic.DataSource = VideoMMag.SelectVideoByType(11);
             //专栏
             SpItem.DataSource = SpeInfoMMag.SelectSpStateAll();
         }
@@ -49,6 +53,27 @@ namespace Gligli
         private void ImgDatabin()
         {
             ImgRoctRepeater.DataSource = ImgRotationInfoMMag.SelectImgByPage("主页");
+        }
+        //动态
+        private void UserWarchVideoUpList()
+        {
+            UserWarchUpVideoList.DataSource = WarchInfoManager.SelectWarchJoinVideo(UserDataBin().userID);
+        }
+        //计算时间差
+        public string DateDiff(DateTime DateTime1, DateTime DateTime2)
+        {
+            string dateDiff = null;
+            try { TimeSpan ts1 = new TimeSpan(DateTime1.Ticks); TimeSpan ts2 = new TimeSpan(DateTime2.Ticks); TimeSpan ts = ts1.Subtract(ts2).Duration(); dateDiff = ts.Days.ToString() + "天" + ts.Hours.ToString() + "小时" + ts.Minutes.ToString() + "分钟" + ts.Seconds.ToString() + "秒"; }
+            catch
+            {
+
+            }
+            return dateDiff;
+        }
+        //各分区视频总数获取
+        private void TypeVideoCountGet()
+        {
+            TypeVideoCountRepeater.DataSource = TypeInfoManager.SelectTypeVideoALL();
         }
         //用户信息绑定
        public UserInfo  UserDataBin()

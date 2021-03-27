@@ -94,5 +94,10 @@ namespace GliDAL
                 return DBHelper.Updata(sql);
             }
         }
+        public static void ComLike(int videoid, int likenum, int comid)
+        {
+            string sql = $"UPDATE VideoCommentInfo SET likenum={likenum} where videoid={videoid} and comid={comid}";
+            DBHelper.Updata(sql);
+        }
     }
 }

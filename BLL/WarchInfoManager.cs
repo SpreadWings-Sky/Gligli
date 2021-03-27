@@ -14,5 +14,10 @@ namespace BLL
         {
             return WarchInfoService.Info(id);
         }
+        //通过用户ID获取关注更新列表
+        public static List<WarchInfo> SelectWarchJoinVideo(int id)
+        {
+            return WarchInfoService.SelectWarchJoinVideo(id);
+        }
     }
 }

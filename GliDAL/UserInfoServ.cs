@@ -83,7 +83,7 @@ namespace GliDAL
         //通过账号连表查询用户信息
         public static UserInfo SelectUserByAccount(string Account)
         {
-            string sql = $"select u.userName,u.imageUrl,count(w.watchID) gz,COUNT(w1.watchID) fs from UserInfo u left join WarchInfo w on(u.userID=w.userID) left join WarchInfo w1 on(u.userID=w1.watchID) where u.Account = '{Account}' group by u.userName,u.imageUrl,w.watchID,w1.watchID ";
+            string sql = $"select u.userName,u.imageUrl,count(w.watchID) gz,COUNT(w1.watchID),u.userID fs from UserInfo u left join WarchInfo w on(u.userID=w.userID) left join WarchInfo w1 on(u.userID=w1.watchID) where u.Account = '{Account}' group by u.userName,u.imageUrl,w.watchID,w1.watchID,u.userID ";
             SqlDataReader dr = DBHelper.GetData(sql);
             UserInfo user = new UserInfo();
             if (dr.Read())
@@ -92,6 +92,7 @@ namespace GliDAL
                 user.imgurl = dr.GetString(1);
                 user.Gz = dr.GetInt32(2);
                 user.Fs = dr.GetInt32(3);
+                user.userID = dr.GetInt32(4);
             }
             DBHelper.Close();
             return user;

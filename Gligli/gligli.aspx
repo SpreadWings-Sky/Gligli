@@ -26,27 +26,17 @@
                         <!-- 目录 -->
                         <div class="logo-muen">
                             <div class="muen-left">
-                                <a href="" class="ms">动画<span>0</span></a>
-                                <a href="" class="ms">生活<span>0</span></a>
-                                <a href="" class="ms">番剧<span>0</span></a>
-                                <a href="" class="ms">鬼畜<span>0</span></a>
-                                <a href="" class="ms">国创<span>0</span></a>
-                                <a href="" class="ms">时尚<span>0</span></a>
-                                <a href="" class="ms">音乐<span>0</span></a>
-                                <a href="" class="ms">广告<span>0</span></a>
-                                <a href="" class="ms">舞蹈<span>0</span></a>
-                                <a href="" class="ms">娱乐<span>0</span></a>
-                                <a href="" class="ms">游戏<span>0</span></a>
-                                <a href="" class="ms">影视<span>0</span></a>
-                                <a href="" class="ms">科技<span>0</span></a>
-                                <a href="" class="ms">放映厅<span>0</span></a>
-                                <a href="" class="ms">数码<span>0</span></a>
+                                <asp:Repeater ID="TypeVideoCountRepeater" runat="server">
+                                    <ItemTemplate>
+                                        <a href="javascript:confirm('分区视频数')" class="ms"><%# Eval("TypeName") %><span><%# Eval("TypeVideoCount") %></span></a>
+                                    </ItemTemplate>
+                                </asp:Repeater>
                             </div>
                             <div class="muen-right">
                                 <a href="Special.aspx" class="ms">专栏</a>
-                                <a href="javascript:void(0)" class="ms">话题</a>
-                                <a href="javascript:void(0)" class="ms">活动</a>
-                                <a href="javascript:void(0)" class="ms">直播</a>
+                                <a href="javascript:confirm('开发中')" class="ms">话题</a>
+                                <a href="javascript:confirm('开发中')" class="ms">活动</a>
+                                <a href="javascript:confirm('开发中')" class="ms">直播</a>
                             </div>
                         </div>
                         <!-- 目录结束 -->
@@ -55,8 +45,8 @@
                     <!-- 左侧导航开始 -->
                     <div class="nav-left">
                         <ul>
-                            <li><a href="javascript:void(0)">番剧</a></li>
-                            <li><a href="javascript:void(0)">直播</a>
+                            <li><a href="javascript:confirm('开发中')">番剧</a></li>
+                            <li><a href="javascript:confirm('开发中')">直播</a>
                                 <div class="nva-left-live">
                                     <div class="live-left">
                                         <h3>热门直播:</h3>
@@ -99,25 +89,25 @@
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="javascript:void(0)">漫画</a>
+                            <li><a href="javascript:confirm('开发中')">漫画</a>
                                 <div class="comic">
                                     <div class="comic-left">
                                         <div class="comic-item">
-                                        <img src="./img/comic-img/i1.jpg" alt="无职转生~到了异世界就拿出真本事">
-                                        <p>无职转生</p>
-                                    </div>
+                                            <img src="./img/comic-img/i1.jpg" alt="无职转生~到了异世界就拿出真本事">
+                                            <p>无职转生</p>
+                                        </div>
                                         <div class="comic-item">
-                                        <img src="./img/comic-img/i2.jpg" alt="武林第一厨师">
-                                        <p>武林第一厨师</p>
-                                    </div>
+                                            <img src="./img/comic-img/i2.jpg" alt="武林第一厨师">
+                                            <p>武林第一厨师</p>
+                                        </div>
                                         <div class="comic-item">
-                                        <img src="./img/comic-img/i3.png" alt="你就饶了为师我">
-                                        <p>你就饶了为师我</p>
-                                    </div>
+                                            <img src="./img/comic-img/i3.png" alt="你就饶了为师我">
+                                            <p>你就饶了为师我</p>
+                                        </div>
                                         <div class="comic-item">
-                                        <img src="./img/comic-img/i4.jpg" alt="别来无恙">
-                                        <p>别来无恙</p>
-                                    </div>
+                                            <img src="./img/comic-img/i4.jpg" alt="别来无恙">
+                                            <p>别来无恙</p>
+                                        </div>
                                     </div>
                                     <div class="comic-right">
                                         <h3>人气漫画</h3>
@@ -132,7 +122,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="javascript:void(0)">活动</a></li>
+                            <li><a href="javascript:confirm('开发中')">活动</a></li>
                             <li class="Phone-logo"><a href="#">下载APP</a>
                                 <div class="Dolowdimg">
                                 </div>
@@ -169,8 +159,8 @@
                     <!-- 登录状态 -->
                     <div class="userlogin grid">
                         <div class="userimg">
-                            <a href="">
-                                <img src='<%=UserDataBin().imgurl %>' alt=""></a>
+                            <a href='<%= UserDataBin().userID %>'>
+                                <img id="UserLogin" src='<%=UserDataBin().imgurl %>' alt=""></a>
                             <div class="user-item">
                                 <p class="user-name"><%=UserDataBin().userName %></p>
                                 <div class="item-num">
@@ -190,153 +180,44 @@
                                 <ul>
                                     <li><a href="giligili.aspx"><i class="fa fa-user" aria-hidden="true"></i>个人中心</a></li>
                                     <li><a href="UserUp.aspx"><i class="fa fa-cog" aria-hidden="true"></i>投稿管理</a></li>
-                                    <li><a href="javascript:void(0)"><i class="fa fa-file-video-o" aria-hidden="true"></i>直播中心</a></li>
+                                    <li><a href="javascript:confirm('开发中')"><i class="fa fa-file-video-o" aria-hidden="true"></i>直播中心</a></li>
                                     <li>
                                         <asp:LinkButton ID="UserOutLogin_btn" OnClick="UserOutLogin_btn_Click" runat="server"><i class="fa fa-sign-out" aria-hidden="true"></i>退出</asp:LinkButton></li>
                                 </ul>
                             </div>
                         </div>
                         <ul class="user-title grid">
-                            <li><a href="#">消息</a>
-                                <div class="Message">
-                                    <ul>
-                                        <li>
-                                            <a href="#">回复我的<span>0</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#">收到的赞<span>0</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#">系统通知<span>0</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#">我的消息<span>1</span></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
+
                             <li><a href="">动态</a>
                                 <div class="title-moving">
                                     <div class="moving-tab grid">
                                         <div class="moving-tab-item active">视频动态</div>
-                                        <div class="moving-tab-item">直播</div>
-                                        <div class="moving-tab-item">专栏</div>
                                     </div>
                                     <div class="moving-list">
-                                        <div class="list-item gird">
-                                            <div class="list-item-left">
-                                                <a href=""></a>
-                                            </div>
-                                            <div class="list-center">
-                                                <div class="center-name-time">
-                                                    <a href="">短的发布会<span>2077年前</span></a>
+                                        <asp:Repeater ID="UserWarchUpVideoList" runat="server">
+                                            <ItemTemplate>
+                                                <div class="list-item gird">
+                                                    <div class="list-item-left">
+                                                        <a href="">
+                                                            <img id="VideoUserImg" src="<%# Eval("imageUrl") %>" alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="list-center">
+                                                        <div class="center-name-time">
+                                                            <a href='video-playback.aspx?videoID=<%# Eval("VideoID") %>'><%# Eval("VideoUserName") %><span><%# DateDiff(DateTime.Now,DateTime.Parse(Eval("VideoUpTime").ToString())) %>前</span></a>
+                                                        </div>
+                                                        <div class="center-title">
+                                                            <a href='video-playback.aspx?videoID=<%# Eval("VideoID") %>'><%# Eval("Title") %></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-right">
+                                                        <img src='<%# Eval("VideoImg") %>' alt="">
+                                                    </div>
                                                 </div>
-                                                <div class="center-title">
-                                                    <a href="">【短的发布会】花最少钱感受最全苹果全家桶？华为MatePad Pro携智慧产品亲民上阵</a>
-                                                </div>
-                                            </div>
-                                            <div class="list-right">
-                                                <img src="./img/ls.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="list-item gird">
-                                            <div class="list-item-left">
-                                                <a href=""></a>
-                                            </div>
-                                            <div class="list-center">
-                                                <div class="center-name-time">
-                                                    <a href="">短的发布会<span>2077年前</span></a>
-                                                </div>
-                                                <div class="center-title">
-                                                    <a href="">【短的发布会】花最少钱感受最全苹果全家桶？华为MatePad Pro携智慧产品亲民上阵</a>
-                                                </div>
-                                            </div>
-                                            <div class="list-right">
-                                                <img src="./img/ls.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="list-item gird">
-                                            <div class="list-item-left">
-                                                <a href=""></a>
-                                            </div>
-                                            <div class="list-center">
-                                                <div class="center-name-time">
-                                                    <a href="">短的发布会<span>2077年前</span></a>
-                                                </div>
-                                                <div class="center-title">
-                                                    <a href="">【短的发布会】花最少钱感受最全苹果全家桶？华为MatePad Pro携智慧产品亲民上阵</a>
-                                                </div>
-                                            </div>
-                                            <div class="list-right">
-                                                <img src="./img/ls.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="list-item gird">
-                                            <div class="list-item-left">
-                                                <a href=""></a>
-                                            </div>
-                                            <div class="list-center">
-                                                <div class="center-name-time">
-                                                    <a href="">短的发布会<span>2077年前</span></a>
-                                                </div>
-                                                <div class="center-title">
-                                                    <a href="">【短的发布会】花最少钱感受最全苹果全家桶？华为MatePad Pro携智慧产品亲民上阵</a>
-                                                </div>
-                                            </div>
-                                            <div class="list-right">
-                                                <img src="./img/ls.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="list-item gird">
-                                            <div class="list-item-left">
-                                                <a href=""></a>
-                                            </div>
-                                            <div class="list-center">
-                                                <div class="center-name-time">
-                                                    <a href="">短的发布会<span>2077年前</span></a>
-                                                </div>
-                                                <div class="center-title">
-                                                    <a href="">【短的发布会】花最少钱感受最全苹果全家桶？华为MatePad Pro携智慧产品亲民上阵</a>
-                                                </div>
-                                            </div>
-                                            <div class="list-right">
-                                                <img src="./img/ls.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="list-item gird">
-                                            <div class="list-item-left">
-                                                <a href=""></a>
-                                            </div>
-                                            <div class="list-center">
-                                                <div class="center-name-time">
-                                                    <a href="">短的发布会<span>2077年前</span></a>
-                                                </div>
-                                                <div class="center-title">
-                                                    <a href="">【短的发布会】花最少钱感受最全苹果全家桶？华为MatePad Pro携智慧产品亲民上阵</a>
-                                                </div>
-                                            </div>
-                                            <div class="list-right">
-                                                <img src="./img/ls.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="list-item gird">
-                                            <div class="list-item-left">
-                                                <a href=""></a>
-                                            </div>
-                                            <div class="list-center">
-                                                <div class="center-name-time">
-                                                    <a href="">短的发布会<span>2077年前</span></a>
-                                                </div>
-                                                <div class="center-title">
-                                                    <a href="">【短的发布会】花最少钱感受最全苹果全家桶？华为MatePad Pro携智慧产品亲民上阵</a>
-                                                </div>
-                                            </div>
-                                            <div class="list-right">
-                                                <img src="./img/ls.png" alt="">
-                                            </div>
-                                        </div>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
                                         <div class="list-login-add">
-                                            <input type="button" value="查看全部">
+                                            <input type="button" value="没有更多了">
                                         </div>
                                     </div>
                                 </div>
@@ -357,7 +238,7 @@
                                     <img src="./img/tg2.png" alt="">音频投稿</a></li>
                                 <li><a href="UserUp.aspx">
                                     <img src="./img/tg3.png" alt="">视频投稿</a></li>
-                                <li><a href="#">
+                                <li><a href="UserAdminPage.aspx">
                                     <img src="./img/tg4.png" alt="">稿件管理</a></li>
                             </ul>
                         </div>
@@ -466,8 +347,8 @@
             <span class="content-meun-line"></span>
             <div class="meun-right">
                 <a href="Special.aspx">专栏</a>
-                <a href="">活动</a>
-                <a href="">直播</a>
+                <a href="javascript:confirm('开发中')">活动</a>
+                <a href="javascript:confirm('开发中')">直播</a>
             </div>
         </div>
         <!-- 主体内容导航栏结束 -->
