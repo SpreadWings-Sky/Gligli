@@ -4,5 +4,3 @@
 ##### 使用ASP.NET基于.NET Framework开发,数据库使用sql server 2019
 
 参考对象[bilibili](https://www.bilibili.com/ "bilibili")
-
-###### 目前进度后台95%,前台80%
