@@ -37,9 +37,9 @@ namespace Gligli
             //动画区
             VideoTypeAniment.DataSource = VideoMMag.SelectVideoByType(1);
             //鬼畜
-            VideoTypeGhost.DataSource = VideoMMag.SelectVideoByType(3);
+            VideoTypeGhost.DataSource = VideoMMag.SelectVideoByType(8);
             //音乐
-            VideoTypeMusic.DataSource = VideoMMag.SelectVideoByType(2);
+            VideoTypeMusic.DataSource = VideoMMag.SelectVideoByType(11);
             //专栏
             SpItem.DataSource = SpeInfoMMag.SelectSpStateAll();
         }

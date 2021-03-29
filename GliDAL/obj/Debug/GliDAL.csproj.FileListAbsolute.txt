@@ -34,3 +34,12 @@ C:\Users\wangqinglong\Desktop\Gligli\GliDAL\obj\Debug\GliDAL.csproj.CoreCompileI
 C:\Users\wangqinglong\Desktop\Gligli\GliDAL\obj\Debug\GliDAL.csproj.CopyComplete
 C:\Users\wangqinglong\Desktop\Gligli\GliDAL\obj\Debug\GliDAL.dll
 C:\Users\wangqinglong\Desktop\Gligli\GliDAL\obj\Debug\GliDAL.pdb
+J:\Gligli\Gligli\GliDAL\bin\Debug\GliDAL.dll
+J:\Gligli\Gligli\GliDAL\bin\Debug\GliDAL.pdb
+J:\Gligli\Gligli\GliDAL\bin\Debug\Models.dll
+J:\Gligli\Gligli\GliDAL\bin\Debug\Models.pdb
+J:\Gligli\Gligli\GliDAL\obj\Debug\GliDAL.csprojAssemblyReference.cache
+J:\Gligli\Gligli\GliDAL\obj\Debug\GliDAL.csproj.CoreCompileInputs.cache
+J:\Gligli\Gligli\GliDAL\obj\Debug\GliDAL.csproj.CopyComplete
+J:\Gligli\Gligli\GliDAL\obj\Debug\GliDAL.dll
+J:\Gligli\Gligli\GliDAL\obj\Debug\GliDAL.pdb

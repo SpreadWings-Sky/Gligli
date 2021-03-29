@@ -9,7 +9,7 @@
      <link rel="stylesheet" href="./css/index-header-top.css"/>
     <link rel="stylesheet" href="./css/font-awesome.min.css"/>
     <link rel="stylesheet" href="./css/section.css"/>
-    <script src="Script/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body style="height:2000px">
     <form id="form1" runat="server">

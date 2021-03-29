@@ -12,7 +12,7 @@ namespace GliDAL
     {
         public static List<SpeRan> SpeRans()
         {
-            string sql = "select * from SpeRan";
+            string sql = "select top 10 * from SpeRan";
             SqlDataReader dr = DBHelper.GetData(sql);
             List<SpeRan> sr = new List<SpeRan>();
             SpeRan sran = null;
