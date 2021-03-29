@@ -55,7 +55,9 @@ create table VideoCommentInfo(
 	userID int foreign key references UserInfo(userID) not null,--用户编号
 	Comment nvarchar(100) not null,--评论内容
 	zRecomID int foreign key references VideoCommentInfo(comID),--主评论编号
-	RecomID int foreign key references VideoCommentInfo(comID)--回复评论
+	RecomID int foreign key references VideoCommentInfo(comID),--回复评论
+	[comtime] datetime default(getdate()) ,--发表时间 
+	[LikeNum] int default(0),--点赞数
 )
 --视频点赞表
 create table VideoLikeInfo(
@@ -77,10 +79,18 @@ create table SpeInfo(
 	title nvarchar(40) not null,--标题
 	pageimg nvarchar(40) not null,--封面图片
 	spUrl text not null,--预览内容
-	SpText text not null,--文章内容
+	SpText text,--文章内容
 	upTime datetime default(getdate()) not null,--上传时间
 	spNumber int default(0),--专栏阅读数
-	[state] nvarchar(10) default('审核') not null, --文章状态
+	[partition] nvarchar(20),--分区
+ 	[state] nvarchar(10) default('审核') not null, --文章状态
+)
+create table SpeRan(
+	[id] int identity(1,1) primary key , 
+	[Yest] nvarchar(200), 
+	[Theday] nvarchar(200), 
+	[Welist] nvarchar(200), 
+	[Molist]nvarchar(200)
 )
 --专栏评论
 create table SPCommentInfo(

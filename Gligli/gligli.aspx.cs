@@ -37,9 +37,9 @@ namespace Gligli
             //动画区
             VideoTypeAniment.DataSource = VideoMMag.SelectVideoByType(1);
             //鬼畜
-            VideoTypeGhost.DataSource = VideoMMag.SelectVideoByType(8);
+            VideoTypeGhost.DataSource = VideoMMag.SelectVideoByType(3);
             //音乐
-            VideoTypeMusic.DataSource = VideoMMag.SelectVideoByType(11);
+            VideoTypeMusic.DataSource = VideoMMag.SelectVideoByType(2);
             //专栏
             SpItem.DataSource = SpeInfoMMag.SelectSpStateAll();
         }
@@ -78,7 +78,19 @@ namespace Gligli
         //用户信息绑定
        public UserInfo  UserDataBin()
         {
-            return UserInfoManager.SelectUserByAccount(Base64Helper.Base64Decode(Request.Cookies["Account"].Value));
+            UserInfo us = new UserInfo();
+
+            if (Request.Cookies["Account"] != null)
+            {
+                return UserInfoManager.SelectUserByAccount(Base64Helper.Base64Decode(Request.Cookies["Account"].Value));
+            }
+            else
+            {
+                us.userName = "请登录";
+                us.Fs = 0;
+                us.Gz = 0;
+            }
+            return us;
         }
         //用户退出登录
         protected void UserOutLogin_btn_Click(object sender, EventArgs e)
