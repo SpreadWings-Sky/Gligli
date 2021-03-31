@@ -21,7 +21,7 @@ namespace BLL
             return SpeInfoServices.DeleteSpByID(id);
         }
         //通过id更新信息
-        public static bool UpSpInfoByid(int id,SpeInfo sp)
+        public static bool UpSpInfoByid(int id, SpeInfo sp)
         {
             return SpeInfoServices.UpSpInfoByID(id, sp);
         }
@@ -31,7 +31,7 @@ namespace BLL
             return SpeInfoServices.SelectSpByID(id);
         }
         //首页推荐视频
-        public static List<SpeInfo> SelectSpStateAll()
+        public static List<SpeInfo> SelectSpTop8StateAll()
         {
             List<SpeInfo> All = SpeInfoServices.SelectSpStateAll();
             List<SpeInfo> RandomSp = new List<SpeInfo>();
@@ -43,6 +43,11 @@ namespace BLL
                 RandomSp.Add(All[index[i]]);
             }
             return RandomSp;
+        }
+        //阅读量前9的专栏
+        public static List<SpeInfo> SelectSpTop9()
+        {
+            return SpeInfoServices.SelectSpTop9();
         }
         /// <summary>
         /// 方法一 使用随机抽取数组index中的数，填充在新的数组array中，使数组array中的数是随机的

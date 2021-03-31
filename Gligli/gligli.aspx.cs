@@ -14,6 +14,7 @@ namespace Gligli
         public static List<VideoInfo> v1 = null;
         public static List<VideoInfo> v2 = null;
         public static List<VideoInfo> v3 = null;
+        public static List<SpeInfo> s1 = null;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -47,7 +48,8 @@ namespace Gligli
             VideoTypeMusic.DataSource = VideoMMag.SelectVideoByType(11);
             v3 = VideoMMag.SelectVideoTop10ByType(11);
             //专栏
-            SpItem.DataSource = SpeInfoMMag.SelectSpStateAll();
+            SpItem.DataSource = SpeInfoMMag.SelectSpTop8StateAll();
+            s1 = SpeInfoMMag.SelectSpTop9();
         }
         //热门视频
         private void HotVideoBin()
