@@ -44,6 +44,11 @@ namespace BLL
             }
             return RandomVideo;     
         }
+        //查询各分区排名前10的视频
+        public static List<VideoInfo> SelectVideoTop10ByType(int type)
+        {
+            return VideoInfoServices.SelectVideoTop10ByType(type);
+        }
         /// <summary>
         /// 方法一 使用随机抽取数组index中的数，填充在新的数组array中，使数组array中的数是随机的
         /// 方法一思路：用一个数组来保存索引号，先随机生成一个数组位置，然后把随机抽取到的位置的索引号取出来，

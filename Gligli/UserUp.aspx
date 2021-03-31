@@ -7,8 +7,8 @@
      <div class="upload_warp">
         <div class="new_link_top">
             <div class="new_link_nav">
-                <a href="#" class="nav_item active">视频投稿</a>
-                <a href="#" class="nav_item">专栏投稿</a>
+                <a href="javascript:void(0)" class="nav_item active">视频投稿</a>
+                <a href="javascript:void(0)" class="nav_item">专栏投稿</a>
             </div>
             <!-- 视频 -->
             <div class="videoup_warp">

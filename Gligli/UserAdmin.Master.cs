@@ -11,7 +11,10 @@ namespace Gligli
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Request.Cookies["Account"] == null || Request.Cookies["Account"].ToString() == string.Empty)
+            {
+                 Response.Redirect("Login.aspx");
+            }
         }
     }
 }

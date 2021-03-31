@@ -53,3 +53,14 @@ J:\Gligli\Gligli\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 J:\Gligli\Gligli\BLL\obj\Debug\BLL.csproj.CopyComplete
 J:\Gligli\Gligli\BLL\obj\Debug\BLL.dll
 J:\Gligli\Gligli\BLL\obj\Debug\BLL.pdb
+C:\Users\wangqinglong\Desktop\Gligli\Gligli\BLL\bin\Debug\BLL.dll
+C:\Users\wangqinglong\Desktop\Gligli\Gligli\BLL\bin\Debug\BLL.pdb
+C:\Users\wangqinglong\Desktop\Gligli\Gligli\BLL\bin\Debug\GliDAL.dll
+C:\Users\wangqinglong\Desktop\Gligli\Gligli\BLL\bin\Debug\Models.dll
+C:\Users\wangqinglong\Desktop\Gligli\Gligli\BLL\bin\Debug\GliDAL.pdb
+C:\Users\wangqinglong\Desktop\Gligli\Gligli\BLL\bin\Debug\Models.pdb
+C:\Users\wangqinglong\Desktop\Gligli\Gligli\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\wangqinglong\Desktop\Gligli\Gligli\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\wangqinglong\Desktop\Gligli\Gligli\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\wangqinglong\Desktop\Gligli\Gligli\BLL\obj\Debug\BLL.dll
+C:\Users\wangqinglong\Desktop\Gligli\Gligli\BLL\obj\Debug\BLL.pdb

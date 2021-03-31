@@ -11,6 +11,9 @@ namespace Gligli
 {
     public partial class gligli : System.Web.UI.Page
     {
+        public static List<VideoInfo> v1 = null;
+        public static List<VideoInfo> v2 = null;
+        public static List<VideoInfo> v3 = null;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -36,10 +39,13 @@ namespace Gligli
         {
             //动画区
             VideoTypeAniment.DataSource = VideoMMag.SelectVideoByType(1);
+            v1 = VideoMMag.SelectVideoTop10ByType(1);
             //鬼畜
             VideoTypeGhost.DataSource = VideoMMag.SelectVideoByType(8);
+            v2 = VideoMMag.SelectVideoTop10ByType(8);
             //音乐
             VideoTypeMusic.DataSource = VideoMMag.SelectVideoByType(11);
+            v3 = VideoMMag.SelectVideoTop10ByType(11);
             //专栏
             SpItem.DataSource = SpeInfoMMag.SelectSpStateAll();
         }
@@ -59,11 +65,12 @@ namespace Gligli
         {
             UserWarchUpVideoList.DataSource = WarchInfoManager.SelectWarchJoinVideo(UserDataBin().userID);
         }
+        
         //计算时间差
         public string DateDiff(DateTime DateTime1, DateTime DateTime2)
         {
             string dateDiff = null;
-            try { TimeSpan ts1 = new TimeSpan(DateTime1.Ticks); TimeSpan ts2 = new TimeSpan(DateTime2.Ticks); TimeSpan ts = ts1.Subtract(ts2).Duration(); dateDiff = ts.Days.ToString() + "天" + ts.Hours.ToString() + "小时" + ts.Minutes.ToString() + "分钟" + ts.Seconds.ToString() + "秒"; }
+            try { TimeSpan ts1 = new TimeSpan(DateTime1.Ticks); TimeSpan ts2 = new TimeSpan(DateTime2.Ticks); TimeSpan ts = ts1.Subtract(ts2).Duration(); dateDiff = ts.Days.ToString() + "天" + ts.Hours.ToString() + "小时" + ts.Minutes.ToString() + "分"; }
             catch
             {
 
