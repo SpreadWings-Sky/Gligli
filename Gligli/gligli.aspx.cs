@@ -56,7 +56,25 @@ namespace Gligli
         {
             ContentHotVideo.DataSource = VideoMMag.SelectVideoHotTopSix();
         }
-
+        //换一换
+        //动画
+        protected void Change_Btn1_Click(object sender, EventArgs e)
+        {
+            VideoTypeAniment.DataSource = VideoMMag.SelectVideoByType(1);
+            VideoTypeAniment.DataBind();
+        }
+        //鬼畜
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            VideoTypeGhost.DataSource = VideoMMag.SelectVideoByType(8);
+            VideoTypeGhost.DataBind();
+        }
+        //音乐
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            VideoTypeMusic.DataSource = VideoMMag.SelectVideoByType(11);
+            VideoTypeMusic.DataBind();
+        }
         //轮播图绑定
         private void ImgDatabin()
         {
@@ -67,7 +85,7 @@ namespace Gligli
         {
             UserWarchUpVideoList.DataSource = WarchInfoManager.SelectWarchJoinVideo(UserDataBin().userID);
         }
-        
+
         //计算时间差
         public string DateDiff(DateTime DateTime1, DateTime DateTime2)
         {
@@ -85,7 +103,7 @@ namespace Gligli
             TypeVideoCountRepeater.DataSource = TypeInfoManager.SelectTypeVideoALL();
         }
         //用户信息绑定
-       public UserInfo  UserDataBin()
+        public UserInfo UserDataBin()
         {
             UserInfo us = new UserInfo();
 
@@ -108,5 +126,7 @@ namespace Gligli
             Session.Clear();
             Response.Redirect("gligli.aspx");
         }
+
+        
     }
 }

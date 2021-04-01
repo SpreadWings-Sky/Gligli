@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/font-awesome.min.css" />
     <link rel="stylesheet" href="./css/index-content.css" />
     <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery.scrollex.min.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -249,17 +250,14 @@
             </div>
             <img src="./img/gligli.png" alt="" class="gligli" />
         </header>
-    </form>
+    
     <!-- 主体内容区开始 -->
     <section id="content">
         <!-- 竖状导航 -->
         <div class="vertical-list">
             <div class="vertical-list-box">
-                <div class="box-item">
+                <div class="box-item" >
                     动画
-                </div>
-                <div class="box-item">
-                    番剧
                 </div>
                 <div class="box-item">
                     鬼畜
@@ -388,7 +386,7 @@
                         <a href="#">动画</a>
                     </div>
                     <div class="list-header-btn">
-                        <div class="btn-change"><i class="fa fa-refresh" aria-hidden="true"></i>换一换</div>
+                        <asp:LinkButton ID="Change_Btn1" OnClick="Change_Btn1_Click" class="btn-change" runat="server"><i class="fa fa-refresh" aria-hidden="true"></i>换一换</asp:LinkButton>
                         <a href="#">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
                 </header>
@@ -423,8 +421,7 @@
                     <div class="item-right">
                         <div class="item-img">
                             <a href='video-playback.aspx?videoID=<%=v1[i].VideoID %>'>
-                                <img src='<%=v1[i].bacimg %>'' alt="" />
-                            </a>
+                                <img src='<%=v1[i].bacimg %>' alt="" /></a>
                         </div>
                         <div class="item-text">
                             <a href='video-playback.aspx?videoID=<%=v1[i].VideoID %>'>
@@ -436,7 +433,7 @@
                             <div class="video-show-top item-right">
                                 <div class="item-img">
                                     <a href='video-play.aspxback?videoID=<%=v1[i].VideoID %>'>
-                                        <img src='<%=v1[i].bacimg %>'' alt="" />
+                                        <img src='<%=v1[i].bacimg %>' alt="" />
                                     </a>
                                 </div>
                                 <div class="item-text">
@@ -448,7 +445,7 @@
                             </div>
                             <div class="video-show-bottom">
                                 <ul class="grid">
-                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i><%=v1[i].VideoPlay %></li>
                                     <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
                                     <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
                                 </ul>
@@ -459,7 +456,7 @@
                 <% }
                     else
                     {%>
-                       <div class="rank-item">
+                <div class="rank-item">
                     <span class="item-number"><%=i+1 %></span>
                     <div class="item-right">
                         <div class="item-text">
@@ -471,7 +468,7 @@
                             <div class="video-show-top item-right">
                                 <div class="item-img">
                                     <a href='video-play.aspxback?videoID=<%=v1[i].VideoID %>'>
-                                        <img src='<%=v1[i].bacimg %>'' alt="" />
+                                        <img src='<%=v1[i].bacimg %>' alt="" />
                                     </a>
                                 </div>
                                 <div class="item-text">
@@ -483,7 +480,7 @@
                             </div>
                             <div class="video-show-bottom">
                                 <ul class="grid">
-                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i><%=v1[i].VideoPlay %></li>
                                     <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
                                     <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
                                 </ul>
@@ -495,272 +492,6 @@
                     } %>
             </div>
         </div>
-        <!-- 番剧动态开始 -->
-        <div class="content-videoclass fj">
-            <div class="video-list">
-                <header class="video-list-header">
-                    <div class="list-header-logo logo5">
-                        <a href="">番剧</a>
-                        <div class="video-tab">
-                            <span class="tab-item ontab">最新</span>
-                            <span class="tab-item">周一</span>
-                            <span class="tab-item">周二</span>
-                            <span class="tab-item">周三</span>
-                            <span class="tab-item">周四</span>
-                            <span class="tab-item">周五</span>
-                            <span class="tab-item">周六</span>
-                            <span class="tab-item">周日</span>
-                        </div>
-                    </div>
-                    <script src="./js/tab-item.js"></script>
-                    <div class="list-header-btn">
-                        <div class="btn-change"><i class="fa fa-refresh" aria-hidden="true"></i>换一换</div>
-                        <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
-                </header>
-                <div class="video-list-anime">
-                    <div class="anime-item">
-                        <a href="" class="anime-img">
-                            <img src="./img/anim-img/1.png" alt="">
-                        </a>
-                        <div class="anime-txt">
-                            <a href="" class="anime-name">记录的地平线 圆桌崩坏
-                            </a>
-                            <p class="anime-data">
-                                <a href="">第5话</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="video-rank">
-                <header class="rank-header">
-                    <span>排行榜</span>
-                    <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                </header>
-                <div class="rank-item">
-                    <span class="item-number rank-on">1</span>
-                    <div class="item-right">
-                        <div class="item-text">
-                            <a href="" class="anime-updata">
-                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="rank-item">
-                    <span class="item-number rank-on">2</span>
-                    <div class="item-right">
-                        <div class="item-text">
-                            <a href="" class="anime-updata">
-                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="rank-item">
-                    <span class="item-number rank-on">3</span>
-                    <div class="item-right">
-                        <div class="item-text">
-                            <a href="" class="anime-updata">
-                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="rank-item">
-                    <span class="item-number">4</span>
-                    <div class="item-right">
-                        <div class="item-text">
-                            <a href="" class="anime-updata">
-                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="rank-item">
-                    <span class="item-number">5</span>
-                    <div class="item-right">
-                        <div class="item-text">
-                            <a href="" class="anime-updata">
-                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="rank-item">
-                    <span class="item-number">6</span>
-                    <div class="item-right">
-                        <div class="item-text">
-                            <a href="" class="anime-updata">
-                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="rank-item">
-                    <span class="item-number">7</span>
-                    <div class="item-right">
-                        <div class="item-text">
-                            <a href="" class="anime-updata">
-                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="rank-item">
-                    <span class="item-number">8</span>
-                    <div class="item-right">
-                        <div class="item-text">
-                            <a href="" class="anime-updata">
-                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="rank-item">
-                    <span class="item-number">9</span>
-                    <div class="item-right">
-                        <div class="item-text">
-                            <a href="" class="anime-updata">
-                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="rank-item">
-                    <span class="item-number">10</span>
-                    <div class="item-right">
-                        <div class="item-text">
-                            <a href="" class="anime-updata">
-                                <span class="anime-title">Re：从零开始的异世界生活 第二季 后半</span><span class="datanumber">更新至114话</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="content-videoclass">
-            <div class="video-list">
-                <header class="video-list-header">
-                    <div class="list-header-logo anime-header">
-                        <a href="">番剧动态</a>
-                    </div>
-                    <div class="list-header-btn">
-                        <div class="btn-change"><i class="fa fa-refresh" aria-hidden="true"></i>换一换</div>
-                        <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
-                </header>
-                <div class="video-list-box">
-                    <ul>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/8.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">【10月】JOJO的奇妙冒险 黄金之风 04</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/8.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">【10月】JOJO的奇妙冒险 黄金之风 04</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/8.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">【10月】JOJO的奇妙冒险 黄金之风 04</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/8.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">【10月】JOJO的奇妙冒险 黄金之风 04</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/8.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">【10月】JOJO的奇妙冒险 黄金之风 04</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/8.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">【10月】JOJO的奇妙冒险 黄金之风 04</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/8.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">【10月】JOJO的奇妙冒险 黄金之风 04</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/video-img/8.png" alt="">
-                                <p class="video-list-play"><i class="fa fa-play-circle" aria-hidden="true"></i>3.0万</p>
-                                <p class="video-list-title">【10月】JOJO的奇妙冒险 黄金之风 04</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="video-rank">
-                <header class="rank-header">
-                    <span>特别推荐</span>
-                </header>
-                <div class="anime-img-slide">
-                    <ul>
-                        <li>
-                            <a href="">
-                                <img src="./img/anim-img/hot/1.jpg" alt="">
-                                <p><span title="学校第一美少女教你变现充">学校第一美少女教你变现充</span></p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/anim-img/hot/2.jpg" alt="">
-                                <p><span title="萌王又回来啦！">萌王又回来啦！</span></p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/anim-img/hot/3.jpg" alt="">
-                                <p><span title="身体内的细胞日常">身体内的细胞日常</span></p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/anim-img/hot/4.jpg" alt="">
-                                <p><span title="剑与魔法的冒险史诗~">剑与魔法的冒险史诗~</span></p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="./img/anim-img/hot/5.jpg" alt="">
-                                <p><span title="食杀事件即将揭晓">食杀事件即将揭晓</span></p>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="anime-trigger">
-                        <span class="oncheck"></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <script src="./js/anime-img-hot.js"></script>
-                </div>
-            </div>
-        </div>
-        <!-- 番剧动态结束 -->
         <div class="content-videoclass gc">
             <div class="video-list">
                 <header class="video-list-header">
@@ -768,7 +499,7 @@
                         <a href="">鬼畜</a>
                     </div>
                     <div class="list-header-btn">
-                        <div class="btn-change"><i class="fa fa-refresh" aria-hidden="true"></i>换一换</div>
+                        <asp:LinkButton ID="LinkButton1" OnClick="LinkButton1_Click" class="btn-change" runat="server"><i class="fa fa-refresh" aria-hidden="true"></i>换一换</asp:LinkButton>
                         <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
                 </header>
@@ -794,7 +525,7 @@
                     <span>排行榜</span>
                     <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                 </header>
-                 <%for (int i = 0; i < 9; i++)
+                <%for (int i = 0; i < 9; i++)
                     {
                         if (i < 2)
                         {%>
@@ -803,7 +534,7 @@
                     <div class="item-right">
                         <div class="item-img">
                             <a href='video-playback.aspx?videoID=<%=v2[i].VideoID %>'>
-                                <img src='<%=v2[i].bacimg %>'' alt="" />
+                                <img src='<%=v2[i].bacimg %>' alt="" />
                             </a>
                         </div>
                         <div class="item-text">
@@ -816,7 +547,7 @@
                             <div class="video-show-top item-right">
                                 <div class="item-img">
                                     <a href='video-play.aspxback?videoID=<%=v2[i].VideoID %>'>
-                                        <img src='<%=v2[i].bacimg %>'' alt="" />
+                                        <img src='<%=v2[i].bacimg %>' alt="" />
                                     </a>
                                 </div>
                                 <div class="item-text">
@@ -828,7 +559,7 @@
                             </div>
                             <div class="video-show-bottom">
                                 <ul class="grid">
-                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i><%=v2[i].VideoPlay %></li>
                                     <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
                                     <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
                                 </ul>
@@ -839,7 +570,7 @@
                 <% }
                     else
                     {%>
-                       <div class="rank-item">
+                <div class="rank-item">
                     <span class="item-number"><%=i+1 %></span>
                     <div class="item-right">
                         <div class="item-text">
@@ -851,7 +582,7 @@
                             <div class="video-show-top item-right">
                                 <div class="item-img">
                                     <a href='video-play.aspxback?videoID=<%=v2[i].VideoID %>'>
-                                        <img src='<%=v2[i].bacimg %>'' alt="" />
+                                        <img src='<%=v2[i].bacimg %>' alt="" />
                                     </a>
                                 </div>
                                 <div class="item-text">
@@ -863,7 +594,7 @@
                             </div>
                             <div class="video-show-bottom">
                                 <ul class="grid">
-                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i><%=v2[i].VideoPlay %></li>
                                     <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
                                     <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
                                 </ul>
@@ -882,7 +613,7 @@
                         <a href="">音乐</a>
                     </div>
                     <div class="list-header-btn">
-                        <div class="btn-change"><i class="fa fa-refresh" aria-hidden="true"></i>换一换</div>
+                        <asp:LinkButton ID="LinkButton2" OnClick="LinkButton2_Click" class="btn-change" runat="server"><i class="fa fa-refresh" aria-hidden="true"></i>换一换</asp:LinkButton>
                         <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
                 </header>
@@ -908,7 +639,7 @@
                     <span>排行榜</span>
                     <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                 </header>
-                 <%for (int i = 0; i < 9; i++)
+                <%for (int i = 0; i < 9; i++)
                     {
                         if (i < 2)
                         {%>
@@ -917,7 +648,7 @@
                     <div class="item-right">
                         <div class="item-img">
                             <a href='video-playback.aspx?videoID=<%=v3[i].VideoID %>'>
-                                <img src='<%=v3[i].bacimg %>'' alt="" />
+                                <img src='<%=v3[i].bacimg %>' alt="" />
                             </a>
                         </div>
                         <div class="item-text">
@@ -930,7 +661,7 @@
                             <div class="video-show-top item-right">
                                 <div class="item-img">
                                     <a href='video-play.aspxback?videoID=<%=v3[i].VideoID %>'>
-                                        <img src='<%=v3[i].bacimg %>'' alt="" />
+                                        <img src='<%=v3[i].bacimg %>' alt="" />
                                     </a>
                                 </div>
                                 <div class="item-text">
@@ -942,7 +673,7 @@
                             </div>
                             <div class="video-show-bottom">
                                 <ul class="grid">
-                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i><%=v3[i].VideoPlay %></li>
                                     <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
                                     <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
                                 </ul>
@@ -953,7 +684,7 @@
                 <% }
                     else
                     {%>
-                       <div class="rank-item">
+                <div class="rank-item">
                     <span class="item-number"><%=i+1 %></span>
                     <div class="item-right">
                         <div class="item-text">
@@ -965,7 +696,7 @@
                             <div class="video-show-top item-right">
                                 <div class="item-img">
                                     <a href='video-play.aspxback?videoID=<%=v3[i].VideoID %>'>
-                                        <img src='<%=v3[i].bacimg %>'' alt="" />
+                                        <img src='<%=v3[i].bacimg %>' alt="" />
                                     </a>
                                 </div>
                                 <div class="item-text">
@@ -977,7 +708,7 @@
                             </div>
                             <div class="video-show-bottom">
                                 <ul class="grid">
-                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i>489万</li>
+                                    <li><i class="fa fa-play-circle" aria-hidden="true"></i><%=v3[i].VideoPlay %></li>
                                     <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
                                     <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
                                 </ul>
@@ -996,7 +727,6 @@
                         <a href="Special.aspx">专栏</a>
                     </div>
                     <div class="list-header-btn">
-                        <div class="btn-change"><i class="fa fa-refresh" aria-hidden="true"></i>换一换</div>
                         <a href="Special.aspx">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
                 </header>
@@ -1027,101 +757,40 @@
                     <span>排行榜</span>
                     <a href="Special.aspx">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                 </header>
+                <%for (int i = 0; i < 8; i++)
+                    {
+                        if (i < 2)
+                        {%>
                 <div class="rank-item">
-                    <span class="item-number rank-on">1</span>
+                    <span class="item-number rank-on"><%=i+1 %></span>
                     <div class="item-right">
                         <div class="item-img">
                             <a href="">
-                                <img src="./img/hot-img/4.png" alt=""></a>
+                                <img src='<%=s1[i].PageImg %>' alt=""></a>
                         </div>
                         <div class="item-text">
                             <a href="">
-                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                                <span>综合得分937.1万</span>
+                                <p><%=s1[i].Title %></p>
+                                <span>阅读量<%=s1[i].SpNumber %></span>
                             </a>
                         </div>
                     </div>
                 </div>
+                <% }
+                    else
+                    { %>
                 <div class="rank-item">
-                    <span class="item-number rank-on">2</span>
+                    <span class="item-number"><%=i+1 %></span>
                     <div class="item-right">
                         <div class="item-text">
                             <a href="">
-                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
+                                <p><%=s1[i].Title %></p>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="rank-item">
-                    <span class="item-number rank-on">3</span>
-                    <div class="item-right">
-                        <div class="item-text">
-                            <a href="">
-                                <p>我不在乎输赢，因为袋鼠喜欢男桐，同时马老师的青花瓷外衣很好看，听说糖宝的鞋被偷走了，我很难过，所以我要加个菜，综上所述，马老师获得胜利</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="rank-item">
-                    <span class="item-number">4</span>
-                    <div class="item-right">
-                        <div class="item-text">
-                            <a href="">
-                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="rank-item">
-                    <span class="item-number">5</span>
-                    <div class="item-right">
-                        <div class="item-text">
-                            <a href="">
-                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="rank-item">
-                    <span class="item-number">6</span>
-                    <div class="item-right">
-                        <div class="item-text">
-                            <a href="">
-                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="rank-item">
-                    <span class="item-number">7</span>
-                    <div class="item-right">
-                        <div class="item-text">
-                            <a href="">
-                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="rank-item">
-                    <span class="item-number">8</span>
-                    <div class="item-right">
-                        <div class="item-text">
-                            <a href="">
-                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="rank-item">
-                    <span class="item-number">9</span>
-                    <div class="item-right">
-                        <div class="item-text">
-                            <a href="">
-                                <p>芜湖大司马 VS 盖亚卢本伟（真 · 决赛！！）</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <%}
+                    } %>
             </div>
         </div>
         <!-- 分区内容展示部分结束 -->
@@ -1208,5 +877,6 @@
             </div>
         </div>
     </footer>
+    </form>
 </body>
 </html>

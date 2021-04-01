@@ -69,6 +69,15 @@ namespace Gligli
         protected global::System.Web.UI.WebControls.Repeater ContentHotVideo;
 
         /// <summary>
+        /// Change_Btn1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Change_Btn1;
+
+        /// <summary>
         /// VideoTypeAniment 控件。
         /// </summary>
         /// <remarks>
@@ -78,6 +87,15 @@ namespace Gligli
         protected global::System.Web.UI.WebControls.Repeater VideoTypeAniment;
 
         /// <summary>
+        /// LinkButton1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+
+        /// <summary>
         /// VideoTypeGhost 控件。
         /// </summary>
         /// <remarks>
@@ -85,6 +103,15 @@ namespace Gligli
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater VideoTypeGhost;
+
+        /// <summary>
+        /// LinkButton2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
 
         /// <summary>
         /// VideoTypeMusic 控件。

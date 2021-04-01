@@ -81,7 +81,7 @@ namespace GliDAL
         //阅读量前9的专栏
         public static List<SpeInfo> SelectSpTop9()
         {
-            string sql = "select top 9 s.spID,s.userID,s.title,s.pageimg,u.userName,count(c.spID) sun,s.spNumber from SpeInfo s left join UserInfo u on(s.userID=u.userID) left join SPCommentInfo c on(c.spID=s.spID) where s.state = '正常' group by c.spID,u.userName,s.spID,s.userID,s.title,s.pageimg,s.spNumber order by s.spNumber desc";
+            string sql = "select top 8 s.spID,s.userID,s.title,s.pageimg,u.userName,count(c.spID) sun,s.spNumber from SpeInfo s left join UserInfo u on(s.userID=u.userID) left join SPCommentInfo c on(c.spID=s.spID) where s.state = '正常' group by c.spID,u.userName,s.spID,s.userID,s.title,s.pageimg,s.spNumber order by s.spNumber desc";
             List<SpeInfo> lsp = new List<SpeInfo>();
             SqlDataReader da = DBHelper.GetData(sql);
             while (da.Read())
