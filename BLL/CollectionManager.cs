@@ -14,5 +14,9 @@ namespace BLL
         {
             return CollectionService.giligili(id);
         }
+        public static List<CollectionInfo> giligili2(int id)
+        {
+            return CollectionService.giligili2(id);
+        }
     }
 }

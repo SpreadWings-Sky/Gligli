@@ -124,7 +124,7 @@ namespace GliDAL
         }
         public static List<SpeInfo> Info(int id)
         {
-            string sql = $"select Top 10  * from UserInfo l left join SpeInfo v on l.userID = v.userID where l.userID = {id}";
+            string sql = $"select * from UserInfo l left join SpeInfo v on l.userID = v.userID where l.userID = {id}";
             SqlDataReader dr = DBHelper.GetData(sql);
             SpeInfo info = null;
             List<SpeInfo> list = new List<SpeInfo>();
@@ -161,6 +161,25 @@ namespace GliDAL
             dr.Close();
             return list;
         }
+        //东
+        public static List<SpeInfo> SpeInfo(int id)
+        {
+            string sql = $"select top(5) * from UserInfo l left join SpeInfo v on l.userID = v.userID where l.userID = {id}";
+            SqlDataReader dr = DBHelper.GetData(sql);
+            SpeInfo info = null;
+            List<SpeInfo> list = new List<SpeInfo>();
+            while (dr.Read())
+            {
 
+                info = new SpeInfo();
+                info.Title = dr["title"].ToString();
+                info.UserName = dr["userName"].ToString();
+                info.ImageUrl = dr["imageUrl"].ToString();
+                info.Brief = dr["brief"].ToString();
+                list.Add(info);
+            }
+            dr.Close();
+            return list;
+        }
     }
 }

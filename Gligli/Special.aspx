@@ -143,7 +143,7 @@
             <!-- 中间搜索栏结束 -->
             <!-- 右侧状态展示栏开始 -->
             <div class="header-right grid grid-cell-1">
-                    <%if (Request.Cookies["Account"] == null || Request.Cookies["Account"].ToString() == string.Empty)
+                    <%if (Request.Cookies["Account"] == null || Request.Cookies["Account"].Value == string.Empty)
                         { %>
                     <!-- 未登录状态 -->
                     <div class="right-login">

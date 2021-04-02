@@ -138,6 +138,13 @@ body
     margin: 0 auto;
     height: 35px;
 }
+.section-title a
+{
+    margin: 10px;
+    font-size: 30px;
+    font-weight: normal;
+    padding: 10px;
+}
 .col-2 img
 {
     width: 160px;
@@ -145,36 +152,7 @@ body
 }
 
 
-.be-tab ul li
-{
-    float: left;
-    margin-left: 20px;
-    font-size: 10px;
-    font-weight: normal;
-    cursor: pointer;
-    margin-top: 5px;
-} 
-.count,.more
-{
-    font-weight: normal;
-    font-size: 10px;
-}
-.more
-{
-    font-weight: normal;
-    position: relative;
-    right: -10px;
-}
-.more
-{
-    display: inline-block;
-    width: 55px;
-    height: 24px;
-    border: 0.5px solid #e7e7e7;
-    text-align: center;
-    line-height: 24px;
-    color: #e7e7e7;
-}
+
 .col-2-img
 {
     width: 98%;
@@ -184,12 +162,16 @@ body
 .col-2-img1
 {
     width:160px;
-    height:140px;   
+    height:160px;   
     float: left;
-    margin-left: 20px;
+    margin-left: 50px;
     overflow: hidden;
     font-size:10px;
     flex-flow:wrap;
+}
+.col-2-img1 img
+{
+
 }
 /* .col-2-img2
 {

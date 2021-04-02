@@ -51,7 +51,6 @@ body
     height: 270px;
     margin-top: 2px;
     background: #fff;
-    border-radius: 5px 5px 5px 5px;
 }
 
 .box2-img
@@ -98,7 +97,6 @@ body
     margin: 0 auto;
     height: 50px;
     background: #fff;
-    border-radius: 5px 5px 5px 5px;
     line-height: 40px;
 }
 .col-1-button
@@ -122,12 +120,11 @@ body
     margin: 0 auto;
     height: auto;
     background: #fff;
-    border-radius: 5px 5px 5px 5px;
     line-height: 40px;
 }
-.col-2-img1
+.col-2-img
 {
-    width: 15%;
+    width: 1305px;
     margin-left: 30px;
     background: #fff;
 }
@@ -259,3 +256,18 @@ body
 {
     transform: scale(1);
 }
+
+/* 上一页 */
+
+#Button2,#Button3
+{
+    width: 60px;
+    height:30px;
+    background: #00a1d6;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+

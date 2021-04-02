@@ -14,6 +14,10 @@ namespace Gligli
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.Cookies["Account"] == null)
+            {
+                Response.Write("<script>alert('请先登录！');location.href='Login.aspx'</script>");
+            }
             if (!IsPostBack)
             {
                 getInfo();
@@ -22,12 +26,12 @@ namespace Gligli
         private void getInfo()
         {
             UserInfo info = new UserInfo();
-            info = UserInfoManager.Add(1000015);
+            info = UserInfoManager.Add(UserInfoManager.SelectUserByAccount(Base64Helper.Base64Decode(Request.Cookies["Account"].Value)).userID);
             this.userName.Text = info.userName;
             this.userID.Text = info.userID.ToString();
             this.brief.Text = info.brief;
             this.Image1.ImageUrl = info.imgurl;
-            if (int.Parse(info.sex.ToString()) == 1)
+            if (int.Parse(info.sex) == 1)
             {
                 RadioButtonList1.SelectedValue = "男";
             }
@@ -74,7 +78,7 @@ namespace Gligli
             {
                 sex = "2";
             }
-            info.sex =sex.ToString();
+            info.sex = sex.ToString();
             if (Session["ImageUrl"] == null)
             {
                 Response.Write("<script>alert('请选择图片')</script>");

@@ -96,8 +96,8 @@
     <Content Include="Admin_UserList.aspx" />
     <Content Include="Admin_VideoComment.aspx" />
     <Content Include="Animation.aspx" />
+    <Content Include="Collection column.aspx" />
     <Content Include="Collection.aspx" />
-    <Content Include="Collection_column.aspx" />
     <Content Include="css\AdminLog.css" />
     <Content Include="css\adminsystem.css" />
     <Content Include="css\animate.css" />
@@ -262,12 +262,14 @@
     <Content Include="Login.aspx" />
     <Content Include="modify.aspx" />
     <Content Include="Music.aspx" />
-    <Content Include="MyVideo.aspx" />
+    <Content Include="My video.aspx" />
     <Content Include="OutLogin.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Special.aspx" />
     <Content Include="special_column.aspx" />
     <Content Include="Sp\1.txt" />
+    <Content Include="TA special_column.aspx" />
+    <Content Include="TA video.aspx" />
     <Content Include="TA.aspx" />
     <Content Include="UserAdminPage.aspx" />
     <Content Include="UserUp.aspx" />
@@ -361,19 +363,19 @@
     <Compile Include="Animation.aspx.designer.cs">
       <DependentUpon>Animation.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Collection column.aspx.cs">
+      <DependentUpon>Collection column.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collection column.aspx.designer.cs">
+      <DependentUpon>Collection column.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Collection.aspx.cs">
       <DependentUpon>Collection.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Collection.aspx.designer.cs">
       <DependentUpon>Collection.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Collection_column.aspx.cs">
-      <DependentUpon>Collection_column.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Collection_column.aspx.designer.cs">
-      <DependentUpon>Collection_column.aspx</DependentUpon>
     </Compile>
     <Compile Include="follow.aspx.cs">
       <DependentUpon>follow.aspx</DependentUpon>
@@ -451,12 +453,12 @@
     <Compile Include="Music.aspx.designer.cs">
       <DependentUpon>Music.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MyVideo.aspx.cs">
-      <DependentUpon>MyVideo.aspx</DependentUpon>
+    <Compile Include="My video.aspx.cs">
+      <DependentUpon>My video.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MyVideo.aspx.designer.cs">
-      <DependentUpon>MyVideo.aspx</DependentUpon>
+    <Compile Include="My video.aspx.designer.cs">
+      <DependentUpon>My video.aspx</DependentUpon>
     </Compile>
     <Compile Include="OutLogin.aspx.cs">
       <DependentUpon>OutLogin.aspx</DependentUpon>
@@ -486,6 +488,20 @@
     </Compile>
     <Compile Include="special_column.aspx.designer.cs">
       <DependentUpon>special_column.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TA special_column.aspx.cs">
+      <DependentUpon>TA special_column.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TA special_column.aspx.designer.cs">
+      <DependentUpon>TA special_column.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TA video.aspx.cs">
+      <DependentUpon>TA video.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TA video.aspx.designer.cs">
+      <DependentUpon>TA video.aspx</DependentUpon>
     </Compile>
     <Compile Include="TA.aspx.cs">
       <DependentUpon>TA.aspx</DependentUpon>

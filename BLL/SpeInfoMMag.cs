@@ -90,5 +90,9 @@ namespace BLL
         {
             return SpeInfoServices.Collection(id);
         }
+        public static List<SpeInfo> SpeInfo(int id)
+        {
+            return SpeInfoServices.SpeInfo(id);
+        }
     }
 }

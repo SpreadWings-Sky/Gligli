@@ -146,7 +146,7 @@
                 <!-- 中间搜索栏结束 -->
                 <!-- 右侧状态展示栏开始 -->
                 <div class="header-right grid grid-cell-1">
-                    <%if (Request.Cookies["Account"] == null || Request.Cookies["Account"].ToString() == string.Empty)
+                    <%if (Request.Cookies["Account"] == null || Request.Cookies["Account"].Value == string.Empty)
                         { %>
                     <!-- 未登录状态 -->
                     <div class="right-login">
@@ -161,7 +161,7 @@
                     <!-- 登录状态 -->
                     <div class="userlogin grid">
                         <div class="userimg">
-                            <a href='<%= UserDataBin().userID %>'>
+                            <a href='giligili.aspx'>
                                 <img id="UserLogin" src='<%=UserDataBin().imgurl %>' alt=""></a>
                             <div class="user-item">
                                 <p class="user-name"><%=UserDataBin().userName %></p>
@@ -200,7 +200,7 @@
                                             <ItemTemplate>
                                                 <div class="list-item gird">
                                                     <div class="list-item-left">
-                                                        <a href="">
+                                                        <a href='TA.aspx?UserID=<%# Eval("VideoUserID") %>'>
                                                             <img id="VideoUserImg" src="<%# Eval("imageUrl") %>" alt="" />
                                                         </a>
                                                     </div>
@@ -740,7 +740,7 @@
                                     <div class="list-title-name">
                                         <a href="" class="arti-name" title='<%# Eval("Title") %>'><%# Eval("Title") %>
                                         </a>
-                                        <a href="" class="arti-up"><span>UP</span><%# Eval("UserName") %></a>
+                                        <a href="TA.aspx?UserID=<%# Eval("UserID") %>" class="arti-up"><span>UP</span><%# Eval("UserName") %></a>
                                         <p class="arti-play">
                                             <i class="fa fa-eye fa-fw" aria-hidden="true"></i><span><%# Eval("SpNumber") %></span>
                                             <i class="fa fa-comment-o fa-fw" style="margin-left: 10%;" aria-hidden="true"></i><span><%# Eval("Sum") %></span>
