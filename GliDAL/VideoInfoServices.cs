@@ -107,7 +107,7 @@ namespace GliDAL
         //查询各分类下播放前10的视频
         public static List<VideoInfo> SelectVideoTop10ByType(int type)
         {
-            string sql = $"select TOP 9 v.*,u.userName from VideoInfo v join UserInfo u on(v.userID = u.userID) where v.type = {type} and  v.state='正常'order by v.videoplay desc";
+            string sql = $"select TOP 9 v.*,u.userName,(select count(*) from VideoCommentInfo where videoID = v.videoID ) CommentNumber,(select count(*) from VideoKeepInfo where videoID=v.videoID) KeepNumber from VideoInfo v join UserInfo u on(v.userID = u.userID) where v.type = {type} and  v.state='正常'order by v.videoplay desc";
             SqlDataReader da = DBHelper.GetData(sql);
             List<VideoInfo> vd = new List<VideoInfo>();
             while (da.Read())
@@ -125,7 +125,9 @@ namespace GliDAL
                     VideoUrl = da.IsDBNull(8) ? "" : da.GetString(8),
                     Uptime = da.GetDateTime(9),
                     State = da.GetString(10),
-                    UserName = da.GetString(11)
+                    UserName = da.GetString(11),
+                    CommentNumber = da.GetInt32(12),
+                    KeepNumber = da.GetInt32(13)
                 };
                 vd.Add(video);
             }

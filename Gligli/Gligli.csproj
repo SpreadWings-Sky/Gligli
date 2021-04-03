@@ -118,6 +118,7 @@
     <Content Include="css\search.css" />
     <Content Include="css\style.min.css" />
     <Content Include="css\User_upVideo.css" />
+    <Content Include="Details.aspx" />
     <Content Include="follow.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\materialdesignicons.svg" />
@@ -274,6 +275,7 @@
     <Content Include="UserAdminPage.aspx" />
     <Content Include="UserUp.aspx" />
     <Content Include="video-playback.aspx" />
+    <Content Include="VideoTypeListWeb.aspx" />
     <Content Include="video\100001.mp4" />
     <Content Include="video\video-img\100001.jpg" />
     <Content Include="Web.config" />
@@ -377,6 +379,13 @@
     <Compile Include="Collection.aspx.designer.cs">
       <DependentUpon>Collection.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
     <Compile Include="follow.aspx.cs">
       <DependentUpon>follow.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -386,6 +395,7 @@
     </Compile>
     <Compile Include="FootSite.Master.cs">
       <DependentUpon>FootSite.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="FootSite.Master.designer.cs">
       <DependentUpon>FootSite.Master</DependentUpon>
@@ -537,6 +547,13 @@
     </Compile>
     <Compile Include="video-playback.aspx.designer.cs">
       <DependentUpon>video-playback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VideoTypeListWeb.aspx.cs">
+      <DependentUpon>VideoTypeListWeb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VideoTypeListWeb.aspx.designer.cs">
+      <DependentUpon>VideoTypeListWeb.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

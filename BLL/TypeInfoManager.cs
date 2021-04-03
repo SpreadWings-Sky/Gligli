@@ -15,5 +15,10 @@ namespace BLL
         {
             return TypeInfoService.SelectTypeVideoALL();
         }
+        //查询分类表
+        public static List<TypeInfo> SelectTypeAll()
+        {
+            return TypeInfoService.SelectTypeAll();
+        }
     }
 }

@@ -35,9 +35,6 @@
                             </div>
                             <div class="muen-right">
                                 <a href="Special.aspx" class="ms">专栏</a>
-                                <a href="javascript:confirm('开发中')" class="ms">话题</a>
-                                <a href="javascript:confirm('开发中')" class="ms">活动</a>
-                                <a href="javascript:confirm('开发中')" class="ms">直播</a>
                             </div>
                         </div>
                         <!-- 目录结束 -->
@@ -46,84 +43,6 @@
                     <!-- 左侧导航开始 -->
                     <div class="nav-left">
                         <ul>
-                            <li><a href="javascript:confirm('开发中')">番剧</a></li>
-                            <li><a href="javascript:confirm('开发中')">直播</a>
-                                <div class="nva-left-live">
-                                    <div class="live-left">
-                                        <h3>热门直播:</h3>
-                                        <div class="live-list">
-                                            <a href="javascript:void(0)">
-                                                <img src="./img/live-img/t1.png" alt="">
-                                                <div class="live-hover">LIVE</div>
-                                                <p>酸奶EFI</p>
-                                            </a>
-                                            <a href="javascript:void(0)">
-                                                <img src="./img/live-img/t2.png" alt=""><div class="live-hover">LIVE</div>
-                                                <p>夜落莫言</p>
-                                            </a>
-                                            <a href="javascript:void(0)">
-                                                <img src="./img/live-img/t3.png" alt=""><div class="live-hover">LIVE</div>
-                                                <p>十二月的...</p>
-                                            </a>
-                                            <a href="javascript:void(0)">
-                                                <img src="./img/live-img/t4.png" alt=""><div class="live-hover">LIVE</div>
-                                                <p>睡神不醒、</p>
-                                            </a>
-                                            <a href="javascript:void(0)">
-                                                <img src="./img/live-img/t5.png" alt=""><div class="live-hover">LIVE</div>
-                                                <p>是辞妹o</p>
-                                            </a>
-                                            <a href="javascript:void(0)">
-                                                <img src="./img/live-img/t6.png" alt=""><div class="live-hover">LIVE</div>
-                                                <p>梦醒三生梦</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="live-right">
-                                        <h3>热门活动:</h3>
-                                        <div class="right-list">
-                                            <img src="./img/live-img/zyt1.jpg" alt="">
-                                        </div>
-                                        <div class="right-list">
-                                            <img src="./img/live-img/zyt2.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a href="javascript:confirm('开发中')">漫画</a>
-                                <div class="comic">
-                                    <div class="comic-left">
-                                        <div class="comic-item">
-                                            <img src="./img/comic-img/i1.jpg" alt="无职转生~到了异世界就拿出真本事">
-                                            <p>无职转生</p>
-                                        </div>
-                                        <div class="comic-item">
-                                            <img src="./img/comic-img/i2.jpg" alt="武林第一厨师">
-                                            <p>武林第一厨师</p>
-                                        </div>
-                                        <div class="comic-item">
-                                            <img src="./img/comic-img/i3.png" alt="你就饶了为师我">
-                                            <p>你就饶了为师我</p>
-                                        </div>
-                                        <div class="comic-item">
-                                            <img src="./img/comic-img/i4.jpg" alt="别来无恙">
-                                            <p>别来无恙</p>
-                                        </div>
-                                    </div>
-                                    <div class="comic-right">
-                                        <h3>人气漫画</h3>
-                                        <ol>
-                                            <li><a href="javascript:void(0)">其中一个是魔王</a><img src="./img/comic-img/c1.jpg" alt="其中一个是魔王"></li>
-                                            <li><a href="javascript:void(0)">总之非常可爱</a><img src="./img/comic-img/c2.jpg" alt="总之非常可爱"></li>
-                                            <li><a href="javascript:void(0)">租借女友</a><img src="./img/comic-img/c3.jpg" alt=""></li>
-                                            <li><a href="javascript:void(0)">失业魔王</a><img src="./img/comic-img/c4.jpg" alt=""></li>
-                                            <li><a href="javascript:void(0)">伪恋</a><img src="./img/comic-img/c5.jpg" alt=""></li>
-                                            <li><a href="javascript:void(0)">咒术回战</a><img src="./img/comic-img/c6.png" alt=""></li>
-                                        </ol>
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a href="javascript:confirm('开发中')">活动</a></li>
                             <li class="Phone-logo"><a href="#">下载APP</a>
                                 <div class="Dolowdimg">
                                 </div>
@@ -199,7 +118,7 @@
                                             <ItemTemplate>
                                                 <div class="list-item gird">
                                                     <div class="list-item-left">
-                                                        <a href="">
+                                                        <a href='TA.aspx?UserID=<%# Eval("VideoUserID") %>'>
                                                             <img id="VideoUserImg" src="<%# Eval("imageUrl") %>" alt="" />
                                                         </a>
                                                     </div>
@@ -223,7 +142,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="">收藏</a></li>
+                            <li><a href="Collection.aspx">收藏</a></li>
                             <li><a href="UserUp.aspx">创作中心</a></li>
                         </ul>
                     </div>
@@ -247,7 +166,6 @@
                 </div>
                 <!-- 右侧状态展示栏结束 -->
             </div>
-            <img src="./img/gligli.png" alt="" class="gligli" />
         </header>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

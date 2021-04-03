@@ -26,5 +26,24 @@ namespace GliDAL
             DBHelper.Close();
             return list;
         }
+        //查询分类表
+        public static List<TypeInfo> SelectTypeAll()
+        {
+            string sql = "select TypeName from TypeInfo";
+            List<TypeInfo> list = new List<TypeInfo>();
+            TypeInfo typeInfo = null;
+            SqlDataReader dr = DBHelper.GetData(sql);
+            while (dr.Read())
+            {
+                typeInfo = new TypeInfo()
+                {
+                    TypeName = dr.GetString(0)
+                };
+                list.Add(typeInfo);
+            }
+            dr.Close();
+            return list;
+        }
     }
 }
+

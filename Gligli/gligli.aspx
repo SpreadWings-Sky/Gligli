@@ -36,9 +36,6 @@
                             </div>
                             <div class="muen-right">
                                 <a href="Special.aspx" class="ms">专栏</a>
-                                <a href="javascript:confirm('开发中')" class="ms">话题</a>
-                                <a href="javascript:confirm('开发中')" class="ms">活动</a>
-                                <a href="javascript:confirm('开发中')" class="ms">直播</a>
                             </div>
                         </div>
                         <!-- 目录结束 -->
@@ -47,84 +44,6 @@
                     <!-- 左侧导航开始 -->
                     <div class="nav-left">
                         <ul>
-                            <li><a href="javascript:confirm('开发中')">番剧</a></li>
-                            <li><a href="javascript:confirm('开发中')">直播</a>
-                                <div class="nva-left-live">
-                                    <div class="live-left">
-                                        <h3>热门直播:</h3>
-                                        <div class="live-list">
-                                            <a href="javascript:void(0)">
-                                                <img src="./img/live-img/t1.png" alt="">
-                                                <div class="live-hover">LIVE</div>
-                                                <p>酸奶EFI</p>
-                                            </a>
-                                            <a href="javascript:void(0)">
-                                                <img src="./img/live-img/t2.png" alt=""><div class="live-hover">LIVE</div>
-                                                <p>夜落莫言</p>
-                                            </a>
-                                            <a href="javascript:void(0)">
-                                                <img src="./img/live-img/t3.png" alt=""><div class="live-hover">LIVE</div>
-                                                <p>十二月的...</p>
-                                            </a>
-                                            <a href="javascript:void(0)">
-                                                <img src="./img/live-img/t4.png" alt=""><div class="live-hover">LIVE</div>
-                                                <p>睡神不醒、</p>
-                                            </a>
-                                            <a href="javascript:void(0)">
-                                                <img src="./img/live-img/t5.png" alt=""><div class="live-hover">LIVE</div>
-                                                <p>是辞妹o</p>
-                                            </a>
-                                            <a href="javascript:void(0)">
-                                                <img src="./img/live-img/t6.png" alt=""><div class="live-hover">LIVE</div>
-                                                <p>梦醒三生梦</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="live-right">
-                                        <h3>热门活动:</h3>
-                                        <div class="right-list">
-                                            <img src="./img/live-img/zyt1.jpg" alt="">
-                                        </div>
-                                        <div class="right-list">
-                                            <img src="./img/live-img/zyt2.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a href="javascript:confirm('开发中')">漫画</a>
-                                <div class="comic">
-                                    <div class="comic-left">
-                                        <div class="comic-item">
-                                            <img src="./img/comic-img/i1.jpg" alt="无职转生~到了异世界就拿出真本事">
-                                            <p>无职转生</p>
-                                        </div>
-                                        <div class="comic-item">
-                                            <img src="./img/comic-img/i2.jpg" alt="武林第一厨师">
-                                            <p>武林第一厨师</p>
-                                        </div>
-                                        <div class="comic-item">
-                                            <img src="./img/comic-img/i3.png" alt="你就饶了为师我">
-                                            <p>你就饶了为师我</p>
-                                        </div>
-                                        <div class="comic-item">
-                                            <img src="./img/comic-img/i4.jpg" alt="别来无恙">
-                                            <p>别来无恙</p>
-                                        </div>
-                                    </div>
-                                    <div class="comic-right">
-                                        <h3>人气漫画</h3>
-                                        <ol>
-                                            <li><a href="javascript:void(0)">其中一个是魔王</a><img src="./img/comic-img/c1.jpg" alt="其中一个是魔王"></li>
-                                            <li><a href="javascript:void(0)">总之非常可爱</a><img src="./img/comic-img/c2.jpg" alt="总之非常可爱"></li>
-                                            <li><a href="javascript:void(0)">租借女友</a><img src="./img/comic-img/c3.jpg" alt=""></li>
-                                            <li><a href="javascript:void(0)">失业魔王</a><img src="./img/comic-img/c4.jpg" alt=""></li>
-                                            <li><a href="javascript:void(0)">伪恋</a><img src="./img/comic-img/c5.jpg" alt=""></li>
-                                            <li><a href="javascript:void(0)">咒术回战</a><img src="./img/comic-img/c6.png" alt=""></li>
-                                        </ol>
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a href="javascript:confirm('开发中')">活动</a></li>
                             <li class="Phone-logo"><a href="#">下载APP</a>
                                 <div class="Dolowdimg">
                                 </div>
@@ -224,7 +143,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="">收藏</a></li>
+                            <li><a href="Collection.aspx">收藏</a></li>
                             <li><a href="UserUp.aspx">创作中心</a></li>
                         </ul>
                     </div>
@@ -278,11 +197,9 @@
         <div class="content-meun grid">
             <div class="meun-left grid">
                 <a href="gligli.aspx">首页</a>
-                <a href="">动态</a>
-                <a href="">排行</a>
             </div>
             <span class="content-meun-line"></span>
-            <div class="meun-conter grid grid-cell-2">
+            <%--<div class="meun-conter grid grid-cell-2">
                 <span><a href=""><span>动画</span><em>999+</em></a>
                 </span>
                 <span><a href=""><span>音乐</span><em>999+</em></a>
@@ -326,12 +243,10 @@
                 <span class="max-vis"><a href=""><span>搞笑</span><em>999+</em></a></span>
                 <span class="max-vis"><a href=""><span>动物圈</span><em>999+</em></a></span>
                 <span class="max-vis"><a href=""><span>VLOG</span></a></span>
-            </div>
+            </div>--%>
             <span class="content-meun-line"></span>
             <div class="meun-right">
                 <a href="Special.aspx">专栏</a>
-                <a href="javascript:confirm('开发中')">活动</a>
-                <a href="javascript:confirm('开发中')">直播</a>
             </div>
         </div>
         <!-- 主体内容导航栏结束 -->
@@ -350,7 +265,6 @@
                         </ItemTemplate>
                     </asp:Repeater>
                 </ul>
-                <a href="#" class="move">更多<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="left-trigger">
                     <span class="oncheck"></span>
                     <span></span>
@@ -383,11 +297,11 @@
             <div class="video-list">
                 <header class="video-list-header">
                     <div class="list-header-logo logo1">
-                        <a href="#">动画</a>
+                        <a href="VideoTypeListWeb.aspx?type=动画">动画</a>
                     </div>
                     <div class="list-header-btn">
                         <asp:LinkButton ID="Change_Btn1" OnClick="Change_Btn1_Click" class="btn-change" runat="server"><i class="fa fa-refresh" aria-hidden="true"></i>换一换</asp:LinkButton>
-                        <a href="#">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                        <a href="VideoTypeListWeb.aspx?type=动画">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
                 </header>
                 <div class="video-list-box">
@@ -410,14 +324,16 @@
             <div class="video-rank">
                 <header class="rank-header">
                     <span>排行榜</span>
-                    <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    <a href="VideoTypeListWeb.aspx?type=动画">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                 </header>
-                <%for (int i = 0; i < 9; i++)
+                <% for (int i = 0; i < 9; i++)
                     {
+                        object @__o; 
+                            @__o = i;
                         if (i < 2)
                         {%>
                 <div class="rank-item">
-                    <span class="item-number rank-on"><%=i+1 %></span>
+                    <span class="item-number rank-on"><%= i+1 %></span>
                     <div class="item-right">
                         <div class="item-img">
                             <a href='video-playback.aspx?videoID=<%=v1[i].VideoID %>'>
@@ -446,8 +362,8 @@
                             <div class="video-show-bottom">
                                 <ul class="grid">
                                     <li><i class="fa fa-play-circle" aria-hidden="true"></i><%=v1[i].VideoPlay %></li>
-                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i><%=v1[i].CommentNumber %></li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i><%=v1[i].KeepNumber %></li>
                                 </ul>
                             </div>
                         </div>
@@ -481,8 +397,8 @@
                             <div class="video-show-bottom">
                                 <ul class="grid">
                                     <li><i class="fa fa-play-circle" aria-hidden="true"></i><%=v1[i].VideoPlay %></li>
-                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i><%=v1[i].CommentNumber %></li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i><%=v1[i].KeepNumber %></li>
                                 </ul>
                             </div>
                         </div>
@@ -496,11 +412,11 @@
             <div class="video-list">
                 <header class="video-list-header">
                     <div class="list-header-logo logo2">
-                        <a href="">鬼畜</a>
+                        <a href="VideoTypeListWeb.aspx?type=鬼畜">鬼畜</a>
                     </div>
                     <div class="list-header-btn">
                         <asp:LinkButton ID="LinkButton1" OnClick="LinkButton1_Click" class="btn-change" runat="server"><i class="fa fa-refresh" aria-hidden="true"></i>换一换</asp:LinkButton>
-                        <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                        <a href="VideoTypeListWeb.aspx?type=鬼畜">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
                 </header>
                 <div class="video-list-box">
@@ -523,10 +439,12 @@
             <div class="video-rank">
                 <header class="rank-header">
                     <span>排行榜</span>
-                    <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    <a href="VideoTypeListWeb.aspx?type=鬼畜">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                 </header>
                 <%for (int i = 0; i < 9; i++)
                     {
+                        object @__o; 
+                            @__o = i;
                         if (i < 2)
                         {%>
                 <div class="rank-item">
@@ -560,8 +478,8 @@
                             <div class="video-show-bottom">
                                 <ul class="grid">
                                     <li><i class="fa fa-play-circle" aria-hidden="true"></i><%=v2[i].VideoPlay %></li>
-                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i><%=v2[i].CommentNumber %></li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i><%=v2[i].KeepNumber %></li>
                                 </ul>
                             </div>
                         </div>
@@ -595,8 +513,8 @@
                             <div class="video-show-bottom">
                                 <ul class="grid">
                                     <li><i class="fa fa-play-circle" aria-hidden="true"></i><%=v2[i].VideoPlay %></li>
-                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i><%=v2[i].CommentNumber %></li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i><%=v2[i].KeepNumber %></li>
                                 </ul>
                             </div>
                         </div>
@@ -610,11 +528,11 @@
             <div class="video-list">
                 <header class="video-list-header">
                     <div class="list-header-logo logo3">
-                        <a href="">音乐</a>
+                        <a href="VideoTypeListWeb.aspx?type=音乐">音乐</a>
                     </div>
                     <div class="list-header-btn">
                         <asp:LinkButton ID="LinkButton2" OnClick="LinkButton2_Click" class="btn-change" runat="server"><i class="fa fa-refresh" aria-hidden="true"></i>换一换</asp:LinkButton>
-                        <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                        <a href="VideoTypeListWeb.aspx?type=音乐">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
                 </header>
                 <div class="video-list-box">
@@ -637,10 +555,12 @@
             <div class="video-rank">
                 <header class="rank-header">
                     <span>排行榜</span>
-                    <a href="">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    <a href="VideoTypeListWeb.aspx?type=音乐">更多<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                 </header>
                 <%for (int i = 0; i < 9; i++)
                     {
+                        object @__o; 
+                            @__o = i;
                         if (i < 2)
                         {%>
                 <div class="rank-item">
@@ -674,8 +594,8 @@
                             <div class="video-show-bottom">
                                 <ul class="grid">
                                     <li><i class="fa fa-play-circle" aria-hidden="true"></i><%=v3[i].VideoPlay %></li>
-                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i><%=v3[i].CommentNumber %></li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i><%=v3[i].KeepNumber %></li>
                                 </ul>
                             </div>
                         </div>
@@ -709,8 +629,8 @@
                             <div class="video-show-bottom">
                                 <ul class="grid">
                                     <li><i class="fa fa-play-circle" aria-hidden="true"></i><%=v3[i].VideoPlay %></li>
-                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i>8.3万</li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i>32万</li>
+                                    <li><i class="fa fa-commenting-o" aria-hidden="true"></i><%=v3[i].CommentNumber %></li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i><%=v3[i].KeepNumber %></li>
                                 </ul>
                             </div>
                         </div>
@@ -735,10 +655,10 @@
                         <asp:Repeater ID="SpItem" runat="server">
                             <ItemTemplate>
                                 <li>
-                                    <a href="" class="arti-img">
+                                    <a href='Details.aspx?id=<%# Eval("SpID") %>' class="arti-img">
                                         <img src='<%# Eval("PageImg") %>' alt=""></a>
                                     <div class="list-title-name">
-                                        <a href="" class="arti-name" title='<%# Eval("Title") %>'><%# Eval("Title") %>
+                                        <a href='Details.aspx?id=<%# Eval("SpID") %>' class="arti-name" title='<%# Eval("Title") %>'><%# Eval("Title") %>
                                         </a>
                                         <a href="TA.aspx?UserID=<%# Eval("UserID") %>" class="arti-up"><span>UP</span><%# Eval("UserName") %></a>
                                         <p class="arti-play">
@@ -759,17 +679,19 @@
                 </header>
                 <%for (int i = 0; i < 8; i++)
                     {
+                        object @__o; 
+                            @__o = i;
                         if (i < 2)
                         {%>
                 <div class="rank-item">
                     <span class="item-number rank-on"><%=i+1 %></span>
                     <div class="item-right">
                         <div class="item-img">
-                            <a href="">
+                            <a href='Details.aspx?id=<%=s1[i].spID %>' >
                                 <img src='<%=s1[i].PageImg %>' alt=""></a>
                         </div>
                         <div class="item-text">
-                            <a href="">
+                            <a href='Details.aspx?id=<%=s1[i].spID %>' >
                                 <p><%=s1[i].Title %></p>
                                 <span>阅读量<%=s1[i].SpNumber %></span>
                             </a>
@@ -783,7 +705,7 @@
                     <span class="item-number"><%=i+1 %></span>
                     <div class="item-right">
                         <div class="item-text">
-                            <a href="">
+                            <a href='Details.aspx?id=<%=s1[i].spID %>' >
                                 <p><%=s1[i].Title %></p>
                             </a>
                         </div>

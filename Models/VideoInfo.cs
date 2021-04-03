@@ -25,5 +25,7 @@ namespace Models
         public string UserName { get; set; }
         public string imageUrl { get; set; }//头像
         public string brief { get; set; }//简介
+        public int CommentNumber { get; set; }
+        public int KeepNumber { get; set; }
     }
 }

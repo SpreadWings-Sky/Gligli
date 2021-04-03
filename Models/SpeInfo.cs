@@ -17,8 +17,9 @@ namespace Models
         public string Title { get; set; }
         //封面
         public string PageImg { get; set; }
-        //文章
+        //文章预览
         public string SpUrl { get; set; }
+        public string SpText { get; set; }
         //更新时间
         public DateTime UpTime { get; set; }
         //阅读数
@@ -35,5 +36,6 @@ namespace Models
         //头像
         public string ImageUrl { get; set; }
         public string Brief { get; set; }
+        public int Fs { get; set; }
     }
 }

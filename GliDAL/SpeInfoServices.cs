@@ -24,9 +24,9 @@ namespace GliDAL
                 sp.Title = da.GetString(2);
                 sp.PageImg = da.GetString(3);
                 sp.SpUrl = da.GetString(4);
-                sp.UpTime = da.GetDateTime(5);
-                sp.SpNumber = da.GetInt32(6);
-                sp.State = da.GetString(7);
+                sp.UpTime = da.IsDBNull(6) ? da.GetDateTime(5):DateTime.Now;
+                sp.SpNumber = da.GetInt32(7);
+                sp.State = da.GetString(9);
                 Lsp.Add(sp);
             }
             da.Close();
@@ -102,7 +102,7 @@ namespace GliDAL
         //获取专栏主页内容
         public static List<SpeInfo> SpeInfos()
         {
-            string sql = "select s.title,s.pageimg,s.spUrl,u.userName,s.partition,u.imageUrl from SpeInfo s left join UserInfo u on s.userID=u.userID";
+            string sql = "select s.spID, s.title,s.pageimg,s.spUrl,u.userName,s.partition,u.imageUrl from SpeInfo s left join UserInfo u on s.userID=u.userID";
             SqlDataReader dr = DBHelper.GetData(sql);
             List<SpeInfo> so = new List<SpeInfo>();
             SpeInfo spe = null;
@@ -110,12 +110,14 @@ namespace GliDAL
             {
                 spe = new SpeInfo()
                 {
-                    Title = dr.GetString(0),
-                    PageImg = dr.GetString(1),
-                    SpUrl = dr.GetString(2),
-                    UserName = dr.GetString(3),
-                    Partition = dr.IsDBNull(4) ? "无" : dr.GetString(4),
-                    ImageUrl = dr.GetString(5)
+                    spID = dr.GetInt32(0),
+                    Title = dr.GetString(1),
+                    PageImg = dr.GetString(2),
+                    SpUrl = dr.GetString(3),
+                    UserName = dr.GetString(4),
+                    Partition = dr.IsDBNull(5) ? "无" : dr.GetString(5),
+                    ImageUrl = dr.GetString(6)
+
                 };
                 so.Add(spe);
             }
@@ -170,7 +172,6 @@ namespace GliDAL
             List<SpeInfo> list = new List<SpeInfo>();
             while (dr.Read())
             {
-
                 info = new SpeInfo();
                 info.Title = dr["title"].ToString();
                 info.UserName = dr["userName"].ToString();
@@ -180,6 +181,80 @@ namespace GliDAL
             }
             dr.Close();
             return list;
+        }
+        //陈
+        //获取专栏详情页内容
+        public static List<SpeInfo> Deta(int id)
+        {
+            string sql = $"select title, pageimg,SpText from SpeInfo where spID={id};";
+            SqlDataReader dr = DBHelper.GetData(sql);
+            List<SpeInfo> de = new List<SpeInfo>();
+            SpeInfo deta = null;
+            while (dr.Read())
+            {
+                deta = new SpeInfo()
+                {
+                    Title = dr.GetString(0),
+                    PageImg = dr.GetString(1),
+                    SpText = dr.GetString(2)
+                };
+                de.Add(deta);
+            }
+            dr.Close();
+            return de;
+        }
+        //点击增加阅读量
+        public static bool SpNu(int id)
+        {
+            string sql = $"update SpeInfo set spNumber=spNumber+1 where spID={id}";
+            return DBHelper.Updata(sql);
+
+        }
+        public static SpeInfo UsInfo(int id)
+        {
+            string sql = $"select userName,imageUrl,spNumber,sum(fs) from (select  watchID,count(userID) fs from WarchInfo  where watchID=(select userID from SpeInfo  where spID={id}) group by watchID,userID) w left join (select DISTINCT u.userName,u.imageUrl,s.spNumber,u.userID from (UserInfo u left join SpeInfo s on u.userID=s.userID) where u.userID=(select userID from SpeInfo where spID={id}) ) u on w.watchID=u.userID group by userName,imageUrl,spNumber";
+            //阅读
+            SqlDataReader dr = DBHelper.GetData(sql);
+            SpeInfo us = null;
+            //粉丝
+            while (dr.Read())
+            {
+
+                us = new SpeInfo()
+                {
+                    UserName = dr.GetString(0),
+                    ImageUrl = dr.GetString(1),
+                    SpNumber = dr.GetInt32(2),
+                    Fs = dr.GetInt32(3)
+                };
+            }
+
+            dr.Close();
+            return us;
+        }
+        public static List<SpeInfo> Sptui()
+        {
+            string sql = "select top 5 s.spID, s.title,s.pageimg,s.spUrl,u.userName,s.partition,u.imageUrl from SpeInfo s left join UserInfo u on s.userID=u.userID";
+            SqlDataReader dr = DBHelper.GetData(sql);
+            List<SpeInfo> so = new List<SpeInfo>();
+            SpeInfo spe = null;
+            while (dr.Read())
+            {
+                spe = new SpeInfo()
+                {
+                    spID = dr.GetInt32(0),
+                    Title = dr.GetString(1),
+                    PageImg = dr.GetString(2),
+                    SpUrl = dr.GetString(3),
+                    UserName = dr.GetString(4),
+                    Partition = dr.IsDBNull(5) ? "无" : dr.GetString(5),
+                    ImageUrl = dr.GetString(6)
+
+                };
+                so.Add(spe);
+            }
+            dr.Close();
+            return so;
         }
     }
 }

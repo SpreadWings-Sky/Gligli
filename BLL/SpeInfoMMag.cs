@@ -94,5 +94,23 @@ namespace BLL
         {
             return SpeInfoServices.SpeInfo(id);
         }
+        public static List<SpeInfo> Sptui()
+        {
+            return SpeInfoServices.Sptui();
+        }
+        public static List<SpeInfo> Deta(int id)
+        {
+            return SpeInfoServices.Deta(id);
+        }
+        //详情用户
+        public static SpeInfo UsInfo(int id)
+        {
+            return SpeInfoServices.UsInfo(id);
+        }
+        //阅读量
+        public static bool SpNu(int id)
+        {
+            return SpeInfoServices.SpNu(id);
+        }
     }
 }

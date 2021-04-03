@@ -30,6 +30,11 @@ namespace BLL
         {
             return VideoInfoServices.SelectVideoHotTopSix();
         }
+        //查询特定分类全部视频
+        public static List<VideoInfo> SelectVideoAllByType(int type)
+        {
+            return VideoInfoServices.SelectVideoByType(type);
+        }
         //通过分类查找分区视频返回随机八个
         public static List<VideoInfo> SelectVideoByType(int type)
         {
@@ -43,6 +48,20 @@ namespace BLL
                 RandomVideo.Add(VideoAll[index[i]]);
             }
             return RandomVideo;     
+        }
+        //通过分类查找分区视频返回随机四个
+        public static List<VideoInfo> SelectVideoByTypeWeb(int type)
+        {
+            List<VideoInfo> VideoAll = VideoInfoServices.SelectVideoByType(type);
+            List<VideoInfo> RandomVideo = new List<VideoInfo>();
+            //生成随机索引
+            int[] index = UseDoubleArrayToNonRepeatedRandom(4, 0, VideoAll.Count);
+            //生成随机数
+            for (int i = 0; i < index.Length; i++)
+            {
+                RandomVideo.Add(VideoAll[index[i]]);
+            }
+            return RandomVideo;
         }
         //查询各分区排名前10的视频
         public static List<VideoInfo> SelectVideoTop10ByType(int type)

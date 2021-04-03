@@ -1,11 +1,10 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Models;
-using BLL;
 
 namespace Gligli
 {
@@ -23,19 +22,8 @@ namespace Gligli
             this.Ranlist3.DataSource = SpeRanManager.SpeRans();
 
             this.UserInfo.DataSource = UserInfoManager.UserInfos();
+
             DataBind();
-        }
-        //用户信息获取
-        public UserInfo UserDataBin()
-        {
-            return UserInfoManager.SelectUserByAccount(Base64Helper.Base64Decode(Request.Cookies["Account"].Value));
-        }
-        //退出登录
-        protected void UserOutLogin_btn_Click(object sender, EventArgs e)
-        {
-            Response.Cookies["Account"].Expires = DateTime.Now.AddDays(-1);
-            Session.Clear();
-            Response.Redirect("gligli.aspx");
         }
     }
 }

@@ -14,7 +14,12 @@ namespace Gligli
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                //分区信息获取
+                PageSelect.DataSource = TypeInfoManager.SelectTypeAll();
+                DataBind();
+            }
         }
         //确认上传
         protected void UpBtn_Click(object sender, EventArgs e)

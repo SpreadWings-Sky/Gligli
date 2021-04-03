@@ -38,7 +38,7 @@
                     <!-- logo -->
                     <div id="logo" class="sidebar-header">
                         <a href="Admin-home.aspx">
-                            <img src="./img/logo (3).png" title="GliGli" alt="gligli" /></a>
+                            <img src="./img/gligli.png" style="max-width:100px" title="GliGli" alt="gligli" /></a>
                     </div>
                     <div class="lyear-layout-sidebar-scroll">
 
@@ -79,7 +79,7 @@
                         </nav>
 
                         <div class="sidebar-footer">
-                            <img src="./img/chara-a.png" alt="Alternate Text" />
+                            
                         </div>
                     </div>
 

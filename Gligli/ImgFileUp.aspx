@@ -25,11 +25,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="web_site_copyright">归属页面</label>
-                                <asp:DropDownList ID="PageSelect" runat="server" class="form-control">
-                                    <asp:ListItem Value="1">主页</asp:ListItem>
-                                    <asp:ListItem Value="2">动画</asp:ListItem>
-                                    <asp:ListItem Value="3">音乐</asp:ListItem>
-                                    <asp:ListItem Value="4">禁用</asp:ListItem>
+                                <asp:DropDownList ID="PageSelect" runat="server" class="form-control" DataTextField="TypeName" DataValueField="TypeName">
                                 </asp:DropDownList>
                             </div>
                             <div class="form-group">
