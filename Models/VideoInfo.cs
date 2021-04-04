@@ -27,5 +27,13 @@ namespace Models
         public string brief { get; set; }//简介
         public int CommentNumber { get; set; }
         public int KeepNumber { get; set; }
+        //关注列表
+        public int WarchNum { get; set; }
+
+        //点赞列表
+        public int LikeNum { get; set; }
+
+        //收藏列表
+        public int keepNum { get; set; }
     }
 }

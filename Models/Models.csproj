@@ -46,6 +46,7 @@
     <Compile Include="CollectionInfo.cs" />
     <Compile Include="giligiliInfo.cs" />
     <Compile Include="ImgRotationInfo.cs" />
+    <Compile Include="SearchInfo.cs" />
     <Compile Include="SPCommentInfo.cs" />
     <Compile Include="SpeInfo.cs" />
     <Compile Include="SpeRan.cs" />

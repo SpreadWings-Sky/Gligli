@@ -44,6 +44,7 @@
     <Compile Include="CollectionManager.cs" />
     <Compile Include="giligiliManager.cs" />
     <Compile Include="ImgRotationInfoMMag.cs" />
+    <Compile Include="SearchManager.cs" />
     <Compile Include="SPCommentInfoMMag.cs" />
     <Compile Include="SpeInfoMMag.cs" />
     <Compile Include="SpeRanManager.cs" />

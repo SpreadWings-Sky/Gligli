@@ -57,7 +57,7 @@
                 <div class="header-center grid-cell-2">
                     <div class="search-box">
                         <input type="text" placeholder="呐~这就叫做专业~~~">
-                        <a href="">
+                        <a href="Search.aspx">
                             <i class="fa fa-search" aria-hidden="true"></i>
                         </a>
                     </div>
@@ -199,14 +199,14 @@
                 <a href="gligli.aspx">首页</a>
             </div>
             <span class="content-meun-line"></span>
-            <%--<div class="meun-conter grid grid-cell-2">
-                <span><a href=""><span>动画</span><em>999+</em></a>
+            <div class="meun-conter grid grid-cell-2">
+                <span><a href="VideoTypeListWeb.aspx?type=动画"><span>动画</span></a>
                 </span>
-                <span><a href=""><span>音乐</span><em>999+</em></a>
+                <span><a href="VideoTypeListWeb.aspx?type=音乐"><span>音乐</span></a>
                 </span>
-                <span><a href=""><span>番剧</span><em>999+</em></a>
+                <span><a href="VideoTypeListWeb.aspx?type=鬼畜"><span>鬼畜</span></a>
                 </span>
-                <span><a href=""><span>国创</span><em>999+</em></a>
+                <%--<span><a href=""><span>国创</span><em>999+</em></a>
                 </span>
                 <span><a href=""><span>游戏</span><em>999+</em></a>
                 </span>
@@ -242,8 +242,8 @@
                 <span class="max-vis"><a href=""><span>影视</span><em>999+</em></a></span>
                 <span class="max-vis"><a href=""><span>搞笑</span><em>999+</em></a></span>
                 <span class="max-vis"><a href=""><span>动物圈</span><em>999+</em></a></span>
-                <span class="max-vis"><a href=""><span>VLOG</span></a></span>
-            </div>--%>
+                <span class="max-vis"><a href=""><span>VLOG</span></a></span>--%>
+            </div>
             <span class="content-meun-line"></span>
             <div class="meun-right">
                 <a href="Special.aspx">专栏</a>

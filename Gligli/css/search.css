@@ -1,3 +1,96 @@
+/* 消除标签自带的内外元素 */
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    /* 下划线去除 */
+    text-decoration: none;
+    color: #000;
+}
+li{
+    /* 去除小黑点 */
+    list-style: none;
+}
+
+/* 栅格布局 */
+.grid{
+    /* 把盒子变成弹性盒子 */
+    display: flex;
+    /* 行排列 单元格不换行 */
+    flex-flow: row nowrap;
+}
+.grid-cell-1,
+.grid-cell-2,
+.grid-cell-3,
+.grid-cell-4,
+.grid-cell-5,
+.grid-cell-6{
+    /* 弹性缩放比例 */
+    flex-shrink: 1;
+}
+/* 把行分成六等分  =》单元格的意思 */
+.grid-cell-1{
+    flex-grow: 1;
+}
+.grid-cell-2{
+    flex-grow: 2;
+}
+.grid-cell-3{
+    flex-grow: 3;
+}
+.grid-cell-4{
+    flex-grow: 4;
+}
+.grid-cell-5{
+    flex-grow: 5;
+}
+.grid-cell-6{
+    flex-grow: 6;
+}
+
+/* ============================================================== */
+/* 注册登录 共用代码 */
+#name,
+#email,
+#pass,
+#depass,
+#an-email{
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+}
+.box{
+    width: 422px;
+    height: 42px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#box-num{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    float: left;
+}
+#box-btn{
+    width: 100px;
+    height: 42px;
+    border-radius: 0 10px 10px 0;
+    outline: none;
+    background: #00a1d6;
+    border: 1px solid #00a1d6;
+    color:#fff;
+    float: left;
+}
+.color{
+    color: red;
+}
 /* ===================================================================== */
 /* body{
     height: 2000px;
@@ -57,6 +150,8 @@
 #search-btn{
     width: 100px;
     height: 42px;
+    line-height: 42px;
+    text-align: center;
     border-radius: 0 5px 5px 0;
     outline: none;
     border: none;
@@ -126,7 +221,7 @@
     /* padding: 120px 0 10px 0; */
 }
 .nav a{
-    margin: 0 40px 0 40px;
+    margin: 0 12%;
     cursor: pointer;
     overflow: hidden;
 }
@@ -145,6 +240,9 @@
     background: #00a1d6;
     color: #fff !important;
     border-radius: 5px;
+}
+.screen{
+    display: none;
 }
 .p-one{
     margin-top: 10px;
@@ -182,9 +280,6 @@
     color: #fff;
     border-radius: 3px;
 }
-.screen{
-    display: none;
-}
 .m-av{
     width: 100%;
     height: 0 auto;
@@ -214,6 +309,7 @@
 .av span:hover{
     color: #00a1d6;
 }
+
 /* ------------------------【综合】------------------------ */
 .multiple{
     width: 100%;
@@ -237,19 +333,22 @@
 }
 .tv-li{
     width: 100%;
-    max-height: 940px;
     overflow: hidden;
 }
 .tv-li ul{
-    padding: 36px;
+    border-top: 1px solid #ccc;
+    padding-top:  20px;
+    display: inline-block;
+    margin: 10px auto;
+    text-align: center;
 }
 .tv-li li{
     display: inline-block;
-    max-width: 160px;
+    max-width: 200px;
     min-height: 200px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    margin: 0 1px 20px 0;
+    margin: 0 20px 20px 0;
     overflow: hidden;
 }
 .tv-li a{
@@ -260,17 +359,27 @@
     color: #00a1d6;
 }
 .tv-li img{
-    width: 160px;
-    height: 100px;
+    width: 200px;
+    height: 125px;
     margin-bottom: 5px;
     cursor: pointer;
 }
 .box-title{
+
     font-size: 14px;
-    margin: 0 5px;
+    margin: 0 5px;    
+    max-height: 16px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: inline-block;
+    overflow: hidden;
+    
 }
 .video-one{
     margin: 10px;
+    max-width: 50%;
+    max-height: 20px;
+    overflow: hidden;
 }
 .video-two img{
     margin-left: 10px;
@@ -285,10 +394,14 @@
 .video-two img:hover{
     cursor: pointer;
 }
+.video img{
+    display: inline-block;
+}
 .video-money,
 .video-time,
 .video-user{
     font-size: 10px;
+
 }
 .video-user:hover{
     color: #00a1d6;
@@ -298,22 +411,14 @@
 .page,
 .page-one,
 .page-two,
-.page-three,
-.page-four,
-.page-five,
-.page-six,
-.page-seven{
+.page-three{
     height: 60px;
     line-height: 60px;
 }
 .page-con,
 .one-con,
 .two-con,
-.three-con,
-.four-con,
-.five-con,
-.six-con,
-.seven-con{
+.three-con{
     width: 600px;
     height: 60px;
     line-height: 60px;
@@ -415,15 +520,67 @@
     background: #00a1d6;
     border: 1px solid #00a1d6 !important;
 }
-.page,
-.page-one,
-.page-two,
-.page-three,
-.page-four,
-.page-five,
-.page-six,
-.page-seven{
-    display: none;
+.page-one ul li,
+.page-two ul li,
+.page-three ul li{
+    display: inline-block !important;
+}
+.current{
+    background-color: #00a1d6 !important;
+    color: white !important;
+}
+.page-one ul li a,
+.page-one ul li span,
+.page-two ul li a,
+.page-two ul li span,
+.page-three ul li a,
+.page-three ul li span{
+    color: #222;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #fff;
+    border: solid 1px #ddd;
+    transition: 0.2s all;
+    font-size: 14px;
+    min-width: 15px;
+    margin: 0 2px 0 2px;
+    padding: 0 10px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    text-decoration: none;
+}
+.tcd-active .prev,
+.tcd-active .next{
+    display: none !important;
+}
+.ellipse{
+    background: none;
+    border: none !important;
+    border-radius: 0;
+    box-shadow: none;
+    font-weight: bold;
+    cursor: default !important;
+}
+h2 span {
+	font-weight: normal;
+}
+.tcd-active{
+    display: none !important;
+}
+.btu-avtive{
+    display: none !important;
+}
+.page-one tcd-num:hover,
+.page-one ul li a:hover,
+.page-two tcd-num:hover,
+.page-two ul li a:hover,
+.page-three tcd-num:hover,
+.page-three ul li a:hover{
+    background: #00b5e5;
+    color: white;
+    transition: 0.2s all;
 }
 /* =========================【页数——尾】========================= */
 /* ------------------------【番剧】------------------------ */
@@ -720,7 +877,6 @@
 }
 .gaine{
     width: 100%;
-    max-height: 940px;
     border-top: 1px solid #ccc;
     overflow: hidden;
 }
@@ -866,7 +1022,6 @@
 .u-drop ul li,
 .down{
     display: inline-block;
-    float: left;
     width: 120px;
     font-size: 13px;
 }
@@ -896,7 +1051,6 @@
 }
 .news{
     width: 100%;
-    max-height: 940px;
     margin: 20px 10px;
     overflow: hidden;
 }

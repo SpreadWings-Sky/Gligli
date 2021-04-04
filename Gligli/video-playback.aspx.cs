@@ -1,17 +1,20 @@
-﻿using System;
+﻿using BLL;
+using Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Models;
-using BLL;
-using System.Web.Services;
 
 namespace Gligli
 {
     public partial class video_playback : System.Web.UI.Page
     {
+        public static int isLikeVideo = 1;
+        public static int isKeepVideo = 1;
+        public static int isWarchUser = 1;
         public static Dictionary<int, List<VComInfo>> dic = null;
         public static List<VComInfo> list = null;
         protected void Page_Load(object sender, EventArgs e)
@@ -26,16 +29,105 @@ namespace Gligli
                 GetCount(int.Parse(Request["videoID"]));
                 VideoList(int.Parse(Request["videoID"]), int.Parse(Session["type"].ToString()));
                 CommentList(int.Parse(Request["videoID"]));
+                IsLikeVideo(int.Parse(Session["LoginUserID"].ToString()), int.Parse(Request["videoID"]));
+                IsKeepVideo(int.Parse(Session["LoginUserID"].ToString()), int.Parse(Request["videoID"]));
+                IsWarchUser(int.Parse(Session["LoginUserID"].ToString()), int.Parse(Session["UserID"].ToString()));
+            }
+        }
+        //视频点赞与取消点赞
+        [WebMethod]
+        public static void AddVideoLikeInfo(int userID, int videoID)
+        {
+            if (VideoMMag.AddVideoLikeInfo(userID, videoID))
+            {
+                isLikeVideo = 0;
+            }
+        }
+        [WebMethod]
+        public static void DelVideoLikeInfo(int userID, int videoID)
+        {
+            if (VideoMMag.DelVideoLikeInfo(userID, videoID))
+            {
+                isLikeVideo = 1;
+            }
+        }
+        //视频收藏与取消收藏
+        [WebMethod]
+        public static void AddVideoKeepInfo(int userID, int videoID)
+        {
+            if (VideoMMag.AddVideoKeepInfo(userID, videoID))
+            {
+                isKeepVideo = 0;
+            }
+        }
+        [WebMethod]
+        public static void DelVideoKeepInfo(int userID, int videoID)
+        {
+            if (VideoMMag.DelVideoKeepInfo(userID, videoID))
+            {
+                isKeepVideo = 1;
+            }
+        }
+        //关注与取消关注
+        [WebMethod]
+        public static void AddWarchInfo(int LoginUserID, int UpUserID)
+        {
+            if (VideoMMag.AddWarchInfo(LoginUserID, UpUserID))
+            {
+                isWarchUser = 0;
+            }
+        }
+        [WebMethod]
+        public static void DelWarchInfo(int LoginUserID, int UpUserID)
+        {
+            if (VideoMMag.DelWarchInfo(LoginUserID, UpUserID))
+            {
+                isWarchUser = 1;
+            }
+        }
+        public static void IsLikeVideo(int userID, int videoID)
+        {
+            if (VideoMMag.IsLikeVideo(userID, videoID))
+            {
+                isLikeVideo = 0;
+            }
+            else
+            {
+                isLikeVideo = 1;
+            }
+        }
+        public static void IsKeepVideo(int userID, int videoID)
+        {
+            if (VideoMMag.IsKeepVideo(userID, videoID))
+            {
+                isKeepVideo = 0;
+            }
+            else
+            {
+                isKeepVideo = 1;
+            }
+        }
+        public static void IsWarchUser(int LoginUserID, int UpUserID)
+        {
+            if (VideoMMag.IsWarchUser(LoginUserID, UpUserID))
+            {
+                isWarchUser = 0;
+            }
+            else
+            {
+                isWarchUser = 1;
             }
         }
         private void GetCount(int id)
         {
             double a = VComManager.GetCount(id) / 10;
+            Session["ComCount"] = a * 10;
             Session["Count"] = Convert.ToInt32(Math.Ceiling(a));
         }
         public void getvideo(int id)
         {
             VideoInfo vi = VideoMMag.getvideoList(id);
+            Session["UserID"] = vi.UserID;
             Session["videoUrl"] = vi.VideoUrl;
             Session["videopic"] = vi.bacimg;
             Session["barrageUrl"] = vi.barrageUrl;
@@ -47,11 +139,24 @@ namespace Gligli
             Session["username"] = vi.UserName;
             Session["introduction"] = vi.brief;
             Session["duction"] = vi.Duction;
+            Session["LikeNum"] = vi.LikeNum;
+            Session["keepNum"] = vi.keepNum;
+            Session["WarchNum"] = vi.WarchNum;
+            videotype(vi.type);
+        }
+        public static List<string> Videotype = null;
+        public void videotype(int videotype)
+        {
+            Videotype = VideoMMag.GetVideoType(videotype);
         }
         private void VideoList(int id, int type)
         {
             this.videoList.DataSource = VideoMMag.Gethotlist(id, type);
             DataBind();
+
+        }
+        public void VideoLK()
+        {
 
         }
         public static int index = 1;
@@ -82,47 +187,11 @@ namespace Gligli
             VComManager.ComLike(videoID, num, comID);
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        [WebMethod]
+        public static void SendCom(string content, int loginID, int VideoID, string rcomid = null)
         {
-            if (TextBox1.Text == "")
-            {
-                return;
-            }
-            if (Session["LoginUserID"] == null)
-            {
-                Response.Write("<script>alert('请登录！！')</script> ");
-                return;
-            }
-            string rcomid = null;
-            rcomid = Label1.Text == "" ? null : Label1.Text;
-            string content = TextBox1.Text;
-            if (VComManager.AddComm(content, 1000015, int.Parse(Session["videoID"].ToString()), rcomid))
-            {
-                TextBox1.Text = "";
-                Label1.Text = "";
-            }
-
-        }
-
-        protected void Button2_Click(object sender, EventArgs e)
-        {
-            if (TextBox4.Text == null)
-            {
-                return;
-            }
-            if (Session["LoginUserID"] == null)
-            {
-                Response.Write("<script>alert('请登录！！')</script> ");
-                return;
-            }
-            string rcomid = null;
-            rcomid = Label1.Text == "" ? null : Label1.Text;
-            string content = TextBox4.Text;
-            if (VComManager.AddComm(content, 1000015, int.Parse(Session["videoID"].ToString()), rcomid))
-            {
-                TextBox1.Text = "";
-                Label1.Text = "";
-            }
+            VComManager.AddComm(content, loginID, VideoID, rcomid);
+            CommentList(VideoID);
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)
@@ -138,14 +207,38 @@ namespace Gligli
             index = 1;
             CommentList(int.Parse(Session["videoID"].ToString()));
         }
+        //用户信息绑定
         public UserInfo UserDataBin()
         {
-            return UserInfoManager.SelectUserByAccount(Base64Helper.Base64Decode(Request.Cookies["Account"].Value));
+            UserInfo us = new UserInfo();
+
+            if (Request.Cookies["Account"] != null)
+            {
+                return UserInfoManager.SelectUserByAccount(Base64Helper.Base64Decode(Request.Cookies["Account"].Value));
+            }
+            else
+            {
+                us.userName = "请登录";
+                us.Fs = 0;
+                us.Gz = 0;
+            }
+            return us;
         }
-        //用户退出登录
-        protected void UserOutLogin_btn_Click(object sender, EventArgs e)
+        //计算时间差
+        public string DateDiff(DateTime DateTime1, DateTime DateTime2)
         {
-            Response.Redirect("OutLogin.aspx");
+            string dateDiff = null;
+            try { TimeSpan ts1 = new TimeSpan(DateTime1.Ticks); TimeSpan ts2 = new TimeSpan(DateTime2.Ticks); TimeSpan ts = ts1.Subtract(ts2).Duration(); dateDiff = ts.Days.ToString() + "天" + ts.Hours.ToString() + "小时" + ts.Minutes.ToString() + "分"; }
+            catch
+            {
+
+            }
+            return dateDiff;
+        }
+        //动态
+        private void UserWarchVideoUpList()
+        {
+            UserWarchUpVideoList.DataSource = WarchInfoManager.SelectWarchJoinVideo(UserDataBin().userID);
         }
     }
 }

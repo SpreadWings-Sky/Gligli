@@ -125,6 +125,7 @@
     <Content Include="Game.aspx" />
     <Content Include="giligili.aspx" />
     <Content Include="gligli.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="ImgFileUp.aspx" />
     <Content Include="img\Admin-img\06-01.png" />
     <Content Include="img\Admin-img\06-app-bar.gif" />
@@ -266,6 +267,7 @@
     <Content Include="My video.aspx" />
     <Content Include="OutLogin.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="Search.aspx" />
     <Content Include="Special.aspx" />
     <Content Include="special_column.aspx" />
     <Content Include="Sp\1.txt" />
@@ -428,6 +430,9 @@
     <Compile Include="GliMS.Master.designer.cs">
       <DependentUpon>GliMS.Master</DependentUpon>
     </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="ImgFileUp.aspx.cs">
       <DependentUpon>ImgFileUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -484,6 +489,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
     </Compile>
     <Compile Include="Special.aspx.cs">
       <DependentUpon>Special.aspx</DependentUpon>

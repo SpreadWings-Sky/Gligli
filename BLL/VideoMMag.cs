@@ -105,5 +105,49 @@ namespace BLL
         {
             return videoSevice.Gethotlist(id, type);
         }
+        public static List<string> GetVideoType(int i)
+        {
+            return videoSevice.GetVideoType(i);
+        }
+        public static bool IsLikeVideo(int userID, int videoID)
+        {
+            return videoSevice.IsLikeVideo(userID, videoID);
+        }
+        public static bool IsKeepVideo(int userID, int videoID)
+        {
+            return videoSevice.IsKeepVideo(userID, videoID);
+        }
+        public static bool IsWarchUser(int userID, int videoID)
+        {
+            return videoSevice.IsWarchUser(userID, videoID);
+        }
+        //点赞
+        public static bool AddVideoLikeInfo(int userID, int videoID)
+        {
+            return videoSevice.AddVideoLikeInfo(userID, videoID);
+        }
+        public static bool DelVideoLikeInfo(int userID, int videoID)
+        {
+            return videoSevice.DelVideoLikeInfo(userID, videoID);
+        }
+
+        //收藏
+        public static bool AddVideoKeepInfo(int userID, int videoID)
+        {
+            return videoSevice.AddVideoKeepInfo(userID, videoID);
+        }
+        public static bool DelVideoKeepInfo(int userID, int videoID)
+        {
+            return videoSevice.DelVideoKeepInfo(userID, videoID);
+        }
+        //关注
+        public static bool AddWarchInfo(int userID, int UpUserID)
+        {
+            return videoSevice.AddWarchInfo(userID, UpUserID);
+        }
+        public static bool DelWarchInfo(int userID, int UpUserID)
+        {
+            return videoSevice.DelWarchInfo(userID, UpUserID);
+        }
     }
 }

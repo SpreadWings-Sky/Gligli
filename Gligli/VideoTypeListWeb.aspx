@@ -8,7 +8,7 @@
     <title>吉哩吉哩 (゜-゜)つロ 干杯~-gligli</title>
     <link rel="stylesheet" href="./css/index-header.css" />
     <link rel="stylesheet" href="./css/font-awesome.min.css" />
-    <link rel="stylesheet" href="./css/index-content.css" />
+    <%--<link rel="stylesheet" href="./css/index-content.css" />--%>
     <script src="./js/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="./css/index-content2.css">
     <script src="./js/layui-v2.6.1/layui/layui.js" charset="utf-8"></script>
@@ -243,7 +243,6 @@
                 </div>
                 <!-- 右侧状态展示栏结束 -->
             </div>
-            <img src="./img/gligli.png" alt="" class="gligli" />
         </header>
 
         <!-- 主体内容区开始 -->
@@ -254,8 +253,14 @@
                     <a href="gligli.aspx">首页</a>
                 </div>
                 <span class="content-meun-line"></span>
-                <%--<div class="meun-conter grid grid-cell-2">
-                <span><a href=""><span>动画</span><em>999+</em></a>
+                <div class="meun-conter grid grid-cell-2">
+                    <span><a href="VideoTypeListWeb.aspx?type=动画"><span>动画</span></a>
+                    </span>
+                    <span><a href="VideoTypeListWeb.aspx?type=音乐"><span>音乐</span></a>
+                    </span>
+                    <span><a href="VideoTypeListWeb.aspx?type=鬼畜"><span>鬼畜</span></a>
+                    </span>
+                    <%--<span><a href=""><span>动画</span><em>999+</em></a>
                 </span>
                 <span><a href=""><span>音乐</span><em>999+</em></a>
                 </span>
@@ -299,10 +304,11 @@
                 <span class="max-vis"><a href=""><span>动物圈</span><em>999+</em></a></span>
                 <span class="max-vis"><a href=""><span>VLOG</span></a></span>
             </div>--%>
-                <span class="content-meun-line"></span>
-                <div class="meun-right">
-                    <a href="Special.aspx">专栏</a>
+                    <span class="content-meun-line"></span>
                 </div>
+                <div class="meun-right">
+                        <a href="Special.aspx">专栏</a>
+                    </div>
             </div>
             <!-- 主体内容导航栏结束 -->
             <!-- 轮播图热门推荐开始 -->

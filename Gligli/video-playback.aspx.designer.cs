@@ -15,6 +15,24 @@ namespace Gligli
     {
 
         /// <summary>
+        /// TypeVideoCountRepeater 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater TypeVideoCountRepeater;
+
+        /// <summary>
+        /// UserWarchUpVideoList 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater UserWarchUpVideoList;
+
+        /// <summary>
         /// form1 控件。
         /// </summary>
         /// <remarks>
@@ -51,31 +69,31 @@ namespace Gligli
         protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
 
         /// <summary>
-        /// Label1 控件。
+        /// RcomID 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.TextBox RcomID;
 
         /// <summary>
-        /// TextBox1 控件。
+        /// sendbox 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox sendbox;
 
         /// <summary>
-        /// Button1 控件。
+        /// sendbtn 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button sendbtn;
 
         /// <summary>
         /// UpdatePanel1 控件。

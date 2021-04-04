@@ -31,9 +31,9 @@ namespace GliDAL
             int start = num * 10 - 10;
             int stop = num * 10;
             string sql = $"select* from   (select   comID,v.userID,Comment,RecomID,comtime,LikeNum,userName,sex,imageUrl,backimgUrl,brief,   ROW_NUMBER() " +
-                               $" OVER(order   by   v.comID)   AS ROWNUM   from VideoCommentInfo v join userInfo " +
+                               $" OVER(order   by   {type} desc)   AS ROWNUM   from VideoCommentInfo v join userInfo " +
                                $"u on (v.userID = u.userID) where v.videoID = {id} " +
-                               $"and v.recomID is null) t where   rownum between   {start}   and   {stop}   order by {type} desc ";
+                               $"and v.recomID is null) t where   rownum between   {start}   and   {stop} ";
             SqlDataReader sdr = DBHelper.GetData(sql);
             List<VComInfo> list = new List<VComInfo>();
             VComInfo vCom = null;
@@ -82,7 +82,7 @@ namespace GliDAL
         }
         public static bool AddComm(string comm, int userid, int videoid, string recomID = null)
         {
-            if (recomID == null)
+            if (recomID == "null")
             {
                 string sql = $"insert into VideoCommentInfo(videoID,userID,Comment,comtime,likeNum) values('{videoid}','{userid}','{comm}','{DateTime.Now}','0')";
                 return DBHelper.Updata(sql);
