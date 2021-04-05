@@ -147,5 +147,15 @@ namespace BLL
         {
             return SpeInfoServices.SpNu(id);
         }
+        //查询评论
+        public static List<SpeInfo> SpCom(int id)
+        {
+            return SpeInfoServices.SpCom(id);
+        }
+        //写评论
+        public static bool SpComs(SpeInfo com)
+        {
+            return SpeInfoServices.SpComs(com);
+        }
     }
 }

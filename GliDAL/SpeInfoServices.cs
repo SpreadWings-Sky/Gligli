@@ -377,5 +377,33 @@ namespace GliDAL
             dr.Close();
             return so;
         }
+        //评论
+        public static List<SpeInfo> SpCom(int id)
+        {
+            string sql = $"select u.userName,u.imageUrl, s.comID,s.spID,s.Comment from UserInfo u left join SPCommentInfo s on u.userID=s.userID where s.spID={id}";
+            SqlDataReader dr = DBHelper.GetData(sql);
+            List<SpeInfo> scom = new List<SpeInfo>();
+            SpeInfo sc = null;
+            while (dr.Read())
+            {
+                sc = new SpeInfo()
+                {
+                    UserName = dr.GetString(0),
+                    ImageUrl = dr.GetString(1),
+                    comID = dr.GetInt32(2),
+                    spID = dr.GetInt32(3),
+                    Comment = dr.GetString(4),
+                };
+                scom.Add(sc);
+            }
+            dr.Close();
+            return scom;
+        }
+        public static bool SpComs(SpeInfo com)
+        {
+            string sql = $"insert into SPCommentInfo(spID,userID,Comment)values({com.spID},{com.UserID},'{com.Comment}')";
+            return DBHelper.Updata(sql);
+
+        }
     }
 }

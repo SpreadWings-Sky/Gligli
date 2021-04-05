@@ -22,13 +22,14 @@
                 <asp:Repeater ID="spList" runat="server">
                     <ItemTemplate>
                         <dl class="news-item-s1">
-                            <h1 style="margin-bottom:30px"><%# Eval("title") %></h1>
+                            <h1><%# Eval("title") %></h1>
                             <%# Eval("spText") %>
                         </dl>
                     </ItemTemplate>
                 </asp:Repeater>
 
                 <h3>评论</h3>
+                
                 <div class="comment_outsize">
                     <table>
                         <tr>
@@ -36,16 +37,18 @@
                                 <img id="Image" class="comment_photo" src="./img/ls.png" /></td>
                             <td>
                                 <asp:TextBox ID="txtComment" runat="server" CssClass="comment_content" TextMode="MultiLine"></asp:TextBox></td>
-                            <%--<td><asp:Button ID="btnFend" runat="server" CssClass="comment_send" Text="发表评论" OnClick="btnFend_Click"/></td>--%>
+                            <td><asp:Button ID="btnFend" runat="server" CssClass="comment_send" Text="发表评论" OnClick="btnFend_Click"/></td>
                         </tr>
-
-                        <%--  循环输出对应的说说列表  --%>
-                        <%-- <asp:Repeater ID="Repeater1" runat="server">
-                        <ItemTemplate>
-                            </div class="comment_in">
+                    </table>
+                </div>
+                    
+                       <%-- <%--  循环输出对应的说说列表  --%>
+                         <asp:Repeater ID="SpCom" runat="server">
+                            <ItemTemplate>
+                            <div class="comment_in">
                                 <table>
                                     <tr>
-                                        <td rowspan="2"><img id="image" class="comment_photo" src="./img/video-img/<%# Eval("imageUrl") %>.png" /></td>
+                                        <td rowspan="2"><img id="image" class="comment_photo" src="<%# Eval("imageUrl") %>" /></td>
                                         <td class="comment_font"><%# Eval("userName") %></td>
                                     </tr>
                                     <tr>
@@ -54,9 +57,8 @@
                                 </table>
                             </div> 
                         </ItemTemplate>
-                    </asp:Repeater>--%>
-                    </table>
-                </div>
+                    </asp:Repeater>
+                    
             </div>
 
             <div class="section-pai">
@@ -74,7 +76,7 @@
                         </dd>
                     </dl>
 
-                    <asp:Button  CssClass="btn1" runat="server" Text="关注" />
+                    <asp:Button CssClass="btn1" runat="server" Text="关注" />
                     <h3 style="margin-top: 20px">推荐文章</h3>
                     <div class="line"></div>
                     <asp:Repeater ID="Sptui" runat="server">

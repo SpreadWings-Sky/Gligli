@@ -32,10 +32,15 @@ namespace Models
         //用户名
         public string UserName { get; set; }
         //评论表
+        public int comID { get; set; }
+        public string Comment { get; set; }
+        public int zRecomID { get; set; }
+        public int RecomID { get; set; }
         public int Sum { get; set; }
         //头像
         public string ImageUrl { get; set; }
         public string Brief { get; set; }
         public int Fs { get; set; }
+        //
     }
 }

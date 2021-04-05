@@ -15,7 +15,7 @@ namespace Gligli
         {
             if (!IsPostBack)
             {
-                if (Session["userName"]!= null)
+                if (Session["userName"]!= null&& Session["userImg"]!=null)
                 {
                     this.user.Text = Session["userName"].ToString();
                     this.userimg.ImageUrl = Session["userImg"].ToString();
