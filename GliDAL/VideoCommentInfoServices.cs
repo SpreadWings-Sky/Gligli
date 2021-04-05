@@ -30,6 +30,28 @@ namespace GliDAL
             da.Close();
             return vcomnet;
         }
+        //查询当前用户的评论
+        public static List<VideoCommentInfo> SelectVideoCommentByUserID(int UserID)
+        {
+            string sql = $"select c.comID,c.Comment,v.title,v.bacImg,u.userName from VideoCommentInfo c left join VideoInfo v on(c.videoID=v.videoID) left join UserInfo u on(u.userID=c.userID) where v.userID = {UserID}";
+            SqlDataReader dr = DBHelper.GetData(sql);
+            List<VideoCommentInfo> list = new List<VideoCommentInfo>();
+            VideoCommentInfo cd = null;
+            while (dr.Read())
+            {
+                cd = new VideoCommentInfo()
+                {
+                    comID = dr.GetInt32(0),
+                    Comment = dr.GetString(1),
+                    VideoTitle = dr.GetString(2),
+                    VideoImg = dr.GetString(3),
+                    UserName = dr.GetString(4)
+                };
+                list.Add(cd);
+            }
+            dr.Close();
+            return list;
+        }
         //查询评论及回复评论
         public static Dictionary<VideoCommentInfo, List<VideoCommentInfo>> SelectCommentAndChildrenComment()
         {

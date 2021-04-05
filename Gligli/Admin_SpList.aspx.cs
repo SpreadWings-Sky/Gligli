@@ -20,7 +20,12 @@ namespace Gligli
         }
         protected  void SpListBin()
         {
-            this.SpList.DataSource = SpeInfoMMag.SelectSpAll();
+            string key = "%%";
+            if (Key_text.Text != null)
+            {
+                key = "%" + Key_text.Text + "%";
+            }
+            this.SpList.DataSource = SpeInfoMMag.SelectSpAll(key);
             DataBind();
         }
         //删除专栏
@@ -99,6 +104,12 @@ namespace Gligli
                     ((LinkButton)e.Row.Cells[8].Controls[1]).Attributes.Add("onclick", "javascript:return confirm('确认删除？')");
                 }
             }
+        }
+
+        protected void Serchar_btn_Click(object sender, EventArgs e)
+        {
+            this.SpList.PageIndex = 0;
+            SpListBin();
         }
     }
 }

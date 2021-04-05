@@ -21,5 +21,9 @@ namespace Models
         public int RecomID { get; set; }
         //主评论ID
         public int zRecomID { get; set; }
+        //连表
+        public string VideoTitle { get; set; }
+        public string VideoImg { get; set; }
+        public string UserName { get; set; }
     }
 }

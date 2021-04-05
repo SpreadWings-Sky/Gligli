@@ -296,7 +296,7 @@ a
     height: 1px;
     background: #eee;
 }
-#btn1 {
+.btn1 {
     width: 100px;
     height: 35px;
     background: #00a1d6;

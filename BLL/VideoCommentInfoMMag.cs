@@ -25,5 +25,10 @@ namespace BLL
         {
             return VideoCommentInfoServices.DeleteCommentByID(id);
         }
+        //查询当前用户的评论
+        public static List<VideoCommentInfo> SelectVideoCommentByUserID(int UserID)
+        {
+            return VideoCommentInfoServices.SelectVideoCommentByUserID(UserID);
+        }
     }
 }

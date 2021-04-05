@@ -40,10 +40,10 @@ create table VideoInfo(
 	userID int foreign key references UserInfo(userID) not null,--上传用户编号
 	title nvarchar(80) not null,--视频标题
 	videoPlay int default(0) not null,--视频播放数
-	duction nvarchar(500),--视频简介
+	duction nvarchar(500) default('没有简介'),--视频简介
 	type int not null,--视频分区编号
 	barrageUrl nvarchar(100),--弹幕文件
-	bacImg nvarchar(150),--视频封面
+	bacImg nvarchar(300),--视频封面
 	videoUrl nvarchar(150),--视频地址
 	uptime datetime default(getdate()),--上传时间
 	[state] nvarchar(5) default('审核')--视频状态
@@ -77,7 +77,7 @@ create table SpeInfo(
 	spID int identity(100000,1) primary key not null,--专栏编号
 	userID int foreign key references UserInfo(userID),--上传用户
 	title nvarchar(40) not null,--标题
-	pageimg nvarchar(40) not null,--封面图片
+	pageimg nvarchar(400) not null,--封面图片
 	spUrl text not null,--预览内容
 	SpText text,--文章内容
 	upTime datetime default(getdate()) not null,--上传时间

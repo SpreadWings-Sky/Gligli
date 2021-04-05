@@ -29,7 +29,7 @@ namespace GliDAL
         //查询分类表
         public static List<TypeInfo> SelectTypeAll()
         {
-            string sql = "select TypeName from TypeInfo";
+            string sql = "select tpID,TypeName from TypeInfo";
             List<TypeInfo> list = new List<TypeInfo>();
             TypeInfo typeInfo = null;
             SqlDataReader dr = DBHelper.GetData(sql);
@@ -37,7 +37,8 @@ namespace GliDAL
             {
                 typeInfo = new TypeInfo()
                 {
-                    TypeName = dr.GetString(0)
+                    TpID = dr.GetInt32(0),
+                    TypeName = dr.GetString(1)
                 };
                 list.Add(typeInfo);
             }

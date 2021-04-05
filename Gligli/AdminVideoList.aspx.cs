@@ -20,7 +20,12 @@ namespace Gligli
         }
         private void BindVideoInfo()
         {
-            this.GridView1.DataSource = VideoMMag.SelectVideoALL();
+            string key = "%%";
+            if (Key_text.Text != null)
+            {
+                key = "%"+Key_text.Text+"%";
+            }
+            this.GridView1.DataSource = VideoMMag.SelectVideoALL(key);
             this.GridView1.DataBind();
         }
         //切换分页
@@ -118,6 +123,12 @@ namespace Gligli
                     ((LinkButton)e.Row.Cells[11].Controls[0]).Attributes.Add("onclick", "javascript:return confirm('确认删除？')");
                 }
             }
+        }
+        //搜索
+        protected void Serchar_btn_Click(object sender, EventArgs e)
+        {
+            this.GridView1.PageIndex = 0;
+            BindVideoInfo();
         }
     }
 }

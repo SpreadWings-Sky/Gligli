@@ -11,9 +11,34 @@ namespace BLL
     public class SpeInfoMMag
     {
         //查询全部专栏
-        public static List<SpeInfo> SelectSpAll()
+        public static List<SpeInfo> SelectSpAll(string key)
         {
-            return SpeInfoServices.SelectSpALL();
+            return SpeInfoServices.SelectSpALL(key);
+        }
+        //添加专栏
+        public static bool AddSpe(SpeInfo spe)
+        {
+            return SpeInfoServices.AddSpe(spe);
+        }
+        //查询用户全部专栏
+        public static List<SpeInfo> SelectSpeAllByUserID(int UserID)
+        {
+            return SpeInfoServices.SelectSpeAllByUserID(UserID);
+        }
+        //查询用户审核专栏
+        public static List<SpeInfo> SelectSpeNoByUserID(int UserID)
+        {
+            return SpeInfoServices.SelectSpeNoByUserID(UserID);
+        }
+        //查询用户过审专栏
+        public static List<SpeInfo> SelectSpeTrueByUserID(int UserID)
+        {
+            return SpeInfoServices.SelectSpeTrueByUserID(UserID);
+        }
+        //查询用户未过审专栏
+        public static List<SpeInfo> SelectSpePasByUserID(int UserID)
+        {
+            return SpeInfoServices.SelectSpePasByUserID(UserID);
         }
         //删除通过id专栏
         public static bool DeleteSpByID(int id)
@@ -29,6 +54,16 @@ namespace BLL
         public static string SelectSpByID(int id)
         {
             return SpeInfoServices.SelectSpByID(id);
+        }
+        //通过Id查询专栏信息
+        public static SpeInfo SelectSpeBySpeID(int id)
+        {
+            return SpeInfoServices.SelectSpeBySpeID(id);
+        }
+        //用户更新专栏信息
+        public static bool UserUpSpeByID(SpeInfo sp)
+        {
+            return SpeInfoServices.UserUpSpeByID(sp);
         }
         //首页推荐视频
         public static List<SpeInfo> SelectSpTop8StateAll()

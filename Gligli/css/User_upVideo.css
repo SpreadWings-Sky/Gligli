@@ -347,9 +347,6 @@ ul.nav-warp li {
 .item_group_item:hover {
   background: rgb(0, 0, 0, 0.05);
 }
-.bar_item:nth-child(1) .bar_item_meun {
-  background: rgb(0, 0, 0, 0.05);
-}
 .bar_item_meun .box i[fa-angle-up] {
   color: silver !important;
 }

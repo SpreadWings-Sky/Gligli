@@ -1,17 +1,17 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UserAdmin.Master" AutoEventWireup="true" CodeBehind="UserUp.aspx.cs" Inherits="Gligli.UserUp" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UserAdmin.Master" AutoEventWireup="true" CodeBehind="UserUp.aspx.cs" Inherits="Gligli.UserUp"  ValidateRequest="false"%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="./css/User_upVideoPage.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="upload_warp">
+    <div class="upload_warp">
         <div class="new_link_top">
             <div class="new_link_nav">
                 <a href="javascript:void(0)" class="nav_item active">视频投稿</a>
                 <a href="javascript:void(0)" class="nav_item">专栏投稿</a>
             </div>
             <!-- 视频 -->
-            <div class="videoup_warp">
+            <div class="videoup_warp" id="VideoBox" runat="server">
                 <div class="video_warp_content">
                     <div id="video-box">
                         <div class="Up_btn">
@@ -23,26 +23,7 @@
                                     </div>
                                     <div class="file_list_warp">
                                         <div class="file_list_item">
-                                            <div class="file_item_ico">
-                                                <span>p1</span>
-                                            </div>
-                                            <div class="file_item_warp">
-                                                <div class="item_state_warp">
-                                                    <span class="item-title">
-                                                        <p>
-                                                            [HYSUB]Kaifuku Jutsushi no
-                                                                        Yarinaoshi[07][GB_MP4][1920X1080]
-                                                        </p>
-                                                    </span>
-                                                    <div class="item-state-op">
-                                                        <span>删除</span>
-                                                        <i class="item-state-op-ico"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="item_upload_info">
-                                                    <span>上传完成</span>
-                                                </div>
-                                            </div>
+                                            <asp:FileUpload ID="Video_up" runat="server" />  
                                         </div>
                                     </div>
                                     <div class="div-line"></div>
@@ -58,7 +39,7 @@
                                             <p>（格式jpeg、png，文件大小≤5MB，建议尺寸≥1146*717，最低尺寸≥960*600）</p>
                                         </div>
                                         <div class="img-up">
-                                            <img src="./img/banner.jpg" alt="">
+                                            <asp:FileUpload ID="VideoPage_up" runat="server" />
                                         </div>
                                     </div>
                                     <!-- 标题 -->
@@ -70,9 +51,8 @@
                                         <div class="content-input">
                                             <div class="input-box">
                                                 <div class="ipnut-box-inster">
-                                                    <input type="text" maxlength="80" placeholder="请输入稿件标题">
+                                                    <asp:TextBox ID="Video_title" maxlength="80" placeholder="请输入稿件标题" runat="server"></asp:TextBox>
                                                 </div>
-                                                <p>0/80</p>
                                             </div>
                                         </div>
                                     </div>
@@ -84,9 +64,7 @@
                                         </div>
                                         <div class="type-list">
                                             <div class="type-list-box">
-                                                <div class="type-list-select">
-                                                    <p>动画</p>
-                                                </div>
+                                                <asp:DropDownList ID="Video_typelist" runat="server" DataTextField="TypeName" DataValueField="TpID"></asp:DropDownList>
                                             </div>
                                         </div>
                                     </div>
@@ -97,14 +75,13 @@
                                         </div>
                                         <div class="content-desc-text">
                                             <div class="content-desc-box">
-                                                <textarea class="desc-text"></textarea>
-                                                <p>0/200</p>
+                                                <asp:TextBox ID="Video_desc" class="desc-text" TextMode="MultiLine" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- 投稿 -->
                                     <div class="video-up-btn">
-                                        <a href="#">立即投稿</a>
+                                        <asp:LinkButton ID="VideoUp_btn" OnClick="VideoUp_btn_Click" runat="server">立即投稿</asp:LinkButton>
                                     </div>
                                 </div>
                             </div>
@@ -113,53 +90,57 @@
                 </div>
             </div>
             <!-- 专栏 -->
-            <div class="Sp-up-warp" style="display: none;">
+            <div class="Sp-up-warp" style="display: none;" id="SpeBox" runat="server">
                 <div class="editor-warp">
                     <div class="editor-origial">
                         <div class="editor-title-box">
                             <div class="editor-box-warp">
                                 <div class="editor-box-title">
-                                    <textarea maxlength="80" placeholder="请输入标题（建议30字以内）"
-                                        style="overflow-y: hidden; height: 64px;"></textarea>
+                                    <asp:TextBox ID="Spe_Title" TextMode="MultiLine" MaxLength="80" placeholder="请输入标题（建议30字以内）"
+                                        Style="overflow-y: hidden; height: 64px;" runat="server"></asp:TextBox>
                                 </div>
-                                <div id="editorbox" style="z-index:999;">
-
+                                <div id="editorbox" style="z-index: 999;">
+                                    <!-- 加载编辑器的容器 -->
+                                    <script id="container" name="content" type="text/plain">  
+                                    </script>
+                                    <!-- 配置文件 -->
+                                    <script type="text/javascript" src="/Content/ueditor/ueditor.config.js"></script>
+                                    <!-- 编辑器源码文件 -->
+                                    <script type="text/javascript" src="/Content/ueditor/ueditor.all.js"></script>
+                                    <!-- 实例化编辑器 -->
+                                    <script type="text/javascript">
+                                        var ue = UE.getEditor('container',{
+                                            initialFrameHeight: 400,
+                                        });
+                                    </script>
                                 </div>
                             </div>
                         </div>
                         <div class="block-warp">
                             <h3 class="block-title">请选择专栏分类</h3>
                             <div class="block-class">
-                                <select name="" id="type">
-                                    <option value="">动画</option>
-                                    <option value="">游戏</option>
-                                    <option value="">影视</option>
-                                    <option value="">兴趣</option>
-                                    <option value="">轻小说</option>
-                                    <option value="">科技</option>
-                                </select>
+                                <asp:DropDownList ID="SpeTypeList" runat="server">
+                                    <asp:ListItem Value="动画">动画</asp:ListItem>
+                                    <asp:ListItem Value="游戏">游戏</asp:ListItem>
+                                    <asp:ListItem Value="影视">影视</asp:ListItem>
+                                    <asp:ListItem Value="兴趣">兴趣</asp:ListItem>
+                                    <asp:ListItem Value="轻小说">轻小说</asp:ListItem>
+                                    <asp:ListItem Value="科技">科技</asp:ListItem>
+                                </asp:DropDownList>
                             </div>
                         </div>
                         <div class="bolock-warp">
                             <h3 class="block-title">请设置专栏封面</h3>
                             <div class="block-img">
-                                <a href="#">+</a>
-                                <img src="./img/banner.jpg" alt="">
+                                <asp:FileUpload ID="SpeImgUp" runat="server" />
                             </div>
                         </div>
                         <div class="sp-up-btn">
-                            <a href="#"><span>提交文章</span></a>
+                            <asp:LinkButton ID="UpSpe_btn" OnClick="UpSpe_btn_Click" runat="server"><span>提交文章</span></asp:LinkButton>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/wangeditor/dist/wangEditor.min.js"></script>
-    <script type="text/javascript">
-        const E = window.wangEditor
-        const editor = new E(document.getElementById('editorbox') )
-        editor.create()
-    </script>
 </asp:Content>

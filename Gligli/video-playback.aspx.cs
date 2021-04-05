@@ -19,6 +19,7 @@ namespace Gligli
         public static List<VComInfo> list = null;
         protected void Page_Load(object sender, EventArgs e)
         {
+            TypeVideoCountRepeater.DataSource = TypeInfoManager.SelectTypeVideoALL();
             if (Request["videoID"] == null)
             {
                 Response.Redirect("gligli.aspx");

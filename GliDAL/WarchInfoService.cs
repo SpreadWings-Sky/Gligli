@@ -52,5 +52,31 @@ namespace GliDAL
             DBHelper.Close();
             return list;
         }
+        //获取本周粉丝数据变化
+        public static List<int> SelectWarchNumber(int UserID)
+        {
+            string sql = $"select datepart(dd,WatchTime) daytime,COUNT(*) Number from WarchInfo where datediff(week,WatchTime,getdate())=0  or datediff(week,WatchTime,getdate())=-1 and watchID = {UserID} group by datepart(dd,WatchTime)";
+            List<int> list = new List<int>();
+            SqlDataReader dr = DBHelper.GetData(sql);
+            while (dr.Read())
+            {
+                list.Add(dr.GetInt32(1));
+            }
+            dr.Close();
+            return list;
+        }
+        //用户粉丝总数
+        public static int SelectWarchCount(int UserID)
+        {
+            string sql = $"select count(*) from WarchInfo where watchID = {UserID}";
+            int count = 0;
+            SqlDataReader dr = DBHelper.GetData(sql);
+            if (dr.Read())
+            {
+                count = dr.GetInt32(0);
+            }
+            dr.Close();
+            return count;
+        }
     }
 }

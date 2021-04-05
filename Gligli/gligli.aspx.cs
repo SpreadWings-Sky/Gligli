@@ -21,6 +21,7 @@ namespace Gligli
             {
                 IndexDataBin();
                 Session["LoginUserID"] = UserDataBin().userID;
+                Session["UserID"] = UserDataBin().userID;
             }
                
         }

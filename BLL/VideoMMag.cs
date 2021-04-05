@@ -11,9 +11,39 @@ namespace BLL
     public class VideoMMag
     {
         //查询全部视频
-        public static List<VideoInfo> SelectVideoALL()
+        public static List<VideoInfo> SelectVideoALL(string key)
         {
-            return VideoInfoServices.SelectVideoAll();
+            return VideoInfoServices.SelectVideoAll(key);
+        }
+        //通过id查询视频
+        public static VideoInfo SelectVideoByVideoID(int VideoID)
+        {
+            return VideoInfoServices.SelectVideoByVideoID(VideoID);
+        }
+        //通过用户查询视频
+        public static List<VideoInfo> SelectVideoByUserID(int UserID)
+        {
+            return VideoInfoServices.SelectVideoByUserID(UserID);
+        }
+        //用户审核中的视频
+        public static List<VideoInfo> SelectVideoByUserIdNoExit(int userID)
+        {
+            return VideoInfoServices.SelectVideoByUserIdNoExit(userID);
+        }
+        //用户过审的视频
+        public static List<VideoInfo> SelectVideoByUserIdTrue(int userID)
+        {
+            return VideoInfoServices.SelectVideoByUserIdTrue(userID);
+        }
+        //用户驳回的视频
+        public static List<VideoInfo> SelectVideoByUserIdPas(int userID)
+        {
+            return VideoInfoServices.SelectVideoByUserIdPas(userID);
+        }
+        //添加视频
+        public static bool AddVideo(VideoInfo video)
+        {
+            return VideoInfoServices.AddVideo(video);
         }
         //通过ID删除视频
         public static bool DeleteVideobyID(int id)
@@ -24,6 +54,11 @@ namespace BLL
         public static bool UpVideobyID(int id,VideoInfo vd)
         {
             return VideoInfoServices.UpVideoByid(id, vd);
+        }
+        //用户更新视频信息通过ID
+        public static bool UpUserVideoByid(VideoInfo vd)
+        {
+            return VideoInfoServices.UpUserVideoByid(vd);
         }
         //查询热门前六视频通过播放量排序
         public static List<VideoInfo> SelectVideoHotTopSix()

@@ -11,10 +11,10 @@ namespace GliDAL
     public class SpeInfoServices
     {
         //查询全部专栏
-        public static List<SpeInfo> SelectSpALL()
+        public static List<SpeInfo> SelectSpALL(string key)
         {
             List<SpeInfo> Lsp = new List<SpeInfo>();
-            string sql = "select * from SpeInfo";
+            string sql = $"select * from SpeInfo where Title Like '{key}'";
             SqlDataReader da = DBHelper.GetData(sql);
             while (da.Read())
             {
@@ -23,7 +23,7 @@ namespace GliDAL
                 sp.UserID = da.GetInt32(1);
                 sp.Title = da.GetString(2);
                 sp.PageImg = da.GetString(3);
-                sp.SpUrl = da.GetString(4);
+                sp.SpText = da.GetString(5);
                 sp.UpTime = da.IsDBNull(6) ? da.GetDateTime(5):DateTime.Now;
                 sp.SpNumber = da.GetInt32(7);
                 sp.State = da.GetString(9);
@@ -31,6 +31,104 @@ namespace GliDAL
             }
             da.Close();
             return Lsp;
+        }
+        //查询用户全部专栏
+        public static List<SpeInfo> SelectSpeAllByUserID(int UserID)
+        {
+            string sql = $"select spID,userID,title,pageimg,state,SpUrl from SpeInfo where userID = {UserID}";
+            List<SpeInfo> list = new List<SpeInfo>();
+            SqlDataReader dr = DBHelper.GetData(sql);
+            SpeInfo spe = null;
+            while (dr.Read())
+            {
+                spe = new SpeInfo()
+                {
+                    spID = dr.GetInt32(0),
+                    UserID = dr.GetInt32(1),
+                    Title = dr.GetString(2),
+                    PageImg = dr.GetString(3),
+                    State = dr.GetString(4),
+                    SpUrl = dr.GetString(5)
+                };
+                list.Add(spe);
+            }
+            dr.Close();
+            return list;
+        }
+        //查询用户审核专栏
+        public static List<SpeInfo> SelectSpeNoByUserID(int UserID)
+        {
+            string sql = $"select spID,userID,title,pageimg,state,SpUrl from SpeInfo where userID = {UserID} and state='审核'";
+            List<SpeInfo> list = new List<SpeInfo>();
+            SqlDataReader dr = DBHelper.GetData(sql);
+            SpeInfo spe = null;
+            while (dr.Read())
+            {
+                spe = new SpeInfo()
+                {
+                    spID = dr.GetInt32(0),
+                    UserID = dr.GetInt32(1),
+                    Title = dr.GetString(2),
+                    PageImg = dr.GetString(3),
+                    State = dr.GetString(4),
+                    SpUrl = dr.GetString(5)
+                };
+                list.Add(spe);
+            }
+            dr.Close();
+            return list;
+        }
+        //查询用户过审专栏
+        public static List<SpeInfo> SelectSpeTrueByUserID(int UserID)
+        {
+            string sql = $"select spID,userID,title,pageimg,state,SpUrl from SpeInfo where userID = {UserID} and state='正常'";
+            List<SpeInfo> list = new List<SpeInfo>();
+            SqlDataReader dr = DBHelper.GetData(sql);
+            SpeInfo spe = null;
+            while (dr.Read())
+            {
+                spe = new SpeInfo()
+                {
+                    spID = dr.GetInt32(0),
+                    UserID = dr.GetInt32(1),
+                    Title = dr.GetString(2),
+                    PageImg = dr.GetString(3),
+                    State = dr.GetString(4),
+                    SpUrl = dr.GetString(5)
+                };
+                list.Add(spe);
+            }
+            dr.Close();
+            return list;
+        }
+        //查询用户未过审专栏
+        public static List<SpeInfo> SelectSpePasByUserID(int UserID)
+        {
+            string sql = $"select spID,userID,title,pageimg,state,SpUrl from SpeInfo where userID = {UserID} and state='驳回'";
+            List<SpeInfo> list = new List<SpeInfo>();
+            SqlDataReader dr = DBHelper.GetData(sql);
+            SpeInfo spe = null;
+            while (dr.Read())
+            {
+                spe = new SpeInfo()
+                {
+                    spID = dr.GetInt32(0),
+                    UserID = dr.GetInt32(1),
+                    Title = dr.GetString(2),
+                    PageImg = dr.GetString(3),
+                    State = dr.GetString(4),
+                    SpUrl = dr.GetString(5)
+                };
+                list.Add(spe);
+            }
+            dr.Close();
+            return list;
+        }
+        //添加专栏
+        public static bool AddSpe(SpeInfo spe)
+        {
+            string sql = $"insert into SpeInfo(userID,title,pageimg,spUrl,SpText,[partition]) values({spe.UserID},'{spe.Title}','{spe.PageImg}','{spe.SpUrl}','{spe.SpText}','{spe.Partition}')";
+            return DBHelper.Updata(sql);
         }
         //通过ID删除专栏
         public static bool DeleteSpByID(int id)
@@ -47,7 +145,7 @@ namespace GliDAL
         //通过ID查询专栏地址
         public static string SelectSpByID(int id)
         {
-            string sql = string.Format("select spUrl from SpeInfo where spID={0}", id);
+            string sql = string.Format("select SpText from SpeInfo where spID={0}", id);
             SqlDataReader da = DBHelper.GetData(sql);
             string url="";
             if (da.Read())
@@ -231,6 +329,29 @@ namespace GliDAL
 
             dr.Close();
             return us;
+        }
+        //通过Id查询专栏信息
+        public static SpeInfo SelectSpeBySpeID(int id)
+        {
+            string sql = $"select title,partition from SpeInfo where spID = {id}";
+            SqlDataReader dr = DBHelper.GetData(sql);
+            SpeInfo sp = null;
+            if (dr.Read())
+            {
+                sp = new SpeInfo()
+                {
+                    Title = dr.GetString(0),
+                    Partition = dr.GetString(1)
+                }; 
+            }
+            dr.Close();
+            return sp;
+        }
+        //用户更新专栏信息
+        public static bool UserUpSpeByID(SpeInfo sp)
+        {
+            string sql = $"update SpeInfo set title = '{sp.Title}',partition = '{sp.Partition}' where spID = {sp.spID}";
+            return DBHelper.Updata(sql);
         }
         public static List<SpeInfo> Sptui()
         {

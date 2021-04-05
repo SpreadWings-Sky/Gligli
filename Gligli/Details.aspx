@@ -22,6 +22,7 @@
                 <asp:Repeater ID="spList" runat="server">
                     <ItemTemplate>
                         <dl class="news-item-s1">
+                            <h1 style="margin-bottom:30px"><%# Eval("title") %></h1>
                             <%# Eval("spText") %>
                         </dl>
                     </ItemTemplate>
@@ -73,7 +74,7 @@
                         </dd>
                     </dl>
 
-                    <asp:Button ID="btn1" runat="server" Text="关注" />
+                    <asp:Button  CssClass="btn1" runat="server" Text="关注" />
                     <h3 style="margin-top: 20px">推荐文章</h3>
                     <div class="line"></div>
                     <asp:Repeater ID="Sptui" runat="server">

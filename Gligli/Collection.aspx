@@ -34,7 +34,7 @@
                 <li><a href="My video.aspx">
                     <img src="./Content/img/m11.png" alt="">
                     视频</a></li>
-                <li><a href="#">
+                <li><a href="UserUp.aspx">
                     <img src="./Content/img/m14.png" alt="">
                     投稿</a></li>
                 <li><a href="follow.aspx">

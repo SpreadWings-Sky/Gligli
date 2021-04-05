@@ -118,6 +118,8 @@
     <Content Include="css\search.css" />
     <Content Include="css\style.min.css" />
     <Content Include="css\User_upVideo.css" />
+    <Content Include="DeleteSpeByID.aspx" />
+    <Content Include="DeleteVideoByID.aspx" />
     <Content Include="Details.aspx" />
     <Content Include="follow.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -275,7 +277,10 @@
     <Content Include="TA video.aspx" />
     <Content Include="TA.aspx" />
     <Content Include="UserAdminPage.aspx" />
+    <Content Include="UserEditWeb.aspx" />
+    <Content Include="UserFsGerList.aspx" />
     <Content Include="UserUp.aspx" />
+    <Content Include="UserVideoComment.aspx" />
     <Content Include="video-playback.aspx" />
     <Content Include="VideoTypeListWeb.aspx" />
     <Content Include="video\100001.mp4" />
@@ -380,6 +385,20 @@
     </Compile>
     <Compile Include="Collection.aspx.designer.cs">
       <DependentUpon>Collection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteSpeByID.aspx.cs">
+      <DependentUpon>DeleteSpeByID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteSpeByID.aspx.designer.cs">
+      <DependentUpon>DeleteSpeByID.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteVideoByID.aspx.cs">
+      <DependentUpon>DeleteVideoByID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteVideoByID.aspx.designer.cs">
+      <DependentUpon>DeleteVideoByID.aspx</DependentUpon>
     </Compile>
     <Compile Include="Details.aspx.cs">
       <DependentUpon>Details.aspx</DependentUpon>
@@ -546,12 +565,33 @@
     <Compile Include="UserAdminPage.aspx.designer.cs">
       <DependentUpon>UserAdminPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserEditWeb.aspx.cs">
+      <DependentUpon>UserEditWeb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserEditWeb.aspx.designer.cs">
+      <DependentUpon>UserEditWeb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserFsGerList.aspx.cs">
+      <DependentUpon>UserFsGerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserFsGerList.aspx.designer.cs">
+      <DependentUpon>UserFsGerList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserUp.aspx.cs">
       <DependentUpon>UserUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserUp.aspx.designer.cs">
       <DependentUpon>UserUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserVideoComment.aspx.cs">
+      <DependentUpon>UserVideoComment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserVideoComment.aspx.designer.cs">
+      <DependentUpon>UserVideoComment.aspx</DependentUpon>
     </Compile>
     <Compile Include="video-playback.aspx.cs">
       <DependentUpon>video-playback.aspx</DependentUpon>

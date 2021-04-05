@@ -19,5 +19,15 @@ namespace BLL
         {
             return WarchInfoService.SelectWarchJoinVideo(id);
         }
+        //获取用户本周粉丝数据变化
+        public static List<int> SelectWarchNumber(int UserID)
+        {
+            return WarchInfoService.SelectWarchNumber(UserID);
+        }
+        //用户粉丝总数
+        public static int SelectWarchCount(int UserID)
+        {
+            return WarchInfoService.SelectWarchCount(UserID);
+        }
     }
 }

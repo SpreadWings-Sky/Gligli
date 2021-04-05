@@ -10,25 +10,21 @@
             <div class="new_link_nav">
                 <a href="#" class="nav_item active">视频管理</a>
                 <a href="#" class="nav_item">专栏管理</a>
-                <span>
-                    <input type="text" name="" id="nav_search" placeholder="搜索稿件">
-                    <img src="./img/search.png" alt="" id="nav_img">
-                </span>
             </div>
             <!-- 内容主题 -->
             <div class="load_from">
                 <div class="upload_con">
                     <div class="con_one l_default">
                         <ul>
-                            <li class="one_active">全部稿件<span>0</span></li>
+                            <li class="one_active">全部稿件<span><%=VideoCount %></span></li>
                             |
-                                        <li>进行中<span>0</span></li>
+                                        <li>进行中<span><%= VideoNo %></span></li>
                             |
-                                        <li>已通过<span>0</span></li>
+                                        <li>已通过<span><%= VideoTrue %></span></li>
                             |
-                                        <li>未通过<span>0</span></li>
+                                        <li>未通过<span><%= Videopas %></span></li>
                             |
-                                        <select name="" id="con_one_right_e">
+                                        <%--<select name="" id="con_one_right_e">
                                             <option value="">投稿时间排序</option>
                                             <option value="">播放数排序</option>
                                             <option value="">评论数排序</option>
@@ -56,19 +52,19 @@
                                 <option value="">资讯<span>(0)</span></option>
                                 <option value="">美食<span>(0)</span></option>
                                 <option value="">动物圈<span>(0)</span></option>
-                            </select>
+                            </select>--%>
                         </ul>
                     </div>
                     <div class="con_two">
                         <!-- 专栏管理内容 -->
                         <ul>
-                            <li class="two_active">全部稿件<span>0</span></li>
+                            <li class="two_active">全部稿件<span><%=SpeCount %></span></li>
                             |
-                                        <li>进行中<span>0</span></li>
+                                        <li>进行中<span><%= SpeNo%></span></li>
                             |
-                                        <li>已通过<span>0</span></li>
+                                        <li>已通过<span><%= SpeTrue%></span></li>
                             |
-                                        <li>未通过<span>0</span></li>
+                                        <li>未通过<span><%= Spepas%></span></li>
                             |
                         </ul>
                     </div>
@@ -78,85 +74,86 @@
                     <div class="one_one o_default">
                         <!-- 全部稿件 -->
                         <!-- 一个盒子开始 -->
-                        <table>
-                            <tr>
-                                <td rowspan="3">
-                                    <img src="./img/banner.jpg" alt=""></td>
-                                <td><b>说点真的，就是那样</b></td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</td>
-                            </tr>
-                            <a href="#" class="one_right">删除</a>
-                            <a href="#" class="one_right">编辑</a>
-                        </table>
-                        <span>————————————————————————————————————————————————————————————</span>
-                        <!-- 一个盒子结束 -->
-                        <!-- 一个盒子开始 -->
-                        <table>
-                            <tr>
-                                <td rowspan="3">
-                                    <img src="./img/banner.jpg" alt=""></td>
-                                <td><b>说点真的，就是那样</b></td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</td>
-                            </tr>
-                            <a href="#" class="one_right">删除</a>
-                            <a href="#" class="one_right">编辑</a>
-                        </table>
-                        <span>————————————————————————————————————————————————————————————</span>
+                        <asp:Repeater ID="Repeater1" runat="server">
+                            <ItemTemplate>
+                                <table>
+                                    <tr>
+                                        <td rowspan="3">
+                                            <img src='<%# Eval("bacimg") %>' alt=""></td>
+                                        <td><b><%# Eval("Title") %></b><em style="font-size:12px;color: orange;margin-left:10px"><%# Eval("State") %></em></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2"><%# Eval("Duction") %></td>
+                                    </tr>
+                                    <a href='DeleteVideoByID.aspx?id=<%# Eval("VideoID") %>' onclick="javascript:return confirm('确认删除？')" class="one_right">删除</a>
+                                    <a href='UserEditWeb.aspx?id=<%# Eval("VideoID") %>&Type=Video' class="one_right">编辑</a>
+                                </table>
+                                <span>————————————————————————————————————————————————————————————</span>
+                            </ItemTemplate>
+                        </asp:Repeater>
                         <!-- 一个盒子结束 -->
                     </div>
                     <div class="one_two">
                         <!-- 一个盒子开始 -->
-                        <table>
-                            <tr>
-                                <td rowspan="3">
-                                    <img src="./img/banner.jpg" alt=""></td>
-                                <td><b>说点真的，就是那样</b></td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</td>
-                            </tr>
-                            <a href="#" class="one_right">删除</a>
-                            <a href="#" class="one_right">编辑</a>
-                        </table>
-                        <span>————————————————————————————————————————————————————————————</span>
+                        <asp:Repeater ID="Repeater2" runat="server">
+                            <ItemTemplate>
+                                <table>
+                                    <tr>
+                                        <td rowspan="3">
+                                            <img src='<%# Eval("bacimg") %>' alt=""></td>
+                                        <td><b><%# Eval("Title") %></b><em style="font-size:12px;color:#0094ff;margin-left:10px"><%# Eval("State") %></em></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2"><%# Eval("Duction") %></td>
+                                    </tr>
+                                    <a href='DeleteVideoByID.aspx?id=<%# Eval("VideoID") %>' onclick="javascript:return confirm('确认删除？')" class="one_right">删除</a>
+                                    <a href='UserEditWeb.aspx?id=<%# Eval("VideoID") %>&Type=Video' class="one_right">编辑</a>
+                                </table>
+                                <span>————————————————————————————————————————————————————————————</span>
+                            </ItemTemplate>
+                        </asp:Repeater>
                         <!-- 一个盒子结束 -->
                     </div>
                     <div class="one_three">
                         <!-- 一个盒子开始 -->
-                        <table>
-                            <tr>
-                                <td rowspan="3">
-                                    <img src="./img/banner.jpg" alt=""></td>
-                                <td><b>说点真的，就是那样</b></td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</td>
-                            </tr>
-                            <a href="#" class="one_right">删除</a>
-                            <a href="#" class="one_right">编辑</a>
-                        </table>
-                        <span>————————————————————————————————————————————————————————————</span>
+                        <asp:Repeater ID="Repeater3" runat="server">
+                            <ItemTemplate>
+                                <table>
+                                    <tr>
+                                        <td rowspan="3">
+                                            <img src='<%# Eval("bacimg") %>' alt=""></td>
+                                        <td><b><%# Eval("Title") %></b><em style="font-size:12px;color:limegreen;margin-left:10px"><%# Eval("State") %></em></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2"><%# Eval("Duction") %></td>
+                                    </tr>
+                                    <a href='DeleteVideoByID.aspx?id=<%# Eval("VideoID") %>' onclick="javascript:return confirm('确认删除？')" class="one_right">删除</a>
+                                    <a href='UserEditWeb.aspx?id=<%# Eval("VideoID") %>&Type=Video' class="one_right">编辑</a>
+                                </table>
+                                <span>————————————————————————————————————————————————————————————</span>
+                            </ItemTemplate>
+                        </asp:Repeater>
                         <!-- 一个盒子结束 -->
                     </div>
                     <div class="one_four">
                         <!-- 一个盒子开始 -->
-                        <table>
-                            <tr>
-                                <td rowspan="3">
-                                    <img src="./img/banner.jpg" alt=""></td>
-                                <td><b>说点真的，就是那样</b></td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</td>
-                            </tr>
-                            <a href="#" class="one_right">删除</a>
-                            <a href="#" class="one_right">编辑</a>
-                        </table>
-                        <span>————————————————————————————————————————————————————————————</span>
+                        <asp:Repeater ID="Repeater4" runat="server">
+                            <ItemTemplate>
+                                <table>
+                                    <tr>
+                                        <td rowspan="3">
+                                            <img src='<%# Eval("bacimg") %>' alt=""></td>
+                                        <td><b><%# Eval("Title") %></b><em style="font-size:12px;color:limegreen;margin-left:10px"><%# Eval("State") %></em></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2"><%# Eval("Duction") %></td>
+                                    </tr>
+                                    <a href='DeleteVideoByID.aspx?id=<%# Eval("VideoID") %>' onclick="javascript:return confirm('确认删除？')" class="one_right">删除</a>
+                                    <a href='UserEditWeb.aspx?id=<%# Eval("VideoID") %>&Type=Video' class="one_right">编辑</a>
+                                </table>
+                                <span>————————————————————————————————————————————————————————————</span>
+                            </ItemTemplate>
+                        </asp:Repeater>
                         <!-- 一个盒子结束 -->
                     </div>
                 </div>
@@ -165,84 +162,86 @@
                     <!-- 专栏管理 -->
                     <div class="zhuan_one">
                         <!-- 一个盒子开始 -->
-                        <table>
-                            <tr>
-                                <td rowspan="3">
-                                    <img src="./img/akari.jpg" alt=""></td>
-                                <td><b>说点真的，就是那样</b></td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</td>
-                            </tr>
-                            <a href="#" class="one_right">删除</a>
-                            <a href="#" class="one_right">编辑</a>
-                        </table>
-                        <span>————————————————————————————————————————————————————————————</span>
+                        <asp:Repeater ID="Repeater5" runat="server">
+                            <ItemTemplate>
+                                <table>
+                                    <tr>
+                                        <td rowspan="3">
+                                            <img src='<%# Eval("PageImg") %>' alt=""></td>
+                                        <td><b><%# Eval("Title") %></b><em style="font-size:12px;color:limegreen;margin-left:10px"><%# Eval("State") %></em></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2"><%# Eval("SpUrl").ToString().Length>20?Eval("SpUrl").ToString().Substring(0,10):Eval("SpUrl").ToString() %></td>
+                                    </tr>
+                                    <a href='DeleteSpeByID.aspx?id=<%# Eval("spID") %>' onclick="javascript:return confirm('确认删除？')" class="one_right">删除</a>
+                                    <a href='UserEditWeb.aspx?id=<%# Eval("spID") %>&Type=Spe' class="one_right">编辑</a>
+                                </table>
+                                <span>————————————————————————————————————————————————————————————</span>
+                            </ItemTemplate>
+                        </asp:Repeater>
                         <!-- 一个盒子结束 -->
                     </div>
                     <div class="zhuan_two">
                         <!-- 一个盒子开始 -->
-                        <table>
-                            <tr>
-                                <td rowspan="3">
-                                    <img src="./img/akari.jpg" alt=""></td>
-                                <td><b>说点真的，就是那样</b></td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</td>
-                            </tr>
-                            <a href="#" class="one_right">删除</a>
-                            <a href="#" class="one_right">编辑</a>
-                        </table>
-                        <span>————————————————————————————————————————————————————————————</span>
+                        <asp:Repeater ID="Repeater6" runat="server">
+                            <ItemTemplate>
+                                <table>
+                                    <tr>
+                                        <td rowspan="3">
+                                            <img src='<%# Eval("PageImg") %>' alt=""></td>
+                                        <td><b><%# Eval("Title") %></b><em style="font-size:12px;color:limegreen;margin-left:10px"><%# Eval("State") %></em></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2"><%# Eval("SpUrl").ToString().Length>20?Eval("SpUrl").ToString().Substring(0,10):Eval("SpUrl").ToString() %></td>
+                                    </tr>
+                                    <a href='DeleteSpeByID.aspx?id=<%# Eval("spID") %>' onclick="javascript:return confirm('确认删除？')" class="one_right">删除</a>
+                                    <a href='UserEditWeb.aspx?id=<%# Eval("spID") %>&Type=Spe' class="one_right">编辑</a>
+                                </table>
+                                <span>————————————————————————————————————————————————————————————</span>
+                            </ItemTemplate>
+                        </asp:Repeater>
                         <!-- 一个盒子结束 -->
                     </div>
                     <div class="zhuan_three">
                         <!-- 一个盒子开始 -->
-                        <table>
-                            <tr>
-                                <td rowspan="3">
-                                    <img src="./img/akari.jpg" alt=""></td>
-                                <td><b>说点真的，就是那样</b></td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</td>
-                            </tr>
-                            <a href="#" class="one_right">删除</a>
-                            <a href="#" class="one_right">编辑</a>
-                        </table>
-                        <span>————————————————————————————————————————————————————————————</span>
+                        <asp:Repeater ID="Repeater7" runat="server">
+                            <ItemTemplate>
+                               <table>
+                                    <tr>
+                                        <td rowspan="3">
+                                            <img src='<%# Eval("PageImg") %>' alt=""></td>
+                                        <td><b><%# Eval("Title") %></b><em style="font-size:12px;color:limegreen;margin-left:10px"><%# Eval("State") %></em></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2"><%# Eval("SpUrl").ToString().Length>20?Eval("SpUrl").ToString().Substring(0,10):Eval("SpUrl").ToString() %></td>
+                                    </tr>
+                                    <a href='DeleteSpeByID.aspx?id=<%# Eval("spID") %>' onclick="javascript:return confirm('确认删除？')" class="one_right">删除</a>
+                                    <a href='UserEditWeb.aspx?id=<%# Eval("spID") %>&Type=Spe' class="one_right">编辑</a>
+                                </table>
+                                <span>————————————————————————————————————————————————————————————</span>
+                            </ItemTemplate>
+                        </asp:Repeater>
                         <!-- 一个盒子结束 -->
                     </div>
                     <div class="zhuan_four">
                         <!-- 一个盒子开始 -->
-                        <table>
-                            <tr>
-                                <td rowspan="3">
-                                    <img src="./img/akari.jpg" alt=""></td>
-                                <td><b>说点真的，就是那样</b></td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</td>
-                            </tr>
-                            <a href="#" class="one_right">删除</a>
-                            <a href="#" class="one_right">编辑</a>
-                        </table>
-                        <span>————————————————————————————————————————————————————————————</span>
-                        <!-- 一个盒子结束 -->
-                        <table>
-                            <tr>
-                                <td rowspan="3">
-                                    <img src="./img/akari.jpg" alt=""></td>
-                                <td><b>说点真的，就是那样</b></td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</td>
-                            </tr>
-                            <a href="#" class="one_right">删除</a>
-                            <a href="#" class="one_right">编辑</a>
-                        </table>
-                        <span>————————————————————————————————————————————————————————————</span>
+                        <asp:Repeater ID="Repeater8" runat="server">
+                            <ItemTemplate>
+                                <table>
+                                    <tr>
+                                        <td rowspan="3">
+                                            <img src='<%# Eval("PageImg") %>' alt=""></td>
+                                        <td><b><%# Eval("Title") %></b><em style="font-size:12px;color:limegreen;margin-left:10px"><%# Eval("State") %></em></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2"><%# Eval("SpUrl").ToString().Length>20?Eval("SpUrl").ToString().Substring(0,10):Eval("SpUrl").ToString() %></td>
+                                    </tr>
+                                    <a href='DeleteSpeByID.aspx?id=<%# Eval("spID") %>' onclick="javascript:return confirm('确认删除？')" class="one_right">删除</a>
+                                    <a href='UserEditWeb.aspx?id=<%# Eval("spID") %>&Type=Spe' class="one_right">编辑</a>
+                                </table>
+                                <span>————————————————————————————————————————————————————————————</span>
+                            </ItemTemplate>
+                        </asp:Repeater>
                         <!-- 一个盒子结束 -->
                     </div>
                 </div>
