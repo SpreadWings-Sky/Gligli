@@ -21,7 +21,7 @@
 
         <div class="peand">
             <span>昵称：</span><asp:TextBox ID="userName" runat="server" Text=""></asp:TextBox><br>
-            <span>用户名：</span><asp:TextBox ID="userID" runat="server" Enabled="False"></asp:TextBox><br>
+            <span>UID：</span><asp:TextBox ID="userID" runat="server" Enabled="False"></asp:TextBox><br>
             <span>我的签名：</span><asp:TextBox ID="brief" Text="" runat="server"></asp:TextBox><br>
             <span>性别：</span>
             <asp:RadioButtonList ID="RadioButtonList1" RepeatDirection="Horizontal" runat="server">

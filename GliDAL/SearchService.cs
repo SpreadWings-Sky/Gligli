@@ -27,9 +27,11 @@ namespace GliDAL
             sdr.Close();
             return list;
         }
-        public static List<SearchInfo> GetVideoList(string search, string type1, string type2)
+        public static List<SearchInfo> GetVideoList(string search, string type1, string type2, int num)
         {
-            string sql = $"select *,(select count(*) from VideoKeepInfo where videoID = v.videoID) KeepNumber from  VideoInfo v left join TypeInfo t on(v.type=t.tpID) left join UserInfo u on(v.userID=u.userID) where title like'%{search}%'  and typeName like'{type1}'order  by {type2} ";
+            int start = num * 25 - 24;
+            int stop = num * 25;
+            string sql = $"  select * from (select u.userID,v.VideoID,v.bacImg,v.uptime,v.videoplay,v.title,u.userName,(select count(*) from VideoKeepInfo where videoID = v.videoID) as KeepNumber, ROW_NUMBER()  OVER(order by {type2} ) ROWNUM from VideoInfo v left join TypeInfo t on(v.type=t.tpID) left join UserInfo u on(v.userID=u.userID) where title like'%{search}%'  and typeName like'{type1}')  d where  rownum between   {start}   and   {stop} ";
             List<SearchInfo> list = new List<SearchInfo>();
             SearchInfo s = null;
             SqlDataReader sdr = DBHelper.GetData(sql);
@@ -37,7 +39,7 @@ namespace GliDAL
             {
                 s = new SearchInfo()
                 {
-                    UserID=int.Parse(sdr["userid"].ToString()),
+                    UserID = int.Parse(sdr["userid"].ToString()),
                     VideoID = int.Parse(sdr["VideoID"].ToString()),
                     videoBaImg = sdr["bacimg"].ToString(),
                     createtime = DateTime.Parse(sdr["uptime"].ToString()),
@@ -78,9 +80,11 @@ namespace GliDAL
             sdr.Close();
             return list;
         }
-        public static List<SearchInfo> GetSpList(string search, string type1, string type2)
+        public static List<SearchInfo> GetSpList(string search, string type1, string type2, int num)
         {
-            string sql = $"select *,(select count(*) from SpKeepInfo where spID = v.spID) KeepNumber,(select count(*) from SPCommentInfo where spID=v.spID) CommentNum,(select COUNT(*) from SpLikeInfo where spID=v.spID) LikeNum from  SpeInfo v left join UserInfo u on(v.userID=u.userID) where title like'%{search}%'  and partition like'{type1}'order by {type2} ";
+            int start = num * 10 - 9;
+            int stop = num * 10;
+            string sql = $" select * from (select u.userID,v.spID,v.pageimg,u.imageUrl,v.spUrl,v.spNumber,v.title,u.userName,(select count(*) from SpKeepInfo where spID = v.spID) as KeepNumber,(select count(*) from SPCommentInfo where spID=v.spID) CommentNum,(select COUNT(*) from SpLikeInfo where spID=v.spID) LikeNum, ROW_NUMBER()  OVER(order by {type2} ) ROWNUM from SpeInfo v  left join UserInfo u on(v.userID=u.userID) where title like'%{search}%'  and partition like'{type1}')  d where  rownum between   {start}   and   {stop}";
             List<SearchInfo> list = new List<SearchInfo>();
             SearchInfo s = null;
             SqlDataReader sdr = DBHelper.GetData(sql);
@@ -117,18 +121,18 @@ namespace GliDAL
                     UserID = int.Parse(sdr["userid"].ToString()),
                     imageUrl = sdr["imageUrl"].ToString(),
                     UserName = sdr["userName"].ToString(),
-                    playNum=sdr["videoNum"].ToString(),
-                    LikeNum=sdr["WarNum"].ToString(),
-                    brief=sdr["brief"].ToString()
+                    playNum = sdr["videoNum"].ToString(),
+                    LikeNum = sdr["WarNum"].ToString(),
+                    brief = sdr["brief"].ToString()
                 };
                 list.Add(s);
             }
             sdr.Close();
             return list;
         }
-        public static  List<SearchInfo> GetUserVList(int userid)
+        public static List<SearchInfo> GetUserVList(int userid)
         {
-            string sql = $"select top 3 * from VideoInfo where userID ='{userid}' order by uptime desc"; 
+            string sql = $"select top 3 * from VideoInfo where userID ='{userid}' order by uptime desc";
             SearchInfo s = null;
             SqlDataReader sdr = DBHelper.GetData(sql);
             List<SearchInfo> list = new List<SearchInfo>();
@@ -140,11 +144,25 @@ namespace GliDAL
                     VideoID = int.Parse(sdr["VideoID"].ToString()),
                     videoBaImg = sdr["bacimg"].ToString(),
                     createtime = DateTime.Parse(sdr["uptime"].ToString()),
+                    title = sdr["title"].ToString()
                 };
                 list.Add(s);
             }
             sdr.Close();
-            return list ;
+            return list;
+        }
+        public static Dictionary<string, double> GetCount()
+        {
+            string sql = " select (select COUNT(*) from VideoInfo) videoNum,(select COUNT(*) from SpeInfo) SpNum";
+            SqlDataReader sdr = DBHelper.GetData(sql);
+            Dictionary<string, double> count = new Dictionary<string, double>();
+            if (sdr.Read())
+            {
+                count.Add("videoNum", sdr.GetInt32(0));
+                count.Add("SpNum", sdr.GetInt32(1));
+            }
+            sdr.Close();
+            return count;
         }
     }
 }

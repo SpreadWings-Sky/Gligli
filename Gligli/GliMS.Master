@@ -56,7 +56,7 @@
                 <div class="header-center grid-cell-2">
                     <div class="search-box">
                         <input type="text" placeholder="呐~这就叫做专业~~~">
-                        <a href="">
+                        <a href="Search.aspx">
                             <i class="fa fa-search" aria-hidden="true"></i>
                         </a>
                     </div>
@@ -79,7 +79,7 @@
                     <!-- 登录状态 -->
                     <div class="userlogin grid">
                         <div class="userimg">
-                            <a href='<%= UserDataBin().userID %>'>
+                            <a href='giligili.aspx'>
                                 <img id="UserLogin" src='<%=UserDataBin().imgurl %>' alt=""></a>
                             <div class="user-item">
                                 <p class="user-name"><%=UserDataBin().userName %></p>

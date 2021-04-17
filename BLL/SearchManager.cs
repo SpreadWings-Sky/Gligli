@@ -18,13 +18,13 @@ namespace BLL
         {
             return SearchService.GetSpTypeList();
         }
-        public static List<SearchInfo> GetVideoList(string search, string type1, string type2)
+        public static List<SearchInfo> GetVideoList(string search, string type1, string type2, int num)
         {
-            return SearchService.GetVideoList(search, type1, type2);
+            return SearchService.GetVideoList(search, type1, type2, num);
         }
-        public static List<SearchInfo> GetSpList(string search, string type1, string type2)
+        public static List<SearchInfo> GetSpList(string search, string type1, string type2, int num)
         {
-            return SearchService.GetSpList(search, type1, type2);
+            return SearchService.GetSpList(search, type1, type2, num);
         }
         public static List<SearchInfo> GetUserList(string search)
         {
@@ -33,6 +33,10 @@ namespace BLL
         public static List<SearchInfo> GetUserVList(int userid)
         {
             return SearchService.GetUserVList(userid);
+        }
+        public static Dictionary<string, double> GetCount()
+        {
+            return SearchService.GetCount();
         }
     }
 }

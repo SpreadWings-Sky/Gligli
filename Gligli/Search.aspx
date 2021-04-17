@@ -25,17 +25,17 @@
         <script>
             function Search() {
                 var text = $("#search-con").val();
-                    $.ajax({
-                        type: "POST",
-                        async: true,
-                        url: "Search.aspx/Searchs",    //必须是后台的静态方法
-                        contentType: "application/json; charset=utf-8",
-                        dataType: "json",
-                        data: "{'text':'" + text + "'}",
-                        beforeSend: function () {
-                            $("#Button1").click();
-                        }
-                    });
+                $.ajax({
+                    type: "POST",
+                    async: true,
+                    url: "Search.aspx/Searchs",    //必须是后台的静态方法
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    data: "{'text':'" + text + "'}",
+                    success: function () {
+                        $("#Button1").click();
+                    }
+                });
             }
         </script>
      <div class="middles grid">
@@ -68,10 +68,10 @@
                 <div class="partition">
                     <!-- 第一行 -->
                     <ul class="p-one">
-                        <li><a data-type="keepNumber desc" href="#" class="back">综合排序</a></li>
+                        <li><a data-type="(select count(*) from VideoKeepInfo where videoID = v.videoID) desc"  onclick="type2(this)" href="#" class="back">综合排序</a></li>
                         <li><a data-type="videoPlay desc" onclick="type2(this)" href="#">最多点击</a></li>
                         <li><a data-type="uptime" onclick="type2(this)" href="#">最新发布</a></li>
-                        <li><a data-type="keepNumber desc" onclick="type2(this)" href="#">最多收藏</a></li>
+                        <li><a data-type="(select count(*) from VideoKeepInfo where videoID = v.videoID) desc" onclick="type2(this)" href="#">最多收藏</a></li>
                         <li><a href="#" data-class="screen" class="screen">更多筛选<span class="s-out">v</span></a></li>
                     </ul>
                     <!-- 第二行 -->
@@ -95,7 +95,7 @@
                             contentType: "application/json; charset=utf-8",
                             dataType: "json",
                             data: "{'type':'" + type + "'}",
-                            beforeSend: function () {
+                            success: function () {
                                 $("#Button1").click();
                             }
                         });
@@ -103,23 +103,23 @@
                     function type1(obj) {
                         var type = $(obj).data("type")
                         $.ajax({
-                                type: "POST",
-                                async: true,
+                            type: "POST",
+                            async: true,
                             url: "Search.aspx/Type1",    //必须是后台的静态方法
-                                contentType: "application/json; charset=utf-8",
-                                dataType: "json",
-                                data: "{'type':'" + type + "'}",
-                                beforeSend: function () {
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            data: "{'type':'" + type + "'}",
+                            success: function () {
                                 $("#Button1").click();
-                                 }
-                         });
+                            }
+                        });
                     }
                 </script>
                 <div class="tv-li">
                     <ul>
                         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                         <!-- 内容 -->
-                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server" OnLoad="UpdatePanel1_Load">
                             <ContentTemplate>
                             <%foreach (var item in list) {%>
                             <li class="video">
@@ -137,7 +137,6 @@
                                         <a href="TA.aspx?UserID=<%=item.UserID %>"><span class="video-user"><%=item.UserName  %></span></a> 
                                     </span></li>
                                <% } %>
-
                             </ContentTemplate>
                             <Triggers>
                                 <asp:AsyncPostBackTrigger ControlID="Button1" EventName="Click" />
@@ -159,18 +158,18 @@
                 <div class="partitions">
                     <!-- 第一行 -->
                     <ul class="p-one">
-                        <li><a data-type="keepNumber desc" onclick="type4(this)" href="#" class="back">默认排序</a></li>
-                        <li><a data-type="uptime" onclick="type4(this)" href="#">最新发布</a></li>
+                        <li><a data-type="(select count(*) from SpKeepInfo where spID = v.spID) desc" onclick="type4(this)" href="#" class="back">默认排序</a></li>
+                        <li><a data-type="uptime desc" onclick="type4(this)" href="#">最新发布</a></li>
                         <li><a data-type="spNumber desc" onclick="type4(this)"  href="#">最多阅读</a></li>
-                        <li><a data-type="CommentNum desc"  onclick="type4(this)"  href="#">最多评论</a></li>
+                        <li><a data-type="(select count(*) from SPCommentInfo where spID=v.spID) desc"  onclick="type4(this)"  href="#">最多评论</a></li>
                         <li><a href="#" data-calss="screen" class="screen">更多筛选<span class="s-out">v</span></a></li>
                     </ul>
                     <!-- 第二行 -->
                     <ul class="p-three">
-                        <li><a data-type="%%" href="#" class="back">全部分区</a></li>
+                        <li><a data-type="%%" href="#"  onclick="type3(this)" class="back">全部分区</a></li>
                         <asp:Repeater ID="SpType" runat="server">
                             <ItemTemplate>
-                                <li><a data-class="<%#Eval("typename") %>" onclick="type3(this)" href="#"><%#Eval("typename") %></a></li>
+                                <li><a data-type="<%#Eval("typename") %>" onclick="type3(this)" href="#"><%#Eval("typename") %></a></li>
                             </ItemTemplate>
                         </asp:Repeater>
                         <li><a href="#" data-class="put" class="put">收起<span class="p-on">^</span></a></li>
@@ -187,7 +186,7 @@
                             contentType: "application/json; charset=utf-8",
                             dataType: "json",
                             data: "{'type':'" + type + "'}",
-                            beforeSend: function () {
+                            success: function () {
                                 $("#Button1").click();
                             }
                         });
@@ -201,7 +200,7 @@
                             contentType: "application/json; charset=utf-8",
                             dataType: "json",
                             data: "{'type':'" + type + "'}",
-                            beforeSend: function () {
+                            success: function () {
                                 $("#Button1").click();
                             }
                         });
@@ -213,19 +212,16 @@
                         <ContentTemplate>
                     <%foreach (var item in splist){%>
                     <div class="column">
-                        <a href="<%=item.spID %>"><%=item.title %></a>
+                        <a href="Details.aspx?id=<%=item.spID %>"><%=item.title %></a>
                         <div>
                             <a href="#">
                                 <img src="<%=item.videoBaImg %>" alt="" class="column-photo">
-                            </a>
-                        </div>
-                        <p class="column-con">
+                            </a><p class="column-con">
                             <%=item.spUrl %>
                         </p>
                         <div class="column-user">
-                            <a href="<%=item.UserID %>" class="column-name">
-                                <img src="<%=item.imageUrl %>"" alt=""><%=item.UserName %>
-                            </a>
+                            <a href="TA.aspx?UserID=<%=item.UserID %>" class="column-name">
+                                <img src="<%=item.imageUrl %>"" alt=""><%=item.UserName %></a>
                             <p class="column-one">
                                 <img src="./img/Search-img/eye.jpg" alt="">
                                 <span class="column-num"><%=item.playNum %></span>
@@ -240,8 +236,8 @@
                             </p>
                         </div>
                     </div>
-                    <%}%>
                 </div>
+                    <%}%>
                </ContentTemplate>
                <Triggers>
              <asp:AsyncPostBackTrigger ControlID="Button1" EventName="Click" />
@@ -254,214 +250,229 @@
                     </div>
                 </div>
             </div>
+        </div>
             <!-- 用户 -->
             <div class="user">
                 <div class="news">
-                    <!-- 内容 -->
-                    <%foreach (var item in userlist){%>
-                            <div class="u-con">
-                                <div class="u-box">
-                                    <img src="<%=item.imageUrl %>" alt="">
-                                    <span class="u-font">
-                                        <a href="<%=item.UserID %>"><span class="weight"><%=item.UserName %></span></a>
-                                    </span>
-                                    <p>
-                                        <span>稿件：<%=item.playNum %></span>
-                                        <span>粉丝：<a href="#"><%=item.LikeNum %></a></span>
-                                    </p>
-                                    <p>
-                                        <span><%=item.brief %></span>
-                                    </p>
-                                            <%foreach (var v in dic[item.UserID]){%>
-                                                          <div class="small">
-                                                          <img src="<%=v.videoBaImg %>" alt="">
-                                                          <a href="video-playback.aspx?videoID=<%=v.VideoID %>"><%=v.title %></a>
-                                                          <span class="u-time"><%=v.createtime %></span>
-                                                          </div>
-                                            <%} %>
+                        <!-- 内容 -->
+                        <%foreach (var item in userlist){%>
+                                <div class="u-con">
+                                    <div class="u-box">
+                                        <img src="<%=item.imageUrl %>" alt="">
+                                        <span class="u-font">
+                                            <a href="TA.aspx?UserID=<%=item.UserID %>"><span class="weight"><%=item.UserName %></span></a>
+                                        </span>
+                                        <p>
+                                            <span>稿件:<%=item.playNum %>  </span><span>粉丝数:<%=item.LikeNum %></span></p>
+                                        <p>
+                                            <span><%=item.brief %></span>
+                                        </p>
+                                                <%foreach (var v in dic[item.UserID]){%>
+                                                              <div class="small">
+                                                              <img src="<%=v.videoBaImg %>" alt="">
+                                                              <a href="video-playback.aspx?videoID=<%=v.VideoID %>"><%=v.title %></a>
+                                                              <span class="u-time"><%=v.createtime %></span>
+                                                              </div>
+                                                <%} %>
+                                    </div>
                                 </div>
-                            </div>
-                        <%} %>
+                             <%} %>
+                        </div>
                 </div>
-                <div class="page-three">
-                    <div class="three-con">
-                        <ul id="sevens"  class="pagination">
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
-
     <script>
-        
+        var index = 1;
+        function index_nav(obj) {
+            var a = $(obj).data("index")
+            if (a == "下一页") {
+                index++;
+            }
+            else if (a == "上一页") {
+                index--;
+            }
+            else {
+                index = a;
+            }
+            $("#num").val(index);
+            indexR(index)
+            $("#Button1").click();
+
+        }
+        function indexR(obj) {
+            $.ajax({
+                type: "POST",
+                async: true,
+                url: "Search.aspx/ComIndex",    //必须是后台的静态方法
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: "{'indexs':'" + obj + "'}",
+                success: function () {
+                    $("#Button1").click();
+                }
+            });
+        }
+
+
         $('#ones').pagination({
-            pages:10,
+            pages:<%=Session["videoNum"]%>,
             cssStyle: 'dark-theme',
             displayedPages: 5,
             edges: 1
         });
         $('#fives').pagination({
-            pages:10,
-            cssStyle: 'dark-theme',
-            displayedPages: 5,
-            edges: 1
-        });
-        $('#sevens').pagination({
-            pages:10,
+            pages:<%=Session["SpNum"]%>,
             cssStyle: 'dark-theme',
             displayedPages: 5,
             edges: 1
         });
 
         $(".nav a").eq(0).addClass("nav-color");
-        $(".tv").css("display","block");
+        $(".tv").css("display", "block");
 
-        $(".p-three").find("li").find("a").click(function(){ 
-            $(this).parent().siblings("li").find("div").find("div").css("display","none");
-            $(this).next().find("div").css("display","block");
+        $(".p-three").find("li").find("a").click(function () {
+            $(this).parent().siblings("li").find("div").find("div").css("display", "none");
+            $(this).next().find("div").css("display", "block");
         })
         // 标题【切换】
-        $(".nav a").click(function(){
+        $(".nav a").click(function () {
             $(this).addClass("nav-color").siblings("a").removeClass("nav-color");
         });
-        $(".nav-one").click(function(){
-            $(".tv").css("display","block");
-            $(".special").css("display","none");
-            $(".user").css("display","none");
+        $(".nav-one").click(function () {
+            $(".tv").css("display", "block");
+            $(".special").css("display", "none");
+            $(".user").css("display", "none");
         });
-        $(".nav-two").click(function(){
-            $(".tv").css("display","none");
-            $(".special").css("display","block");
-            $(".user").css("display","none");
+        $(".nav-two").click(function () {
+            $(".tv").css("display", "none");
+            $(".special").css("display", "block");
+            $(".user").css("display", "none");
         });
-        $(".nav-three").click(function(){
-            $(".tv").css("display","none");
-            $(".special").css("display","none");
-            $(".user").css("display","block");
+        $(".nav-three").click(function () {
+            $(".tv").css("display", "none");
+            $(".special").css("display", "none");
+            $(".user").css("display", "block");
         });
-        $(".p-one a").click(function(){
-            if($(this).data("class")=="screen"){
+        $(".p-one a").click(function () {
+            if ($(this).data("class") == "screen") {
                 return false;
             }
             $(this).addClass("back").parent().siblings("li").find("a").removeClass("back");
         });
-        $(".p-three a").click(function(){
-            if($(this).data("class")=="put"){
+        $(".p-three a").click(function () {
+            if ($(this).data("class") == "put") {
                 return false;
             }
             $(this).addClass("back").parent().siblings("li").find("a").removeClass("back");
         });
-        $(".p-three li").click(function(){
-            var index=$(this).index();
-            if(index>0){
-                
+        $(".p-three li").click(function () {
+            var index = $(this).index();
+            if (index > 0) {
+
             }
         });
 
         // 【收起】按钮
-        $(".put").click(function(){
-            $(".p-two").slideToggle(1000,function(){
-                $(this).css("display","none");
+        $(".put").click(function () {
+            $(".p-two").slideToggle(1000, function () {
+                $(this).css("display", "none");
             });
-            $(".p-three").slideToggle(1000,function(){
-                $(this).css("display","none");
+            $(".p-three").slideToggle(1000, function () {
+                $(this).css("display", "none");
             });
-            $(".put").slideToggle(1000,function(){
-                $(this).css("display","none");
+            $(".put").slideToggle(1000, function () {
+                $(this).css("display", "none");
             });
-            $(".screen").slideToggle(1000,function(){
-                $(this).css("display","block");
+            $(".screen").slideToggle(1000, function () {
+                $(this).css("display", "block");
             });
         });
 
         // 【展开】按钮
-        $(".screen").click(function(){
-            $(".p-two").slideToggle(1000,function(){
-                $(this).css("display","block");
+        $(".screen").click(function () {
+            $(".p-two").slideToggle(1000, function () {
+                $(this).css("display", "block");
             });
-            $(".p-three").slideToggle(1000,function(){
-                $(this).css("display","block");
+            $(".p-three").slideToggle(1000, function () {
+                $(this).css("display", "block");
             });
-            $(".put").slideToggle(1000,function(){
-                $(this).css("display","block");
+            $(".put").slideToggle(1000, function () {
+                $(this).css("display", "block");
             });
-            $(".screen").slideToggle(1000,function(){
-                $(this).css("display","none");
+            $(".screen").slideToggle(1000, function () {
+                $(this).css("display", "none");
             });
         });
 
         // 【用户】切换
-        $(".u-drop ul li").hover(function(){
+        $(".u-drop ul li").hover(function () {
             // 向下滑动
             $(this).find("ul").show();
-        },function(){
+        }, function () {
             // 向上滑动
             $(this).find("ul").hide();
         });
         // 页数点击
-        var index=1;
-        var len=$(".page-item").length;
-        $(".page-item").click(function(){
+        var index = 1;
+        var len = $(".page-item").length;
+        $(".page-item").click(function () {
             $(this).addClass("lone").siblings("li").removeClass("lone");
-            index=$(this).index();
-            if(index>=2){
-                $(".page-up").css("display","inline-block");
+            index = $(this).index();
+            if (index >= 2) {
+                $(".page-up").css("display", "inline-block");
             }
-            else{
-                $(".page-up").css("display","none");
+            else {
+                $(".page-up").css("display", "none");
             }
-            if(index != len){
-                $(".page-out").css("display","inline-block");
+            if (index != len) {
+                $(".page-out").css("display", "inline-block");
             }
-            else{
-                $(".page-out").css("display","none");
-                index=len;
+            else {
+                $(".page-out").css("display", "none");
+                index = len;
             }
         });
         // 【上一页】
-        $(".page-up").click(function(){
+        $(".page-up").click(function () {
             index--;
-            $(".page-item").eq(index-1).addClass("lone").siblings("li").removeClass("lone");
+            $(".page-item").eq(index - 1).addClass("lone").siblings("li").removeClass("lone");
             loads();
         });
         // 【下一页】
-        $(".page-out").click(function(){
+        $(".page-out").click(function () {
             index++;
-            $(".page-item").eq(index-1).addClass("lone").siblings("li").removeClass("lone");
+            $(".page-item").eq(index - 1).addClass("lone").siblings("li").removeClass("lone");
             loads();
         });
-        function loads(){
-            if(index>=2){
-                $(".page-up").css("display","inline-block");
+        function loads() {
+            if (index >= 2) {
+                $(".page-up").css("display", "inline-block");
             }
-            else{
-                $(".page-up").css("display","none");
+            else {
+                $(".page-up").css("display", "none");
             }
-            if(index != len){
-                $(".page-out").css("display","inline-block");
+            if (index != len) {
+                $(".page-out").css("display", "inline-block");
             }
-            else{
-                $(".page-out").css("display","none");
+            else {
+                $(".page-out").css("display", "none");
             }
         }
-    
+
         // 【搜索框】判断窗体的滚动条是否下拉
-        $(window).scroll(function(){
-            var height=$(window).scrollTop();
-            if(height>100){
-                $(".middles").show(300,function(){
+        $(window).scroll(function () {
+            var height = $(window).scrollTop();
+            if (height > 100) {
+                $(".middles").show(300, function () {
                     $(this).css({
                         "display": "block",
-                        "position":"fixed",
-                        "top":"0",
-                        "left":"0",
-                        "right":"0",
+                        "position": "fixed",
+                        "top": "0",
+                        "left": "0",
+                        "right": "0",
                     });
                 });
             }
-            if(height<100){
+            if (height < 100) {
                 $(".middles").hide(300);
             }
         });

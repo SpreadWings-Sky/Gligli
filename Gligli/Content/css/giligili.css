@@ -9,7 +9,7 @@ ul li
 }
 body
 {
-    background-image: url("../img/无用/2020-09-24.jpg");
+    background: #e8e8e8;
     background-size: cover;
 }
 
@@ -33,7 +33,7 @@ body
 {
     width: 70%;
     margin: 0 auto;
-    height: 270px;
+    height: 250px;
     margin-top: 2px;
     background: #fff;
 }
@@ -47,12 +47,17 @@ body
 {   
     margin-left: 20px;
     margin-top: 13px;
-    float: left;
+    /* float: left; */
+    display: inline-block;
+    height: 36px;
+}
+.current
+{
+    border-bottom: 3px solid #60a3f5;
 }
 .box2-1
 {
     height: 50px;
-    border-bottom: 1px solid #ccc;
 }
 .box2-1 img
 {
@@ -78,6 +83,7 @@ body
     height: 370px;
     border-bottom: 1px solid #ccc;
     background: #fff;
+    margin-top: 7px;
 }
 .col-1-1
 {
@@ -212,6 +218,13 @@ body
     width: 98%;
     margin: 0 auto;
     height: 35px;
+}
+.col-4-a a
+{
+    margin: 10px;
+    font-size: 30px;
+    font-weight: normal;
+    padding: 10px;
 }
 .col-4-img
 {
@@ -372,8 +385,8 @@ body
 {
     width: 100%;
     height: 200px;
-    background: url(../img/footer-img/bq2.png);
-    background-size:contain;
+    background: url(../img/footer-img/he.png);
+    background-size:cover;
     text-align: left;
 }
 .box2-img img
@@ -391,6 +404,9 @@ body
 .box-img ul li a
 {
     margin-left: 20px;
+}
+a::marker{
+    color: transparent !important;
 }
 .box-img ul li
 {
@@ -429,7 +445,7 @@ body
     font-size: 12px;
     transform: scale(0);
     transition: all 0.2s 0.1s linear;
-    background: rgb(0, 0, 0,0.5) url("../img/live-img/yuan.png") no-repeat 10px center;
+    background: rgb(0, 0, 0,0.5) url("") no-repeat 10px center;
 }
 #box-img-img a:hover .live-box
 {

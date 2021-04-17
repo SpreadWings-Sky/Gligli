@@ -28,7 +28,7 @@ namespace GliDAL
 
         public static List<VComInfo> GetVideoComList(int id, string type, int num)
         {
-            int start = num * 10 - 10;
+            int start = num * 10 - 9;
             int stop = num * 10;
             string sql = $"select* from   (select   comID,v.userID,Comment,RecomID,comtime,LikeNum,userName,sex,imageUrl,backimgUrl,brief,   ROW_NUMBER() " +
                                $" OVER(order   by   {type} desc)   AS ROWNUM   from VideoCommentInfo v join userInfo " +

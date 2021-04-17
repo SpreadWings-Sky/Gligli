@@ -45,12 +45,18 @@ body
 {   
     margin-left: 20px;
     margin-top: 13px;
-    float: left;
+    /* float: left; */
+    display: inline-block;
+    height: 36px;
 }
 .box2-1
 {
     height: 50px;
     border-bottom:1px solid #ccc;
+}
+.current
+{
+    border-bottom: 3px solid #60a3f5;
 }
 .box2-1 img
 {
@@ -187,8 +193,8 @@ body
 {
     width: 100%;
     height: 200px;
-    background: url(../img/footer-img/bq2.png);
-    background-size:contain;
+    background: url(../img/footer-img/he.png);
+    background-size:cover;
     text-align: left;
 }
 .box2-img img
@@ -230,6 +236,9 @@ body
     margin-top: 5px;
     margin: 0 8px;
 }
+a::marker{
+    color: transparent !important;
+}
 .live-box
 {
     width: 64px;
@@ -244,7 +253,7 @@ body
     font-size: 12px;
     transform: scale(0);
     transition: all 0.2s 0.1s linear;
-    background: rgb(0, 0, 0,0.5) url("../img/live-img/yuan.png") no-repeat 10px center;
+    background: rgb(0, 0, 0,0.5) url("") no-repeat 10px center;
 }
 #box-img-img a:hover .live-box
 {

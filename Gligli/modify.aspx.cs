@@ -52,10 +52,10 @@ namespace Gligli
                     Response.Write("<script>alert('请上传图片')</script>");
                     return;
                 }
-                FileUpload1.SaveAs(Server.MapPath("~/Content/img/" + fileName));
+                FileUpload1.SaveAs(Server.MapPath("./Content/img/" + fileName));
                 //Response.Write("<script>alert('上传成功')</script>");
-                Session["ImageUrl"] = "~/Content/img/" + fileName;
-                this.Image1.ImageUrl = "~/Content/img/" + fileName;
+                Session["ImageUrl"] = "./Content/img/" + fileName;
+                this.Image1.ImageUrl = "./Content/img/" + fileName;
             }
             else
             {

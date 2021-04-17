@@ -143,6 +143,7 @@ namespace Gligli
             Session["LikeNum"] = vi.LikeNum;
             Session["keepNum"] = vi.keepNum;
             Session["WarchNum"] = vi.WarchNum;
+            Session["headImg"] = vi.imageUrl;
             videotype(vi.type);
         }
         public static List<string> Videotype = null;
@@ -154,10 +155,6 @@ namespace Gligli
         {
             this.videoList.DataSource = VideoMMag.Gethotlist(id, type);
             DataBind();
-
-        }
-        public void VideoLK()
-        {
 
         }
         public static int index = 1;
@@ -191,7 +188,8 @@ namespace Gligli
         [WebMethod]
         public static void SendCom(string content, int loginID, int VideoID, string rcomid = null)
         {
-            VComManager.AddComm(content, loginID, VideoID, rcomid);
+            video_playback v = new video_playback();
+            VComManager.AddComm(v.Server.HtmlEncode(content), loginID, VideoID, rcomid);
             CommentList(VideoID);
         }
 
@@ -207,6 +205,10 @@ namespace Gligli
             type = "ComTime";
             index = 1;
             CommentList(int.Parse(Session["videoID"].ToString()));
+        }
+        protected void UpdatePanel1_Load(object sender, EventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(UpdatePanel1, this.GetType(), "replyLoad", "replyLoad();", true);
         }
         //用户信息绑定
         public UserInfo UserDataBin()

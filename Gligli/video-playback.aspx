@@ -33,159 +33,159 @@
             })
         })
     </script>
-   <header id="header">
-            <div class="grid">
-                <!-- 左侧标题开始 -->
-                <!-- 左侧标题开始 -->
-                <div class="header-left grid grid-cell-1">
-                    <!-- logo开始 -->
-                    <div class="left-logo">
-                        <a href="gligli.aspx">
-                            <span class="logo-title">主站</span>
-                        </a>
-                        <!-- 目录 -->
-                        <div class="logo-muen">
-                            <div class="muen-left">
-                                <asp:Repeater ID="TypeVideoCountRepeater" runat="server">
-                                    <ItemTemplate>
-                                        <a href="javascript:confirm('分区视频数')" class="ms"><%# Eval("TypeName") %><span><%# Eval("TypeVideoCount") %></span></a>
-                                    </ItemTemplate>
-                                </asp:Repeater>
-                            </div>
-                            <div class="muen-right">
-                                <a href="Special.aspx" class="ms">专栏</a>
-                            </div>
+    <header id="header">
+        <div class="grid">
+            <!-- 左侧标题开始 -->
+            <!-- 左侧标题开始 -->
+            <div class="header-left grid grid-cell-1">
+                <!-- logo开始 -->
+                <div class="left-logo">
+                    <a href="gligli.aspx">
+                        <span class="logo-title">主站</span>
+                    </a>
+                    <!-- 目录 -->
+                    <div class="logo-muen">
+                        <div class="muen-left">
+                            <asp:Repeater ID="TypeVideoCountRepeater" runat="server">
+                                <ItemTemplate>
+                                    <a href="javascript:confirm('分区视频数')" class="ms"><%# Eval("TypeName") %><span><%# Eval("TypeVideoCount") %></span></a>
+                                </ItemTemplate>
+                            </asp:Repeater>
                         </div>
-                        <!-- 目录结束 -->
-                    </div>
-                    <!-- logo结束 -->
-                    <!-- 左侧导航开始 -->
-                    <div class="nav-left">
-                        <ul>
-                            <li class="Phone-logo"><a href="#">下载APP</a>
-                                <div class="Dolowdimg">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- 左侧导航结束 -->
-                </div>
-                <!-- 左侧标题结束 -->
-                <!-- 中间搜索栏开始-->
-                <div class="header-center grid-cell-2">
-                    <div class="search-box">
-                        <input type="text" placeholder="呐~这就叫做专业~~~">
-                        <a href="">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-                <!-- 中间搜索栏结束 -->
-                <!-- 右侧状态展示栏开始 -->
-                <div class="header-right grid grid-cell-1">
-                    <%if (Request.Cookies["Account"] == null || Request.Cookies["Account"].Value == string.Empty)
-                        { %>
-                    <!-- 未登录状态 -->
-                    <div class="right-login">
-                        <a href="Login.aspx" class="login-img">
-                            <img src="./img/akari.jpg" alt="" /></a>
-                        <a href="Login.aspx">登录</a>
-                        <a href="Register.aspx">注册</a>
-                    </div>
-                    <%} %>
-                    <%else
-                        { %>
-                    <!-- 登录状态 -->
-                    <div class="userlogin grid">
-                        <div class="userimg">
-                            <a href='giligili.aspx'>
-                                <img id="UserLogin" src='<%=UserDataBin().imgurl %>' alt=""></a>
-                            <div class="user-item">
-                                <p class="user-name"><%=UserDataBin().userName %></p>
-                                <div class="item-num">
-                                    <div class="num1">
-                                        <span>关注</span>
-                                        <p><%=UserDataBin().Gz.ToString() %></p>
-                                    </div>
-                                    <div class="num2">
-                                        <span>粉丝</span>
-                                        <p><%=UserDataBin().Fs.ToString() %></p>
-                                    </div>
-                                    <div class="num3">
-                                        <span>动态</span>
-                                        <p>--</p>
-                                    </div>
-                                </div>
-                                <ul>
-                                    <li><a href="giligili.aspx"><i class="fa fa-user" aria-hidden="true"></i>个人中心</a></li>
-                                    <li><a href="UserUp.aspx"><i class="fa fa-cog" aria-hidden="true"></i>投稿管理</a></li>
-                                    <li><a href="javascript:confirm('开发中')"><i class="fa fa-file-video-o" aria-hidden="true"></i>直播中心</a></li>
-                                    <li>
-                                        <a href="OutLogin.aspx"><i class="fa fa-sign-out" aria-hidden="true"></i>退出</a></li>
-                                </ul>
-                            </div>
+                        <div class="muen-right">
+                            <a href="Special.aspx" class="ms">专栏</a>
                         </div>
-                        <ul class="user-title grid">
-
-                            <li><a href="javascript:void(0)">动态</a>
-                                <div class="title-moving">
-                                    <div class="moving-tab grid">
-                                        <div class="moving-tab-item active">视频动态</div>
-                                    </div>
-                                    <div class="moving-list">
-                                        <asp:Repeater ID="UserWarchUpVideoList" runat="server">
-                                            <ItemTemplate>
-                                                <div class="list-item gird">
-                                                    <div class="list-item-left">
-                                                        <a href='TA.aspx?UserID=<%# Eval("VideoUserID") %>'>
-                                                            <img id="VideoUserImg" src="<%# Eval("imageUrl") %>" alt="" />
-                                                        </a>
-                                                    </div>
-                                                    <div class="list-center">
-                                                        <div class="center-name-time">
-                                                            <a href='video-playback.aspx?videoID=<%# Eval("VideoID") %>'><%# Eval("VideoUserName") %><span><%# DateDiff(DateTime.Now,DateTime.Parse(Eval("VideoUpTime").ToString())) %>前</span></a>
-                                                        </div>
-                                                        <div class="center-title">
-                                                            <a href='video-playback.aspx?videoID=<%# Eval("VideoID") %>'><%# Eval("Title") %></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="list-right">
-                                                        <img src='<%# Eval("VideoImg") %>' alt="">
-                                                    </div>
-                                                </div>
-                                            </ItemTemplate>
-                                        </asp:Repeater>
-                                        <div class="list-login-add">
-                                            <input type="button" value="没有更多了">
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a href="Collection.aspx">收藏</a></li>
-                            <li><a href="UserUp.aspx">创作中心</a></li>
-                        </ul>
                     </div>
-                    <%} %>
-                    <!-- 投稿栏 -->
-                    <div class="right-up">
-                        <a href="UserUp.aspx">投稿</a>
-                        <div class="up-box">
+                    <!-- 目录结束 -->
+                </div>
+                <!-- logo结束 -->
+                <!-- 左侧导航开始 -->
+                <div class="nav-left">
+                    <ul>
+                        <li class="Phone-logo"><a href="#">下载APP</a>
+                            <div class="Dolowdimg">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 左侧导航结束 -->
+            </div>
+            <!-- 左侧标题结束 -->
+            <!-- 中间搜索栏开始-->
+            <div class="header-center grid-cell-2">
+                <div class="search-box">
+                    <input type="text" placeholder="呐~这就叫做专业~~~">
+                    <a href="Search.aspx">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- 中间搜索栏结束 -->
+            <!-- 右侧状态展示栏开始 -->
+            <div class="header-right grid grid-cell-1">
+                <%if (Request.Cookies["Account"] == null || Request.Cookies["Account"].Value == string.Empty)
+                    { %>
+                <!-- 未登录状态 -->
+                <div class="right-login">
+                    <a href="Login.aspx" class="login-img">
+                        <img src="./img/akari.jpg" alt="" /></a>
+                    <a href="Login.aspx">登录</a>
+                    <a href="Register.aspx">注册</a>
+                </div>
+                <%} %>
+                <%else
+                    { %>
+                <!-- 登录状态 -->
+                <div class="userlogin grid">
+                    <div class="userimg">
+                        <a href='giligili.aspx'>
+                            <img id="UserLogin" src='<%=UserDataBin().imgurl %>' alt=""></a>
+                        <div class="user-item">
+                            <p class="user-name"><%=UserDataBin().userName %></p>
+                            <div class="item-num">
+                                <div class="num1">
+                                    <span>关注</span>
+                                    <p><%=UserDataBin().Gz.ToString() %></p>
+                                </div>
+                                <div class="num2">
+                                    <span>粉丝</span>
+                                    <p><%=UserDataBin().Fs.ToString() %></p>
+                                </div>
+                                <div class="num3">
+                                    <span>动态</span>
+                                    <p>--</p>
+                                </div>
+                            </div>
                             <ul>
-                                <li><a href="UserUp.aspx">
-                                    <img src="./img/tg1.png" alt="">专栏投稿</a></li>
-                                <li><a href="UserUp.aspx">
-                                    <img src="./img/tg2.png" alt="">音频投稿</a></li>
-                                <li><a href="UserUp.aspx">
-                                    <img src="./img/tg3.png" alt="">视频投稿</a></li>
-                                <li><a href="UserAdminPage.aspx">
-                                    <img src="./img/tg4.png" alt="">稿件管理</a></li>
+                                <li><a href="giligili.aspx"><i class="fa fa-user" aria-hidden="true"></i>个人中心</a></li>
+                                <li><a href="UserUp.aspx"><i class="fa fa-cog" aria-hidden="true"></i>投稿管理</a></li>
+                                <li><a href="javascript:confirm('开发中')"><i class="fa fa-file-video-o" aria-hidden="true"></i>直播中心</a></li>
+                                <li>
+                                    <a href="OutLogin.aspx"><i class="fa fa-sign-out" aria-hidden="true"></i>退出</a></li>
                             </ul>
                         </div>
                     </div>
+                    <ul class="user-title grid">
+
+                        <li><a href="javascript:void(0)">动态</a>
+                            <div class="title-moving">
+                                <div class="moving-tab grid">
+                                    <div class="moving-tab-item active">视频动态</div>
+                                </div>
+                                <div class="moving-list">
+                                    <asp:Repeater ID="UserWarchUpVideoList" runat="server">
+                                        <ItemTemplate>
+                                            <div class="list-item gird">
+                                                <div class="list-item-left">
+                                                    <a href='TA.aspx?UserID=<%# Eval("VideoUserID") %>'>
+                                                        <img id="VideoUserImg" src="<%# Eval("imageUrl") %>" alt="" />
+                                                    </a>
+                                                </div>
+                                                <div class="list-center">
+                                                    <div class="center-name-time">
+                                                        <a href='video-playback.aspx?videoID=<%# Eval("VideoID") %>'><%# Eval("VideoUserName") %><span><%# DateDiff(DateTime.Now,DateTime.Parse(Eval("VideoUpTime").ToString())) %>前</span></a>
+                                                    </div>
+                                                    <div class="center-title">
+                                                        <a href='video-playback.aspx?videoID=<%# Eval("VideoID") %>'><%# Eval("Title") %></a>
+                                                    </div>
+                                                </div>
+                                                <div class="list-right">
+                                                    <img src='<%# Eval("VideoImg") %>' alt="">
+                                                </div>
+                                            </div>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                    <div class="list-login-add">
+                                        <input type="button" value="没有更多了">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="Collection.aspx">收藏</a></li>
+                        <li><a href="UserUp.aspx">创作中心</a></li>
+                    </ul>
                 </div>
-                <!-- 右侧状态展示栏结束 -->
+                <%} %>
+                <!-- 投稿栏 -->
+                <div class="right-up">
+                    <a href="UserUp.aspx">投稿</a>
+                    <div class="up-box">
+                        <ul>
+                            <li><a href="UserUp.aspx">
+                                <img src="./img/tg1.png" alt="">专栏投稿</a></li>
+                            <li><a href="UserUp.aspx">
+                                <img src="./img/tg2.png" alt="">音频投稿</a></li>
+                            <li><a href="UserUp.aspx">
+                                <img src="./img/tg3.png" alt="">视频投稿</a></li>
+                            <li><a href="UserAdminPage.aspx">
+                                <img src="./img/tg4.png" alt="">稿件管理</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </header>
+            <!-- 右侧状态展示栏结束 -->
+        </div>
+    </header>
     <section id="content">
         <div class="content-box grid">
             <div class="content-left">
@@ -305,27 +305,27 @@
                                         contentType: "application/json; charset=utf-8",
                                         dataType: "json",
                                         data: "{'userID':'<%=Session["LoginUserID"]%>','videoID':'<%=Session["videoID"]%>'}",
-                                            beforeSend: function () {
-                                                $(".VideoLikeBox").addClass("content-likeboxcolor")
-                                                num = parseInt($(".VideoLikeNum").text()) + 1
-                                                $(".VideoLikeNum").text(num)
-                                            }
-                                        });
-                                    }
-                                    else {
-                                        $.ajax({
-                                            type: "POST",
-                                            async: true,
-                                            url: "video-playback.aspx/DelVideoLikeInfo",    //必须是后台的静态方法
-                                            contentType: "application/json; charset=utf-8",
-                                            dataType: "json",
-                                            data: "{'userID':'<%=Session["LoginUserID"]%>','videoID':'<%=Session["videoID"]%>'}",
-                                        beforeSend: function () {
-                                            $(".VideoLikeBox").removeClass("content-likeboxcolor")
-                                            num = parseInt($(".VideoLikeNum").text()) - 1
+                                        success: function () {
+                                            $(".VideoLikeBox").addClass("content-likeboxcolor")
+                                            num = parseInt($(".VideoLikeNum").text()) + 1
                                             $(".VideoLikeNum").text(num)
                                         }
                                     });
+                                }
+                                else {
+                                    $.ajax({
+                                        type: "POST",
+                                        async: true,
+                                        url: "video-playback.aspx/DelVideoLikeInfo",    //必须是后台的静态方法
+                                        contentType: "application/json; charset=utf-8",
+                                        dataType: "json",
+                                        data: "{'userID':'<%=Session["LoginUserID"]%>','videoID':'<%=Session["videoID"]%>'}",
+                                            success: function () {
+                                                $(".VideoLikeBox").removeClass("content-likeboxcolor")
+                                                num = parseInt($(".VideoLikeNum").text()) - 1
+                                                $(".VideoLikeNum").text(num)
+                                            }
+                                        });
                                 }
                             }
 
@@ -350,22 +350,22 @@
                                         contentType: "application/json; charset=utf-8",
                                         dataType: "json",
                                         data: "{'userID':'<%=Session["LoginUserID"]%>','videoID':'<%=Session["videoID"]%>'}",
-                                            beforeSend: function () {
-                                                $(".VideoKeepBox").addClass("content-likeboxcolor")
-                                                num = parseInt($(".VideoKeepNum").text()) + 1
-                                                $(".VideoKeepNum").text(num)
-                                            }
-                                        });
-                                    }
-                                    else {
-                                        $.ajax({
-                                            type: "POST",
-                                            async: true,
-                                            url: "video-playback.aspx/DelVideoKeepInfo",    //必须是后台的静态方法
-                                            contentType: "application/json; charset=utf-8",
-                                            dataType: "json",
-                                            data: "{'userID':'<%=Session["LoginUserID"]%>','videoID':'<%=Session["videoID"]%>'}",
-                                            beforeSend: function () {
+                                        success: function () {
+                                            $(".VideoKeepBox").addClass("content-likeboxcolor")
+                                            num = parseInt($(".VideoKeepNum").text()) + 1
+                                            $(".VideoKeepNum").text(num)
+                                        }
+                                    });
+                                }
+                                else {
+                                    $.ajax({
+                                        type: "POST",
+                                        async: true,
+                                        url: "video-playback.aspx/DelVideoKeepInfo",    //必须是后台的静态方法
+                                        contentType: "application/json; charset=utf-8",
+                                        dataType: "json",
+                                        data: "{'userID':'<%=Session["LoginUserID"]%>','videoID':'<%=Session["videoID"]%>'}",
+                                            success: function () {
                                                 $(".VideoKeepBox").removeClass("content-likeboxcolor")
                                                 num = parseInt($(".VideoKeepNum").text()) - 1
                                                 $(".VideoKeepNum").text(num)
@@ -431,7 +431,7 @@
                                 <%} %>
                             </div>
                         </div>
-                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server" OnLoad="UpdatePanel1_Load">
                             <ContentTemplate>
 
                                 <div class="commentbox-list">
@@ -448,7 +448,7 @@
                                             {%>
                                         <div class='commentbox-listitem' data-id="<%=item.userID %>">
                                             <div class='listitem-head'>
-                                                <a href='?userid=<%=item.userID%>'>
+                                                <a href='?userid=<%=item.userID%>' class="head">
                                                     <img src='<%=item.imageUrl %>' width='48' height='48' />
                                                 </a>
                                             </div>
@@ -468,7 +468,7 @@
                                                     <%foreach (var value in dic[item.comID])
                                                         {%>
                                                     <div class='reply-item'>
-                                                        <a href='#' class='reply-head'>
+                                                        <a href='#' class='head'>
                                                             <img src='<%=value.imageUrl%>' width='24' height='24' /></a>
                                                         <div class='reply-item__user'>
                                                             <a href='<%=value.userID%>' class='name'><%=value.userName%></a>
@@ -487,6 +487,7 @@
                                                     </div>
                                                     <%}%>
                                                 </div>
+                                                <div class="reply-open" style="color: blue; font-size: 12px; cursor: pointer; width: 36px; display: none" onclick="Open(this)">展开</div>
                                             </div>
                                         </div>
                                         <%}%>
@@ -531,6 +532,23 @@
                         </div>
 
                         <script>
+                            replyLoad()
+                            function replyLoad() {
+                                $(".reply-box").each(function () {
+                                    if ($(this).find(".reply-item").length > 3) {
+                                        $(this).next().css("display", "block")
+                                    }
+                                })
+                            }
+                            function Open(obj) {
+                                $(obj).prev().toggleClass("reply-box")
+                                if ($(obj).text() == "展开") {
+                                    $(obj).text("收回")
+                                }
+                                else {
+                                    $(obj).text("展开")
+                                }
+                            }
                             function SendCom() {
                                 var sendcontent = $("#sendbox").val()
                                 if ((sendcontent == null || sendcontent == "" || sendcontent == 'undefined')) {
@@ -547,7 +565,7 @@
                                     contentType: "application/json; charset=utf-8",
                                     dataType: "json",
                                     data: "{'content':'" + sendcontent + "','loginID':'<%=Session["LoginUserID"]%>','VideoID':'<%=Session["videoID"]%>','rcomid':'" + rcomid + "'}",
-                                    beforeSend: function () {
+                                    success: function () {
                                         $("#Button2").click();
                                     }
                                 });
@@ -599,7 +617,8 @@
                                     contentType: "application/json; charset=utf-8",
                                     dataType: "json",
                                     data: "{'indexs':'" + obj + "','VideoID':'<%=Session["videoID"]%>'}",
-                                    beforeSend: function () {
+                                    success: function () {
+
                                     }
                                 });
                             }
@@ -652,7 +671,7 @@
                                     contentType: "application/json; charset=utf-8",
                                     dataType: "json",
                                     data: "{'num':'" + num + "','videoID':'<%=Session["videoID"]%>','comID':'" + comid + "'}",
-                                    beforeSend: function () {
+                                    success: function () {
 
                                     }
                                 });
@@ -724,7 +743,7 @@
             <!-- 右边部分 -->
             <div class="content-right grid-cell-2">
                 <div id="upinfo">
-                    <img width="48" height="48" src="./img/akari.jpg" alt="" /><span><%=Session["username"]%></span>&nbsp;&nbsp;<span class="send"><i class="fa fa-envelope" aria-hidden="true"></i> 发消息</span>
+                    <a href="TA.aspx?UserID=<%=Session["UserID"] %>"><img width="48" height="48" src="<%=Session["headImg"] %>" alt="" /></a> <span><%=Session["username"]%></span>&nbsp;&nbsp;<span class="send"><i class="fa fa-envelope" aria-hidden="true"></i> 发消息</span>
                     <br />
                     <span class="introduction" title="<%=Session["introduction"] %>"><%=Session["introduction"] %></span>
                     <br />
@@ -741,16 +760,20 @@
                                     return false;
                                 }
                             }
-                            else {
-                                if (War != 1) {
-                                    $.ajax({
-                                        type: "POST",
-                                        async: true,
-                                        url: "video-playback.aspx/AddWarchInfo",    //必须是后台的静态方法
-                                        contentType: "application/json; charset=utf-8",
-                                        dataType: "json",
-                                        data: "{'LoginUserID':'<%=Session["LoginUserID"]%>','UpUserID':'<%=Session["UserID"]%>'}",
-                                            beforeSend: function () {
+                            else if (a ==<%=int.Parse(Session["UserID"].ToString())%> ) {
+                                    alert("你要对你自己干些什么？？！！")
+                                    return false;
+                                }
+                                else {
+                                    if (War != 1) {
+                                        $.ajax({
+                                            type: "POST",
+                                            async: true,
+                                            url: "video-playback.aspx/AddWarchInfo",    //必须是后台的静态方法
+                                            contentType: "application/json; charset=utf-8",
+                                            dataType: "json",
+                                            data: "{'LoginUserID':'<%=Session["LoginUserID"]%>','UpUserID':'<%=Session["UserID"]%>'}",
+                                            success: function () {
                                                 War = 1;
                                                 $(".WarchBox").text("已关注")
                                                 $(".WarchBox").css("background", "#ccc")
@@ -765,7 +788,7 @@
                                             contentType: "application/json; charset=utf-8",
                                             dataType: "json",
                                             data: "{'LoginUserID':'<%=Session["LoginUserID"]%>','UpUserID':'<%=Session["UserID"]%>'}",
-                                            beforeSend: function () {
+                                            success: function () {
                                                 War = 0;
                                                 $(".WarchBox").text("+  关注 <%=Session["WarchNum"]%>")
                                                 $(".WarchBox").css("background", "#00a1d6")
@@ -782,6 +805,7 @@
                             $(".WarchBox").text("+  关注 <%=Session["WarchNum"]%>")
                             $(".WarchBox").css("background", "#00a1d6")
                         }
+
                     </script>
                 </div>
                 <div id="content-right__recommend">

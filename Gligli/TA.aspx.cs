@@ -32,7 +32,7 @@ namespace Gligli
                 }
                 else
                 {
-                    Response.Redirect("Index.aspx");
+                    Response.Redirect("gligli.aspx");
                 }
                 
             }

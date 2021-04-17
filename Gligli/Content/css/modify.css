@@ -1,147 +1,120 @@
-.el
-    {
-        width: 300px;
-        height: 500px;
-        margin: 0 auto;
-        margin-top: 100px;
-        line-height: 50px;
-    }
-    .content-box
-    {
-        padding: 20px;
-        text-align: center;
-        width: 830px;
-        height: 890px;
-        margin: 0 auto;
-        border: 1px solid #ccc;
-    }
-    .content-img
-    {
-        margin: 0 auto;
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        border: 1px solid #ccc;
-        text-align: center;
-        line-height: 280px;
-    }
-    .content-img img
-    {
-        width: 96px;
-        height: 96px;
-        border-radius: 50%;
-    }
-    .content-button
-    {
-        display:inline-block;
-        width: 54px;
-        height: 54px;
-        border-radius: 50%;
-        position: relative;
-        left: -98px;
-        top: -130px;
-        outline: none;
-        font-size: 10px;
-        background: #00a1d6;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-    }
-    .content-baocun
-    {
-        width: 110px;
-        height: 30px;
-        text-align: center;
-        line-height: 30px;
-        color: #fff;
-        background: #00a1d6;
-        outline: none;
-        border: none;
-        border-radius: 5% 5%;
-    }
-    .content-box
-    {
-        line-height: 60px;
-    }
-    table
-    {
-        margin:  0 auto;
-       
-    }
-    table td
-    {
-        text-align: center;
-        vertical-align: middle;
-        margin-top:10px;
-    }
+.el {
+  width: 300px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+  line-height: 50px;
+}
+.content-box {
+  padding: 20px;
+  text-align: center;
+  width: 830px;
+  height: 890px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+.content-img {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 280px;
+}
+.content-img img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+}
+.content-button {
+  display: inline-block;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  position: relative;
+  left: -98px;
+  top: -130px;
+  outline: none;
+  font-size: 10px;
+  background: #00a1d6;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.content-baocun {
+  width: 110px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  background: #00a1d6;
+  outline: none;
+  border: none;
+  border-radius: 5% 5%;
+}
+.content-box {
+  line-height: 60px;
+}
+table {
+  margin: 0 auto;
+}
+table td {
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 10px;
+}
 
+/*  */
 
+.box {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  height: 1000px;
+}
+h1 {
+  text-align: center;
+}
+.img {
+  width: 202px;
+  height: 202px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  line-height: 270px;
+}
+.img img {
+  width: 100%;
+  text-align: center;
+}
+.img a {
+  text-align: center;
+}
+.head {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  justify-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
-    /*  */
+.FileUpload {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
 
-    .box
-        {
-            width: 50%;
-            margin: 0 auto;
-            border: 1px solid #ccc;
-            height: 1000px;
-        }
-        h1
-        {
-            text-align: center;
-        }
-        .img
-        {
-            width: 202px;
-            height: 202px;
-            border-radius: 50%;
-            border: 1px solid #ccc;
-            margin: 0 auto;
-            line-height: 270px;
-        }
-        .img a img
-        {
-            width: 96px;
-            height: 96px;
-            text-align: center;
-        }
-        .img a
-        {
-            text-align: center;
-        }
-        .head
-        {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            vertical-align: middle;
-            justify-items: center;
-            justify-content: center
-        }
-        .head #Image1
-        {
-            width: 96px;
-            height: 96px;
-            border-radius: 50%;
-        }
-
-        .FileUpload
-        {
-            width: 50%;
-            margin:  0 auto;
-            text-align: center;
-        }
-
-        .peand
-        {
-            width: 200px;
-            margin: 0 auto;
-            margin-top: 50px;
-            line-height: 50px;
-        }
-        .peand span
-        {
-            margin-top: 300px;
-        }
+.peand {
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  line-height: 50px;
+}
+.peand span {
+  margin-top: 300px;
+}

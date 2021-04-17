@@ -85,10 +85,10 @@
                             <div class="user-item">
                                 <p class="user-name"><%=UserDataBin().userName %></p>
                                 <div class="item-num">
-                                    <div class="num1">
+                                    <a href="follow.aspx" style="color:#212121"><div class="num1">
                                         <span>关注</span>
                                         <p><%=UserDataBin().Gz.ToString() %></p>
-                                    </div>
+                                    </div></a>
                                     <div class="num2">
                                         <span>粉丝</span>
                                         <p><%=UserDataBin().Fs.ToString() %></p>
