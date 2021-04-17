@@ -139,7 +139,7 @@ namespace Gligli
                 SpeInfo com = new SpeInfo()
                 {
                     spID = int.Parse(Request.QueryString["id"]),
-                    Comment = this.sendbox.Text,
+                    Comment = Server.HtmlEncode(this.sendbox.Text),
                     UserID = int.Parse(Session["LoginUserID"].ToString()),
                 };
                 SpeInfoMMag.SpComs(com);

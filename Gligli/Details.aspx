@@ -125,22 +125,9 @@
                                 <asp:AsyncPostBackTrigger ControlID="LinkButton1" EventName="Click" />
                                 <asp:AsyncPostBackTrigger ControlID="LinkButton2" EventName="Click" />
                                 <asp:AsyncPostBackTrigger ControlID="Button3" EventName="Click" />
-                                <asp:AsyncPostBackTrigger ControlID="num" EventName="TextChanged" />
                                 <asp:AsyncPostBackTrigger ControlID="Button2" EventName="Click" />
                             </Triggers>
                         </asp:UpdatePanel>
-                        <div id="commentbox-bottom">
-                            <div class="commentbox-bottom">
-                                <ul id="dark-pagination" class="pagination">
-                                </ul>
-                                <div class="jump">共<label class="bottom-num"><%=Session["Count"]%></label>页,当前第<asp:TextBox ID="num" runat="server" ReadOnly="True"></asp:TextBox>页</div>
-                            </div>
-                            <div class="commentbox-send">
-                                <div class="user-head">
-                                    <img src="./img/akari.jpg" width="48" height="48" alt="" />
-                                </div>
-                            </div>
-                        </div>
 
                         <script>
                             function reply(obj) {

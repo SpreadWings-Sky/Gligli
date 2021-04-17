@@ -99,7 +99,9 @@ create table SPCommentInfo(
 	userID int foreign key references UserInfo(userID) not null,--用户编号
 	Comment nvarchar(100) not null,--评论内容
 	zRecomID int foreign key references SPCommentInfo(comID),--主评论编号
-	RecomID int foreign key references SPCommentInfo(comID)--回复评论
+	RecomID int foreign key references SPCommentInfo(comID),--回复评论
+	[comtime] datetime default(getdate()) ,--发表时间 
+	[LikeNum] int default(0)--点赞数
 )
 --专栏点赞表
 create table SpLikeInfo(

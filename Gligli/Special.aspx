@@ -116,7 +116,7 @@
             <div class="section-pai">
                 <div id="section-pai">
                     <input type="text" id="txt" />
-                    <input type="button" value="搜索" id="btn" />
+                    <a href="Search.aspx"><input type="button" value="搜索" id="btn" /></a>
                     <ul>
                         排行榜&nbsp;&nbsp;&nbsp;&nbsp; 
                     <li>昨天</li>

@@ -46,6 +46,7 @@
     <Compile Include="DBHelper.cs" />
     <Compile Include="giligiliService.cs" />
     <Compile Include="ImgRotationInfoServices.cs" />
+    <Compile Include="SComService.cs" />
     <Compile Include="SearchService.cs" />
     <Compile Include="SPCommentInfoServices.cs" />
     <Compile Include="SpeInfoServices.cs" />
