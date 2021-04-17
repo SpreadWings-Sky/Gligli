@@ -27,37 +27,220 @@
                         </dl>
                     </ItemTemplate>
                 </asp:Repeater>
-
-                <h3>评论</h3>
-                
-                <div class="comment_outsize">
-                    <table>
-                        <tr>
-                            <td>
-                                <img id="Image" class="comment_photo" src="./img/ls.png" /></td>
-                            <td>
-                                <asp:TextBox ID="txtComment" runat="server" CssClass="comment_content" TextMode="MultiLine"></asp:TextBox></td>
-                            <td><asp:Button ID="btnFend" runat="server" CssClass="comment_send" Text="发表评论" OnClick="btnFend_Click"/></td>
-                        </tr>
-                    </table>
-                </div>
                     
                        <%-- <%--  循环输出对应的说说列表  --%>
-                         <asp:Repeater ID="SpCom" runat="server">
-                            <ItemTemplate>
-                            <div class="comment_in">
-                                <table>
-                                    <tr>
-                                        <td rowspan="2"><img id="image" class="comment_photo" src="<%# Eval("imageUrl") %>" /></td>
-                                        <td class="comment_font"><%# Eval("userName") %></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="comment_color"><%# Eval("Comment") %></td>
-                                    </tr>
-                                </table>
-                            </div> 
-                        </ItemTemplate>
-                    </asp:Repeater>
+                         <div class="content-commentbox">
+                        <h3><span><%=Session["ComCount"] %></span>   评论</h3>
+                        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                        <div class="commentbox-header">
+                            <ul>
+                                <asp:LinkButton ID="LinkButton1" data-type="likeNum" runat="server" OnClick="LinkButton1_Click"><li  class="commentbox-active" >按热度排序</li></asp:LinkButton>
+                                <asp:LinkButton ID="LinkButton2" data-type="comTime" runat="server" OnClick="LinkButton2_Click"><li>按时间排序</li></asp:LinkButton>
+                            </ul>
+                        </div>
+                        <div class="commentbox-send">
+                            <div class="user-head">
+                                <img src="./img/akari.jpg" width="48" height="48" alt="" />
+                            </div>
+                            <div class="commentbox-container">
+                                <asp:TextBox ID="RcomID" Style="display: none" runat="server"></asp:TextBox>
+                                <%if (int.Parse(Session["LoginUserID"].ToString()) == 0)
+                                    { %>
+                                <div style="text-align: center; height: 55px; width: 108%; line-height: 55px; background: #ccc; margin: 0 auto; border-radius: 10px;">
+                                    <a href="Login.aspx">请登录 </a>
+                                </div>
+                                <%}
+                                    else
+                                    { %>
+                                <asp:TextBox ID="sendbox" runat="server" name="1" class="commentbox-text" cols="80" placeholder="发条友善的评论" Rows="5" TextMode="MultiLine"></asp:TextBox>
+                                <asp:Button ID="Button3" CssClass="commentbox-btn" runat="server" Text="发表"  OnClick="Button3_Click"/>
+                                <%} %>
+                            </div>
+                        </div>
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                            <ContentTemplate>
+
+                                <div class="commentbox-list">
+                                    <div id="likebox">
+                                        <%if (list.Count < 1)
+                                            { %>
+                                        <div style="height: 150px; line-height: 150px; text-align: center">
+                                            <h1>暂时还没有评论，快抢沙发吧！</h1>
+                                        </div>
+                                        <% }%>
+                                        <%else
+                                            { %>
+                                        <%foreach (var item in list)
+                                            {%>
+                                        <div class='commentbox-listitem' data-id="<%=item.userID %>">
+                                            <div class='listitem-head'>
+                                                <a href='?userid=<%=item.userID%>'>
+                                                    <img src='<%=item.imageUrl %>' width='48' height='48' />
+                                                </a>
+                                            </div>
+                                            <div class='commentbox-con'>
+                                                <div class='user'><a href='#'><%=item.userName %></a></div>
+                                                <p><%=item.Comment %></p>
+                                                <div class='info'>
+                                                    <span class='time'><%=item.comtime %></span>
+                                                    <span onclick="LikeCl(this)" data-comid="<%=item.comID %>" class='like'><i class='fa fa-thumbs-o-up' aria-hidden='true'></i>
+                                                        <span class="likenum"><%=item.likeNum %></span>
+                                                    </span>
+                                                    <span onclick="unLikeCl(this)" data-comid="<%=item.comID %>" class='unlike'><i class='fa fa-thumbs-o-down' aria-hidden='true'></i></span>
+                                                    <span class='reply' onclick="reply(this)" data-ruserid="<%=item.comID %>" data-reply='<%=item.userName %>'>回复</span>
+                                                    <span class='spot'><i class='fa fa-ellipsis-v' aria-hidden='true'></i></span>
+                                                </div>
+                                                <div class='reply-box'>
+                                                    <%foreach (var value in dic[item.comID])
+                                                        {%>
+                                                    <div class='reply-item'>
+                                                        <a href='#' class='reply-head'>
+                                                            <img src='<%=value.imageUrl%>' width='24' height='24' /></a>
+                                                        <div class='reply-item__user'>
+                                                            <a href='<%=value.userID%>' class='name'><%=value.userName%></a>
+                                                            <span class='reply-text'><%=value.Comment %></span>
+                                                        </div>
+                                                        <div class='reply-item__info'>
+                                                            <div class='info'>
+                                                                <span class='time'><%=value.comtime%></span>
+                                                                <span onclick="LikeCl(this)" data-comid="<%=value.comID %>" class='like'>
+                                                                    <i class='fa fa-thumbs-o-up' aria-hidden='true'></i>
+                                                                    <span class="likenum"><%=value.likeNum%></span>
+                                                                </span>
+                                                                <span onclick="unLikeCl(this)" data-comid="<%=value.comID %>" class='unlike'><i class='fa fa-thumbs-o-down' aria-hidden='true'></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <%}%>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <%}%>
+                                        <%}%>
+                                    </div>
+                                    <asp:Button ID="Button2" Style="display: none" runat="server" Text="Button" />
+                                </div>
+                            </ContentTemplate>
+                            <Triggers>
+                                <asp:AsyncPostBackTrigger ControlID="LinkButton1" EventName="Click" />
+                                <asp:AsyncPostBackTrigger ControlID="LinkButton2" EventName="Click" />
+                                <asp:AsyncPostBackTrigger ControlID="Button3" EventName="Click" />
+                                <asp:AsyncPostBackTrigger ControlID="num" EventName="TextChanged" />
+                                <asp:AsyncPostBackTrigger ControlID="Button2" EventName="Click" />
+                            </Triggers>
+                        </asp:UpdatePanel>
+                        <div id="commentbox-bottom">
+                            <div class="commentbox-bottom">
+                                <ul id="dark-pagination" class="pagination">
+                                </ul>
+                                <div class="jump">共<label class="bottom-num"><%=Session["Count"]%></label>页,当前第<asp:TextBox ID="num" runat="server" ReadOnly="True"></asp:TextBox>页</div>
+                            </div>
+                            <div class="commentbox-send">
+                                <div class="user-head">
+                                    <img src="./img/akari.jpg" width="48" height="48" alt="" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            function reply(obj) {
+                                var a = <%=int.Parse(Session["LoginUserID"].ToString())%>
+                                   if (a == 0) {
+                                    if (confirm("未登录！是否前往登录？")) {
+                                        location.href = "Login.aspx"
+                                        return false;
+                                    }
+                                    else {
+                                        return false;
+                                    }
+                                }
+                                else {
+                                    $(".commentbox-text").attr("placeholder", $(obj).data("reply") + ":");
+                                    $("#RcomID").val($(obj).data("ruserid"))
+                                }
+                            }
+                            $('#dark-pagination').pagination({
+                                pages: <%=Session["Count"]%>,
+                                cssStyle: 'dark-theme',
+                                displayedPages: 5,
+                                edges: 1
+                            });
+                            function LikeCl(obj) {
+                                if (!($(obj).find("i").hasClass("content-likeboxcolor"))) {
+                                    $(obj).find("i").addClass("content-likeboxcolor")
+                                    var num = parseInt($(obj).find("span").text()) + 1;
+                                    if (($(obj).next().find("i").hasClass("content-likeboxcolor"))) {
+                                        $(obj).next().find("i").removeClass("content-likeboxcolor")
+                                        num = num + 1;
+                                    }
+                                    var comid = $(obj).data("comid")
+                                    Like(num, comid)
+                                    $(obj).find("span").text(num)
+                                }
+                                else {
+                                    $(obj).find("i").removeClass("content-likeboxcolor")
+                                    var num = parseInt($(obj).find("span").text()) - 1;
+                                    var comid = $(obj).data("comid")
+                                    Like(num, comid)
+                                    $(obj).find("span").text(num)
+                                }
+                            }
+                            function unLikeCl(obj) {
+                                if (!($(obj).find("i").hasClass("content-likeboxcolor"))) {
+                                    $(obj).find("i").addClass("content-likeboxcolor")
+                                    var num = parseInt($(obj).prev("span").find("span").text()) - 1
+                                    if (($(obj).prev().find("i").hasClass("content-likeboxcolor"))) {
+                                        $(obj).prev().find("i").removeClass("content-likeboxcolor")
+                                        num = num - 1;
+                                    }
+                                    var comid = $(obj).data("comid")
+                                    Like(num, comid)
+                                    $(obj).prev("span").find("span").text(num)
+                                }
+                                else {
+                                    $(obj).find("i").removeClass("content-likeboxcolor")
+                                    var num = parseInt($(obj).prev("span").find("span").text()) + 1
+                                    var comid = $(obj).data("comid")
+                                    Like(num, comid)
+                                    $(obj).prev("span").find("span").text(num)
+                                }
+                            }
+                            function Like(num, comid) {
+                                $.ajax({
+                                    type: "POST",
+                                    async: true,
+                                    url: "video-playback.aspx/Like",    //必须是后台的静态方法
+                                    contentType: "application/json; charset=utf-8",
+                                    dataType: "json",
+                                    data: "{'num':'" + num + "','SpID':'<%=Request.QueryString["id"]%>','comID':'" + comid + "'}",
+                                    beforeSend: function () {
+
+                                    }
+                                });
+                            }
+                            $(".introduce-btn").click(function () {
+                                if ($(this).find("span").text() == "展开更多") {
+                                    $(".video-introduce").css("height", "auto")
+                                    $(this).find("span").text("收起")
+                                }
+                                else {
+                                    $(".video-introduce").css("height", "63px")
+                                    $(this).find("span").text("展开更多")
+                                }
+                            })
+                            $(".commentbox-header").find("a").click(function () {
+                                $(this).find("li").addClass("commentbox-active").parent().siblings("a").find("li").removeClass("commentbox-active")
+                                $('#dark-pagination').pagination({
+                                    pages: <%=Session["Count"]%>,
+                                    cssStyle: 'dark-theme',
+                                    displayedPages: 5,
+                                    edges: 1
+                                });
+                                indexR(1)
+                                $("#num").val(1);
+                            })
+                        </script>
+                    </div>
                     
             </div>
 

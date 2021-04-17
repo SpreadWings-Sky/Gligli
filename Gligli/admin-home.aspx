@@ -96,7 +96,7 @@
                                         <th>视频名称</th>
                                         <th>播放数</th>
                                         <th>更新时间</th>
-                                        <th>标签</th>
+                                        <th>状态</th>
                                     </tr>
                                 </thead>
                                 <tbody>
