@@ -22,7 +22,7 @@
                 <asp:Repeater ID="spList" runat="server">
                     <ItemTemplate>
                         <dl class="news-item-s1">
-                            <h1><%# Eval("title") %></h1>
+                            <h1 style="align-content:center;margin-bottom:20px"><%# Eval("title") %></h1>
                             <%# Eval("spText") %>
                         </dl>
                     </ItemTemplate>
@@ -306,12 +306,10 @@
                 var top = $(window).scrollTop();
                 if (top > 0) {
                     $("#section-pai").css("position", "fixed");
-                    $(".section-tu").css("margin-right", "20%");
                     $("#lie-up").css("display", "none");
                 }
                 else {
                     $("#section-pai").css("position", "initial");
-                    $(".section-tu").css("margin-right", "0");
                     $("#lie-up").css("display", "block");
                 }
             });

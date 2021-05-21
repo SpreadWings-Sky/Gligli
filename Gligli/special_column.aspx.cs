@@ -16,13 +16,13 @@ namespace Gligli
         {
             if (Request["UserID"] != null)
             {
+                id = UserInfoManager.SelectUserByAccount(Base64Helper.Base64Decode(Request.Cookies["Account"].Value)).userID;
                 UserInfo info = new UserInfo();
                 info = UserInfoManager.Add(id);
                 this.touxiang.Text = info.userName;
                 this.touxiang2.Text = info.brief;
                 this.Image1.ImageUrl = info.imgurl;
                 //getSpeInfo();
-
                 if (!IsPostBack)
                 {
                     ViewState["Page"] = 0;

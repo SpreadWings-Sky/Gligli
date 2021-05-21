@@ -36,7 +36,7 @@ namespace Gligli
         public void Bangding()
         {
             PagedDataSource pds = new PagedDataSource();
-            pds.DataSource = SpeInfoMMag.Info(id);
+            pds.DataSource = giligiliManager.giligili(id);
             pds.AllowPaging = true;
             pds.PageSize = 6; //每页记录数
             pds.CurrentPageIndex = Pager;//当前页

@@ -18,7 +18,7 @@
                 </div>
 
                 <ul>
-                    <li><a href="" style="color: #fb7299;">
+                    <li><a href="" style="color: #000;" style="font-weight: bold;">
                         <asp:Label ID="touxiang" runat="server" Text="Label"></asp:Label></a></li>
                     <li><a href="" style="font-size: 10px;">
                         <asp:Label ID="touxiang2" runat="server" Text="Label"></asp:Label></a></li>
@@ -131,7 +131,7 @@
 
     <div class="col-3">
         <div class="col-3-a">
-            <a href="special_column.aspx" class="">我的专栏</a>
+            <a href="special_column.aspx?UserID=<%=id %>" class="">我的专栏</a>
         </div>
 
     </div>

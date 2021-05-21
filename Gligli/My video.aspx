@@ -81,7 +81,7 @@
 
                     <div class="col-2-img1">
                         <a href="#">
-                            <img src="<%# Eval("PageImg") %>" alt=""><br>
+                            <img src="<%# Eval("bacImg") %>" alt=""><br>
                             <p class="col-2-p"><%# Eval("title") %></p>
                             <span style="font-size: 8px;" class="col-2-span">收藏于：<span><%# Eval("uptime") %></span></span></a>
                     </div>

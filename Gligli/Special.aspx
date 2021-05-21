@@ -129,8 +129,8 @@
                         <div>
                             <asp:Repeater ID="Ranlist" runat="server">
                                 <ItemTemplate>
-                                    <p title="<%# Eval("Yest").ToString().Substring(0,15)%>">
-                                        <span><%# Eval("id")%></span><%# Eval("Yest").ToString().Substring(0,15)%>
+                                    <p title="<%# Eval("Yest").ToString().Length>15?Eval("Yest").ToString().Substring(0,15):Eval("Yest").ToString()%>">
+                                        <span><%# Eval("id")%></span><%# Eval("Yest").ToString().Length>15?Eval("Yest").ToString().Substring(0,15):Eval("Yest").ToString()%>
                                     </p>
                                 </ItemTemplate>
                             </asp:Repeater>
@@ -138,8 +138,8 @@
                         <div>
                             <asp:Repeater ID="Ranlist1" runat="server">
                                 <ItemTemplate>
-                                    <p title="<%# Eval("Theday").ToString().Substring(0,15)%>">
-                                        <span><%# Eval("id")%></span><%# Eval("Theday").ToString().Substring(0,15)%>
+                                    <p title="<%# Eval("Theday").ToString().Length>15?Eval("Theday").ToString().Substring(0,15):Eval("Theday").ToString()%>">
+                                        <span><%# Eval("id")%></span><%# Eval("Theday").ToString().Length>15?Eval("Theday").ToString().Substring(0,15):Eval("Theday").ToString()%>
                                     </p>
                                 </ItemTemplate>
                             </asp:Repeater>
@@ -147,8 +147,8 @@
                         <div>
                             <asp:Repeater ID="Ranlist2" runat="server">
                                 <ItemTemplate>
-                                    <p title="<%# Eval("Welist").ToString().Substring(0,15)%>">
-                                        <span><%# Eval("id")%></span><%# Eval("Welist").ToString().Substring(0,15)%>
+                                    <p title="<%# Eval("Welist").ToString().Length>15?Eval("Welist").ToString().Substring(0,15):Eval("Welist").ToString()%>">
+                                        <span><%# Eval("id")%></span><%# Eval("Welist").ToString().Length>15?Eval("Welist").ToString().Substring(0,15):Eval("Welist").ToString()%>
                                     </p>
                                 </ItemTemplate>
                             </asp:Repeater>
@@ -156,8 +156,8 @@
                         <div>
                             <asp:Repeater ID="Ranlist3" runat="server">
                                 <ItemTemplate>
-                                    <p title="<%# Eval("Molist").ToString().Substring(0,15)%>">
-                                        <span><%# Eval("id")%></span><%# Eval("Molist").ToString().Substring(0,15)%>
+                                    <p title="<%# Eval("Molist").ToString().Length>15?Eval("Molist").ToString().Substring(0,15):Eval("Molist").ToString()%>">
+                                        <span><%# Eval("id")%></span><%# Eval("Molist").ToString().Length>15?Eval("Molist").ToString().Substring(0,15):Eval("Molist").ToString()%>
                                     </p>
                                 </ItemTemplate>
                             </asp:Repeater>
@@ -244,12 +244,10 @@
                 var top = $(window).scrollTop();
                 if (top > 500) {
                     $("#section-pai").css("position", "fixed");
-                    $(".section-tu").css("margin-right", "20%");
                     $("#lie-up").css("display", "none");
                 }
                 else {
                     $("#section-pai").css("position", "initial");
-                    $(".section-tu").css("margin-right", "0");
                     $("#lie-up").css("display", "block");
                 }
             });
